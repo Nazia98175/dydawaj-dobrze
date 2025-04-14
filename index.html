@@ -99,9 +99,8 @@
   .dropdown-panel {
     position: absolute;
     top: 100%;
-    left: 0;
     z-index: 50;
-
+    left:0;
     background-color: white;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
@@ -112,6 +111,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
+    
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   }
 
@@ -119,6 +119,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+   
   }
 
 
@@ -128,11 +129,11 @@
     transition: max-height 0.3s ease-out;
   }
 
-  .arrow-icon {
+  .arrow-icon-dropdown {
     transition: transform 0.3s ease;
   }
 
-  .arrow-icon.rotate {
+  .arrow-icon-dropdown.rotate {
     transform: rotate(180deg);
   }
 
@@ -169,7 +170,7 @@
             Kategorie
             <span>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="arrow-icon">
+                class="arrow-icon-dropdown">
                 <path
                   d="M4.46289 6.80664L0.478516 2.82227C0.185547 2.5293 0.185547 2.08984 0.478516 1.82617L1.12305 1.15234C1.41602 0.888672 1.85547 0.888672 2.11914 1.15234L4.93164 3.99414L7.77344 1.15234C8.03711 0.888672 8.47656 0.888672 8.76953 1.15234L9.41406 1.82617C9.70703 2.08984 9.70703 2.5293 9.41406 2.82227L5.42969 6.80664C5.16602 7.07031 4.72656 7.07031 4.46289 6.80664Z"
                   fill="#FFEA74" />
@@ -178,7 +179,7 @@
           </button>
 
           <!-- Dropdown Panel -->
-          <div id="categoriesPanel" class="dropdown-panel mx-auto max-w-[1920px] w-full">
+          <div id="categoriesPanel" class="dropdown-panel mx-auto max-w-[1920px] w-full transition-transform">
             <div class="grid grid-cols-6 gap-6 w-full bg-white p-6 rounded-md overflow-auto h-[60vh]">
               <!-- Row 1 -->
               <div
@@ -1196,11 +1197,11 @@
             </div>
           </div>
         </div>
-        <a href="#" class="text-base leading-[150%] text-white">Okazje</a>
-        <a href="#" class="text-base leading-[150%] text-white">Kody rabatowe</a>
-        <a href="#" class="text-base leading-[150%] text-white">Gezetki</a>
-        <a href="#" class="text-base leading-[150%] text-white">Poradniki</a>
-        <a href="#" class="text-base leading-[150%] text-white">Sklepy</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Okazje</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Kody rabatowe</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Gezetki</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Poradniki</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Sklepy</a>
       </nav>
       <!-- Search Icon -->
       <div class="hidden lg:flex items-center" id="searchBtn">
@@ -1248,30 +1249,30 @@
           </svg>
         </button>
       </div>
-      <div class="border-b border-[#DCDCDE] py-3">
+      <div class="border-b border-Jupiter py-3">
         <input id="search-input" type="text"
-          class="outline-none bg-transparent placeholder:text-[#BBBABF] text-base text-black" placeholder="Szukaj..." />
+          class="outline-none bg-transparent placeholder:text-piedWagtailGrey text-base text-black" placeholder="Szukaj..." />
       </div>
     </div>
     <div id="suggestions" class="hidden">
       <div class="flex justify-start items-center gap-4 max-w-[1163px] mx-auto px-4 pb-6 pt-7">
         <article class="suggestion-item flex flex-col justify-center items-center gap-5" data-name="The North Face">
-          <div class="border-[#DCDCDE] border px-4 h-[100px] flex justify-center items-center">
+          <div class="border-Jupiter border px-4 h-[100px] flex justify-center items-center">
             <img src="/images/svg/north-face-logo.svg" alt="" />
           </div>
-          <h3 class="text-[#243237] text-base">The North Face</h3>
+          <h3 class="text-lightblack text-base">The North Face</h3>
         </article>
         <article class="suggestion-item flex flex-col justify-center items-center gap-5" data-name="The Body Shop">
-          <div class="border-[#DCDCDE] border px-4 h-[100px] flex justify-center items-center">
+          <div class="border-Jupiter border px-4 h-[100px] flex justify-center items-center">
             <img src="/images/svg/no-body-shop.svg" alt="" />
           </div>
-          <h3 class="text-[#243237] text-base">The Body Shop</h3>
+          <h3 class="text-lightblack text-base">The Body Shop</h3>
         </article>
         <article class="suggestion-item flex flex-col justify-center items-center gap-5" data-name="The Streets">
-          <div class="border-[#DCDCDE] border px-4 h-[100px] flex justify-center items-center">
+          <div class="border-Jupiter border px-4 h-[100px] flex justify-center items-center">
             <img src="/images/svg/street.svg" alt="" />
           </div>
-          <h3 class="text-[#243237] text-base">The Streets</h3>
+          <h3 class="text-lightblack text-base">The Streets</h3>
         </article>
       </div>
     </div>
@@ -1281,7 +1282,7 @@
   <div class="mobile-sidebar" id="mobileSidebar">
     <div class="flex justify-between items-center gap-3 pr-4">
       <div class="max-w-[164px] w-full">
-        <img src="/public/images/svg/mobile-logo.svg" alt="wydawaj dobrze logo" />
+        <img src="/images/svg/mobile-logo.svg" alt="wydawaj dobrze logo" />
       </div>
       <button id="close">
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -1306,83 +1307,83 @@
       <div id="dropdownContent" class="dropdown-content w-full bg-white shadow-lg">
 
         <ul class="py-1">
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Artykuły spożywcze</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Biuro i firma</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Biżuteria i dodatki</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Catering Dietetyczne</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Dla dzieci</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Dom i ogród</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Drogerie, Perfumy i kosmetyki</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Komputery i elektronika</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Finanse</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Gry, programy, aplikacje</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Inne</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Konta bankowe dla młodych i młodzieży</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Artykuły spożywcze</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Biuro i firma</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Biżuteria i dodatki</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Catering Dietetyczne</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Dla dzieci</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Dom i ogród</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Drogerie, Perfumy i kosmetyki</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Komputery i elektronika</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Finanse</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Gry, programy, aplikacje</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Inne</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Konta bankowe dla młodych i młodzieży</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Książki, muzyka, film</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Meble, oświetlenie i dodatki</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Motoryzacja</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Odzież i obuwie</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Podróże i wakacje</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Portale streamingowe</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Prezenty i kwiaty</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Promocje bankowe 2025</a></li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Gry, programy, aplikacje</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Książki, muzyka, film</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Meble, oświetlenie i dodatki</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Motoryzacja</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Odzież i obuwie</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Podróże i wakacje</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Portale streamingowe</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Prezenty i kwiaty</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Promocje bankowe 2025</a></li>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Gry, programy, aplikacje</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Inne</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Inne</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">młodzieży</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">młodzieży</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Książka, muzyka, film</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Książka, muzyka, film</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Meble, oświetlenie i dodatki</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Meble, oświetlenie i dodatki</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">Prezenty i
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">Prezenty i
               kwiaty</a>
           </li>
-          <li class="border-b border-[#DCDCDE]"><a href="#"
-              class="block px-4 py-2 text-base font-light text-[#050505]">debetowych</a>
+          <li class="border-b border-Jupiter"><a href="#"
+              class="block px-4 py-2 text-base font-light text-blackMetal">debetowych</a>
           </li>
         </ul>
         </li>
       </div>
-      <li class="border-y border-[#DCDCDE]"><a class="text-base font-light text-[#050505]" href="#">Okazje</a></li>
-      <li class="border-b border-[#DCDCDE]"><a class="text-base font-light text-[#050505]" href="#">Kody rabatowe</a>
+      <li class="border-y border-Jupiter"><a class="text-base font-light text-blackMetal" href="#">Okazje</a></li>
+      <li class="border-b border-Jupiter"><a class="text-base font-light text-blackMetal" href="#">Kody rabatowe</a>
       </li>
-      <li class="border-b border-[#DCDCDE]"><a class="text-base font-light text-[#050505]" href="#">Gezetki</a></li>
-      <li class="border-b border-[#DCDCDE]"><a class="text-base font-light text-[#050505]" href="#">Za darmo</a></li>
-      <li class="border-b border-[#DCDCDE]"><a class="text-base font-light text-[#050505]" href="#">Poradnik</a></li>
-      <li class=""><a class="text-base font-light text-[#050505]" href="#">Sklepy</a></li>
+      <li class="border-b border-Jupiter"><a class="text-base font-light text-blackMetal" href="#">Gezetki</a></li>
+      <li class="border-b border-Jupiter"><a class="text-base font-light text-blackMetal" href="#">Za darmo</a></li>
+      <li class="border-b border-Jupiter"><a class="text-base font-light text-blackMetal" href="#">Poradnik</a></li>
+      <li class=""><a class="text-base font-light text-blackMetal" href="#">Sklepy</a></li>
     </ul>
     <div class="px-4">
-      <div class="flex justify-between items-center gap-4 px-4 border-[#DCDCDE] border rounded-md h-[48px]">
-        <input id="searchInput" class="outline-none h-full w-full bg-transparent text-[#BBBABF] text-base font-light"
+      <div class="flex justify-between items-center gap-4 px-4 border-Jupiter border rounded-md h-[48px]">
+        <input id="searchInput" class="outline-none h-full w-full bg-transparent text-piedWagtailGrey text-base font-light"
           type="text" />
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" fill="none">
@@ -1394,11 +1395,11 @@
       </div>
       <!-- Inline Suggestions Container (part of the same container) -->
       <div id="suggestionsBox" class="suggestions">
-        <div class="py-2 px-4 text-[#243237] text-base font-light" onclick="selectSuggestion('The North Face')">The
+        <div class="py-2 px-4 text-lightblack text-base font-light" onclick="selectSuggestion('The North Face')">The
           North Face</div>
-        <div class="py-2 px-4 text-[#243237] text-base font-light" onclick="selectSuggestion('The Body Shop')">The Body
+        <div class="py-2 px-4 text-lightblack text-base font-light" onclick="selectSuggestion('The Body Shop')">The Body
           Shop</div>
-        <div class="py-2 px-4 text-[#243237] text-base font-light" onclick="selectSuggestion('The Streets')">The Streets
+        <div class="py-2 px-4 text-lightblack text-base font-light" onclick="selectSuggestion('The Streets')">The Streets
         </div>
       </div>
     </div>
@@ -1620,12 +1621,12 @@
       <!-- Custom navigation arrows -->
     </section>
   </div>
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden mt-[45px] md:mt-[90px]">
     <img class="top-[-300px] md:top-[78px] right-[-84px] md:right-[-126px] absolute z-[-10] w-full h-full"
       src="/images/hero-product-bg.png" alt="" />
 
     <div
-      class="!max-w-[1561px] mx-auto px-4 !my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      class="!max-w-[1561px] mx-auto px-4 !mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
       <!-- card 1 -->
       <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
@@ -1762,7 +1763,7 @@
       <article
         class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 relative overflow-hidden">
         <div
-          class="bg-[#FFD800] text-[#243237] text-base font-bold w-full rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
+          class="bg-schoolBus text-lightblack text-base font-bold w-full rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
           Tylko u nas
         </div>
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
@@ -2048,7 +2049,7 @@
             Skalnik
           </p>
           <div>
-            <h3 class="text-[#576063] text-xl sm:text-2xl md:text-3xl font-bold text-start md:text-center">
+            <h3 class="text-yachtClub text-xl sm:text-2xl md:text-3xl font-bold text-start md:text-center">
               Kod Rabatowy -30%
             </h3>
             <p
@@ -2069,7 +2070,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-[#576063] mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-yachtClub mt-2 transition-all duration-200 ease-in-out">
                 Zakończone
               </button>
             </div>
@@ -2098,7 +2099,7 @@
   </section>
   <!-- frequently visited stores -->
   <section class="relative hidden lg:block">
-    <div class="bg-[#F4F9FD] w-full h-[200px] absolute -top-[10px] left-0 z-[-4]"></div>
+    <div class="bg-cottonBall w-full h-[200px] absolute -top-[10px] left-0 z-[-4]"></div>
     <img class="top-[200px] left-0 w-full h-full absolute z-[-4]" src="/images/hero-bg-2.png" alt="" />
     <img class="top-0 left-0 w-full h-full absolute z-[-1]" src="/images/frequently-story-bg.png" alt="bg" />
     <div class="bg-white absolute bottom-[50px] w-full h-[200px] flex z-[-2]"></div>
@@ -2484,7 +2485,7 @@
         <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
           60 000+
         </h4>
-        <p class="text-center text-[#050505] text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
+        <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           aktywnych kodów rabatowych i promocji
         </p>
       </article>
@@ -2493,7 +2494,7 @@
         <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
           400+
         </h4>
-        <p class="text-center text-[#050505] text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
+        <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           nowych rabatów dodawanych każdego miesiąca
         </p>
       </article>
@@ -2502,7 +2503,7 @@
         <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
           773
         </h4>
-        <p class="text-center text-[#050505] text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
+        <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           sklepów w bazie
         </p>
       </article>
@@ -2511,7 +2512,7 @@
         <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
           10+
         </h4>
-        <p class="text-center text-[#050505] text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
+        <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           lat w sieci
         </p>
       </article>
@@ -2520,13 +2521,13 @@
         <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
           10 000zł
         </h4>
-        <p class="text-center text-[#050505] text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
+        <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           oszczędności generowanych przez naszych użytkowników każdego
           miesiąca
         </p>
       </article>
     </div>
-  </section>7
+  </section>
   <!-- TOP categories section  -->
   <section class="relative hidden md:block">
     <img class="absolute top-[300px] left-0 z-[-5] w-full h-full" src="/images/top-categories-bg.png" alt="top bg">
@@ -3150,9 +3151,9 @@
           sklepu, a jakiegoś produktu, to również możesz użyć wyszukiwarki, aby znaleźć interesujące Cię produkty.</p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[10%] top-[5%] max-w-[20px] md:max-w-full max-w-[20px] md:max-w-full"
+      <img class="absolute left-[10%] top-[5%]  max-w-[20px] md:max-w-full"
         src="/images/svg/star-icon.svg" alt="icon">
-      <img class="absolute right-[20%] top-[90%] max-w-[20px] md:max-w-full max-w-[20px] md:max-w-full"
+      <img class="absolute right-[20%] top-[90%]  max-w-[20px] md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
@@ -3385,7 +3386,6 @@
               <ul class="space-y-2 text-base text-white font-light">
                 <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">KONTAKT</a></li>
                 <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">NEWSLETTER</a></li>
-
               </ul>
             </div>
           </div>
@@ -3394,7 +3394,7 @@
   </footer>
   <!-- top to bottom buttom -->
   <button
-    class="fixed bottom-[200px] 2xl:buttom-[600px] 3xl:bottom-[600px] right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full   hover:bg-[#F47D41] transition-all duration-200 bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)]"
+    class="fixed bottom-[200px] 2xl:buttom-[600px] 3xl:bottom-[600px] right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full  hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)]"
     id="scroll" style="display: none">
     <span class="flex justify-center items-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -3404,372 +3404,10 @@
     </svg>
     </span>
   </button>
-  <script>
-    // Get DOM elements
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileSidebar = document.getElementById("mobileSidebar");
-    const sidebarOverlay = document.getElementById("sidebarOverlay");
-    const searchBtn = document.getElementById("searchBtn");
-    const searchOverlay = document.getElementById("searchOverlay");
-    const searchCloseBtn = document.getElementById("searchCloseBtn");
-    const sidebarCloseBtn = document.getElementById("close");
-
-    // Toggle mobile sidebar
-    function toggleMobileMenu() {
-      const isOpen = mobileSidebar.classList.toggle("open");
-      sidebarOverlay.classList.toggle("active", isOpen);
-      sidebarCloseBtn.classList.toggle("active", isOpen);
-
-      // Close search overlay if it's open
-      if (searchOverlay.classList.contains("open")) {
-        searchOverlay.classList.remove("open");
-        sidebarCloseBtn.classList.remove("open"); // fixed this line
-      }
-
-      // Prevent or restore body scroll
-      document.body.style.overflow = isOpen ? "hidden" : "";
-    }
-
-    // Toggle search overlay
-    function toggleSearchOverlay() {
-      const isOpen = searchOverlay.classList.toggle("open");
-
-      // Close mobile sidebar if it's open
-      if (mobileSidebar.classList.contains("open")) {
-        mobileSidebar.classList.remove("open");
-        sidebarOverlay.classList.remove("active");
-        sidebarCloseBtn.classList.remove("active");
-      }
-
-      // Focus input when opening
-      if (isOpen) {
-        const input = document.querySelector(".search-overlay-input");
-        input && input.focus();
-      }
-
-      // Always allow body scroll in search overlay
-      document.body.style.overflow = "";
-    }
-
-    // Event listeners
-    mobileMenuBtn.addEventListener("click", toggleMobileMenu);
-    sidebarOverlay.addEventListener("click", toggleMobileMenu);
-    searchBtn.addEventListener("click", toggleSearchOverlay);
-    searchCloseBtn.addEventListener("click", toggleSearchOverlay);
-
-    // Optional: close sidebar via close button
-    sidebarCloseBtn.addEventListener("click", toggleMobileMenu);
-
-    // Close overlays on window resize
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
-        mobileSidebar.classList.remove("open");
-        sidebarOverlay.classList.remove("active");
-        sidebarCloseBtn.classList.remove("active");
-        searchOverlay.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-    });
-
-    // Close search overlay only when clicking outside of it and not on the search button
-    document.addEventListener("click", function (event) {
-      const isInsideSearch = event.target.closest("#searchOverlay");
-      const isSearchBtn = event.target.closest("#searchBtn");
-      if (!isInsideSearch && !isSearchBtn) {
-        searchOverlay.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-    });
-
-    // DOM elements
-    const searchInput = document.getElementById("search-input");
-    const suggestionsContainer = document.getElementById("suggestions");
-    const searchContainer = document.getElementById("search-container");
-    const suggestionItems = document.querySelectorAll(".suggestion-item");
-
-    // Show/hide clear button and filter suggestions based on input
-    searchInput.addEventListener("input", function () {
-      const query = this.value.trim().toLowerCase();
-      console.log(query);
-
-      // Filter and display suggestions
-      if (query) {
-        let hasVisibleSuggestions = false;
-
-        // Loop through all suggestion items and show/hide based on match
-        suggestionItems.forEach((item) => {
-          console.log(item);
-
-          const itemName = item.getAttribute("data-name").toLowerCase();
-          console.log(itemName);
-
-          if (itemName.includes(query)) {
-            item.style.display = "flex";
-            hasVisibleSuggestions = true;
-          } else {
-            item.style.display = "none";
-          }
-        });
-
-        // Show suggestions container if there are visible suggestions
-        if (hasVisibleSuggestions) {
-          suggestionsContainer.classList.remove("hidden");
-        } else {
-          suggestionsContainer.classList.add("hidden");
-        }
-      } else {
-        suggestionsContainer.classList.add("hidden");
-      }
-    });
-
-    // Handle click on suggestion items
-    suggestionItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        const name = this.getAttribute("data-name");
-        searchInput.value = name;
-        suggestionsContainer.classList.add("hidden");
-        clearButton.classList.remove("hidden");
-      });
-    });
-
-    // Show suggestions on focus if there's text
-    searchInput.addEventListener("focus", function () {
-      const query = this.value.trim().toLowerCase();
-      if (query) {
-        let hasVisibleSuggestions = false;
-
-        // Loop through all suggestion items and show/hide based on match
-        suggestionItems.forEach((item) => {
-          const itemName = item.getAttribute("data-name").toLowerCase();
-          if (itemName.includes(query)) {
-            item.style.display = "flex";
-            hasVisibleSuggestions = true;
-          } else {
-            item.style.display = "none";
-          }
-        });
-
-        // Show suggestions container if there are visible suggestions
-        if (hasVisibleSuggestions) {
-          suggestionsContainer.classList.remove("hidden");
-        }
-      }
-    });
-
-    // DOM Elements
-    const categoriesDropdown = document.getElementById("categoriesDropdown");
-    const categoriesBtn = document.getElementById("categoriesBtn");
-    const categoriesPanel = document.getElementById("categoriesPanel");
-    const arrowIcon = categoriesBtn.querySelector(".arrow-icon");
-
-    // Open dropdown on mouse enter
-    categoriesDropdown.addEventListener("mouseenter", function () {
-      categoriesPanel.classList.add("show");
-      arrowIcon.classList.add("rotate");
-    });
-
-    // Close dropdown on mouse leave
-    categoriesDropdown.addEventListener("mouseleave", function () {
-      categoriesPanel.classList.remove("show");
-      arrowIcon.classList.remove("rotate");
-    });
-
-    // Handle window resize
-    window.addEventListener("resize", function () {
-      if (window.innerWidth < 1024) {
-        categoriesPanel.classList.remove("show");
-        arrowIcon.classList.remove("rotate");
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const dropdownBtn = document.getElementById('dropdownBtn');
-      const dropdownContent = document.getElementById('dropdownContent');
-      const dropdownArrow = document.getElementById('dropdownArrow');
-
-      dropdownBtn.addEventListener('click', function () {
-        const isOpen = dropdownContent.classList.toggle('open');
-
-        if (isOpen) {
-          // Dropdown is open
-          dropdownArrow.classList.add('rotate-180', 'arrow-change');
-          dropdownBtn.classList.remove('text-[#243237]');
-          dropdownBtn.classList.add('bg-orange-400', 'text-white');
-        } else {
-          // Dropdown is closed
-          dropdownArrow.classList.remove('rotate-180', 'arrow-change');
-          dropdownBtn.classList.remove('text-white');
-          dropdownBtn.classList.add('text-[#243237]');
-          dropdownBtn.classList.remove('bg-orange-400');
-        }
-      });
-    });
-
-    // Get DOM elements
-    const searchInputMobile = document.getElementById('searchInput');
-    const suggestionsBox = document.getElementById('suggestionsBox');
-
-    // Show suggestions when typing
-    searchInputMobile.addEventListener('input', function () {
-      if (this.value.trim() !== '') {
-        suggestionsBox.style.display = 'block';
-      } else {
-        suggestionsBox.style.display = 'none';
-      }
-    });
-
-    // Hide suggestions when clicking outside
-    document.addEventListener('click', function (event) {
-      if (!event.target.closest('.max-w-md')) {
-        suggestionsBox.style.display = 'none';
-      }
-    });
-
-    // Function to select a suggestion
-    function selectSuggestion(text) {
-      searchInputMobile.value = text;
-      suggestionsBox.style.display = 'none';
-    }
-
-    // Show suggestions on focus
-    searchInputMobile.addEventListener('focus', function () {
-      if (this.value.trim() !== '') {
-        suggestionsBox.style.display = 'block';
-      }
-    });
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const swiperElement = document.querySelector(".card-swiper");
-      const totalSlides = document.querySelectorAll(".swiper-slide").length;
-      const prevButton = document.querySelector(".custom-next-arrow");
-      const nextButton = document.querySelector(".custom-prev-arrow");
-
-      // Initialize Swiper
-      const swiper = new Swiper(".card-swiper", {
-        loop: false,
-        // Responsive breakpoints
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 7
-          },
-          633: {
-            slidesPerView: 1,
-            spaceBetween: 9
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 10
-          },
-          992: {
-            slidesPerView: 3.5,
-            spaceBetween: 10
-          },
-          1120: {
-            slidesPerView: 4,
-            spaceBetween: 11
-          },
-          1300: {
-            slidesPerView: 5,
-            spaceBetween: 11
-          },
-        },
-
-        navigation: {
-          nextEl: ".custom-prev-arrow",
-          prevEl: ".custom-next-arrow",
-        },
-
-        centeredSlides: false,
-        grabCursor: true,
-
-        on: {
-          init: function () {
-            updateArrows(this);
-          },
-          slideChange: function () {
-            updateArrows(this);
-          },
-          resize: function () {
-            this.update();
-            updateArrows(this);
-          },
-        },
-      });
-
-      /**
-       * Updates navigation arrows visibility based on swiper state
-       */
-      function updateArrows(swiperInstance) {
-        // Get current device slidesPerView based on breakpoint
-        let currentSlidesPerView = swiperInstance.params.slidesPerView;
-
-        // All slides are visible - hide both arrows
-        if (totalSlides <= currentSlidesPerView) {
-          prevButton.classList.add("!hidden");
-          prevButton.classList.remove("md:!flex");
-          nextButton.classList.add("!hidden");
-          nextButton.classList.remove("md:!flex");
-          return;
-        }
-
-        // Handle beginning of slider
-        if (swiperInstance.isBeginning) {
-          prevButton.classList.add("!hidden");
-          prevButton.classList.remove("md:!flex");
-        } else {
-          prevButton.classList.remove("!hidden");
-          prevButton.classList.add("md:!flex");
-        }
-
-        // Handle end of slider
-        if (swiperInstance.isEnd) {
-          nextButton.classList.add("!hidden");
-          nextButton.classList.remove("md:!flex");
-        } else {
-          nextButton.classList.remove("!hidden");
-          nextButton.classList.add("md:!flex");
-        }
-      }
-
-      // Initial update with a small delay to ensure everything is rendered
-      setTimeout(() => {
-        swiper.update();
-        updateArrows(swiper);
-      }, 100);
-
-      // Update on window resize with debounce
-      let resizeTimer;
-      window.addEventListener("resize", function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-          swiper.update();
-          updateArrows(swiper);
-        }, 250);
-      });
-    });
-  </script>
-  <script>
-    // SCROLL TO TOP BUTTON FUNCTIONALITY
-    window.addEventListener("scroll", () => {
-      const scrollButton = document.getElementById("scroll")
-      if (window.scrollY > 150) {
-        scrollButton.style.display = "block";
-      } else {
-        scrollButton.style.display = "none";
-      }
-
-    });
-    document.getElementById("scroll").addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      })
-    })
-  </script>
+ 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/slider.js"></script>
 </body>
 
 </html>
