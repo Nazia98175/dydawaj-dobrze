@@ -29,6 +29,9 @@ export default {
         lightblack: "#243237",
         exodusFruit: "#696ADB",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

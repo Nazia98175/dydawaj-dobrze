@@ -5,16 +5,9 @@
 @tailwind utilities;
 
 body {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", "sans-serif";
 }
 /* Global */
-body.page-wrapper {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: white;
-  color: #111;
-}
 
 /* Header Section */
 .section-header {
@@ -80,12 +73,12 @@ body.page-wrapper {
   margin: auto;
   gap: 10px;
   justify-content: space-between;
+  align-items: start;
 }
 /* Offers Section */
 .offer-section {
   max-width: 1178px;
   width: 100%;
-  margin: auto;
 }
 
 .offer-container {
@@ -222,7 +215,7 @@ body.page-wrapper {
   line-height: 140%;
 }
 
-.contact-info p {
+.information {
   max-width: 256px;
   line-height: 160%;
   font-size: 20px;
@@ -261,15 +254,31 @@ body.page-wrapper {
 }
 
 .history-title {
-  font-size: 1.5rem;
+  font-size: 50px;
   font-weight: 700;
+  line-height: 65px;
+  margin-top: 70px;
 }
 
+.history-desc {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.history-img {
+  margin-top: 40px;
+}
 .logo-img {
-  max-width: 200px;
-  height: auto;
+  max-width: 428px;
+  max-height: 268px;
 }
 
+.title-news-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 /* Delivery Section */
 .delivery-section {
   margin-top: 2rem;
@@ -279,13 +288,19 @@ body.page-wrapper {
 }
 
 .delivery-title {
-  font-size: 1.25rem;
+  font-size: 30px;
+  max-width: 344px;
   font-weight: 700;
+  line-height: 140%;
 }
 
 .delivery-desc {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
+  max-width: 344px;
+  line-height: 160%;
+  font-size: 20px;
+  margin-top: 20px;
+  color: #243237;
+  font-weight: 300;
 }
 
 @media (max-width: 1024px) {
@@ -353,6 +368,7 @@ body.page-wrapper {
   .card-section {
     padding: 1rem;
     color: #243237;
+    align-items: start;
   }
 
   .contact-info {
