@@ -184,12 +184,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isOpen) {
       // Dropdown is open
-      dropdownArrow.classList.add("rotate-180", "arrow-change");
+      dropdownArrow.classList.add("rotate-90", "arrow-change");
       dropdownBtn.classList.remove("text-[#243237]");
       dropdownBtn.classList.add("bg-orange-400", "text-white");
     } else {
       // Dropdown is closed
-      dropdownArrow.classList.remove("rotate-180", "arrow-change");
+      dropdownArrow.classList.remove("rotate-90", "arrow-change");
       dropdownBtn.classList.remove("text-white");
       dropdownBtn.classList.add("text-[#243237]");
       dropdownBtn.classList.remove("bg-orange-400");

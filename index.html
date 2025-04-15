@@ -19,7 +19,7 @@
     max-width: 300px;
     height: 100vh;
     background-color: white;
-    z-index: 20;
+    z-index: 9999;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
@@ -98,7 +98,7 @@
 
   .dropdown-panel {
     position: absolute;
-    top: 100%;
+    top: 80%;
     z-index: 50;
     left:0;
     background-color: white;
@@ -138,7 +138,7 @@
   }
 
   .dropdown-content.open {
-    max-height: 1464px;
+    max-height: 1451px;
     /* Adjust based on your content */
     transition: max-height 0.5s ease-in;
   }
@@ -151,13 +151,32 @@
     border-top: none;
     display: none;
   }
+  .custom-pointer {
+  cursor: url("../images/svg/cursor-pointer.svg"), auto;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 9999px;
+}
 </style>
 
 <body>
   <!-- Header start --- -->
   <header class="relative">
     <div class="flex justify-between items-center gap-7 max-w-[1164px] mx-auto px-4">
-      <img class="hidden xl:block max-w-[160px] md:max-w-[270px] w-full cursor-pointer" src="/images/svg/logo.svg"
+      <img class="hidden xl:block max-w-[160px] md:max-w-[270px] w-full custom-pointer" src="/images/svg/logo.svg"
         alt="logo" />
       <div class=" block xl:hidden max-w-[160px] md:max-w-[270px] w-full">
         <img src="/images/svg/mobile-logo.svg" alt="wydawaj dobrze logo" />
@@ -166,7 +185,7 @@
       <nav class="hidden xl:flex space-x-8">
         <div class="" id="categoriesDropdown">
           <button id="categoriesBtn"
-            class="flex justify-between items-center gap-3 text-base leading-[150%] text-primary">
+            class="flex justify-between items-center gap-3 text-base leading-[150%] text-primary custom-pointer">
             Kategorie
             <span>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -180,10 +199,10 @@
 
           <!-- Dropdown Panel -->
           <div id="categoriesPanel" class="dropdown-panel mx-auto max-w-[1920px] w-full transition-transform">
-            <div class="grid grid-cols-6 gap-6 w-full bg-white p-6 rounded-md overflow-auto h-[60vh]">
+            <div class="grid grid-cols-6 gap-6 w-full bg-white p-6 rounded-md overflow-auto h-[60vh] custom-scrollbar">
               <!-- Row 1 -->
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group  custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -216,7 +235,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" viewBox="0 0 38 36" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -255,7 +274,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="44" viewBox="0 0 36 44" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -299,7 +318,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg width="37" height="40" viewBox="0 0 37 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -332,7 +351,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg width="59" height="33" viewBox="0 0 59 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -404,7 +423,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg width="37" height="40" viewBox="0 0 37 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -438,7 +457,7 @@
               </div>
               <!-- Row 2  -->
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="45" viewBox="0 0 48 45" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -515,7 +534,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="47" viewBox="0 0 42 47" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -562,7 +581,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" viewBox="0 0 25 38" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -582,7 +601,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="26" viewBox="0 0 44 26" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -609,7 +628,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="38" viewBox="0 0 45 38" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -681,7 +700,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="31" viewBox="0 0 38 31" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -709,7 +728,7 @@
               </div>
               <!-- Row 3 -->
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="35" viewBox="0 0 42 35" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -747,7 +766,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="62" viewBox="0 0 68 62" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -773,7 +792,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="73" height="28" viewBox="0 0 73 28" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -826,7 +845,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -849,7 +868,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="47" viewBox="0 0 48 47" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -876,7 +895,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -907,7 +926,7 @@
               </div>
               <!-- Row 4 -->
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="41" height="43" viewBox="0 0 41 43" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -936,7 +955,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="41" height="35" viewBox="0 0 41 35" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -968,7 +987,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1003,7 +1022,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1035,7 +1054,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="57" height="34" viewBox="0 0 57 34" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1074,7 +1093,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="41" viewBox="0 0 28 41" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1117,7 +1136,7 @@
               </div>
               <!-- Row 5 -->
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="38" viewBox="0 0 48 38" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1143,7 +1162,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="43" height="38" viewBox="0 0 43 38" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1166,7 +1185,7 @@
                 </h3>
               </div>
               <div
-                class="group flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
+                class="group custom-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
                   <defs>
                     <linearGradient id="hoverGradient" x1="0" y1="0" x2="1" y2="1">
@@ -1197,15 +1216,15 @@
             </div>
           </div>
         </div>
-        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Okazje</a>
-        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Kody rabatowe</a>
-        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Gezetki</a>
-        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Poradniki</a>
-        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out">Sklepy</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out  custom-pointer">Okazje</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out  custom-pointer">Kody rabatowe</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out  custom-pointer">Gezetki</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out  custom-pointer">Poradniki</a>
+        <a href="#" class="text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out custom-pointer">Sklepy</a>
       </nav>
       <!-- Search Icon -->
       <div class="hidden lg:flex items-center" id="searchBtn">
-        <button class="text-white focus:outline-none">
+        <button class="text-white focus:outline-none custom-pointer">
           <svg width="25" height="32" viewBox="0 0 25 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16.7905 20.1152C16.7905 20.1152 16.4436 20.4622 15.7498 21.156C15.0559 21.8499 13.7201 22.1968 11.7422 22.1968C9.76432 22.1968 8.07357 21.5029 6.66992 20.1152C5.26628 18.7275 4.56445 17.0448 4.56445 15.0669C4.56445 13.089 5.26628 11.3983 6.66992 9.99463C8.07357 8.59098 9.76432 7.88916 11.7422 7.88916C13.7201 7.88916 15.4028 8.59098 16.7905 9.99463C18.1782 11.3983 18.8721 13.089 18.8721 15.0669C18.8721 17.0448 18.1782 18.7275 16.7905 20.1152ZM11.7422 24.2544C13.401 24.2544 14.9323 23.8397 16.3359 23.0103C17.7396 22.1808 18.8561 21.0643 19.6855 19.6606C20.515 18.257 20.9297 16.7257 20.9297 15.0669C20.9297 12.5148 20.0285 10.3455 18.2261 8.55908C16.4237 6.77262 14.2544 5.87939 11.7183 5.87939C9.18213 5.87939 7.02083 6.77262 5.23438 8.55908C3.44792 10.3455 2.55469 12.5068 2.55469 15.043C2.55469 17.5791 3.44792 19.7484 5.23438 21.5508C7.02083 23.3532 9.1901 24.2544 11.7422 24.2544ZM21.9346 25.2593L22.6523 24.5415L18.2021 20.0913L17.4844 20.8091L16.7666 21.5269L21.2168 25.9771L21.9346 25.2593Z"
@@ -1233,7 +1252,7 @@
   <div class="search-overlay" id="searchOverlay">
     <div class="max-w-[1163px] mx-auto px-4 items-end py-4">
       <div class="flex flex-col gap-4 w-full items-end">
-        <button class="search-overlay-close" id="searchCloseBtn">
+        <button class="search-overlay-close mr-2  custom-pointer" id="searchCloseBtn">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path
               d="M6.92881 5.9989L11.8094 1.11918C12.0635 0.865121 12.0635 0.444607 11.8094 0.190546C11.5553 -0.0635152 11.1347 -0.0635152 10.8806 0.190546L6 5.07027L1.11939 0.190546C0.865279 -0.0635152 0.444688 -0.0635152 0.190581 0.190546C-0.0635268 0.444607 -0.0635268 0.865121 0.190581 1.11918L5.07119 5.9989L0.190581 10.8786C-0.0635268 11.1327 -0.0635268 11.5532 0.190581 11.8073C0.322015 11.9387 0.488499 12 0.654984 12C0.821468 12 0.987952 11.9387 1.11939 11.8073L6 6.92754L10.8806 11.8073C11.012 11.9387 11.1785 12 11.345 12C11.5115 12 11.678 11.9387 11.8094 11.8073C12.0635 11.5532 12.0635 11.1327 11.8094 10.8786L6.92881 5.9989Z"
@@ -1241,7 +1260,7 @@
           </svg>
         </button>
 
-        <button>
+        <button class=" custom-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" fill="none">
             <path
               d="M16.2905 20.1152C16.2905 20.1152 15.9436 20.4622 15.2498 21.156C14.5559 21.8499 13.2201 22.1968 11.2422 22.1968C9.26432 22.1968 7.57357 21.5029 6.16992 20.1152C4.76628 18.7275 4.06445 17.0448 4.06445 15.0669C4.06445 13.089 4.76628 11.3983 6.16992 9.99463C7.57357 8.59098 9.26432 7.88916 11.2422 7.88916C13.2201 7.88916 14.9028 8.59098 16.2905 9.99463C17.6782 11.3983 18.3721 13.089 18.3721 15.0669C18.3721 17.0448 17.6782 18.7275 16.2905 20.1152ZM11.2422 24.2544C12.901 24.2544 14.4323 23.8397 15.8359 23.0103C17.2396 22.1808 18.3561 21.0643 19.1855 19.6606C20.015 18.257 20.4297 16.7257 20.4297 15.0669C20.4297 12.5148 19.5285 10.3455 17.7261 8.55908C15.9237 6.77262 13.7544 5.87939 11.2183 5.87939C8.68213 5.87939 6.52083 6.77262 4.73438 8.55908C2.94792 10.3455 2.05469 12.5068 2.05469 15.043C2.05469 17.5791 2.94792 19.7484 4.73438 21.5508C6.52083 23.3532 8.6901 24.2544 11.2422 24.2544ZM21.4346 25.2593L22.1523 24.5415L17.7021 20.0913L16.9844 20.8091L16.2666 21.5269L20.7168 25.9771L21.4346 25.2593Z"
@@ -1251,7 +1270,7 @@
       </div>
       <div class="border-b border-Jupiter py-3">
         <input id="search-input" type="text"
-          class="outline-none bg-transparent placeholder:text-piedWagtailGrey text-base text-black" placeholder="Szukaj..." />
+          class="outline-none bg-transparent placeholder:text-piedWagtailGrey text-base text-black w-full" placeholder="Szukaj..." />
       </div>
     </div>
     <div id="suggestions" class="hidden">
@@ -1279,7 +1298,7 @@
   </div>
   <!-- Mobile Sidebar -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <div class="mobile-sidebar" id="mobileSidebar">
+  <div class="mobile-sidebar pb-5" id="mobileSidebar">
     <div class="flex justify-between items-center gap-3 pr-4">
       <div class="max-w-[164px] w-full">
         <img src="/images/svg/mobile-logo.svg" alt="wydawaj dobrze logo" />
@@ -1295,16 +1314,15 @@
     <ul class="mobile-menu-items">
       <button id="dropdownBtn" class="flex items-center justify-between w-full px-4 py-2 text-base font-light">
         Kategorie
-        <svg id="dropdownArrow" class="w-4 h-4 ml-2 transition-transform duration-300" viewBox="0 0 20 20"
-          fill="currentColor">
-          <path fill-rule="evenodd"
-            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-            clip-rule="evenodd" />
-        </svg>
+       
+        <svg id="dropdownArrow" class="w-4 h-4  transition-transform duration-300" width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.22461 5.81445L2.24023 9.79883C1.94727 10.0918 1.50781 10.0918 1.24414 9.79883L0.570312 9.1543C0.306641 8.86133 0.306641 8.42187 0.570312 8.1582L3.41211 5.3457L0.570312 2.50391C0.30664 2.24023 0.30664 1.80078 0.570312 1.50781L1.24414 0.863281C1.50781 0.570312 1.94727 0.570312 2.24023 0.863281L6.22461 4.84766C6.48828 5.11133 6.48828 5.55078 6.22461 5.81445Z" fill="#243237"/>
+</svg>
+
       </button>
 
       <!-- Dropdown Content (static positioning) -->
-      <div id="dropdownContent" class="dropdown-content w-full bg-white shadow-lg">
+      <div id="dropdownContent" class="dropdown-content w-full bg-white">
 
         <ul class="py-1">
           <li class="border-b border-Jupiter"><a href="#"
@@ -1363,8 +1381,8 @@
           <li class="border-b border-Jupiter"><a href="#"
               class="block px-4 py-2 text-base font-light text-blackMetal">Meble, oświetlenie i dodatki</a>
           </li>
-          <li class="border-b border-Jupiter"><a href="#"
-              class="block px-4 py-2 text-base font-light text-blackMetal">Prezenty i
+          <li class=""><a href="#"
+              class="block !px-4 !pt-4 !pb-0 text-base font-light text-blackMetal">Prezenty i
               kwiaty</a>
           </li>
           <li class="border-b border-Jupiter"><a href="#"
@@ -1406,7 +1424,7 @@
   </div>
   <!-- Header end --- -->
   <!-- Hero - section - -->
-  <section class="pb-10 pt-[66px] md:pt-[73px] relative xl:static">
+  <section class="pb-10 md:pb-[67px] pt-[66px] md:pt-[73px] relative xl:static">
     <img class="absolute left-0 w-full z-[-1] top-0 h-[231px] md:h-[500px]" src="/images/webp/hero-bg.webp"
       alt="hero bg">
     <div class="flex justify-center items-center">
@@ -1419,7 +1437,7 @@
   <!-- Hero SLIDER-SECTION -->
   <div class=" px-4 md:px-8 mt-[40px] md:mt-0">
     <section
-      class=" px-8 max-w-[1650px] mx-auto overflow-hidden bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] relative rounded-3xl">
+      class=" px-8 max-w-[1650px] mx-auto overflow-hidden bg-white shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] relative rounded-3xl">
 
       <div class="max-w-[1540px] mx-auto overflow-hidden px-2">
 
@@ -1428,7 +1446,7 @@
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <article
-              class="swiper-slide relative overflow-hidden bg-white rounded-3xl shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative overflow-hidden bg-white rounded-3xl shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1438,7 +1456,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Abi</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -8%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group custom-pointer flex justify-center gap-2 h-[40px] items-center rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1448,7 +1466,7 @@
             </article>
             <!-- Slide 2 -->
             <article
-              class="swiper-slide relative bg-white rounded-3xl overflow-hidden shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10  !flex !flex-col justify-center items-center">
+              class="swiper-slide relative bg-white rounded-3xl overflow-hidden  shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8  !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1458,7 +1476,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Amso</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -2%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer flex justify-center h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1468,7 +1486,7 @@
             </article>
             <!-- Slide 3 -->
             <article
-              class="swiper-slide relative bg-white rounded-3xl overflow-hidden shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative bg-white rounded-3xl overflow-hidden shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1478,7 +1496,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Douglas</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -10%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer flex justify-center h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1488,7 +1506,7 @@
             </article>
             <!-- Slide 4 -->
             <article
-              class="swiper-slide relative bg-white rounded-3xl overflow-hidden shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative bg-white rounded-3xl overflow-hidden  shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1498,7 +1516,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Hosting</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -5%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center  custom-pointer h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1508,7 +1526,7 @@
             </article>
             <!-- Slide 5 -->
             <article
-              class="swiper-slide relative bg-white rounded-3xl overflow-hidden shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative bg-white rounded-3xl overflow-hidden  shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1518,7 +1536,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Hebe</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -8%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center  custom-pointer h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1528,7 +1546,7 @@
             </article>
             <!-- Slide 6 -->
             <article
-              class="swiper-slide relative bg-white overflow-hidden rounded-3xl shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative bg-white overflow-hidden rounded-3xl  shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1538,7 +1556,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Abi</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -8%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center  custom-pointer h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1548,7 +1566,7 @@
             </article>
             <!-- slide 7 -->
             <article
-              class="swiper-slide relative bg-white overflow-hidden rounded-3xl shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative bg-white overflow-hidden rounded-3xl  shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1558,7 +1576,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Hosting</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -5%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center  custom-pointer h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1568,7 +1586,7 @@
             </article>
             <!-- slide 8 -->
             <article
-              class="swiper-slide relative overflow-hidden bg-white rounded-3xl shadow-[0px_5px_20px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:p-10 !flex !flex-col justify-center items-center">
+              class="swiper-slide relative overflow-hidden bg-white rounded-3xl  shadow-[0px_3px_10px_0px_rgba(132,78,213,0.25)] px-10 pt-10 pb-7 md:px-10 md:py-8 !flex !flex-col justify-center items-center">
               <div
                 class="bg-[#FFD800] text-[#243237] text-base font-bold w-full  rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
                 Tylko u nas
@@ -1578,7 +1596,7 @@
               <p class="text-[#243237] text-base font-light pt-4 text-center">Hosting</p>
               <h2 class="text-[#243237] text-base font-bold text-center">Kod Rabatowy -5%</h2>
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center  custom-pointer h-[40px] items-center gap-2 rounded-3xl px-6 py-3 max-w-[158px] w-full text-white  text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
                 <span
                   class="text-base font-bold group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">
@@ -1590,7 +1608,7 @@
           <!-- Custom navigation arrows -->
           <div class="flex">
             <button
-              class="custom-next-arrow  flex justify-center items-center rounded-full cursor-pointer   rotate-180 absolute left-0 z-20 top-[46%]  ml-[10px] md:ml-8">
+              class="custom-next-arrow  flex justify-center items-center rounded-full  custom-pointer   rotate-180 absolute left-0 z-20 top-[46%]  ml-[10px] md:ml-8">
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-inside-1_759_7539" fill="white">
                   <path d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z" />
@@ -1599,12 +1617,11 @@
                   d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
                   fill="#243237" mask="url(#path-1-inside-1_759_7539)" />
               </svg>
-
             </button>
           </div>
           <div class="flex">
             <button
-              class="custom-prev-arrow  flex  justify-center items-center rounded-full cursor-pointer absolute right-0 z-20 mr-[10px] md:mr-8 top-[46%]">
+              class="custom-prev-arrow  flex  justify-center items-center rounded-full c custom-pointer absolute right-0 z-20 mr-[10px] md:mr-8 top-[46%]">
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-inside-1_759_7539" fill="white">
                   <path d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z" />
@@ -1613,7 +1630,6 @@
                   d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
                   fill="#243237" mask="url(#path-1-inside-1_759_7539)" />
               </svg>
-
             </button>
           </div>
         </div>
@@ -1622,13 +1638,13 @@
     </section>
   </div>
   <section class="relative overflow-hidden mt-[45px] md:mt-[90px]">
-    <img class="top-[-300px] md:top-[78px] right-[-84px] md:right-[-126px] absolute z-[-10] w-full h-full"
+    <img class="top-[-300px] md:top-[78px] left-0 absolute z-[-10] w-full h-full"
       src="/images/hero-product-bg.png" alt="" />
 
     <div
-      class="!max-w-[1561px] mx-auto px-4 !mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      class="!max-w-[1561px] mx-auto px-4  mb-[35px] md:mb-[60px] lg:!mb-[86px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
       <!-- card 1 -->
-      <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6">
+      <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 !flex flex-col justify-between h-full">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-1.png" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1648,7 +1664,7 @@
         <p class="text-lightblack text-xs sm:text-base font-light py-3 text-center block md:hidden">
           Dyson - wszystkie okazje
         </p>
-        <div class="flex flex-col justify-between px-3 sm:px-2 sm:h-[158px]">
+        <div class="flex flex-col justify-between px-3 sm:px-2 md:h-[158px]">
           <p class="text-sm font-light text-lightblack leading-[120%] pt-3 text-center hidden md:block">
             Sprawdź aktualne zniżki w wiosennej promocji Dyson. Lorem Ipsum is
             simply dummy text
@@ -1656,7 +1672,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 sm:max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer  gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Sprawdź okazję
               </button>
             </div>
@@ -1672,7 +1688,7 @@
         </div>
       </article>
       <!-- card 2 -->
-      <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6">
+      <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6  !flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-2.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1700,7 +1716,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group   custom-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
               </button>
             </div>
@@ -1716,7 +1732,7 @@
         </div>
       </article>
       <!-- card 3 -->
-      <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6">
+      <article class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 !pointer-events-none flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-3.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1744,7 +1760,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group   custom-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Sprawdź okazję
               </button>
             </div>
@@ -1761,9 +1777,9 @@
       </article>
       <!-- card 4 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 relative overflow-hidden">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 relative overflow-hidden !flex flex-col justify-between">
         <div
-          class="bg-schoolBus text-lightblack text-base font-bold w-full rotate-[223deg] absolute top-[36px] right-[-77px] text-center">
+          class="bg-schoolBus text-lightblack text-xs sm:text-base font-bold w-full rotate-[404deg] absolute top-[43px] md:top-[36px] right-[-122px] md:right-[-77px] text-center drop-shadow-[(2px_2px_6px_rgba(68,68,68,0.25))]">
           Tylko u nas
         </div>
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
@@ -1793,7 +1809,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer  gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Sprawdż okazję
               </button>
             </div>
@@ -1810,7 +1826,7 @@
       </article>
       <!-- card 5 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:block">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-3.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1838,7 +1854,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Sprawdź okazję
               </button>
             </div>
@@ -1855,7 +1871,7 @@
       </article>
       <!-- card 6 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:block">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden  md:flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-5.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1886,7 +1902,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer  gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Sprawdź okazję
               </button>
             </div>
@@ -1903,7 +1919,7 @@
       </article>
       <!-- card 7 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:block">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden  md:flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-6.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1932,7 +1948,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer  gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
               </button>
             </div>
@@ -1949,7 +1965,7 @@
       </article>
       <!-- card 8 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:block">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden  md:flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-7.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -1979,7 +1995,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Pobierz kod
               </button>
             </div>
@@ -1996,7 +2012,7 @@
       </article>
       <!-- card 9 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:block">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden  md:flex flex-col justify-between">
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-8.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -2025,7 +2041,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Sprawdź okazję
               </button>
             </div>
@@ -2042,7 +2058,7 @@
       </article>
       <!-- card 10 -->
       <article
-        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:block">
+        class="bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-4 py-6 hidden md:flex flex-col justify-between" >
         <div class="flex flex-row md:flex-col gap-4 md:gap-0">
           <img class="max-w-[90px] md:max-w-full" src="/images/webp/hero-product-9.webp" alt="product" />
           <p class="text-lightblack text-base font-light py-3 text-center hidden md:block">
@@ -2070,7 +2086,7 @@
           <div>
             <div class="flex justify-center items-center">
               <button
-                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group flex justify-center gap-2 rounded-3xl px-6 py-3 max-w-[216px] pt-2 w-full text-white text-center bg-yachtClub mt-2 transition-all duration-200 ease-in-out">
+                class="hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)] group  custom-pointer  gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center sm:max-w-[216px] w-full text-white text-center bg-secondry mt-2 transition-all duration-200 ease-in-out">
                 Zakończone
               </button>
             </div>
@@ -2086,15 +2102,15 @@
         </div>
       </article>
     </div>
-    <div class="flex justify-center gap-8">
-      <button class="text-black font-light hover:underline">
+    <div class="flex justify-between md:justify-center gap-8 px-4">
+      <button class="text-black font-light hover:underline  custom-pointer">
         Poprzednia
       </button>
       <div class="flex items-center gap-2">
-        <p class="text-base text-lightblack font-light">123...</p>
+        <p class="text-base text-lightblack font-light">1 2 3...</p>
         <p class="text-base text-lightblack font-light">344</p>
       </div>
-      <button class="text-black font-light hover:underline">Następna</button>
+      <button class="text-black font-light hover:underline custom-pointer">Następna</button>
     </div>
   </section>
   <!-- frequently visited stores -->
@@ -2102,7 +2118,7 @@
     <div class="bg-cottonBall w-full h-[200px] absolute -top-[10px] left-0 z-[-4]"></div>
     <img class="top-[200px] left-0 w-full h-full absolute z-[-4]" src="/images/hero-bg-2.png" alt="" />
     <img class="top-0 left-0 w-full h-full absolute z-[-1]" src="/images/frequently-story-bg.png" alt="bg" />
-    <div class="bg-white absolute bottom-[50px] w-full h-[200px] flex z-[-2]"></div>
+    <div class="bg-white absolute bottom-[-202px] w-full h-[500px] flex z-[-2]"></div>
     <div class="max-w-[1500px] mx-auto px-4 pt-[200px] pb-[400px]">
       <h3 class="text-3xl md:text-[40px] lg:text-[50px] font-bold text-white leading-[130%] text-center">
         100 chętnie odwiedzanych <br class="hidden md:block" />
@@ -2111,357 +2127,357 @@
       <div class="pt-[65px] grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-0">
         <div class="gap-2 flex flex-col">
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Colorland
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Deichmann
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Dekoria
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Duka
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Dyson
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Eastend
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Ecco
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             E-glamour
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Elnino Parfum
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             BonPrix
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             4F
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             5.10.15Kids
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Abra
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Adidas
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Agata
           </p>
         </div>
         <div class="gap-2 flex flex-col">
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Avans
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Black Red White
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Bludshop
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Sferis
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Skin79
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Superpharm
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Superprezenty
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             E-Time-trend
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             TOUS
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Ucando
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Runcolors
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Papierowe
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Perfumesco
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Philips
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Promod
           </p>
         </div>
         <div class="gap-2 flex flex-col">
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Prosto
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Quiosque
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Renee
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             RTV Euro AGD
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Van Graaf
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             VidaXL
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Obi
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Pepco
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Rosssmann
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Carrefour
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Auchan
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Biedronka
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Lidl
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Zalando Lounge
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Wólczanka
           </p>
         </div>
         <div class="gap-2 flex flex-col">
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Worldbox
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             BWittchen
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             W.KRUK
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Vobis
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Vistula
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Stokrotka
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             iParts
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Intymna.pl
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             TOUS
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Intimissimi
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Intersport
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Intercars
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Hop-Sport
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Home&You
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Guess
           </p>
         </div>
         <div class="gap-2 flex flex-col">
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Gino Rossi
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Gearbest
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Gandalf
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Fotojoker
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Footshop
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Fiszki
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             e-Zebra
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Eurofirany
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Jula
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Kakadu
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             KFC
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Ole Ole
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Obi
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Notino
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Nike
           </p>
         </div>
         <div class="gap-2 flex flex-col">
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             New Balance
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Neonet
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Neo24
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Monnari
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Ministerstwo Gadżetów
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Megakoszulki
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Media Markt
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Media Expert
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Leroy Merlin
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Kontri
           </p>
           <p
-            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer">
+            class="text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit custom-pointer">
             Komputronik
           </p>
         </div>
@@ -2469,8 +2485,8 @@
     </div>
   </section>
   <!-- Spendwell section -->
-  <section
-    class="max-w-[1561px] mx-auto px-4 flex flex-col lg:flex-row justify-between gap-8 pt-[45px] md:pt-0 relative">
+  <section id="count-hub"
+    class="max-w-[1561px] mx-auto px-4 flex flex-col lg:flex-row justify-between gap-8 pt-[45px] md:pt-10 relative">
     <img class="top-[-890px] left-0 w-full h-full absolute z-[-1] block md:hidden object-cover"
       src="/images/hero-bg-2.png" alt="" />
     <div class="max-w-[514px] w-full">
@@ -2479,11 +2495,11 @@
         Wydawajdobrze w liczbach
       </h3>
     </div>
-    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-7 lg:gap-10 px-6 md:px-0">
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 px-6 md:px-0">
       <article
         class="bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] rounded-xl py-10 px-9 hover:-translate-y-1 transition-all duration-300 ease-in-out">
-        <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
-          60 000+
+        <h4 id="count1" class="text-gradient text-[50px] font-bold leading-[130%] text-center w-[209px]">
+         0
         </h4>
         <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           aktywnych kodów rabatowych i promocji
@@ -2491,8 +2507,8 @@
       </article>
       <article
         class="bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] rounded-xl py-10 px-9 hover:-translate-y-1 transition-all duration-300 ease-in-out">
-        <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
-          400+
+        <h4 id="count2" class="text-gradient text-[50px] font-bold leading-[130%] text-center w-[209px]">
+         0
         </h4>
         <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           nowych rabatów dodawanych każdego miesiąca
@@ -2500,8 +2516,8 @@
       </article>
       <article
         class="bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] rounded-xl py-10 px-9 hover:-translate-y-1 transition-all duration-300 ease-in-out">
-        <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
-          773
+        <h4 id="count3" class="text-gradient text-[50px] font-bold leading-[130%] text-center w-[209px]">
+          0
         </h4>
         <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           sklepów w bazie
@@ -2509,8 +2525,8 @@
       </article>
       <article
         class="bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] rounded-xl py-10 px-9 hover:-translate-y-1 transition-all duration-300 ease-in-out">
-        <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
-          10+
+        <h4 id="count4" class="text-gradient text-[50px] font-bold leading-[130%] text-center w-[209px]">
+          0
         </h4>
         <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           lat w sieci
@@ -2518,8 +2534,8 @@
       </article>
       <article
         class="bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] rounded-xl py-10 px-9 hover:-translate-y-1 transition-all duration-300 ease-in-out">
-        <h4 class="text-gradient text-[50px] font-bold leading-[130%] text-center">
-          10 000zł
+        <h4 id="count5" class="text-gradient text-[50px] font-bold leading-[130%] text-center w-[209px]">
+          0
         </h4>
         <p class="text-center text-blackMetal text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto">
           oszczędności generowanych przez naszych użytkowników każdego
@@ -2530,7 +2546,7 @@
   </section>
   <!-- TOP categories section  -->
   <section class="relative hidden md:block">
-    <img class="absolute top-[300px] left-0 z-[-5] w-full h-full" src="/images/top-categories-bg.png" alt="top bg">
+    <img class="absolute top-[187px] left-0 z-[-5] w-full h-[800px]" src="/images/top-categories-bg.png" alt="top bg">
     <div class="max-w-[1561px] mx-auto px-4">
       <div class="max-w-[514px] w-full">
         <h3
@@ -2541,7 +2557,7 @@
       <div class="pt-[118px] grid sm:grid-col-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
         <!-- row 1 -->
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M44.9347 33.8854C44.9347 33.8854 44.9347 33.831 44.9347 33.8092L41.5728 24.6657V0.816385C41.5728 0.370095 41.2029 0 40.7568 0H4.17795C3.73186 0 3.36194 0.370095 3.36194 0.816385V24.6657L0.043513 33.8092C0.043513 33.8092 0.043513 33.8636 0.043513 33.8854C0.0217528 33.9507 0 34.016 0 34.0814V35.7468C0 36.9877 1.01184 38 2.25217 38H42.7478C43.9881 38 45 36.9877 45 35.7468V34.0814C45 34.0052 44.9782 33.9398 44.9565 33.8745L44.9347 33.8854ZM4.98308 1.63277H39.9299V23.9908H4.98308V1.63277ZM40.1692 25.6236L42.9763 33.2759H1.94753L4.72195 25.6236H40.1692ZM43.3462 35.7577C43.3462 36.0951 43.0634 36.3781 42.7261 36.3781H2.23042C1.89314 36.3781 1.61025 36.0951 1.61025 35.7577V34.9086H43.3462V35.7577Z"
@@ -2607,7 +2623,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="37" height="40" viewBox="0 0 37 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M36.1633 40H31.8122C31.3403 40 30.9489 39.6063 30.9489 39.1314C30.9489 38.6566 31.3403 38.2629 31.8122 38.2629H35.1734L31.6166 12.1135H5.40646L1.84961 38.2629H24.3417C24.8137 38.2629 25.2051 38.6566 25.2051 39.1314C25.2051 39.6063 24.8137 40 24.3417 40H0.859697C0.606459 40 0.376228 39.8958 0.215077 39.6989C0.0539258 39.5136 -0.0266414 39.2588 0.007891 39.0156L3.79494 11.1291C3.85249 10.7006 4.22085 10.3764 4.64675 10.3764H32.3533C32.7907 10.3764 33.1475 10.7006 33.2051 11.1291L36.9921 39.0156C37.0266 39.2588 36.9461 39.5136 36.7849 39.6989C36.6238 39.8842 36.382 40 36.1403 40H36.1633Z"
@@ -2634,7 +2650,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="68" height="62" viewBox="0 0 68 62" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M68 41.4792C68 39.8064 66.8148 38.3962 65.2409 38.0656V26.7354C65.2409 25.578 64.2985 24.6249 63.1424 24.6249H45.1207C44.4406 24.6249 43.848 24.9556 43.4594 25.4516C43.0708 24.9459 42.4782 24.6249 41.7981 24.6249H23.7764C22.6203 24.6249 21.6682 25.5683 21.6682 26.7354V38.0656C20.0943 38.406 18.9091 39.8064 18.9091 41.4792V45.0679C18.9091 45.8362 19.1617 46.5365 19.5794 47.1103C19.2005 47.1395 18.9091 47.4409 18.9091 47.83V53.8598C18.9091 54.2585 19.2394 54.5892 19.6377 54.5892H20.9881L21.8722 61.3484C21.9208 61.7082 22.2317 61.9805 22.5911 61.9805H23.8735C24.2427 61.9805 24.5439 61.7082 24.5925 61.3484L25.4765 54.5892H61.656L62.5401 61.3484C62.5886 61.7082 62.8995 61.9805 63.259 61.9805H64.5414C64.9106 61.9805 65.2117 61.7082 65.2603 61.3484L66.1444 54.5892H67.2325C67.6308 54.5892 67.9611 54.2585 67.9611 53.8598V47.83C67.9611 47.4507 67.66 47.1395 67.2908 47.1103C67.7085 46.5365 67.9611 45.8265 67.9611 45.0679V41.4792H68ZM66.5427 41.4792V45.0679C66.5427 46.1864 65.6295 47.1005 64.5122 47.1005C64.3179 47.1005 64.1236 47.0616 63.9488 47.013C63.9488 47.013 63.939 47.013 63.9293 47.013C63.5116 46.8866 63.1618 46.6337 62.9092 46.3031C62.8995 46.2933 62.8898 46.2739 62.8801 46.2642C62.7732 46.1085 62.6858 45.9432 62.6178 45.7584C62.6081 45.7195 62.5983 45.6904 62.5886 45.6515C62.5303 45.4667 62.4915 45.2722 62.4915 45.0679V41.4792C62.4915 40.3608 63.4047 39.4466 64.522 39.4466C65.6392 39.4466 66.5524 40.3608 66.5524 41.4792H66.5427ZM44.4698 26.7354C44.4698 26.3755 44.7612 26.0838 45.111 26.0838H63.1327C63.4921 26.0838 63.7739 26.3755 63.7739 26.7354V38.0656C63.5699 38.1142 63.3658 38.1726 63.1715 38.2504C63.1133 38.2795 63.055 38.3087 62.9967 38.3379C62.8607 38.406 62.7344 38.4643 62.6081 38.5518C62.5401 38.6005 62.4818 38.6491 62.4138 38.6977C62.3069 38.7755 62.2097 38.8533 62.1126 38.9409C62.0543 38.9992 61.996 39.0576 61.9377 39.1256C61.8503 39.2229 61.7726 39.3104 61.6948 39.4174C61.6463 39.4855 61.5977 39.5536 61.5491 39.6314C61.4811 39.7384 61.4228 39.8551 61.3645 39.9718C61.3257 40.0496 61.2868 40.1176 61.2576 40.1955C61.2091 40.3316 61.1702 40.4678 61.1313 40.6039C61.1119 40.672 61.0925 40.7401 61.0731 40.8082C61.0342 41.0221 61.0051 41.2458 61.0051 41.4695V45.0582C61.0051 45.2819 61.0342 45.4958 61.0731 45.7001C61.0828 45.7584 61.1022 45.8168 61.1119 45.8751C61.1508 46.021 61.1896 46.1669 61.2479 46.3128C61.2674 46.3711 61.2965 46.4295 61.3257 46.4878C61.3937 46.6337 61.4617 46.7699 61.5491 46.8963C61.5782 46.9449 61.5977 46.9936 61.6365 47.0325C61.6463 47.0519 61.656 47.0714 61.6657 47.0811H45.111C44.7515 47.0811 44.4698 46.7893 44.4698 46.4295V26.7062V26.7354ZM23.1255 26.7354C23.1255 26.3755 23.4169 26.0838 23.7764 26.0838H41.7981C42.1576 26.0838 42.449 26.3755 42.449 26.7354V46.4587C42.449 46.8185 42.1576 47.1103 41.7981 47.1103H25.2434C25.2434 47.1103 25.2628 47.0811 25.2725 47.0616C25.3017 47.013 25.3308 46.9741 25.36 46.9255C25.4474 46.7893 25.5154 46.6532 25.5834 46.517C25.6126 46.4587 25.632 46.4003 25.6611 46.342C25.7194 46.1961 25.7583 46.0502 25.7971 45.9043C25.8166 45.846 25.8263 45.7876 25.836 45.7293C25.8749 45.5153 25.904 45.3013 25.904 45.0874V41.4987C25.904 41.275 25.8749 41.0513 25.836 40.8373C25.8263 40.7693 25.7971 40.7012 25.7777 40.6331C25.7388 40.4969 25.7 40.3511 25.6514 40.2246C25.6223 40.1468 25.5834 40.069 25.5445 40.0009C25.4863 39.8842 25.428 39.7675 25.36 39.6605C25.3114 39.5827 25.2628 39.5147 25.2142 39.4466C25.1365 39.3493 25.0588 39.2521 24.9713 39.1548C24.9131 39.0867 24.8548 39.0284 24.7965 38.97C24.6993 38.8825 24.6022 38.8047 24.4953 38.7269C24.4273 38.6783 24.369 38.6296 24.301 38.581C24.1747 38.5032 24.0484 38.4351 23.9124 38.3671C23.8541 38.3379 23.7958 38.299 23.7375 38.2795C23.5432 38.2017 23.3489 38.1336 23.1352 38.0947V26.7645L23.1255 26.7354ZM20.3663 41.4792C20.3663 40.3608 21.2796 39.4466 22.3968 39.4466C23.5141 39.4466 24.4273 40.3608 24.4273 41.4792V45.0679C24.4273 45.2722 24.3884 45.4569 24.3301 45.6417C24.3204 45.6806 24.3107 45.7195 24.2913 45.7487C24.2233 45.9238 24.1358 46.0988 24.029 46.2447C24.0193 46.2544 24.0095 46.2739 23.9998 46.2836C23.7472 46.6143 23.3975 46.8671 22.9797 46.9936C22.9797 46.9936 22.97 46.9936 22.9603 46.9936C22.7757 47.0422 22.5911 47.0811 22.3968 47.0811C21.2796 47.0811 20.3663 46.1669 20.3663 45.0485V41.4598V41.4792ZM23.242 60.5412L22.4648 54.5989H24.029L23.2518 60.5412H23.242ZM63.9293 60.5412L63.1521 54.5989H64.7163L63.939 60.5412H63.9293ZM66.5427 53.1401H20.3663V48.5691H66.5427V53.1401Z"
@@ -2655,7 +2671,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M37.7999 40H8.08074C7.64774 40 7.28866 39.6413 7.28866 39.2088V20.2947C7.28866 19.8622 7.64774 19.5036 8.08074 19.5036C8.51375 19.5036 8.87283 19.8622 8.87283 20.2947V38.4177H37.0078V20.2947C37.0078 19.8622 37.3669 19.5036 37.7999 19.5036C38.2329 19.5036 38.592 19.8622 38.592 20.2947V39.2088C38.592 39.6413 38.2329 40 37.7999 40Z"
@@ -2682,7 +2698,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group  custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="36" height="44" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M28.2885 44C27.8013 44 27.3973 43.5997 27.3973 43.1169C27.3973 38.0894 23.2623 33.992 18.1886 33.992C13.1149 33.992 8.97995 38.0776 8.97995 43.1169C8.97995 43.5997 8.57595 44 8.08878 44C7.60161 44 7.19762 43.5997 7.19762 43.1169C7.19762 37.1121 12.1287 32.2258 18.1886 32.2258C24.2485 32.2258 29.1796 37.1121 29.1796 43.1169C29.1796 43.5997 28.7757 44 28.2885 44Z"
@@ -2722,7 +2738,7 @@
         </article>
         <!-- row 2 -->
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="42" height="47" viewBox="0 0 42 47" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0.93517 10.0472H9.41174C9.66068 10.0472 9.89718 9.94694 10.0714 9.77156C10.2457 9.59617 10.3453 9.35814 10.3453 9.10759V1.87915H27.7216V25.7693C27.7216 26.283 28.1448 26.7089 28.6552 26.7089C29.1655 26.7089 29.5887 26.283 29.5887 25.7693V0.939573C29.5887 0.42594 29.1655 0 28.6552 0H9.38684C9.1379 0 8.91385 0.100221 8.73959 0.26308L0.287913 8.4311C0.0140741 8.69418 -0.0730566 9.10759 0.063863 9.45836C0.200783 9.80914 0.549305 10.0472 0.93517 10.0472ZM8.46575 3.13191V8.16802H3.25036L8.46575 3.13191Z"
@@ -2764,7 +2780,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="59" height="33" viewBox="0 0 59 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M15.6195 20.7C10.6896 20.7 6.69039 16.6778 6.69039 11.7444C6.69039 6.8111 10.7007 2.78888 15.6195 2.78888C20.5383 2.78888 24.5486 6.8111 24.5486 11.7444C24.5486 16.6778 20.5383 20.7 15.6195 20.7ZM15.6195 4.45555C11.6091 4.45555 8.35213 7.72221 8.35213 11.7444C8.35213 15.7667 11.6091 19.0333 15.6195 19.0333C19.6298 19.0333 22.8868 15.7667 22.8868 11.7444C22.8868 7.72221 19.6298 4.45555 15.6195 4.45555Z"
@@ -2830,7 +2846,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M19.9497 18.7267C19.9497 16.783 18.4043 15.209 16.496 15.209C14.5877 15.209 13.0423 16.783 13.0423 18.7267C13.0423 20.6704 14.5877 22.2444 16.496 22.2444C18.4043 22.2444 19.9497 20.6704 19.9497 18.7267ZM14.7984 18.7267C14.7984 17.7728 15.5594 16.9977 16.496 16.9977C17.4326 16.9977 18.1936 17.7728 18.1936 18.7267C18.1936 19.6807 17.4326 20.4558 16.496 20.4558C15.5594 20.4558 14.7984 19.6807 14.7984 18.7267Z"
@@ -2881,7 +2897,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M38.7018 27.0109C38.755 26.9257 38.7869 26.8299 38.8082 26.7341C39.5637 24.626 40 22.3689 40 20.0053C40 17.1839 39.4041 14.5116 38.3506 12.0735C38.3293 12.0202 38.3081 11.9776 38.2868 11.9351C36.9247 8.85813 34.8071 6.19643 32.1681 4.1629C32.0936 4.07772 32.0085 4.01384 31.9021 3.97125C28.5714 1.49055 24.4533 0 19.9947 0C19.7712 0 19.569 0.0212936 19.3456 0.0319404C19.2604 0.0319404 19.1753 0.0319404 19.0902 0.0425872C15.153 0.223583 11.5137 1.52249 8.49162 3.6625C8.42777 3.69444 8.37457 3.73702 8.32136 3.79026C3.29875 7.42081 0 13.3191 0 19.9947C0 30.5244 8.18303 39.1695 18.5156 39.9255C18.622 39.9681 18.7284 40 18.8348 40C18.9093 40 18.9944 39.9787 19.0689 39.9574C19.3775 39.9681 19.6754 40 19.9947 40C24.5916 40 28.8268 38.4243 32.2107 35.7945C32.2958 35.7519 32.3703 35.6987 32.4342 35.6242C35.2434 33.3883 37.4142 30.4072 38.7018 27.0003V27.0109ZM38.4038 19.9947C38.4038 21.5278 38.191 23.0077 37.8399 24.4344L35.4562 19.6859L37.5738 14.5116C38.1165 16.247 38.4038 18.0889 38.4038 19.9947ZM36.7225 12.3609L34.0303 18.9513L28.1777 19.1855L23.2615 12.7868L25.0705 6.8033L31.3488 5.53633C33.6472 7.34629 35.4988 9.67793 36.7332 12.3716L36.7225 12.3609ZM24.4214 34.5595L29.8164 35.539C27.1774 37.2212 24.0809 38.2326 20.7502 38.371L24.4214 34.5595ZM18.5688 38.3391C15.8127 38.1262 13.2376 37.317 10.9604 36.0181C11.0242 35.8584 11.0561 35.688 11.0136 35.5071L9.26842 28.8422L13.7058 25.5842L21.7398 27.8733L23.2721 33.4842L18.59 38.3497L18.5688 38.3391ZM22.0697 26.2976L14.3336 24.0937V15.8531C14.3336 15.8531 14.3336 15.8211 14.3336 15.8105C14.3336 15.7573 14.3123 15.704 14.3017 15.6508C14.291 15.5976 14.2804 15.555 14.2591 15.5124C14.2378 15.4698 14.2059 15.4272 14.174 15.3953C14.1421 15.3527 14.1101 15.3101 14.0676 15.2675C14.0569 15.2569 14.0463 15.2356 14.0356 15.2249L8.85342 11.1791L9.64086 4.8017C12.3224 2.95981 15.5254 1.83125 18.9625 1.63961L23.5488 6.32419L21.7398 12.3183L18.8986 13.2553C18.4836 13.3937 18.2495 13.8408 18.3879 14.2667C18.4943 14.6074 18.8135 14.8203 19.1434 14.8203C19.2285 14.8203 19.3136 14.8097 19.3881 14.7777L22.0803 13.8941L26.7837 20.016L22.0591 26.3082L22.0697 26.2976ZM24.7087 5.23822L21.1971 1.65025C24.2298 1.84189 27.0604 2.77881 29.5185 4.26936L24.7087 5.23822ZM7.85315 6.20708L7.25725 11.0301L2.80926 13.4895C3.88401 10.6681 5.62916 8.17674 7.85315 6.20708ZM2.12823 15.6614C2.12823 15.6614 2.17079 15.6614 2.19207 15.6401L7.917 12.478L12.7374 16.2364V24.2853L8.24687 27.5858L2.77733 25.1797C2.62836 25.1158 2.47938 25.1158 2.34105 25.1371C1.8622 23.4975 1.59617 21.7833 1.59617 19.9947C1.59617 18.5041 1.79835 17.0562 2.12823 15.6614ZM3.0008 27.0216L7.68289 29.087L9.19394 34.8682C6.46981 32.8773 4.30966 30.1837 3.0008 27.0216ZM31.6361 34.2507L24.7832 33.0051L23.2509 27.3835L28.2096 20.7825L34.0942 20.5483L37.1482 26.6276C35.9883 29.63 34.0835 32.2491 31.6361 34.2507Z"
@@ -2896,7 +2912,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group  custom-pointer  flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="57" height="34" viewBox="0 0 57 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M54.6963 20.9272C54.3124 11.093 46.6663 3.06646 36.8701 1.89367C36.5739 0.806962 35.5756 0 34.3799 0C33.1842 0 32.1859 0.806962 31.8897 1.89367C22.0935 3.07721 14.4475 11.093 14.0635 20.9272C12.7581 21.1424 11.7598 22.2614 11.7598 23.6063C11.7598 25.1019 12.9994 26.3285 14.5352 26.3285H54.2246C55.7494 26.3285 57 25.1127 57 23.6063C57 22.2614 56.0017 21.1532 54.6963 20.9272ZM34.3799 1.61392C34.5445 1.61392 34.698 1.66772 34.8406 1.74304C34.6871 1.74304 34.5335 1.72152 34.3799 1.72152C34.2263 1.72152 34.0728 1.74304 33.9192 1.74304C34.0618 1.66772 34.2044 1.61392 34.3799 1.61392ZM34.3799 3.33544C44.4174 3.33544 52.612 11.1361 53.0398 20.8734H15.72C16.1588 11.1361 24.3424 3.33544 34.3799 3.33544ZM54.2356 24.7038H14.5352C13.9099 24.7038 13.4053 24.2089 13.4053 23.5956C13.4053 22.9823 13.9099 22.4873 14.5352 22.4873H54.2246C54.8499 22.4873 55.3545 22.9823 55.3545 23.5956C55.3545 24.2089 54.8499 24.7038 54.2246 24.7038H54.2356Z"
@@ -2930,7 +2946,7 @@
         </article>
         <!-- row 3 -->
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="38" height="30" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M27.9055 30H10.0844C9.66587 30 9.31884 29.6478 9.31884 29.2231C9.31884 28.7983 9.66587 28.4461 10.0844 28.4461H27.9055C28.3239 28.4461 28.671 28.7983 28.671 29.2231C28.671 29.6478 28.3239 30 27.9055 30Z"
@@ -2954,7 +2970,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="48" height="45" viewBox="0 0 48 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M31.4702 31.25H13.7675C13.3181 31.25 12.9454 30.8804 12.9454 30.4348C12.9454 29.9891 13.3181 29.6196 13.7675 29.6196H31.4702C31.9196 29.6196 32.2923 29.9891 32.2923 30.4348C32.2923 30.8804 31.9196 31.25 31.4702 31.25Z"
@@ -3026,7 +3042,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M32.1813 18.4276C32.0721 18.4276 31.9629 18.4055 31.8647 18.3614C31.7664 18.3283 31.6682 18.2621 31.6027 18.1848C31.5263 18.1076 31.4608 18.0193 31.4171 17.92C31.3844 17.8207 31.3516 17.7103 31.3516 17.6C31.3516 17.3903 31.4499 17.1697 31.6027 17.0152C31.6682 16.9379 31.7664 16.8828 31.8647 16.8386C32.0612 16.7503 32.2904 16.7503 32.4869 16.8386C32.5852 16.8828 32.6834 16.9379 32.7598 17.0152C32.9127 17.1697 33 17.3793 33 17.6C33 17.7103 32.9782 17.8207 32.9345 17.92C32.8908 18.0193 32.8363 18.1076 32.7598 18.1848C32.6834 18.2621 32.5852 18.3283 32.4869 18.3614C32.3887 18.4055 32.2795 18.4276 32.1813 18.4276Z"
@@ -3050,7 +3066,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="48" height="38" viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M33.2223 30.642C32.8155 30.9753 31.6567 31.9753 30.387 33.0494C29.1666 34.0864 27.8599 35.1975 27.0586 35.8765C21.499 31.3333 17.7884 28.1852 14.497 24.8765C14.1395 24.5185 13.5478 24.5185 13.1903 24.8765C12.8328 25.2346 12.8328 25.8272 13.1903 26.1852C16.6543 29.6667 20.5374 32.9506 26.4792 37.7901C26.6518 37.9259 26.8491 38 27.0586 38C27.2682 38 27.4654 37.9259 27.638 37.7901C28.2174 37.321 29.9678 35.8272 31.5704 34.4568C32.8278 33.3827 33.9866 32.3951 34.3811 32.0617C34.7756 31.7407 34.8372 31.1481 34.5043 30.7531C34.1838 30.358 33.5921 30.2963 33.1976 30.6296L33.2223 30.642Z"
@@ -3071,7 +3087,7 @@
           </h3>
         </article>
         <article
-          class="group flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
+          class="group custom-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out">
           <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M38 10.1237C38 9.9228 37.901 9.72194 37.7525 9.58134L29.6359 2.13952C29.5666 2.07927 29.4874 2.02905 29.3983 1.98888L24.2412 0.0606376C23.9937 -0.0297488 23.7265 0.0204658 23.5186 0.181153C23.3107 0.351883 23.2118 0.612999 23.2514 0.874115C23.2514 0.904244 23.3503 1.63738 22.8059 2.28013C22.212 2.97309 21.0242 3.34468 19.3811 3.34468C17.7379 3.34468 16.4512 2.96305 15.7385 2.22991C15.0852 1.55703 15.0753 0.803814 15.0753 0.783729C15.0753 0.532655 14.9664 0.301668 14.7783 0.151024C14.5804 0.000379682 14.3329 -0.0397917 14.0953 0.0405518L8.50274 1.9688C8.40375 1.99892 8.31465 2.05918 8.23546 2.12948L0.237552 9.57129C0.0890761 9.7119 0 9.90271 0 10.1136C0 10.3245 0.0692901 10.5153 0.217766 10.666L6.36467 16.9328V34.2468C6.36467 34.6585 6.70122 35 7.10706 35H30.5663C30.9721 35 31.3087 34.6585 31.3087 34.2468V17.3144L37.7822 10.6559C37.9208 10.5053 38 10.3145 38 10.1036V10.1237ZM31.3186 10.907C31.3186 10.4952 30.982 10.1538 30.5762 10.1538C30.1704 10.1538 29.8338 10.4952 29.8338 10.907V29.7275H26.4486C26.0427 29.7275 25.7062 30.0689 25.7062 30.4807C25.7062 30.8924 26.0427 31.2339 26.4486 31.2339H29.8338V33.5136H7.85934V31.2339H19.9453C20.3511 31.2339 20.6877 30.8924 20.6877 30.4807C20.6877 30.0689 20.3511 29.7275 19.9453 29.7275H7.85934V11.4594C7.85934 11.0476 7.5228 10.7061 7.11696 10.7061C6.71113 10.7061 6.37458 11.0476 6.37458 11.4594V14.8137L1.83118 10.1739L9.14613 3.3748L13.7687 1.78802C13.9073 2.23995 14.1745 2.78227 14.6596 3.28442C15.6692 4.33893 17.2628 4.88125 19.391 4.88125C21.5192 4.88125 23.0633 4.33893 23.9641 3.26433C24.36 2.79232 24.5679 2.28013 24.6668 1.83824L28.7549 3.36476L36.1886 10.1839L31.3186 15.1953V10.907Z"
@@ -3102,8 +3118,9 @@
       <img class="absolute right-[10%] top-20 block md:hidden max-w-[20px]" src="/images/svg/bell-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
-        Zostań świadomym <br> konsumentem</h3>
-      <p class="text-xl font-light text-lightblack leading-[160%] pt-10 text-center md:text-start">Dzisiaj żyjemy w
+        Zostań świadomym <br> konsumentem
+      </h3>
+      <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10 text-center md:text-start">Dzisiaj żyjemy w
         cudownych czasach — ilość
         sklepów, w których możesz zrobić zakupy jest ogromna. Nie musisz ograniczać się do jednego, osiedlowego sklepu.
         A internet dodatkowo poszerza te możliwości — możesz wykorzystywać okazje z całej Polski. Bez problemu możesz
@@ -3117,15 +3134,16 @@
         rabatowych i okazji to pojawia się jedno pytanie.</p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute right-[30%] top-[20%] max-w-[20px] md:max-w-full" src="/images/svg/mic-icon.svg" alt="icon">
-      <img class="absolute left-[30%] top-[60%] pointer-events-none max-w-[20px] md:max-w-full"
+      <img class="absolute right-[30%] top-[20%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/mic-icon.svg" alt="icon">
+      <img class="absolute left-[30%] top-[60%] pointer-events-none max-w-[20px] z-[-1] object-cover md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon">
-      <img class="absolute right-[30%] top-[90%] pointer-events-none max-w-[20px] md:max-w-full"
+      <img class="absolute right-[30%] top-[90%] pointer-events-none max-w-[20px] z-[-1] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Jak zostać świadomym <br> konsumentem?
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Dzisiaj żyjemy w cudownych czasach — ilość
+    </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Dzisiaj żyjemy w cudownych czasach — ilość
           Śledzenie wszystkich okazji wydaje się niemożliwe. Sprawdzanie stron każdego sklepu to zadanie żmudne i
           męczące. Co prawda można zapisywać się na newslettery, jednak każdy dzisiaj dostaje tyle maili, że nawet
           jeżeli dotarłaby do Ciebie informacja o jakiejś promocji, to i tak pewnie bym jej nie zauważył. Jak w takiej
@@ -3134,16 +3152,17 @@
           przychodzi nasz serwis — wydawajdobrze.com</p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4  pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute right-[20%] top-[20%] max-w-[20px] md:max-w-full" src="/images/svg/star-icon.svg" alt="icon">
-      <img class="absolute right-[30%] top-[60%] pointer-events-none max-w-[20px] md:max-w-full"
+      <img class="absolute right-[20%] top-[20%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/star-icon.svg" alt="icon">
+      <img class="absolute right-[30%] top-[60%] pointer-events-none max-w-[20px] md:max-w-full z-[-1] object-cover"
         src="/images/svg/sale-icon.svg" alt="icon">
-      <img class="absolute left-[30%] top-[90%] pointer-events-none max-w-[20px] md:max-w-full"
+      <img class="absolute left-[30%] top-[90%] pointer-events-none max-w-[20px] md:max-w-full z-[-1] object-cover"
         src="/images/svg/shop-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Wszystkie promocje <br> w jednym miejscu
+     </h3>
 
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Dzisiaj żyjemy w cudownych czasach — ilość
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Dzisiaj żyjemy w cudownych czasach — ilość
           Jeżeli potrzebujesz informacji o promocjach, to wystarczy, że po prostu sprawdzisz na naszej stronie —
           wydawajdobrze.com czy jest interesująca okazja związana ze sklepem, w którym chcesz robić zakupy.
           Najpopularniejsze marki mają u nas swoje własne wizytówki, jednak znajdziesz informacje również o promocjach
@@ -3151,27 +3170,27 @@
           sklepu, a jakiegoś produktu, to również możesz użyć wyszukiwarki, aby znaleźć interesujące Cię produkty.</p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[10%] top-[5%]  max-w-[20px] md:max-w-full"
+      <img class="absolute left-[10%] top-[5%] max-w-[20px] md:max-w-full z-[-1] object-cover"
         src="/images/svg/star-icon.svg" alt="icon">
-      <img class="absolute right-[20%] top-[90%]  max-w-[20px] md:max-w-full"
+      <img class="absolute right-[20%] top-[90%]  max-w-[20px] md:max-w-full z-[-1] object-cover"
         src="/images/svg/heart-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Jakie promocje znajdziesz <br> w naszym serwisie?
-
-
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Dzisiaj żyjemy w cudownych czasach — ilość
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Dzisiaj żyjemy w cudownych czasach — ilość
           Przyjrzyjmy się teraz jakie informacje o promocjach i okazjach znajdziesz w naszym serwisie.</p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-0 top-[30%] max-w-[20px] md:max-w-full" src="/images/svg/star-icon.svg" alt="icon">
-      <img class="absolute left-[30%] top-[40%] max-w-[20px] md:max-w-full" src="/images/svg/sale-icon.svg" alt="icon">
-      <img class="absolute right-[30%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/percent-icon.svg"
+      <img class="absolute left-0 top-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/star-icon.svg" alt="icon">
+      <img class="absolute left-[30%] top-[40%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/sale-icon.svg" alt="icon">
+      <img class="absolute right-[30%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/percent-icon.svg"
         alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Kody promocyjne
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Dzisiaj praktycznie każdy sklep internetowy
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Dzisiaj praktycznie każdy sklep internetowy
           umożliwia korzystanie z kodów promocyjnych. Dlatego też, jeżeli planujesz zrobić zakupy w jakimś sklepie, to
           warto sprawdzić, czy są dostępne jakie ciekawe kody rabatowe. Zwłaszcza jeżeli będziesz robił zakupy w danym
           miejscu po raz pierwszy, to możesz liczyć na sporą zniżkę. Wiele sklepów oferuje bowiem specjalne kody
@@ -3181,15 +3200,16 @@
           formę promocji.</p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[30%] top-[40%] max-w-[20px] md:max-w-full" src="/images/svg/shop-icon.svg" alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/heart-icon.svg" alt="icon">
-      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/mic-icon.svg" alt="icon">
-      <img class="absolute right-[20%] bottom-[-30%] max-w-[20px] md:max-w-full" src="/images/svg/sale-icon.svg"
+      <img class="absolute left-[30%] top-[40%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/shop-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/heart-icon.svg" alt="icon">
+      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/mic-icon.svg" alt="icon">
+      <img class="absolute right-[20%] bottom-[-30%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/sale-icon.svg"
         alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Informacje o promocjach
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Nasz serwis to nie jest typowy serwis z
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Nasz serwis to nie jest typowy serwis z
           kodami rabatowymi, gdzie po prostu pobierasz kod. Tutaj znajdziesz wiele informacji o różnych promocjach,
           wyprzedażach i okazjach dostępnych w poszczególnych sklepach. Nawet jeżeli nie wymagają one wykorzystania kodu
           rabatowego. Dzięki temu korzystając z tylko z naszego serwisu, jesteś w stanie zgromadzić informacje na temat
@@ -3199,13 +3219,14 @@
         </p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[30%] bottom-10 max-w-[20px] md:max-w-full" src="/images/svg/like-icon.svg" alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/bell-icon.svg" alt="icon">
-      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/star-icon.svg" alt="icon">
+      <img class="absolute left-[30%] bottom-10 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/like-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/bell-icon.svg" alt="icon">
+      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/star-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Gazetki promocyjne
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Z całą pewnością wiesz, że Lidl jest tani, a
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Z całą pewnością wiesz, że Lidl jest tani, a
           Biedronka oferuje codziennie niskie ceny. Niestety mało kto jest w stanie odwiedzać regularnie wszystkie
           markety, żeby zobaczyć, co w nich ciekawego się znajduje, albo chociaż wziąć gazetkę promocyjną i zobaczyć
           okazje w domu. A bardzo często w takich marketach pojawiają się promocje, na różne produkty, niekoniecznie
@@ -3217,14 +3238,15 @@
         </p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[30%] bottom-[30%] max-w-[20px] md:max-w-full" src="/images/svg/like-icon.svg"
+      <img class="absolute left-[30%] bottom-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/like-icon.svg"
         alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/bell-icon.svg" alt="icon">
-      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/heart-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/bell-icon.svg" alt="icon">
+      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/heart-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Promocje lokalne
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">W naszym serwisie każdy użytkownik ma
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">W naszym serwisie każdy użytkownik ma
           możliwość dodawania informacji o okazjach i ofertach, które spotka. To dla Ciebie świetna informacja, bo
           dzięki temu jesteś w stanie dowiedzieć się o okazjach, o których ciężko znaleźć informacje w internecie.
           Często w sklepach asortyment się różni, a nawet promocje mogą być minimalnie inne. Z pewnością przekonał się o
@@ -3235,14 +3257,15 @@
         </p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[30%] bottom-[30%] max-w-[20px] md:max-w-full" src="/images/svg/like-icon.svg"
+      <img class="absolute left-[30%] bottom-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/like-icon.svg"
         alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/bell-icon.svg" alt="icon">
-      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/heart-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/bell-icon.svg" alt="icon">
+      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/heart-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Dodawaj informacje o <br> promocji samemu
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Jeżeli założysz konto w naszym serwisie, to
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Jeżeli założysz konto w naszym serwisie, to
           zyskasz możliwość dodawania informacji o wyprzedażach i okazjach. Warto to wykorzystywać, ponieważ dzięki
           Tobie więcej osób dowie się o okazjach i promocjach, a dzięki temu więcej osób oszczędzi pieniądze.
           Zastanawiasz się być może, dlaczego miałby poświęcać czas na dodawanie okazji do naszej platformy? Powód jest
@@ -3254,16 +3277,17 @@
         </p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[60%] top-[40%] max-w-[20px] md:max-w-full" src="/images/svg/percent-icon.svg"
+      <img class="absolute left-[60%] top-[40%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/percent-icon.svg"
         alt="icon">
-      <img class="absolute left-0 top-0 max-w-[20px] md:max-w-full" src="/images/svg/star-icon.svg" alt="icon">
-      <img class="absolute left-[40%] top-0 max-w-[20px] md:max-w-full" src="/images/svg/sale-icon.svg" alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/bell-icon.svg" alt="icon">
-      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/heart-icon.svg" alt="icon">
+      <img class="absolute left-0 top-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/star-icon.svg" alt="icon">
+      <img class="absolute left-[40%] top-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/sale-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/bell-icon.svg" alt="icon">
+      <img class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/heart-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Jak dodać <br> informacje o okazji?
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Jeżeli znalazłeś w naszym serwisie
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Jeżeli znalazłeś w naszym serwisie
           wydawajdobrze kod rabatowy, to warto przeczytać opis kodu, może zawierać on istotne informacje np. co do tego,
           jakie produkty są Ci potrzebne, żeby kod promocyjny zadziałał poprawnie. Gdy to zrobisz, to po prostu kliknij
           w przycisk “skopiuj kod”. Gdy to zrobisz, to pojawi Ci się instrukcja jak postępować z danym kodem rabatowym.
@@ -3275,15 +3299,16 @@
         </p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[80%] top-[30%] max-w-[20px] md:max-w-full" src="/images/svg/mic-icon.svg" alt="icon">
-      <img class="absolute left-[-2%] top-[20%] max-w-[20px] md:max-w-full" src="/images/svg/heart-icon.svg" alt="icon">
-      <img class="absolute left-[40%] top-[60%] max-w-[20px] md:max-w-full" src="/images/svg/like-icon.svg" alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/bell-icon.svg" alt="icon">
+      <img class="absolute left-[80%] top-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/mic-icon.svg" alt="icon">
+      <img class="absolute left-[-2%] top-[20%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/heart-icon.svg" alt="icon">
+      <img class="absolute left-[40%] top-[60%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/like-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/bell-icon.svg" alt="icon">
       <img class="absolute right-0 bottom-0" src="/images/svg/heart-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Jak dużo można zaoszczędzić <br> korzystając z kuponów rabatowych?
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">JWiele osób może zastanawiać się, jakie są
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">JWiele osób może zastanawiać się, jakie są
           realne oszczędności, gdy będzie korzystało się z kuponów rabatowych i okazji. Tu wiele zależy od tego, jakie
           oferty wybierzesz. Na naszym serwisie znajdziesz informacje o promocjach i okazjach, które obniżają ceny nawet
           o 90%. Oczywiście takie okazje nie pojawiają się bardzo często, jednak się zdarzają. Dlatego też warto śledzić
@@ -3299,15 +3324,16 @@
         </p>
     </div>
     <div class="max-w-[1561px] mx-auto px-4 pt-10 md:pb-10 md:py-10 relative">
-      <img class="absolute left-[80%] top-[30%] max-w-[20px] md:max-w-full" src="/images/svg/mic-icon.svg" alt="icon">
-      <img class="absolute left-0 top-[80%] max-w-[20px] md:max-w-full" src="/images/svg/shop-icon.svg" alt="icon">
-      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full" src="/images/svg/sale-icon.svg" alt="icon">
-      <img class="absolute left-[30%] bottom-[-10%] max-w-[20px] md:max-w-full hidden lg:block"
+      <img class="absolute left-[80%] top-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/mic-icon.svg" alt="icon">
+      <img class="absolute left-0 top-[80%] max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/shop-icon.svg" alt="icon">
+      <img class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover" src="/images/svg/sale-icon.svg" alt="icon">
+      <img class="absolute left-[30%] bottom-[-10%] max-w-[20px] md:max-w-full hidden lg:block z-[-1] object-cover"
         src="/images/svg/star-icon.svg" alt="icon">
       <h3
         class="text-[23px] sm:text-3xl md:text-[40px] lg:text-[50px] font-bold text-lightblack  text-center md:text-start !leading-[130%]">
         Podsumowanie
-        <p class="text-xl font-light text-lightblack leading-[160%] pt-10">Wykorzystywanie kodów rabatowych, sprawdzanie
+      </h3>
+        <p class="text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%] pt-7 md:pt-10">Wykorzystywanie kodów rabatowych, sprawdzanie
           promocji, okazji i wyprzedaży — to podejście, którym cechuje się coraz więcej konsumentów. Dzięki naszemu
           serwisowi śledzenie wszystkich dostępnych okazji jest znacznie prostsze, nie musisz bowiem śledzić samemu
           wszystkich sklepów, nie musisz sprawdzać setek stron internetowych. Jeżeli chcesz zrobić zakupy i sprawdzić,
@@ -3319,21 +3345,21 @@
     </div>
   </section>
   <!-- footer section  -->
-  <footer class="w-full  text-white relative mt-8">
+  <footer class="w-full  text-white relative mt-[164px] md:mt-8">
     <img class="absolute top-0 left-0 w-full h-full z-[-1] hidden lg:block" src="/images/webp/footer-bg.webp"
       alt="footer bg">
     <img class="absolute top-0 left-0 w-full h-full z-[-1] block lg:hidden" src="/images/webp/footer-mobile-bg.webp"
       alt="footer bg">
     <div class="max-w-[1561px] px-4 py-10 mx-auto">
       <div class="pt-14 sm:pt-20 sm:pb-8">
-        <img class=" w-full cursor-pointer block md:hidden" src="/images/svg/logo.svg" alt="logo" />
+        <img class=" w-full custom-pointer block md:hidden" src="/images/svg/logo.svg" alt="logo" />
         <div class="flex flex-col-reverse md:flex-row justify-between gap-10 md:gap-16">
           <!-- Logo and security section -->
           <div class="max-w-[682px] w-full">
             <div class="mb-6 hidden md:block">
-              <img class="w-full cursor-pointer" src="/images/svg/logo.svg" alt="logo" />
+              <img class="w-full custom-pointer" src="/images/svg/logo.svg" alt="logo" />
             </div>
-            <div class="flex items-center mt-4 gap-4">
+            <div class="flex items-center mt-4 gap-5">
               <img class="max-w-[33px] w-full" src="/images/svg/lock-icon.svg" alt="">
               <div class="text-[11px] font-light text-white">
                 <p>Bezpieczne płatności</p>
@@ -3351,17 +3377,17 @@
             <div class="">
               <h3 class="text-base text-white font-semibold  mb-2">STRONY</h3>
               <ul class="space-y-2 text-base text-white font-light">
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">OKAZJE</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">KODY RABATOWE,
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">OKAZJE</a></li>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">KODY RABATOWE,
                     KUPON</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">GAZETKI
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">GAZETKI
                     PROMOCYJNE</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">ZA DARMO</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">Black Friday 2023</a>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">ZA DARMO</a></li>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">Black Friday 2023</a>
                 </li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">Cyber Monday 2023</a>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">Cyber Monday 2023</a>
                 </li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">Walentynki 2024</a>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">Walentynki 2024</a>
                 </li>
               </ul>
             </div>
@@ -3371,11 +3397,11 @@
               <h3 class="text-base text-white font-semibold  mb-2">WAŻNE</h3>
               <ul class="space-y-2 text-base text-white font-light">
 
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">
                     KIM JESTEŚMY</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">
                     JAK UŻYĆ KOD RABATOWY</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">REGULAMIN SERWISU</a>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">REGULAMIN SERWISU</a>
                 </li>
               </ul>
             </div>
@@ -3384,8 +3410,8 @@
             <div class="">
               <h3 class="text-base text-white font-semibold  mb-2">KONTAKT</h3>
               <ul class="space-y-2 text-base text-white font-light">
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">KONTAKT</a></li>
-                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out">NEWSLETTER</a></li>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">KONTAKT</a></li>
+                <li><a href="#" class="hover:text-primary transition-all duration-200 ease-in-out custom-pointer">NEWSLETTER</a></li>
               </ul>
             </div>
           </div>
@@ -3394,7 +3420,7 @@
   </footer>
   <!-- top to bottom buttom -->
   <button
-    class="fixed bottom-[200px] 2xl:buttom-[600px] 3xl:bottom-[600px] right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full  hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)]"
+    class="fixed custom-pointer bottom-[200px] 2xl:buttom-[600px] 3xl:bottom-[600px] right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full  hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)]"
     id="scroll" style="display: none">
     <span class="flex justify-center items-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -3404,7 +3430,95 @@
     </svg>
     </span>
   </button>
- 
+    <script>
+        // Target values for each counter
+        const targetValues = [
+            60000,  // For count1
+            400,    // For count2
+            773,    // For count3
+            10,     // For count4
+            10000   // For count5
+        ];
+        
+        // Durations for animations in milliseconds
+        const durations = [
+            2000,   // For count1
+            1500,   // For count2
+            1800,   // For count3
+            1000,   // For count4
+            2200    // For count5
+        ];
+        
+        // Formatting options for each counter
+        const formatting = [
+            (val) => val.toLocaleString() + '+',       // For count1 (with plus sign)
+            (val) => val.toLocaleString() + '+',       // For count2 (with plus sign)
+            (val) => val.toLocaleString(),             // For count3 (plain number)
+            (val) => val.toLocaleString() + '+',       // For count4 (with plus sign)
+            (val) => val.toLocaleString() + 'zł'       // For count5 (with zl currency)
+        ];
+        
+        // Flag to track if animations have been triggered
+        let animationsTriggered = false;
+        
+        // Function to animate counting
+        function animateCount(elementId, targetValue, duration, formatFunc) {
+            const element = document.getElementById(elementId);
+            const startTime = performance.now();
+            const startValue = 0;
+            
+            function updateCount(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                if (elapsedTime < duration) {
+                    const progress = elapsedTime / duration;
+                    // Easing function to make animation more natural
+                    const easedProgress = 1 - Math.pow(1 - progress, 3);
+                    const currentValue = Math.floor(startValue + easedProgress * (targetValue - startValue));
+                    element.textContent = formatFunc(currentValue);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    element.textContent = formatFunc(targetValue);
+                }
+            }
+            
+            requestAnimationFrame(updateCount);
+        }
+        
+        // Function to start all animations
+        function startAnimations() {
+            if (!animationsTriggered) {
+                animationsTriggered = true;
+                for (let i = 0; i < targetValues.length; i++) {
+                    animateCount('count' + (i + 1), targetValues[i], durations[i], formatting[i]);
+                }
+            }
+        }
+        
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+                rect.bottom >= 0
+            );
+        }
+        
+        // Scroll event handler to check if stats section is visible
+        function handleScroll() {
+            const statsSection = document.getElementById('count-hub');
+            if (isInViewport(statsSection)) {
+                startAnimations();
+                // Remove scroll listener once animations are triggered
+                window.removeEventListener('scroll', handleScroll);
+            }
+        }
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Check on initial load as well
+        document.addEventListener('DOMContentLoaded', handleScroll);
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
   <script type="module" src="/src/main.js"></script>
   <script type="module" src="/src/slider.js"></script>
