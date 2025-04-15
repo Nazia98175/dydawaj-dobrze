@@ -737,3 +737,15 @@ body {
     justify-content: space-between;
   }
 }
+
+.text-gradient {
+  background: linear-gradient(
+    110deg,
+    #ffd800 25.25%,
+    #f50269 59.3%,
+    #9a33ae 76.55%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

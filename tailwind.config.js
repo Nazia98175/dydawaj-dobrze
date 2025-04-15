@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./shopcard.html",
+    "/guides.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       screens: {
@@ -28,6 +33,13 @@ export default {
         skyblue: "#3CF",
         lightblack: "#243237",
         exodusFruit: "#696ADB",
+        Jupiter: "#DCDCDE",
+        blackMetal: "#050505",
+        piedWagtailGrey: "#BBBABF",
+        schoolBus: "#FFD800",
+        yachtClub: "#576063",
+        cottonBall: "#F4F9FD",
+        Mandarin: "#F47D41",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
