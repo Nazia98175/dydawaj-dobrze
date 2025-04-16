@@ -222,3 +222,6 @@ body {
 .product-card-img {
   @apply max-w-[98px] md:max-w-full md:max-h-[250px] max-h-[90px] h-full object-cover;
 }
+.only-with-us {
+  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus w-[167px] -right-[48px] left-[173px] py-2.5 drop-shadow-c1;
+}

@@ -48,6 +48,8 @@ export default {
         "custom-gradient":
           "linear-gradient(110deg, #9a33ae 6.13%, #f50269 76.3%, #f47d41 99.4%)",
       },
+      dropShadow:{
+      c1:"[(2px 2px 6px rgba(68,68,68,0.25))]"}
     },
   },
   plugins: [],
