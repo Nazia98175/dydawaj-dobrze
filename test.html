@@ -15,7 +15,7 @@
     .dropdown-enter-active {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 200ms, transform 200ms;
+      transition: opacity 200ms ease, transform 200ms ease;
     }
     .dropdown-exit {
       opacity: 1;
@@ -23,112 +23,12 @@
     .dropdown-exit-active {
       opacity: 0;
       transform: translateY(-10px);
-      transition: opacity 200ms, transform 200ms;
+      transition: opacity 200ms ease, transform 200ms ease;
     }
   </style>
   <body class="bg-gray-100 flex justify-center p-5">
-    <!-- <div
-      class="w-full max-w-md bg-white rounded-lg shadow-md overflow-hidden p-5"
-    >
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-medium text-gray-800">Kategorie</h2>
-      </div>
-
-      <div class="relative mb-5">
-        <input
-          type="text"
-          id="searchInput"
-          class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-full text-sm outline-none"
-          placeholder="Wyszukaj porady"
-        />
-        <div
-          class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-      </div>
-
-      <div id="suggestionsList" class="hidden border-t border-gray-100">
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-orange-500 font-medium"
-          data-text="Testy produktów i usługi"
-        >
-          <span>Testy produktów i usługi <span class="ml-1">👆</span></span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >6</span
-          >
-        </div>
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-gray-700"
-          data-text="Sprytne zakupy"
-        >
-          <span>Sprytne zakupy</span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >101</span
-          >
-        </div>
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-gray-700"
-          data-text="Programy i karty lojalnościowe"
-        >
-          <span>Programy i karty lojalnościowe</span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >28</span
-          >
-        </div>
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-gray-700"
-          data-text="Pomysł na prezent"
-        >
-          <span>Pomysł na prezent</span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >9</span
-          >
-        </div>
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-gray-700"
-          data-text="Promocje bankowe i pożywne"
-        >
-          <span>Promocje bankowe i pożywne</span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >4</span
-          >
-        </div>
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-gray-700"
-          data-text="Aplikacje pomagające w zakupach"
-        >
-          <span>Aplikacje pomagające w zakupach</span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >15</span
-          >
-        </div>
-        <div
-          class="suggestion-item flex justify-between py-3 px-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 text-gray-700"
-          data-text="Opinie o sklepach"
-        >
-          <span>Opinie o sklepach</span>
-          <span class="bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full"
-            >7</span
-          >
-        </div>
-      </div>
-    </div> -->
     <div
-      class="shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] !bg-[#FFF] rounded-[20px] py-11"
+      class="shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] !bg-[#FFF] rounded-[20px] py-11 max-w-[350px] w-full"
     >
       <h4
         class="text-center text-lightblack text-base font-bold leading-[120%]"
@@ -282,76 +182,58 @@
       const suggestionsList = document.getElementById("suggestionsList");
       const suggestionItems = document.querySelectorAll(".suggestion-item");
 
-      // Position the dropdown correctly
-      function positionDropdown() {
-        const inputRect = searchInput.getBoundingClientRect();
-        const parentRect = searchInput
-          .closest("div.bg-white")
-          .getBoundingClientRect();
-
-        suggestionsList.style.width = parentRect.width + "px";
-        suggestionsList.style.top = parentRect.bottom + window.scrollY + "px";
-        suggestionsList.style.left = parentRect.left + "px";
+      function showDropdown() {
+        suggestionsList.classList.remove("hidden");
+        suggestionsList.classList.remove(
+          "dropdown-exit",
+          "dropdown-exit-active"
+        );
+        suggestionsList.classList.add("dropdown-enter");
+        requestAnimationFrame(() => {
+          suggestionsList.classList.add("dropdown-enter-active");
+          suggestionsList.classList.remove("dropdown-enter");
+        });
       }
 
-      // Call on page load and resize
-      window.addEventListener("load", positionDropdown);
-      window.addEventListener("resize", positionDropdown);
+      function hideDropdown() {
+        suggestionsList.classList.remove("dropdown-enter-active");
+        suggestionsList.classList.add("dropdown-exit", "dropdown-exit-active");
+        setTimeout(() => {
+          suggestionsList.classList.add("hidden");
+          suggestionsList.classList.remove(
+            "dropdown-exit",
+            "dropdown-exit-active"
+          );
+        }, 200);
+      }
 
-      // Hide suggestions when clicking outside
-      document.addEventListener("click", (event) => {
+      // Show all suggestions when typing
+      searchInput.addEventListener("input", () => {
+        const term = searchInput.value.trim();
+        if (term.length === 0) {
+          hideDropdown();
+        } else {
+          showDropdown();
+        }
+      });
+
+      // Handle outside click
+      document.addEventListener("click", (e) => {
         if (
-          !searchInput.contains(event.target) &&
-          !suggestionsList.contains(event.target)
+          !searchInput.contains(e.target) &&
+          !suggestionsList.contains(e.target)
         ) {
           hideDropdown();
         }
       });
 
-      // Make each suggestion clickable
+      // Suggestion click handler
       suggestionItems.forEach((item) => {
         item.addEventListener("click", () => {
-          searchInput.value = item
-            .querySelector("span:first-child")
-            .textContent.trim()
-            .replace(" 👆", "");
+          const text = item.dataset.text || "";
+          searchInput.value = text;
           hideDropdown();
         });
-      });
-
-      // Show dropdown with animation
-      function showDropdown() {
-        suggestionsList.classList.remove("hidden");
-        suggestionsList.classList.add("dropdown-enter");
-        setTimeout(() => {
-          suggestionsList.classList.add("dropdown-enter-active");
-          suggestionsList.classList.remove("dropdown-enter");
-        }, 10);
-      }
-
-      // Hide dropdown with animation
-      function hideDropdown() {
-        suggestionsList.classList.add("dropdown-exit");
-        suggestionsList.classList.add("dropdown-exit-active");
-
-        setTimeout(() => {
-          suggestionsList.classList.add("hidden");
-          suggestionsList.classList.remove("dropdown-exit");
-          suggestionsList.classList.remove("dropdown-exit-active");
-        }, 200);
-      }
-
-      // Show all suggestions when user starts typing anything
-      searchInput.addEventListener("input", () => {
-        const searchTerm = searchInput.value.toLowerCase();
-
-        if (searchTerm.length === 0) {
-          // Hide suggestions if search is empty
-          hideDropdown();
-        } else {
-          // Show all suggestions as soon as user types anything
-          showDropdown();
-        }
       });
     </script>
   </body>
