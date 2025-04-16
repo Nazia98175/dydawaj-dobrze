@@ -205,14 +205,20 @@ body {
   @apply text-exodusFruit text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
 }
 .product-descriptions {
-  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center ;
+  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center;
 }
 .product-tag {
-  @apply text-lightblack text-xs sm:text-base font-light py-3 text-center ;
+  @apply text-lightblack text-base font-light md:pt-2.5 leading-[120%] text-center block md:hidden;
+}
+.product-tag-mobile {
+  @apply text-lightblack text-base font-light pt-2.5 leading-[120%] text-center md:block hidden;
 }
 .primary-button {
-  @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-secondry transition-all duration-200 ease-in-out ;
+  @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-secondry transition-all duration-200 ease-in-out;
 }
 .product-footer-text {
-  @apply text-[11px] font-light text-lightblack leading-[218.182%] ;
+  @apply text-[11px] font-light text-lightblack leading-[218.182%];
+}
+.product-card-img {
+  @apply max-w-[98px] md:max-w-full md:max-h-[250px] max-h-[90px] h-full object-cover;
 }
