@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./shopcard.html",
     "./guides.html",
+    "./about.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
