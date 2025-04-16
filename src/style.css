@@ -204,6 +204,9 @@ body {
 .product-name {
   @apply text-exodusFruit text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
 }
+.product-name-disable {
+  @apply text-yachtClub text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
+}
 .product-descriptions {
   @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center;
 }
@@ -216,11 +219,14 @@ body {
 .primary-button {
   @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-secondry transition-all duration-200 ease-in-out;
 }
+.primary-button-disable {
+  @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-yachtClub transition-all duration-200 ease-in-out;
+}
 .product-footer-text {
   @apply text-[11px] font-light text-lightblack leading-[218.182%];
 }
 .product-card-img {
-  @apply max-w-[98px] md:max-h-[250px] max-h-[90px] h-full object-center md:max-w-[250px] mx-0 sm:mx-auto;
+  @apply  md:max-h-[250px] max-h-[90px] h-full object-center  mx-0 sm:mx-auto;
 }
 .only-with-us {
   @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[4.9%] xxl:top-[4%] md:top-[5%] sm:top-[9%] top-[18%] -right-[41%] sm:-right-[41%] lg:-right-[40%] md:-right-[42%] xxl:-right-[37%] pointer-events-none;
