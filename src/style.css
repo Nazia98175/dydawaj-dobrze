@@ -199,5 +199,20 @@ body {
   @apply cursor-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out;
 }
 .product-card {
-  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-4 py-6 h-full !flex flex-col justify-between relative overflow-hidden;
+  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-[14px] py-6 h-full flex flex-col justify-between relative overflow-hidden space-y-2 md:space-y-5;
+}
+.product-name {
+  @apply text-exodusFruit text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
+}
+.product-descriptions {
+  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center ;
+}
+.product-tag {
+  @apply text-lightblack text-xs sm:text-base font-light py-3 text-center ;
+}
+.primary-button {
+  @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-secondry transition-all duration-200 ease-in-out ;
+}
+.product-footer-text {
+  @apply text-[11px] font-light text-lightblack leading-[218.182%] ;
 }
