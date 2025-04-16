@@ -7,8 +7,108 @@
       <link rel="stylesheet" href="/src/style.css" />
   </head>
 
-  <body class="bg-white text-[#243237] max-w-full m-auto">
-    <img src="/public/images/webp/background-style.png" alt="" class="absolute z-0 top-0">
+  <body class="bg-white text-[#243237]">
+        <!-- <img src="/public/images/webp/background-style.png" alt="" class="absolute z-0 top-0"> -->
+        <div class="px-4 py-3 md:py-8 relative z-20">
+
+    <div class=" bg-white max-w-[1650px] mx-auto my-10 p-4 md:p-16 rounded-2xl shadow-[0_5px_20px_rgba(0,0,0,0.25)] shadow-[#844ED540]">
+
+      <!-- <div class="bg-gradient-to-r from-pink-500 to-orange-400 py-4 px-6 text-sm text-white">
+  <nav class="max-w-6xl mx-auto flex space-x-1">
+    <a href="#" class="hover:underline">Strona główna</a>
+    <span>›</span>
+    <a href="#" class="hover:underline">Lista sklepów</a>
+    <span>›</span>
+    <a href="#" class="hover:underline">The North Face</a>
+    <span>›</span>
+    <span class="font-bold">Kody rabatowe i promocje</span>
+  </nav>
+</div> -->
+
+<div class=" flex flex-row justify-between gap-6">
+  <!-- Logo -->
+  <div class="hidden lg:flex justify-center items-center w-full max-w-[250px] h-[350px] border-[#F4F9FD] border-[3px] p-4" >
+    <img src="/public/images/webp/north-face-logo.png" alt="The North Face Logo" class="h-[130px] w-[208px] object-contain " />
+  </div>
+
+  <!-- Info Section -->
+   <div class="max-w-[1149px] m-auto w-full">
+  <div class="flex justify-between flex-col lg:flex-row items-center">
+    <div class="flex flex-col">
+      
+      <div class="flex max-w-full justify-between">
+        <div class="flex lg:hidden justify-center items-center w-full max-w-[70px] md:max-w-[150px] h-[80px] md:h-[150px] border-[#F4F9FD] border-[3px] p-0 md:p-4" >
+    <img src="/public/images/webp/north-face-logo.png" alt="The North Face Logo" class="h-auto w-auto object-contain " />
+  </div>
+  <div>
+      <h2 class="text-[15px] md:text-[35px] font-bold ">The North Face</h2>
+      <h3 class="text-[15px] md:text-[35px] font-bold text-[#F47D41]">kody rabatowe, kupony</h3>
+      <p class="text-xs md:text-base mt-1 mb-8 font-light w-full max-w-[168px] md:max-w-full">Dostępne kupony, okazje i promocje: <span class="font-bold text-black">17</span></p>
+      
+      </div>
+</div>
+    <!-- Coupon Info -->
+    <ul class="text-[11px] md:text-base grid grid-cols-2 gap-y-0 md:gap-y-[5px] max-w-xl font-light whitespace-nowrap md:whitespace-normal">
+  <li class="col-span-1 mb-1">Kody rabatowe</li>
+  <li class="col-span-1 text-left pl-10 mb-1">2</li>
+
+  <li class="col-span-1 mb-1">Okazyjne oferty</li>
+  <li class="col-span-1 text-left pl-10 mb-1">15</li>
+
+  <li class="col-span-1 mb-1">Popularna wyprzedaż</li>
+  <li class="col-span-1 text-left pl-10 mb-1">do -50%</li>
+
+  <li class="col-span-1 mb-1">Darmowa dostawa</li>
+  <li class="col-span-1 text-left pl-10 mb-1">powyżej 230zł</li>
+
+  <li class="col-span-1 mb-3">Ostatnia weryfikacja kuponów</li>
+  <li class="col-span-1 text-left pl-10 mb-3">09/09/2024</li>
+</ul>
+ <p class="text-[11px] md:text-base font-light mt-3 block lg:hidden">
+      Zróżnicowana oferta The North Face przypadnie do gustu miłośnikom aktywności outdoorowych. Ubrania The North Face stanowią połączenie funkcjonalności, wytrzymałości, stylowego wzornictwa – to właśnie dzięki temu coraz częściej są wpasowywane w casualowe outfity. Sprawdź promocje na kurtki The North Face oraz pozostałe produkty z asortymentu! <a href="#" class="text-[#F47D41] underline hover:text-orange-600">czytaj więcej</a>
+    </p>
+    <!-- Description -->
+    
+    </div>
+    <!-- Rating & Button -->
+  <div >
+    <div class="text-right space-y-2">
+      <p class="text-[11px] md:text-base font-light text-center">Ocena sklepu<br><strong class="font-light">THE NORTH FACE</strong></p>
+      <div class="flex justify-center md:justify-end space-x-1 ">
+        <span class="text-[#FFD800] text-xl md:text-6xl">★</span>
+        <span class="text-[#FFD800] text-xl md:text-6xl">★</span>
+        <span class="text-[#FFD800] text-xl md:text-6xl">★</span>
+        <span class="text-[#FFD800] text-xl md:text-6xl">★</span>
+        <span class="text-[#F4F9FD] text-xl md:text-6xl">★</span>
+      </div>
+      <div class="w-fit m-auto">
+      <p class="text-xl md:text-[35px] font-light text-center ">4/5</p>
+      <p class="text-xs md:text-base text-center font-light">( 54 opinii )</p>
+      </div>
+     <button
+                        class="bg-[#F50269] max-w-[216px] w-full h-[40px] text-white text-sm md:text-base px-4 py-2 rounded-full shadow-lg transition-all duration-300 group block m-auto"
+                      >
+                     Przejdź do sklepu
+                        <img
+                          src="/public/images/svg/left-arrow.svg"
+                          alt=""
+                    class="absolute opacity-0 -translate-y-4 translate-x-28 lg:translate-x-32 xl:translate-x-36 group-hover:opacity-100 group-hover:translate-x-[165px] xl:group-hover:translate-x-[165px] 2xl:group-hover:translate-x-[165px] transition-all duration-200"
+                        />
+                      </button>
+
+    </div>
+  </div>
+  </div>
+ <p class="text-base font-light mt-3 hidden lg:block">
+      Zróżnicowana oferta The North Face przypadnie do gustu miłośnikom aktywności outdoorowych. Ubrania The North Face stanowią połączenie funkcjonalności, wytrzymałości, stylowego wzornictwa – to właśnie dzięki temu coraz częściej są wpasowywane w casualowe outfity. Sprawdź promocje na kurtki The North Face oraz pozostałe produkty z asortymentu! <a href="#" class="text-[#F47D41] underline hover:text-orange-600">czytaj więcej</a>
+    </p>
+</div>
+  
+</div>
+ 
+      </div>
+      </div>
+
     <!-- Steps Section -->
     <section class="mx-auto px-4 py-3 md:py-8 text-center relative z-20 ">
       <h2
