@@ -917,7 +917,7 @@ body {
   }
 }
 .shops-in-wydawalidobrze {
-  @apply text-base font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
+  @apply xl:text-base text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
 }
 .main-container {
   @apply max-w-[1315px] 3xl:max-w-[1561px] mx-auto px-4;
