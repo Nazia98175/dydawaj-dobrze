@@ -172,6 +172,23 @@
         width: 100%;
         height: 100%;
     }
+       .dropdown-enter {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    .dropdown-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 200ms ease, transform 200ms ease;
+    }
+    .dropdown-exit {
+      opacity: 1;
+    }
+    .dropdown-exit-active {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 200ms ease, transform 200ms ease;
+    }
 </style>
 
 <body>
@@ -1493,10 +1510,167 @@
         </div>
     </section>
     <!-- Hero - Card  -->
-    <section class="max-w-[1561px] px-4 py-10 mx-auto ">
-        <div class="flex flex-col xl:flex-row justify-between gap-3">
-        <div class="space-y-3 max-w-[500px] xl:max-w-[350px] w-full mx-auto xl:mx-0 ">
-            <div class="shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] !bg-[#FFF] rounded-[20px] py-11">
+    <section class="relative">
+           <img
+        class=" left-0 absolute z-[-10] w-full bottom-[-200px] xl:flex hidden"
+        src="/images/hero-product-bg.png"
+        alt=""
+      />
+        <div class="max-w-[1561px] px-4 py-10 mx-auto">
+        <div class="flex flex-col xl:flex-row justify-between gap-8 sm:gap-3">
+        <div class="space-y-8 sm:space-y-3 max-w-[500px] xl:max-w-[350px] w-full mx-auto xl:mx-0">
+            <!-- custom select  -->
+             <div
+      class="shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] !bg-[#FFF] rounded-[20px] py-11 block md:hidden"
+    >
+      <h4
+        class="text-center text-lightblack text-base font-bold leading-[120%]"
+      >
+        Kategorie
+      </h4>
+      <div
+        class="flex justify-between items-center gap-4 px-4 border-Jupiter border rounded-md h-[48px] mx-5 mt-7"
+      >
+        <input
+          id="searchInputSuggetion"
+          placeholder="Wyszukaj poradnik"
+          class="outline-none h-full w-full bg-transparent text-piedWagtailGrey text-base font-light"
+          type="text"
+        />
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="32"
+            viewBox="0 0 25 32"
+            fill="none"
+          >
+            <path
+              d="M16.2905 20.1382C16.2905 20.1382 15.9436 20.4851 15.2498 21.179C14.5559 21.8728 13.2201 22.2197 11.2422 22.2197C9.26432 22.2197 7.57357 21.5259 6.16992 20.1382C4.76628 18.7505 4.06445 17.0677 4.06445 15.0898C4.06445 13.112 4.76628 11.4212 6.16992 10.0176C7.57357 8.61393 9.26432 7.91211 11.2422 7.91211C13.2201 7.91211 14.9028 8.61393 16.2905 10.0176C17.6782 11.4212 18.3721 13.112 18.3721 15.0898C18.3721 17.0677 17.6782 18.7505 16.2905 20.1382ZM11.2422 24.2773C12.901 24.2773 14.4323 23.8626 15.8359 23.0332C17.2396 22.2038 18.3561 21.0872 19.1855 19.6836C20.015 18.2799 20.4297 16.7487 20.4297 15.0898C20.4297 12.5378 19.5285 10.3685 17.7261 8.58203C15.9237 6.79557 13.7544 5.90234 11.2183 5.90234C8.68213 5.90234 6.52083 6.79557 4.73438 8.58203C2.94792 10.3685 2.05469 12.5298 2.05469 15.0659C2.05469 17.6021 2.94792 19.7713 4.73438 21.5737C6.52083 23.3761 8.6901 24.2773 11.2422 24.2773ZM21.4346 25.2822L22.1523 24.5645L17.7021 20.1143L16.9844 20.832L16.2666 21.5498L20.7168 26L21.4346 25.2822Z"
+              fill="#BBBABF"
+              fill-opacity="0.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="suggestionsList" class="hidden">
+        <div
+          data-text="Testy produktów i usługi"
+          class="suggestion-item pt-10 border-Jupiter border-b px-5 pb-3"
+        >
+          <h3
+            class="flex justify-between items-center gap-4 group cursor-pointer"
+          >
+            <span
+              class="text-lightblack font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              Testy produktów i usług
+            </span>
+            <span
+              class="text-exodusFruit font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              5
+            </span>
+          </h3>
+        </div>
+        <div
+          data-text="Sprytne zakupy"
+          class="suggestion-item border-Jupiter border-b px-5 py-3"
+        >
+          <h3
+            class="flex justify-between items-center gap-4 group cursor-pointer"
+          >
+            <span
+              class="text-lightblack font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              Sprytne zakupy
+            </span>
+            <span
+              class="text-exodusFruit font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              101
+            </span>
+          </h3>
+        </div>
+        <div
+          data-text="Programy i karty lojalnościowe"
+          class="suggestion-item border-Jupiter border-b px-5 py-3"
+        >
+          <h3
+            class="flex justify-between items-center gap-4 group cursor-pointer"
+          >
+            <span
+              class="text-lightblack font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              Programy i karty lojalnościowe
+            </span>
+            <span
+              class="text-exodusFruit font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              28
+            </span>
+          </h3>
+        </div>
+        <div
+          data-text="Pomysł na prezent"
+          class="suggestion-item border-Jupiter border-b px-5 py-3"
+        >
+          <h3
+            class="flex justify-between items-center gap-4 group cursor-pointer"
+          >
+            <span
+              class="text-lightblack font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              Pomysł na prezent
+            </span>
+            <span
+              class="text-exodusFruit font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              9
+            </span>
+          </h3>
+        </div>
+        <div
+          data-text="Promocje bankowe i pokrewne"
+          class="suggestion-item border-Jupiter border-b px-5 py-3"
+        >
+          <h3
+            class="flex justify-between items-center gap-4 group cursor-pointer"
+          >
+            <span
+              class="text-lightblack font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              Promocje bankowe i pokrewne
+            </span>
+            <span
+              class="text-exodusFruit font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              4
+            </span>
+          </h3>
+        </div>
+        <div
+          data-text="Aplikacje pomagające w zakupach"
+          class="suggestion-item border-Jupiter border-b px-5 py-3"
+        >
+          <h3
+            class="flex justify-between items-center gap-4 group cursor-pointer"
+          >
+            <span
+              class="text-lightblack font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              Aplikacje pomagające w zakupach
+            </span>
+            <span
+              class="text-exodusFruit font-light group-hover:text-Mandarin transition-all duration-200 ease-in-out"
+            >
+              16
+            </span>
+          </h3>
+        </div>
+      </div>
+    </div>
+            <div class="shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] !bg-[#FFF] rounded-[20px] py-11 hidden md:block">
                 <h4 class="text-center text-lightblack text-base font-bold leading-[120%]">Kategorie</h4>
                 <div
                     class="flex justify-between items-center gap-4 px-4 border-Jupiter border rounded-md h-[48px] mx-5 mt-7">
@@ -1677,7 +1851,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-3">
+        <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-8 sm:gap-3">
             <!-- card 1 -->
             <article
                 class="group shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] bg-white rounded-[20px] flex flex-col justify-between h-full overflow-hidden cursor-pointer">
@@ -1878,6 +2052,7 @@
       </div>
       <button class="text-black font-light hover:underline cursor-pointer">Następna</button>
     </div>
+     </div>
     </section>
  
     <!-- footer section  -->
@@ -1980,15 +2155,24 @@
     </footer>
     <!-- top to bottom buttom -->
     <button
-        class="fixed cursor-pointer bottom-[200px] 2xl:buttom-[600px] 3xl:bottom-[600px] right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full  hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)]"
-        id="scroll" style="display: none">
-        <span class="flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path
-                    d="M11.7689 5.4039L21.5562 15.1911C21.7831 15.3897 21.8966 15.6379 21.8966 15.9358C21.8966 16.2337 21.7902 16.4961 21.5775 16.7231C21.3647 16.95 21.1023 17.0635 20.7902 17.0635C20.4782 17.0635 20.2228 16.95 20.0243 16.7231L11.003 7.74433L1.98172 16.7231C1.78313 16.95 1.52781 17.0635 1.21576 17.0635C0.903701 17.0635 0.64129 16.95 0.428524 16.7231C0.215758 16.4961 0.109375 16.2337 0.109375 15.9358C0.109375 15.6379 0.22285 15.3755 0.449801 15.1486L10.237 5.4039C10.4356 5.17695 10.6909 5.06348 11.003 5.06348C11.315 5.06348 11.5704 5.17695 11.7689 5.4039Z"
-                    fill="white" />
-            </svg>
-        </span>
+      class="fixed cursor-pointer bottom-5 right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)]"
+      id="scroll"
+      style="display: none"
+    >
+      <span class="flex justify-center items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+        >
+          <path
+            d="M11.7689 5.4039L21.5562 15.1911C21.7831 15.3897 21.8966 15.6379 21.8966 15.9358C21.8966 16.2337 21.7902 16.4961 21.5775 16.7231C21.3647 16.95 21.1023 17.0635 20.7902 17.0635C20.4782 17.0635 20.2228 16.95 20.0243 16.7231L11.003 7.74433L1.98172 16.7231C1.78313 16.95 1.52781 17.0635 1.21576 17.0635C0.903701 17.0635 0.64129 16.95 0.428524 16.7231C0.215758 16.4961 0.109375 16.2337 0.109375 15.9358C0.109375 15.6379 0.22285 15.3755 0.449801 15.1486L10.237 5.4039C10.4356 5.17695 10.6909 5.06348 11.003 5.06348C11.315 5.06348 11.5704 5.17695 11.7689 5.4039Z"
+            fill="white"
+          />
+        </svg>
+      </span>
     </button>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -2025,6 +2209,67 @@
                 },
             });
         });
+    </script>
+ <script>
+      const searchInput = document.getElementById("searchInputSuggetion");
+      console.log(searchInput);
+      
+      const suggestionsList = document.getElementById("suggestionsList");
+      const suggestionItems = document.querySelectorAll(".suggestion-item");
+
+      function showDropdown() {
+        suggestionsList.classList.remove("hidden");
+        suggestionsList.classList.remove(
+          "dropdown-exit",
+          "dropdown-exit-active"
+        );
+        suggestionsList.classList.add("dropdown-enter");
+        requestAnimationFrame(() => {
+          suggestionsList.classList.add("dropdown-enter-active");
+          suggestionsList.classList.remove("dropdown-enter");
+        });
+      }
+
+      function hideDropdown() {
+        suggestionsList.classList.remove("dropdown-enter-active");
+        suggestionsList.classList.add("dropdown-exit", "dropdown-exit-active");
+        setTimeout(() => {
+          suggestionsList.classList.add("hidden");
+          suggestionsList.classList.remove(
+            "dropdown-exit",
+            "dropdown-exit-active"
+          );
+        }, 200);
+      }
+
+      // Show all suggestions when typing
+      searchInput.addEventListener("input", () => {
+        const term = searchInput.value.trim();
+        if (term.length === 0) {
+          hideDropdown();
+        } else {
+          showDropdown();
+        }
+      });
+
+      // Handle outside click
+      document.addEventListener("click", (e) => {
+        if (
+          !searchInput.contains(e.target) &&
+          !suggestionsList.contains(e.target)
+        ) {
+          hideDropdown();
+        }
+      });
+
+      // Suggestion click handler
+      suggestionItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const text = item.dataset.text || "";
+          searchInput.value = text;
+          hideDropdown();
+        });
+      });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
     <script type="module" src="/src/main.js"></script>
