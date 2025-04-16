@@ -199,7 +199,7 @@ body {
   @apply cursor-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out;
 }
 .product-card {
-  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-[14px] py-6 h-full flex flex-col justify-between relative overflow-hidden ;
+  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-[14px] py-6 h-full flex flex-col justify-between relative overflow-hidden;
 }
 .product-name {
   @apply text-exodusFruit text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
@@ -208,7 +208,7 @@ body {
   @apply text-yachtClub text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
 }
 .product-descriptions {
-  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center;
+  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center pb-3 ;
 }
 .product-tag {
   @apply text-lightblack text-base font-light md:pt-2.5 leading-[120%] text-center block md:hidden;
@@ -226,12 +226,11 @@ body {
   @apply text-[11px] font-light text-lightblack leading-[218.182%];
 }
 .product-card-img {
-  @apply  md:max-h-[250px] max-h-[90px] h-full object-center  mx-0 sm:mx-auto;
+  @apply md:max-h-[250px] max-h-[90px] h-full object-center  mx-0 sm:mx-auto;
 }
 .only-with-us {
   @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[4.9%] xxl:top-[4%] md:top-[5%] sm:top-[9%] top-[18%] -right-[41%] sm:-right-[41%] lg:-right-[40%] md:-right-[42%] xxl:-right-[37%] pointer-events-none;
 }
 .slider-only-with-us {
   @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[9.9%] xxl:top-[11%] md:top-[10%] sm:top-[12%] xs:top-[14%] top-[14%] -right-[38%] xs:-right-[41%] sm:-right-[44%] lg:-right-[35%] md:-right-[40%] xxl:-right-[34%] pointer-events-none;
-  ;
 }
