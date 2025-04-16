@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./shopcard.html",
-    "/guides.html",
+    "./guides.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
