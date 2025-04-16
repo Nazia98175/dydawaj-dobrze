@@ -220,8 +220,12 @@ body {
   @apply text-[11px] font-light text-lightblack leading-[218.182%];
 }
 .product-card-img {
-  @apply max-w-[98px] md:max-w-full md:max-h-[250px] max-h-[90px] h-full object-center;
+  @apply max-w-[98px] md:max-h-[250px] max-h-[90px] h-full object-center md:max-w-[250px] mx-0 sm:mx-auto;
 }
 .only-with-us {
   @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[4.9%] xxl:top-[4%] md:top-[5%] sm:top-[9%] top-[18%] -right-[41%] sm:-right-[41%] lg:-right-[40%] md:-right-[42%] xxl:-right-[37%];
+}
+.slider-only-with-us {
+  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[9.9%] xxl:top-[11%] md:top-[10%] sm:top-[12%] xs:top-[14%] top-[14%] -right-[38%] xs:-right-[41%] sm:-right-[44%] lg:-right-[35%] md:-right-[40%] xxl:-right-[34%];
+  ;
 }
