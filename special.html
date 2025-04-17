@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Black Friday 2024</title>
     <link rel="stylesheet" href="/src/style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
+    /> -->
   </head>
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
   <body class="bg-white text-[#243237]">
     <img
       src="/public/images/webp/background-style.png"
@@ -23,98 +36,184 @@
       alt=""
       class="absolute z-0 mx-auto block md:hidden"
     />
-    <section>
+    <div class="px-4 py-3 md:py-8 relative z-20">
       <div
-        class="relative w-[1650px] h-[150px] rounded-2xl shadow-[0_5px_20px_rgba(0,0,0,0.25)] shadow-[#844ED540] bg-white overflow-hidden mx-auto mt-10 px-4"
+        class="bg-white max-w-[1650px] mx-auto my-10 rounded-2xl shadow-[0_5px_20px_rgba(0,0,0,0.25)] shadow-[#844ED540]"
+      >
+        <img
+          src="/public/images/Black-friday.png"
+          alt=""
+          class="block m-auto"
+        />
+      </div>
+    </div>
+    <section class="px-4 mx-auto relative z-20">
+      <div
+        class="relative max-w-[1650px] h-full rounded-2xl shadow-[0_5px_20px_rgba(0,0,0,0.25)] shadow-[#844ED540] bg-white overflow-hidden mx-auto px-0 md:px-6 py-10"
       >
         <!-- Scrollable container -->
         <div
-          id="categoryScroll"
-          class="flex items-center h-full overflow-x-auto gap-8 px-16 scrollbar-hide relative z-10"
+          class="flex items-center justify-between relative z-10 gap-0 md:gap-2"
         >
           <!-- A-Z Button -->
           <div
-            class="flex-shrink-0 w-16 h-16 bg-yellow-300 rounded-xl flex items-center justify-center text-sm font-semibold"
+            class="w-[55px] h-[55px] whitespace-nowrap bg-[#FFEA74] bg-opacity-100 p-4 rounded-xl hidden md:flex items-center justify-center text-sm font-semibold"
           >
             A - Z
           </div>
 
-          <!-- Example Category -->
-          <div
-            class="flex-shrink-0 flex flex-col items-center text-center w-20"
-          >
-            <img src="/icons/shirt.svg" class="w-8 h-8 mb-1" />
-            <span class="text-sm">Odzież i obuwie</span>
+          <!-- LEFT Arrow -->
+          <div class="flex">
+            <button
+              id="scrollLeft"
+              type="button"
+              class="custom-next-arrow flex justify-center items-center rounded-full cursor-pointer rotate-180 relative left-0 z-20 top-[46%] ml-[10px] md:ml-8"
+            >
+              <!-- Put SVG fully inside the button -->
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="pointer-events-none"
+              >
+                <mask id="path-1-inside-1_759_7539" fill="white">
+                  <path
+                    d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
+                  />
+                </mask>
+                <path
+                  d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
+                  fill="#243237"
+                  mask="url(#path-1-inside-1_759_7539)"
+                />
+              </svg>
+            </button>
           </div>
 
-          <!-- Repeat for each category -->
           <div
-            class="flex-shrink-0 flex flex-col items-center text-center w-20"
+            id="categoryScroll"
+            class="flex items-center gap-0 md:justify-between h-full flex-nowrap overflow-x-auto scroll-smooth scrollbar-hide relative z-10 w-full"
           >
-            <img src="/icons/tv.svg" class="w-8 h-8 mb-1" />
-            <span class="text-sm">RTV i AGD</span>
+            <!-- Example Category -->
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/shirt-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Odzież i obuwie</span>
+            </div>
+
+            <!-- Repeat for each category -->
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/tv-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">RTV i AGD</span>
+            </div>
+
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/pc-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Komputery i elektronika</span>
+            </div>
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/sport-ball-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Sport i hobby</span>
+            </div>
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/house-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Dom i ogród</span>
+            </div>
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/coin-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Inne</span>
+            </div>
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/apple-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Artikuły spożywcze</span>
+            </div>
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/finance-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Finanse</span>
+            </div>
+
+            <div
+              class="flex-shrink-0 flex flex-col gap-6 items-center text-center w-28"
+            >
+              <img
+                src="/public/images/svg/internet-icon.svg"
+                class="w-[38px] h-[30px] mb-1"
+              />
+              <span class="text-xs">Telewizja, internet, telefon</span>
+            </div>
           </div>
-
-          <div
-            class="flex-shrink-0 flex flex-col items-center text-center w-20"
-          >
-            <img src="/icons/laptop.svg" class="w-8 h-8 mb-1" />
-            <span class="text-sm">Komputery i elektronika</span>
-          </div>
-
-          <!-- ... other categories ... -->
-
-          <div
-            class="flex-shrink-0 flex flex-col items-center text-center w-20"
-          >
-            <img src="/icons/network.svg" class="w-8 h-8 mb-1" />
-            <span class="text-sm">Telewizja, internet, telefon</span>
+          <!-- RIGHT Arrow -->
+          <div class="flex">
+            <button
+              id="scrollRight"
+              class="custom-prev-arrow flex justify-center items-center rounded-full c cursor-pointer relative right-0 z-20 mr-[10px] md:mr-8 top-[46%]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <mask id="path-1-inside-1_759_7539" fill="white">
+                  <path
+                    d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
+                  />
+                </mask>
+                <path
+                  d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
+                  fill="#243237"
+                  mask="url(#path-1-inside-1_759_7539)"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-
-        <!-- Left Arrow -->
-        <button
-          id="scrollLeft"
-          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-20 hover:bg-gray-100"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-black"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-
-        <!-- Right Arrow -->
-        <button
-          id="scrollRight"
-          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-20 hover:bg-gray-100"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-black"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
       </div>
     </section>
+
+    <!--MAIN SECTION-->
     <section class="px-4 py-3 md:py-8 mx-auto relative z-20">
       <section
         class="max-w-[1561px] w-full m-auto flex flex-col xl:flex-row gap-3 items-start"
@@ -405,5 +504,8 @@
         scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
       });
     </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script> -->
+    <!-- <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/slider.js"></script> -->
   </body>
 </html>
