@@ -186,6 +186,9 @@ body {
     background: none !important;
   }
 }
+.main-heading {
+  @apply text-[23px] sm:text-[30px] md:text-[40px] 2xl:text-[45px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
+}
 .shops-in-wydawalidobrze {
   @apply xl:text-base text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
 }
