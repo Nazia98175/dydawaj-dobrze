@@ -8,6 +8,15 @@ body {
   font-family: "Poppins", "sans-serif";
 }
 
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .text-gradient {
   background: linear-gradient(
     110deg,
@@ -208,7 +217,7 @@ body {
   @apply text-yachtClub text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
 }
 .product-descriptions {
-  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center pb-3 ;
+  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center pb-3;
 }
 .product-tag {
   @apply text-lightblack text-base font-light md:pt-2.5 leading-[120%] text-center block md:hidden;
