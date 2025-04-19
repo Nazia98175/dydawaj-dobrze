@@ -195,6 +195,9 @@ body {
     background: none !important;
   }
 }
+.main-heading {
+  @apply text-[23px] sm:text-[30px] md:text-[40px] 2xl:text-[45px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
+}
 .shops-in-wydawalidobrze {
   @apply xl:text-base text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
 }
@@ -242,4 +245,72 @@ body {
 }
 .slider-only-with-us {
   @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[9.9%] xxl:top-[11%] md:top-[10%] sm:top-[12%] xs:top-[14%] top-[14%] -right-[38%] xs:-right-[41%] sm:-right-[44%] lg:-right-[35%] md:-right-[40%] xxl:-right-[34%] pointer-events-none;
+}
+.footer-li-style {
+  @apply hover:text-primary transition-all duration-200 ease-in-out cursor-pointer;
+}
+/* backgrounds */
+
+.hero-product-bg::before {
+  content: "";
+  position: absolute;
+  top: -2.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/webp/hero-product-bg-mobile.webp");
+  background-size: cover;
+  background-position: top center;
+  z-index: -10;
+}
+
+@media (min-width: 1280px) {
+  .hero-product-bg::before {
+    top: -111px;
+    height: 106.5%;
+    background-image: url("/images/webp/hero-product-bg.webp");
+  }
+}
+
+.frequently-bg-section::after {
+  content: "";
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/webp/frequently-story-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: -1;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .frequently-bg-section::after {
+    display: block;
+  }
+}
+
+@layer utilities {
+  .footer-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/webp/footer-mobile-bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: -1;
+  }
+
+  @media (min-width: 1024px) {
+    .footer-bg::before {
+      background-image: url("/images/webp/footer-bg.webp");
+    }
+  }
 }
