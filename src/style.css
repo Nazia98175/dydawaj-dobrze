@@ -8,7 +8,6 @@ body {
   font-family: "Poppins", "sans-serif";
 }
 
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -120,7 +119,8 @@ body {
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
   /* Animation properties */
@@ -128,7 +128,10 @@ body {
   visibility: hidden;
   transform: translateY(-10px);
 
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .dropdown-panel.show {
@@ -198,6 +201,9 @@ body {
 .main-heading {
   @apply text-[23px] sm:text-[30px] md:text-[40px] 2xl:text-[45px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
 }
+.small-title {
+  @apply text-lightblack text-base font-light;
+}
 .shops-in-wydawalidobrze {
   @apply xl:text-base text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
 }
@@ -211,7 +217,7 @@ body {
   @apply cursor-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out;
 }
 .product-card {
-  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-[14px] py-6 h-full flex flex-col justify-between relative overflow-hidden;
+  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-[14px] py-6 h-full flex flex-col justify-between relative overflow-hidden hover:-translate-y-1 transition-all duration-300 ease-in-out;
 }
 .product-name {
   @apply text-exodusFruit text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
@@ -248,6 +254,55 @@ body {
 }
 .footer-li-style {
   @apply hover:text-primary transition-all duration-200 ease-in-out cursor-pointer;
+}
+.search-input-style {
+  @apply outline-none bg-transparent placeholder:text-piedWagtailGrey text-base text-black w-full;
+}
+.search-item-style {
+  @apply border-Jupiter border px-4 h-[100px] flex justify-center items-center;
+}
+.hero-slider-style {
+  @apply relative overflow-hidden bg-white rounded-3xl shadow-c2 !flex !flex-col justify-between items-center !h-[288px];
+}
+.nav-items-style {
+  @apply text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out cursor-pointer;
+}
+.count-card-style {
+  @apply bg-white shadow-c3 rounded-xl py-10 px-9 2xl:px-0 hover:-translate-y-1 transition-all duration-300 ease-in-out;
+}
+.count-hub-heading {
+  @apply text-gradient text-[50px] lg:text-[42px] 3xl:text-[50px] font-bold leading-[130%] text-center w-[200px] md:w-[270px];
+}
+.medium-title {
+  @apply text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%];
+}
+.botton-top-btn-style {
+  @apply fixed cursor-pointer bottom-5 right-2 md:right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-c4;
+}
+.header-dropdown-style {
+  @apply cursor-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out;
+}
+.header-dropdown-title {
+  @apply text-blackMetal text-base font-bold leading-[150%] max-w-[116px] w-full;
+}
+.hero-slider-card {
+  @apply relative overflow-hidden bg-white rounded-3xl shadow-c2 !flex !flex-col justify-between items-center !h-[288px];
+}
+.primary-button-hover {
+  @apply transform -translate-x-5 opacity-0 group-hover:translate-x-0 absolute right-4 group-hover:opacity-100 text-base font-bold transition-all duration-300 ease-in-out;
+}
+.hero-bg-style {
+  @apply absolute left-0 w-full z-[-1] top-0 h-[231px] md:h-[500px];
+}
+.top-categories-bg-style {
+  @apply absolute top-[14%] left-0 z-[-5] object-cover;
+}
+
+.top-categories-bg2-style {
+  @apply hidden md:block absolute top-0 left-0 w-full h-auto z-[-1];
+}
+.header-dropdown-content-hover {
+  @apply fill-blueTitmouse group-hover:fill-[url(#hoverGradient)] transition-colors duration-300;
 }
 /* backgrounds */
 

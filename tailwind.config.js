@@ -47,6 +47,7 @@ export default {
         yachtClub: "#576063",
         cottonBall: "#F4F9FD",
         Mandarin: "#F47D41",
+        blueTitmouse: "#4063FD",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -56,7 +57,12 @@ export default {
           "linear-gradient(110deg, #9a33ae 6.13%, #f50269 76.3%, #f47d41 99.4%)",
       },
       dropShadow: {
-        c1: "[(2px 2px 6px rgba(68,68,68,0.25))]",
+        c1: "2px 2px 6px rgba(68, 68, 68, 0.25)",
+      },
+      boxShadow: {
+        c2: "0px 3px 10px 0px rgba(132, 78, 213, 0.25)",
+        c3: "0px 5px 20px 0px rgba(132, 78, 213, 0.08)",
+        c4: "3px 10px 10px 0px rgba(0, 0, 0, 0.20)",
       },
     },
   },
