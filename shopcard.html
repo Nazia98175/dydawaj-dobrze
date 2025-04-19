@@ -3473,7 +3473,7 @@
                 </section>
 
                 <!-- FAQ -->
-                <section class="max-w-[1110px] w-full">
+                <section class="max-w-[1110px] w-full mb-4">
                   <h2
                     class="text-[23px] md:text-[35px] xl:text-[40px] 2xl:text-[40px] 3xl:text-[50px] leading-[120%] 2xl:leading-[55px] 3xl:leading-[65px] font-bold mt-8 mb-6 text-center md:text-left max-w-[350px] md:max-w-full m-auto"
                   >
@@ -3489,7 +3489,7 @@
                         class="accordion-toggle max-w-[864px] w-full m-auto text-left font-light flex justify-between items-center text-exodusFruit text-sm md:text-[35px] xl:text-[40px] 2xl:text-[40px] 3xl:text-[50px] leading-[130%] 2xl:leading-[55px] 3xl:leading-[65px]"
                       >
                         Gdzie najtaniej kupić ubrania The North Face?
-                        <span class="icon transform transition-transform">
+                        <span class="icon transform transition-transform text-exodusFruit ">
                           <img
                             src="/images/svg/dropdown-svg.svg"
                             alt="Toggle Arrow"
@@ -3498,7 +3498,7 @@
                         </span>
                       </button>
                       <div
-                        class="accordion-content text-xs md:text-xl font-light hidden max-w-[864px] w-full m-auto mt-10"
+                        class="accordion-content text-xs md:text-xl font-light max-w-[864px] w-full m-auto mt-10 overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out"
                       >
                         <p>
                           Marka The North Face oferuje dwuletnią gwarancję na
@@ -3511,7 +3511,7 @@
                     </div>
                   </div>
                   <div
-                    class="accordion-item rounded-lg mb-6 max-w-[1116px] w-full"
+                    class="accordion-item rounded-lg mb-8 max-w-[1116px] w-full"
                   >
                     <div class="bg-cottonBall max-w-full w-full p-6">
                       <button
@@ -3527,7 +3527,7 @@
                         </span>
                       </button>
                       <div
-                        class="accordion-content text-xs md:text-xl font-light hidden max-w-[864px] w-full m-auto mt-10"
+                        class="accordion-content text-xs md:text-xl font-light max-w-[864px] w-full m-auto mt-10 overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out"
                       >
                         <p>
                           Marka The North Face oferuje dwuletnią gwarancję na
@@ -3557,7 +3557,7 @@
                         </span>
                       </button>
                       <div
-                        class="accordion-content text-xs md:text-xl font-light hidden max-w-[864px] w-full m-auto mt-10"
+                        class="accordion-content text-xs md:text-xl font-light max-w-[864px] w-full m-auto mt-10 overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out"
                       >
                         <p>
                           Marka The North Face oferuje dwuletnią gwarancję na
@@ -3587,7 +3587,7 @@
                         </span>
                       </button>
                       <div
-                        class="accordion-content text-xs md:text-xl font-light hidden max-w-[864px] w-full m-auto mt-10"
+                        class="accordion-content text-xs md:text-xl font-light max-w-[864px] w-full m-auto mt-10 overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out"
                       >
                         <p>
                           Marka The North Face oferuje dwuletnią gwarancję na
@@ -3602,19 +3602,20 @@
                 </section>
 
                 <!-- Footer -->
-                <section class="mt-8 mb-6">
-                  <h4 class="font-bold text-xs md:text-[30px] mb-2">
-                    Zobacz więcej:
-                  </h4>
-                  <a
-                    href="#"
-                    class="text-xs md:text-xl underline leading-[170%] md:leading-[160%]"
-                    >Markowe ciuchy "za grosze": gdzie kupować tanie markowe
-                    ubrania online?</a
-                  >
-
-                  <div class="mt-6">
-                    <h4 class="font-bold text-xs md:text-[30px] mb-2">
+                <section class="mt-10 mb-6">
+                  <div class="mb-6">
+                    <h4 class="font-bold text-xs md:text-[30px] mb-6">
+                      Zobacz więcej:
+                    </h4>
+                    <a
+                      href="#"
+                      class="text-xs md:text-xl underline leading-[170%] md:leading-[160%] font-light"
+                      >Markowe ciuchy "za grosze": gdzie kupować tanie markowe
+                      ubrania online?</a
+                    >
+                  </div>
+                  <div class="mt-10">
+                    <h4 class="font-bold text-xs md:text-[30px] mb-4">
                       Podobne sklepy
                     </h4>
                     <div class="flex justify-between items-center flex-wrap">
@@ -3973,52 +3974,48 @@
         button.addEventListener("click", () => {
           const item = button.closest(".accordion-item");
           const content = item.querySelector(".accordion-content");
-          const iconSpan = button.querySelector(".icon");
           const iconImg = button.querySelector(".icon-img");
 
-          const isOpen = !content.classList.contains("hidden");
+          const isOpen = content.classList.contains("open");
 
           // Close all
-          document
-            .querySelectorAll(".accordion-content")
-            .forEach((el) => el.classList.add("hidden"));
+          document.querySelectorAll(".accordion-content").forEach((el) => {
+            el.style.maxHeight = null;
+            el.classList.remove("open");
+            el.style.opacity = 0;
+          });
+
           document.querySelectorAll(".accordion-toggle").forEach((btn) => {
             btn.classList.remove("text-lightblack");
             btn.classList.add("text-exodusFruit");
-            const span = btn.querySelector(".icon");
-            const svg = span.querySelector("svg");
-            span.classList.remove("rotate-180", "text-lightblack");
-            span.classList.add("text-exodusFruit");
-            iconImg.classList.remove("img-color-active", "rotate-180");
-            iconImg.classList.add("img-color-inactive");
+            const img = btn.querySelector(".icon-img");
+            img.classList.remove("img-color-active", "rotate-180");
+            img.classList.add("img-color-inactive");
           });
 
-          // Open current if closed
+          // Open this one if it was closed
           if (!isOpen) {
-            content.classList.remove("hidden");
+            content.classList.add("open");
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = 1;
             button.classList.remove("text-exodusFruit");
             button.classList.add("text-lightblack");
             iconImg.classList.remove("img-color-inactive");
             iconImg.classList.add("img-color-active", "rotate-180");
-            iconSvg.classList.remove("fill-exodusFruit");
-            iconSvg.classList.add("fill-lightblack", "rotate-180");
           }
         });
       });
 
-      // Scroll to top button
+      // Scroll to top
       const scrollButton = document.getElementById("scroll");
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollButton.style.display = "block";
-        } else {
-          scrollButton.style.display = "none";
-        }
+        scrollButton.style.display = window.scrollY > 300 ? "block" : "none";
       });
-      scrollButton.addEventListener("click", () => {
+      scrollButton?.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
