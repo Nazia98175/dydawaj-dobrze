@@ -6,7 +6,9 @@ export default defineConfig({
       input: {
         main: "index.html",
         shopcard: "shopcard.html",
-        guides: "guides.html", // Change "guildes" to "guides.html"
+        guides: "guides.html",
+        about: "about.html",
+        special: "special.html",
       },
     },
   },
