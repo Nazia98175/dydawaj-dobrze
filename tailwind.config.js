@@ -63,6 +63,7 @@ export default {
         c2: "0px 3px 10px 0px rgba(132, 78, 213, 0.25)",
         c3: "0px 5px 20px 0px rgba(132, 78, 213, 0.08)",
         c4: "3px 10px 10px 0px rgba(0, 0, 0, 0.20)",
+        c5: "5px 8px 20px 0px rgba(0, 123, 255, 0.25)",
       },
     },
   },
