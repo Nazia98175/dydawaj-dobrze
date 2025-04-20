@@ -6,6 +6,8 @@
 
 body {
   font-family: "Poppins", "sans-serif";
+  color: #243237;
+  background: white;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
