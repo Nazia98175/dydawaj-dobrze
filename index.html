@@ -17,7 +17,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
     />
   </head>
-
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+  <script defer type="module" src="/src/main.js"></script>
+  <script defer type="module" src="/src/slider.js"></script>
+  <script defer type="module" src="/src/counthub.js"></script>
   <body>
     <!-- Header start --- -->
     <header class="relative">
@@ -28,13 +31,12 @@
           class="hidden xl:block max-w-[160px] md:max-w-[270px] w-full cursor-pointer"
           src="/images/svg/logo.svg"
           alt="logo"
-          loading="lazy"
+       
         />
         <div class="block xl:hidden max-w-[160px] md:max-w-[270px] w-full">
-          <img
+          <img 
             src="/images/webp/mobile-logo.webp"
             alt="wydawaj dobrze logo"
-            loading="lazy"
           />
         </div>
         <!-- Navigation -->
@@ -1702,7 +1704,7 @@
           <img src="/images/svg/sidebar-close.svg" alt="sidebar close" />
         </button>
       </div>
-      <ul class="mobile-menu-items">
+      <article class="mobile-menu-items">
         <button
           id="dropdownBtn"
           aria-label="dropdown open"
@@ -1730,131 +1732,131 @@
         <div id="dropdownContent" class="dropdown-content w-full bg-white">
           <ul class="py-1">
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Artykuły spożywcze</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Biuro i firma</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Biżuteria i dodatki</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Catering Dietetyczne</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Dla dzieci</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Dom i ogród</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Drogerie, Perfumy i kosmetyki</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Komputery i elektronika</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Finanse</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Gry, programy, aplikacje</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Inne</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Konta bankowe dla młodych i młodzieży</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Książki, muzyka, film</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Meble, oświetlenie i dodatki</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Motoryzacja</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Odzież i obuwie</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Podróże i wakacje</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Portale streamingowe</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Prezenty i kwiaty</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Promocje bankowe 2025</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Gry, programy, aplikacje</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Inne</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >młodzieży</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Książka, muzyka, film</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Meble, oświetlenie i dodatki</a
               >
             </li>
-            <li class="">
+            <li >
               <a
                 href="#"
                 class="block !px-4 !pt-4 !pb-0 small-title !text-blackMetal"
@@ -1862,7 +1864,7 @@
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >debetowych</a
               >
             </li>
@@ -1884,10 +1886,10 @@
         <li class="border-b border-Jupiter">
           <a class="small-title !text-blackMetal" href="#">Poradnik</a>
         </li>
-        <li class="">
+        <li >
           <a class="small-title !text-blackMetal" href="#">Sklepy</a>
         </li>
-      </ul>
+      </article>
       <div class="px-4">
         <div
           class="flex justify-between items-center gap-4 px-4 border-Jupiter border rounded-md h-[48px]"
@@ -1895,7 +1897,7 @@
           <input
             id="searchInput"
             class="outline-none h-full w-full bg-transparent text-piedWagtailGrey text-base font-light"
-            type="text"
+            type="search"
           />
           <button>
             <img src="/images/svg/sidebar-search-icon.svg" alt="search icon" />
@@ -1903,24 +1905,24 @@
         </div>
         <!-- Inline Suggestions Container (part of the same container) -->
         <div id="suggestionsBox" class="suggestions">
-          <div
+          <button
             class="py-2 px-4 small-title"
             onclick="selectSuggestion('The North Face')"
           >
             The North Face
-          </div>
-          <div
+          </button>
+          <button
             class="py-2 px-4 small-title"
             onclick="selectSuggestion('The Body Shop')"
           >
             The Body Shop
-          </div>
-          <div
+          </button>
+          <button
             class="py-2 px-4 small-title"
             onclick="selectSuggestion('The Streets')"
           >
             The Streets
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -1931,13 +1933,13 @@
     >
       <img
         class="hero-bg-style"
-        src="/images/webp/hero-bg.avif"
+        src="/images/svg/hero-bg.svg"
         alt="hero bg"
       />
       <div class="flex justify-center items-center">
-        <h1 class="max-w-[943px] mx-auto px-4 main-heading">
+        <h2 class="max-w-[943px] mx-auto px-4 main-heading">
           Okazje, kody rabatowe i promocje do najlepszych sklepów w Polsce
-        </h1>
+        </h2>
       </div>
     </section>
     <!-- Hero SLIDER-SECTION -->
@@ -2687,7 +2689,7 @@
     <section class="relative pt-10">
       <img
         class="top-categories-bg-style"
-        src="/images/webp/top-categories-bg.webp"
+        src="/images/svg/top-categories-bg.svg"
         alt="top bg"
       />
       <div class="main-container">
@@ -2819,12 +2821,8 @@
       </div>
     </section>
     <!-- Become a conscious section -->
-    <section class="relative">
-      <img
-        class="top-categories-bg2-style"
-        src="/images/webp/top-categories-bg2.webp"
-        alt="categories bg"
-      />
+    <section class="relative ">
+
       <div
         class="primary-container md:pb-10 pt-16 sm:pt-[90px] md:pt-[101px] lg:pt-[241px] relative"
       >
@@ -3337,7 +3335,7 @@
             <div
               class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-5 w-full pt-[20px] sm:pt-[50px] md:pt-[100px]"
             >
-              <div class="">
+              <div >
                 <h3 class="text-base text-white font-semibold mb-2">STRONY</h3>
                 <ul class="space-y-2 small-title !text-white">
                   <li>
@@ -3365,7 +3363,7 @@
               </div>
 
               <!-- Ważne section -->
-              <div class="">
+              <div >
                 <h3 class="text-base text-white font-semibold mb-2">WAŻNE</h3>
                 <ul class="space-y-2 small-title !text-white">
                   <li>
@@ -3383,7 +3381,7 @@
               </div>
 
               <!-- Kontakt section -->
-              <div class="">
+              <div >
                 <h3 class="text-base text-white font-semibold mb-2">KONTAKT</h3>
                 <ul class="space-y-2 small-title !text-white">
                   <li>
@@ -3406,9 +3404,6 @@
       </span>
     </button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/slider.js"></script>
-    <script type="module" src="/src/counthub.js"></script>
+
   </body>
 </html>

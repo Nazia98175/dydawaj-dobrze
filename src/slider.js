@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const swiperElement = document.querySelector(".card-swiper");
   const totalSlides = document.querySelectorAll(".swiper-slide").length;
   const prevButton = document.querySelector(".custom-next-arrow");
   const nextButton = document.querySelector(".custom-prev-arrow");
