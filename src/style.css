@@ -201,13 +201,13 @@ body {
   }
 }
 .main-heading {
-  @apply text-[23px] sm:text-[30px] md:text-[40px] 2xl:text-[45px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
+  @apply text-[23px] sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
 }
 .small-title {
   @apply text-lightblack text-base font-light;
 }
 .shops-in-wydawalidobrze {
-  @apply xl:text-base text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
+  @apply 3xl:text-base  text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
 }
 .main-container {
   @apply max-w-[1315px] 3xl:max-w-[1561px] mx-auto px-4;
@@ -249,10 +249,10 @@ body {
   @apply md:max-h-[250px] max-h-[90px] h-full object-center  mx-0 sm:mx-auto;
 }
 .only-with-us {
-  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[4.9%] xxl:top-[4%] md:top-[5%] sm:top-[9%] top-[18%] -right-[41%] sm:-right-[41%] lg:-right-[40%] md:-right-[42%] xxl:-right-[37%] pointer-events-none;
+  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  2xl:py-[6px] 3xl:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[4.9%] xxl:top-[4%] md:top-[5%] sm:top-[9%] top-[18%] -right-[41%] sm:-right-[41%] lg:-right-[40%] md:-right-[42%] xxl:-right-[37%] pointer-events-none;
 }
 .slider-only-with-us {
-  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  md:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[9.9%] xxl:top-[11%] md:top-[10%] sm:top-[12%] xs:top-[14%] top-[14%] -right-[38%] xs:-right-[41%] sm:-right-[44%] lg:-right-[35%] md:-right-[40%] xxl:-right-[34%] pointer-events-none;
+  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus 2xl:py-[6px] 3xl:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[9.9%] xxl:top-[11%] md:top-[10%] sm:top-[12%] xs:top-[14%] top-[14%] -right-[38%] xs:-right-[41%] sm:-right-[44%] lg:-right-[35%] md:-right-[40%] xxl:-right-[34%] pointer-events-none;
 }
 .footer-li-style {
   @apply hover:text-primary transition-all duration-200 ease-in-out cursor-pointer;
@@ -276,7 +276,7 @@ body {
   @apply text-gradient text-[50px] lg:text-[42px] 3xl:text-[50px] font-bold leading-[130%] text-center w-[200px] md:w-[270px];
 }
 .medium-title {
-  @apply text-xs sm:text-lg md:text-xl font-light text-lightblack leading-[160%];
+  @apply text-xs sm:text-lg 3xl:text-xl font-light text-lightblack leading-[160%];
 }
 .botton-top-btn-style {
   @apply fixed cursor-pointer bottom-5 right-2 md:right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-c4;
