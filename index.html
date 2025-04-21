@@ -12,15 +12,15 @@
       Deals, discount codes and promotions for the best stores in Poland
     </title>
     <link rel="stylesheet" href="/src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
-    />
+<!-- Add this to your HTML head -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"></noscript>
   </head>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-  <script defer type="module" src="/src/main.js"></script>
-  <script defer type="module" src="/src/slider.js"></script>
-  <script defer type="module" src="/src/counthub.js"></script>
+  <script defer src="/src/main.js"></script>
+  <script defer src="/src/slider.js"></script>
+  <script defer src="/src/counthub.js"></script>
   <body>
     <!-- Header start --- -->
     <header class="relative">
@@ -1933,7 +1933,7 @@
     >
       <img
         class="hero-bg-style"
-        src="/images/svg/hero-bg.svg"
+        src="/images/webp/hero-bg.avif"
         alt="hero bg"
       />
       <div class="flex justify-center items-center">
