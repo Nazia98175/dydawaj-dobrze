@@ -310,6 +310,10 @@ body {
   @apply fill-blueTitmouse group-hover:fill-[url(#hoverGradient)] transition-colors duration-300;
 }
 
+.paragraph-font-style {
+  @apply text-xs md:text-lg 3xl:text-xl  leading-[170%] md:leading-[160%];
+}
+
 /* backgrounds */
 
 .hero-product-bg::before {
