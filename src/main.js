@@ -154,16 +154,36 @@ const categoriesBtn = document.getElementById("categoriesBtn");
 const categoriesPanel = document.getElementById("categoriesPanel");
 const arrowIcon = categoriesBtn.querySelector(".arrow-icon-dropdown");
 
-// Open dropdown on mouse enter
-categoriesDropdown.addEventListener("mouseenter", function () {
+let isDropdownOpen = false;
+let hoverTimer;
+
+// Only the button should trigger the dropdown
+categoriesBtn.addEventListener("mouseenter", function (e) {
+  e.preventDefault();
+
+  // Clear any existing timers
+  clearTimeout(hoverTimer);
+
   categoriesPanel.classList.add("show");
   arrowIcon.classList.add("rotate");
+  isDropdownOpen = true;
 });
 
-// Close dropdown on mouse leave
-categoriesDropdown.addEventListener("mouseleave", function () {
-  categoriesPanel.classList.remove("show");
-  arrowIcon.classList.remove("rotate");
+// When leaving the entire dropdown container
+categoriesDropdown.addEventListener("mouseleave", function (e) {
+  e.preventDefault();
+
+  // Add a small delay before closing to prevent flickering
+  hoverTimer = setTimeout(() => {
+    categoriesPanel.classList.remove("show");
+    arrowIcon.classList.remove("rotate");
+    isDropdownOpen = false;
+  }, 100);
+});
+
+// When entering the dropdown container, cancel any pending close
+categoriesPanel.addEventListener("mouseenter", function (e) {
+  clearTimeout(hoverTimer);
 });
 
 // Handle window resize
@@ -171,6 +191,7 @@ window.addEventListener("resize", function () {
   if (window.innerWidth < 1024) {
     categoriesPanel.classList.remove("show");
     arrowIcon.classList.remove("rotate");
+    isDropdownOpen = false;
   }
 });
 
