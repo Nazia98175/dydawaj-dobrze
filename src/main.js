@@ -1,4 +1,5 @@
-// Get DOM elements
+
+
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileSidebar = document.getElementById("mobileSidebar");
 const sidebarOverlay = document.getElementById("sidebarOverlay");
@@ -90,10 +91,8 @@ searchInput.addEventListener("input", function () {
 
     // Loop through all suggestion items and show/hide based on match
     suggestionItems.forEach((item) => {
-      console.log(item);
 
       const itemName = item.getAttribute("data-name").toLowerCase();
-      console.log(itemName);
 
       if (itemName.includes(query)) {
         item.style.display = "flex";
