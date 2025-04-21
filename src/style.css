@@ -203,6 +203,9 @@ body {
 .main-heading {
   @apply text-[23px] sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
 }
+.secondry-heading {
+  @apply text-sm lg:text-2xl 2xl:text-[28px] 3xl:text-[35px] font-bold;
+}
 .small-title {
   @apply text-lightblack text-base font-light;
 }
@@ -276,7 +279,7 @@ body {
   @apply text-gradient text-[50px] lg:text-[42px] 3xl:text-[50px] font-bold leading-[130%] text-center w-[200px] md:w-[270px];
 }
 .medium-title {
-  @apply text-xs sm:text-lg 3xl:text-xl font-light text-lightblack leading-[160%];
+  @apply text-xs sm:text-base 3xl:text-xl font-light text-lightblack leading-[160%];
 }
 .botton-top-btn-style {
   @apply fixed cursor-pointer bottom-5 right-2 md:right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-c4;
@@ -306,6 +309,7 @@ body {
 .header-dropdown-content-hover {
   @apply fill-blueTitmouse group-hover:fill-[url(#hoverGradient)] transition-colors duration-300;
 }
+
 /* backgrounds */
 
 .hero-product-bg::before {
