@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "Poppins", "sans-serif";
-  color: #243237;
+  font-family: "Poppins", "sans-serif" !important;
   background: white;
 }
 
@@ -201,119 +200,132 @@ body {
   }
 }
 .main-heading {
-  @apply text-[23px] sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px] font-bold text-white leading-[150%] text-center;
+  @apply text-center text-[23px] font-bold leading-[150%] text-white sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px];
 }
 .secondry-heading {
-  @apply text-sm lg:text-2xl 2xl:text-[28px] 3xl:text-[35px] font-bold;
+  @apply text-sm font-bold lg:text-2xl 2xl:text-[28px] 3xl:text-[35px];
 }
 .small-title {
-  @apply text-lightblack text-base font-light;
+  @apply text-base font-light text-lightblack;
+}
+.larger-title {
+  @apply text-xl font-bold leading-[130%] text-lightblack md:text-[23px] md:leading-[140%] 3xl:text-[30px];
 }
 .shops-in-wydawalidobrze {
-  @apply 3xl:text-base  text-sm font-light text-white hover:text-primary transition-all duration-200 ease-in-out w-fit cursor-pointer;
+  @apply w-fit cursor-pointer text-sm font-light text-white transition-all duration-200 ease-in-out hover:text-primary 3xl:text-base;
 }
 .main-container {
-  @apply max-w-[1315px] 3xl:max-w-[1561px] mx-auto px-4;
+  @apply mx-auto max-w-[1315px] px-4 3xl:max-w-[1561px];
 }
 .primary-container {
-  @apply 3xl:max-w-[1593px] max-w-[1350px] mx-auto px-4;
+  @apply mx-auto max-w-[1350px] px-4 3xl:max-w-[1593px];
 }
 .artical-container {
-  @apply cursor-pointer flex items-center gap-8 py-6 px-9 h-[100px] hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)] hover:bg-white rounded-lg transition-all duration-200 ease-in-out;
+  @apply flex h-[100px] cursor-pointer items-center gap-8 rounded-lg px-9 py-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)];
 }
 .product-card {
-  @apply bg-white rounded-[20px] shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] px-3 3xl:px-[14px] py-6 h-full flex flex-col justify-between relative overflow-hidden hover:-translate-y-1 transition-all duration-300 ease-in-out;
+  @apply relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] bg-white px-3 py-6 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1 3xl:px-[14px];
 }
 .product-name {
-  @apply text-exodusFruit text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
+  @apply mb-2.5 break-words text-start text-xl font-bold leading-[130%] text-exodusFruit sm:text-2xl md:text-center 2xl:text-[26px] 3xl:text-3xl;
 }
 .product-name-disable {
-  @apply text-yachtClub text-xl sm:text-2xl 2xl:text-[26px] 3xl:text-3xl font-bold text-start md:text-center mb-2.5 leading-[130%] break-words;
+  @apply mb-2.5 break-words text-start text-xl font-bold leading-[130%] text-yachtClub sm:text-2xl md:text-center 2xl:text-[26px] 3xl:text-3xl;
 }
 .product-descriptions {
-  @apply text-[11px] sm:text-sm font-light text-lightblack leading-[120%] text-start md:text-center pb-3;
+  @apply pb-3 text-start text-[11px] font-light leading-[120%] text-lightblack sm:text-sm md:text-center;
 }
 .product-tag {
-  @apply text-lightblack text-base font-light md:pt-2.5 leading-[120%] text-center block md:hidden;
+  @apply block text-center text-base font-light leading-[120%] text-lightblack md:hidden md:pt-2.5;
 }
 .product-tag-mobile {
-  @apply text-lightblack text-base font-light pt-2.5 leading-[120%] text-center md:block hidden;
+  @apply hidden pt-2.5 text-center text-base font-light leading-[120%] text-lightblack md:block;
 }
 .primary-button {
-  @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-secondry transition-all duration-200 ease-in-out;
+  @apply flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)];
 }
 .primary-button-disable {
-  @apply hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]  cursor-pointer gap-2 rounded-3xl px-6 py-3 h-[40px] flex justify-center items-center w-full text-white text-center bg-yachtClub transition-all duration-200 ease-in-out;
+  @apply flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-yachtClub px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)];
 }
 .product-footer-text {
-  @apply text-[11px] font-light text-lightblack leading-[218.182%];
+  @apply text-[11px] font-light leading-[218.182%] text-lightblack;
 }
 .product-card-img {
-  @apply md:max-h-[250px] max-h-[90px] h-full object-center  mx-0 sm:mx-auto;
+  @apply mx-0 h-full max-h-[90px] object-center sm:mx-auto md:max-h-[250px];
 }
 .only-with-us {
-  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus  2xl:py-[6px] 3xl:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[4.9%] xxl:top-[4%] md:top-[5%] sm:top-[9%] top-[18%] -right-[41%] sm:-right-[41%] lg:-right-[40%] md:-right-[42%] xxl:-right-[37%] pointer-events-none;
+  @apply pointer-events-none absolute -right-[41%] top-[18%] z-10 !m-0 w-full rotate-45 bg-schoolBus py-1 text-center text-xs font-bold leading-[66.667%] text-lightblack drop-shadow-c1 sm:-right-[41%] sm:top-[9%] md:-right-[42%] md:top-[5%] lg:-right-[40%] xxl:-right-[37%] xxl:top-[4%] 2xl:py-[6px] 3xl:top-[4.9%] 3xl:py-2.5;
 }
 .slider-only-with-us {
-  @apply text-xs leading-[66.667%] font-bold text-lightblack text-center absolute rotate-45 bg-schoolBus 2xl:py-[6px] 3xl:py-2.5 py-1 drop-shadow-c1 !m-0 w-full z-10 3xl:top-[9.9%] xxl:top-[11%] md:top-[10%] sm:top-[12%] xs:top-[14%] top-[14%] -right-[38%] xs:-right-[41%] sm:-right-[44%] lg:-right-[35%] md:-right-[40%] xxl:-right-[34%] pointer-events-none;
+  @apply pointer-events-none absolute -right-[38%] top-[14%] z-10 !m-0 w-full rotate-45 bg-schoolBus py-1 text-center text-xs font-bold leading-[66.667%] text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] sm:-right-[44%] sm:top-[12%] md:-right-[40%] md:top-[10%] lg:-right-[35%] xxl:-right-[34%] xxl:top-[11%] 2xl:py-[6px] 3xl:top-[9.9%] 3xl:py-2.5;
 }
 .footer-li-style {
-  @apply hover:text-primary transition-all duration-200 ease-in-out cursor-pointer;
+  @apply cursor-pointer transition-all duration-200 ease-in-out hover:text-primary;
 }
 .search-input-style {
-  @apply outline-none bg-transparent placeholder:text-piedWagtailGrey text-base text-black w-full;
+  @apply w-full bg-transparent text-base text-black outline-none placeholder:text-piedWagtailGrey;
 }
 .search-item-style {
-  @apply border-Jupiter border px-4 h-[100px] flex justify-center items-center;
+  @apply flex h-[100px] items-center justify-center border border-Jupiter px-4;
 }
 .hero-slider-style {
-  @apply relative overflow-hidden bg-white rounded-3xl shadow-c2 !flex !flex-col justify-between items-center !h-[288px];
+  @apply relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white shadow-c2;
 }
 .nav-items-style {
-  @apply text-base leading-[150%] text-white hover:text-primary transition-all duration-200 ease-in-out cursor-pointer;
+  @apply cursor-pointer text-base leading-[150%] text-white transition-all duration-200 ease-in-out hover:text-primary;
 }
 .count-card-style {
-  @apply bg-white shadow-c3 rounded-xl py-10 px-9 2xl:px-0 hover:-translate-y-1 transition-all duration-300 ease-in-out;
+  @apply rounded-xl bg-white px-9 py-10 shadow-c3 transition-all duration-300 ease-in-out hover:-translate-y-1 2xl:px-0;
 }
 .count-hub-heading {
-  @apply text-gradient text-[50px] lg:text-[42px] 3xl:text-[50px] font-bold leading-[130%] text-center w-[200px] md:w-[270px];
+  @apply text-gradient w-[200px] text-center text-[50px] font-bold leading-[130%] md:w-[270px] lg:text-[42px] 3xl:text-[50px];
 }
 .medium-title {
-  @apply text-xs sm:text-base 3xl:text-xl font-light text-lightblack leading-[160%];
+  @apply text-xs font-light leading-[160%] text-lightblack sm:text-base 3xl:text-xl;
 }
 .botton-top-btn-style {
-  @apply fixed cursor-pointer bottom-5 right-2 md:right-5 h-[50px] w-[50px] md:h-[60px] md:w-[60px] z-[1000] rounded-full hover:bg-Mandarin transition-all duration-200 bg-secondry shadow-c4;
+  @apply fixed bottom-5 right-2 z-[1000] h-[50px] w-[50px] cursor-pointer rounded-full bg-secondry shadow-c4 transition-all duration-200 hover:bg-Mandarin md:right-5 md:h-[60px] md:w-[60px];
 }
 .header-dropdown-style {
-  @apply cursor-pointer flex items-center gap-6 p-6 hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)] hover:bg-white rounded-md transition-all duration-200 ease-in-out;
+  @apply flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)];
 }
 .header-dropdown-title {
-  @apply text-blackMetal text-base font-bold leading-[150%] max-w-[116px] w-full;
+  @apply w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal;
 }
 .hero-slider-card {
-  @apply relative overflow-hidden bg-white rounded-3xl shadow-c2 !flex !flex-col justify-between items-center !h-[288px];
+  @apply relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white shadow-c2;
 }
 .primary-button-hover {
-  @apply transform -translate-x-5 opacity-0 group-hover:translate-x-0 absolute right-4 group-hover:opacity-100 text-base font-bold transition-all duration-300 ease-in-out;
+  @apply absolute right-4 -translate-x-5 transform text-base font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100;
 }
 .hero-bg-style {
-  @apply absolute left-0 w-full z-[-1] top-0 h-[231px] md:h-[500px];
+  @apply absolute left-0 top-0 z-[-1] h-[231px] w-full md:h-[500px];
 }
 .top-categories-bg-style {
-  @apply absolute top-[14%] left-0 z-[-5] object-cover;
-}
-
-.top-categories-bg2-style {
-  @apply hidden md:block absolute top-0 left-0 w-full h-auto z-[-1];
+  @apply absolute left-0 top-[14%] z-[-5] object-cover;
 }
 .header-dropdown-content-hover {
-  @apply fill-blueTitmouse group-hover:fill-[url(#hoverGradient)] transition-colors duration-300;
+  @apply fill-blueTitmouse transition-colors duration-300 group-hover:fill-[url(#hoverGradient)];
 }
 
 .paragraph-font-style {
-  @apply text-xs md:text-lg 3xl:text-xl  leading-[170%] md:leading-[160%];
+  @apply text-xs leading-[170%] md:text-lg md:leading-[160%] 3xl:text-xl;
 }
-
+.dropdown-text {
+  @apply small-title block px-4 py-2 !text-blackMetal;
+}
+.coupon-info-text {
+  @apply text-[11px] md:text-sm 3xl:text-base;
+}
+.table-btn-style {
+  @apply m-auto block h-[36px] w-full max-w-[113px] rounded-full bg-secondry px-4 py-1 text-xs text-white shadow-lg transition-all duration-300 sm:text-sm 3xl:h-[40px] 3xl:py-2 3xl:text-base;
+}
+.accordion-btn-style {
+  @apply flex w-full items-center justify-between gap-3 text-left text-sm font-light leading-[130%] text-exodusFruit md:gap-8 md:text-[30px] xl:text-[36px] 2xl:text-[38px] 2xl:leading-[55px] 3xl:text-[50px] 3xl:leading-[65px];
+}
+.see-more-title {
+  @apply text-xs font-bold text-lightblack sm:text-2xl md:text-[26px] 3xl:text-[30px];
+}
 /* backgrounds */
 
 .hero-product-bg::before {
@@ -378,4 +390,30 @@ body {
       background-image: url("/images/webp/footer-bg.webp");
     }
   }
+}
+.top-categories-bg2-style::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/svg/top-categories-bg2.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -10;
+}
+.top-categories-bg2-style {
+  position: relative;
+  width: 100%;
+}
+.img-color-inactive {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(42%) saturate(1407%)
+    hue-rotate(215deg) brightness(98%) contrast(94%);
+}
+
+.img-color-active {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(293%)
+    hue-rotate(139deg) brightness(97%) contrast(90%);
 }

@@ -12,37 +12,49 @@
       Deals, discount codes and promotions for the best stores in Poland
     </title>
     <link rel="stylesheet" href="/src/style.css" />
+    <!-- Add this to your HTML head -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
+    /></noscript>
   </head>
 
   <body>
+    <script
+      defer
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"
+    ></script>
+    <script defer type="module" src="/src/main.js"></script>
+    <script defer type="module" src="/src/slider.js"></script>
+    <script defer type="module" src="/src/counthub.js"></script>
+
     <!-- Header start --- -->
     <header class="relative">
       <div
-        class="flex justify-between items-center gap-7 max-w-[1164px] mx-auto px-4"
+        class="mx-auto flex max-w-[1164px] items-center justify-between gap-7 px-4"
       >
         <img
-          class="hidden xl:block max-w-[160px] md:max-w-[270px] w-full cursor-pointer"
+          class="hidden w-full max-w-[160px] cursor-pointer md:max-w-[270px] xl:block"
           src="/images/svg/logo.svg"
           alt="logo"
-          loading="lazy"
         />
-        <div class="block xl:hidden max-w-[160px] md:max-w-[270px] w-full">
-          <img
-            src="/images/webp/mobile-logo.webp"
-            alt="wydawaj dobrze logo"
-            loading="lazy"
-          />
+        <div class="block w-full max-w-[160px] md:max-w-[270px] xl:hidden">
+          <img src="/images/webp/mobile-logo.webp" alt="wydawaj dobrze logo" />
         </div>
         <!-- Navigation -->
-        <nav class="hidden xl:flex space-x-8">
+        <nav class="hidden space-x-8 xl:flex">
           <div id="categoriesDropdown">
             <button
               id="categoriesBtn"
-              class="flex justify-between items-center gap-3 text-base leading-[150%] text-primary cursor-pointer"
+              class="flex cursor-pointer items-center justify-between gap-3 text-base leading-[150%] text-primary"
             >
               Kategorie
               <span>
@@ -66,13 +78,13 @@
             <div
               style="transform: translateX(-50%); left: 50%"
               id="categoriesPanel"
-              class="dropdown-panel mx-auto max-w-[1920px] w-full transition-transform"
+              class="dropdown-panel mx-auto w-full max-w-[1920px] transition-transform"
             >
               <div
-                class="grid grid-cols-6 gap-6 w-full bg-white p-6 rounded-md overflow-auto h-[450px] 3xl:h-[600px] custom-scrollbar"
+                class="custom-scrollbar grid h-[450px] w-full grid-cols-6 gap-6 overflow-auto rounded-md bg-white p-6 3xl:h-[600px]"
               >
                 <!-- Row 1 -->
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="43"
@@ -120,7 +132,7 @@
                   </svg>
                   <h3 class="header-dropdown-title">Artikuły spożywcze</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="38"
@@ -178,7 +190,7 @@
                     firma
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="36"
@@ -241,7 +253,7 @@
                   </svg>
                   <h3 class="header-dropdown-title">Biżuteria i dodatki</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     width="37"
                     height="40"
@@ -289,7 +301,7 @@
 
                   <h3 class="header-dropdown-title">Cateringi Dietetyczne</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     width="59"
                     height="33"
@@ -389,7 +401,7 @@
 
                   <h3 class="header-dropdown-title">Dla dzieci</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     width="37"
                     height="40"
@@ -438,7 +450,7 @@
                   <h3 class="header-dropdown-title">Cateringi Dietetyczne</h3>
                 </div>
                 <!-- Row 2  -->
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
@@ -547,7 +559,7 @@
                     Drogerie. Perfumy i kosmetyki
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="42"
@@ -614,7 +626,7 @@
                   </svg>
                   <h3 class="header-dropdown-title">Finanse</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -647,7 +659,7 @@
                     Gry, programy, aplikacje
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="44"
@@ -687,7 +699,7 @@
 
                   <h3 class="header-dropdown-title">Inne</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
@@ -787,7 +799,7 @@
 
                   <h3 class="header-dropdown-title">Komputery i elektronika</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="38"
@@ -830,7 +842,7 @@
                   </h3>
                 </div>
                 <!-- Row 3 -->
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="42"
@@ -885,7 +897,7 @@
                   </svg>
                   <h3 class="header-dropdown-title">Książka, muzyka, film</h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="68"
@@ -926,7 +938,7 @@
                     Meble, oświetlenie i dodatki
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="73"
@@ -1000,12 +1012,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Motoryzacja
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="38"
@@ -1039,12 +1051,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Odież i obuwie
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
@@ -1083,12 +1095,12 @@
                   </svg>
 
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Podróze i wakacje
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="33"
@@ -1131,13 +1143,13 @@
                   </svg>
 
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Portale stremingowe
                   </h3>
                 </div>
                 <!-- Row 4 -->
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
@@ -1179,12 +1191,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Prezenty i kwiaty
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
@@ -1230,12 +1242,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Promocje kart kredytowych i debitowych
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -1285,12 +1297,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Promocje na pożyczki
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="42"
@@ -1336,12 +1348,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Restauracje
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="57"
@@ -1396,12 +1408,12 @@
                   </svg>
 
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Restauracje i dostawa
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -1460,13 +1472,13 @@
                   </svg>
 
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Rozrywka
                   </h3>
                 </div>
                 <!-- Row 5 -->
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
@@ -1504,12 +1516,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Zdrowie i supelementy
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="43"
@@ -1543,12 +1555,12 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Zdrowie i uroda
                   </h3>
                 </div>
-                <div class="group header-dropdown-style">
+                <div class="header-dropdown-style group">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
@@ -1590,7 +1602,7 @@
                     />
                   </svg>
                   <h3
-                    class="text-[#050505] text-base font-bold leading-[150%] max-w-[116px] w-full"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
                   >
                     Zwierzęta
                   </h3>
@@ -1605,8 +1617,8 @@
           <a href="#" class="nav-items-style">Sklepy</a>
         </nav>
         <!-- Search Icon -->
-        <div class="hidden lg:flex items-center" id="searchBtn">
-          <button class="text-white focus:outline-none cursor-pointer">
+        <div class="hidden items-center lg:flex" id="searchBtn">
+          <button class="cursor-pointer text-white focus:outline-none">
             <img src="/images/svg/search-icon.svg" alt="search icon" />
           </button>
         </div>
@@ -1618,8 +1630,8 @@
     </header>
     <!-- Search Overlay -->
     <div class="search-overlay" id="searchOverlay">
-      <div class="max-w-[1163px] mx-auto px-4 items-end py-4">
-        <div class="flex flex-col gap-4 w-full items-end">
+      <div class="mx-auto max-w-[1163px] items-end px-4 py-4">
+        <div class="flex w-full flex-col items-end gap-4">
           <button
             class="search-overlay-close mr-2 cursor-pointer"
             id="searchCloseBtn"
@@ -1643,10 +1655,10 @@
       </div>
       <div id="suggestions" class="hidden">
         <div
-          class="flex justify-start items-center gap-4 max-w-[1163px] mx-auto px-4 pb-6 pt-7"
+          class="mx-auto flex max-w-[1163px] items-center justify-start gap-4 px-4 pb-6 pt-7"
         >
           <article
-            class="suggestion-item flex flex-col justify-center items-center gap-5 cursor-pointer"
+            class="suggestion-item flex cursor-pointer flex-col items-center justify-center gap-5"
             data-name="The North Face"
           >
             <div class="search-item-style">
@@ -1656,10 +1668,10 @@
                 alt="logo"
               />
             </div>
-            <h3 class="text-lightblack text-base">The North Face</h3>
+            <h3 class="text-base text-lightblack">The North Face</h3>
           </article>
           <article
-            class="suggestion-item flex flex-col justify-center items-center gap-5 cursor-pointer"
+            class="suggestion-item flex cursor-pointer flex-col items-center justify-center gap-5"
             data-name="The Body Shop"
           >
             <div class="search-item-style">
@@ -1669,10 +1681,10 @@
                 alt="logo"
               />
             </div>
-            <h3 class="text-lightblack text-base">The Body Shop</h3>
+            <h3 class="text-base text-lightblack">The Body Shop</h3>
           </article>
           <article
-            class="suggestion-item flex flex-col justify-center items-center gap-5 cursor-pointer"
+            class="suggestion-item flex cursor-pointer flex-col items-center justify-center gap-5"
             data-name="The Streets"
           >
             <div class="search-item-style">
@@ -1682,7 +1694,7 @@
                 alt="logo"
               />
             </div>
-            <h3 class="text-lightblack text-base">The Streets</h3>
+            <h3 class="text-base text-lightblack">The Streets</h3>
           </article>
         </div>
       </div>
@@ -1690,8 +1702,8 @@
     <!-- Mobile Sidebar -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar pb-5" id="mobileSidebar">
-      <div class="flex justify-between items-center gap-3 pr-4">
-        <div class="max-w-[164px] w-full">
+      <div class="flex items-center justify-between gap-3 pr-4">
+        <div class="w-full max-w-[164px]">
           <img
             class="h-full w-full"
             src="/images/svg/mobile-logo.svg"
@@ -1706,13 +1718,13 @@
         <button
           id="dropdownBtn"
           aria-label="dropdown open"
-          class="flex items-center justify-between w-full px-4 py-2 text-base font-light"
+          class="flex w-full items-center justify-between px-4 py-2 text-base font-light"
         >
           Kategorie
 
           <svg
             id="dropdownArrow"
-            class="w-4 h-4 transition-transform duration-300"
+            class="h-4 w-4 transition-transform duration-300"
             width="7"
             height="11"
             viewBox="0 0 7 11"
@@ -1730,141 +1742,93 @@
         <div id="dropdownContent" class="dropdown-content w-full bg-white">
           <ul class="py-1">
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Artykuły spożywcze</a
-              >
+              <a href="#" class="dropdown-text">Artykuły spożywcze</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Biuro i firma</a
-              >
+              <a href="#" class="dropdown-text">Biuro i firma</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Biżuteria i dodatki</a
-              >
+              <a href="#" class="dropdown-text">Biżuteria i dodatki</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Catering Dietetyczne</a
-              >
+              <a href="#" class="dropdown-text">Catering Dietetyczne</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Dla dzieci</a
-              >
+              <a href="#" class="dropdown-text">Dla dzieci</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Dom i ogród</a
-              >
+              <a href="#" class="dropdown-text">Dom i ogród</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Drogerie, Perfumy i kosmetyki</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Komputery i elektronika</a
-              >
+              <a href="#" class="dropdown-text">Komputery i elektronika</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Finanse</a
-              >
+              <a href="#" class="dropdown-text">Finanse</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Gry, programy, aplikacje</a
-              >
+              <a href="#" class="dropdown-text">Gry, programy, aplikacje</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Inne</a
-              >
+              <a href="#" class="dropdown-text">Inne</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
+              <a href="#" class="dropdown-text"
                 >Konta bankowe dla młodych i młodzieży</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Książki, muzyka, film</a
-              >
+              <a href="#" class="dropdown-text">Książki, muzyka, film</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Meble, oświetlenie i dodatki</a
-              >
+              <a href="#" class="dropdown-text">Meble, oświetlenie i dodatki</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Motoryzacja</a
-              >
+              <a href="#" class="dropdown-text">Motoryzacja</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Odzież i obuwie</a
-              >
+              <a href="#" class="dropdown-text">Odzież i obuwie</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Podróże i wakacje</a
-              >
+              <a href="#" class="dropdown-text">Podróże i wakacje</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Portale streamingowe</a
-              >
+              <a href="#" class="dropdown-text">Portale streamingowe</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Prezenty i kwiaty</a
-              >
+              <a href="#" class="dropdown-text">Prezenty i kwiaty</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Promocje bankowe 2025</a
-              >
+              <a href="#" class="dropdown-text">Promocje bankowe 2025</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Gry, programy, aplikacje</a
-              >
+              <a href="#" class="dropdown-text">Gry, programy, aplikacje</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Inne</a
-              >
+              <a href="#" class="dropdown-text">Inne</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >młodzieży</a
-              >
+              <a href="#" class="dropdown-text">młodzieży</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Książka, muzyka, film</a
-              >
+              <a href="#" class="dropdown-text">Książka, muzyka, film</a>
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >Meble, oświetlenie i dodatki</a
-              >
+              <a href="#" class="dropdown-text">Meble, oświetlenie i dodatki</a>
             </li>
-            <li class="">
+            <li>
               <a
                 href="#"
-                class="block !px-4 !pt-4 !pb-0 small-title !text-blackMetal"
+                class="small-title block !px-4 !pb-0 !pt-4 !text-blackMetal"
                 >Prezenty i kwiaty</a
               >
             </li>
             <li class="border-b border-Jupiter">
-              <a href="#" class="block px-4 py-2 small-title !text-blackMetal"
-                >debetowych</a
-              >
+              <a href="#" class="dropdown-text">debetowych</a>
             </li>
           </ul>
           3441
@@ -1884,18 +1848,18 @@
         <li class="border-b border-Jupiter">
           <a class="small-title !text-blackMetal" href="#">Poradnik</a>
         </li>
-        <li class="">
+        <li>
           <a class="small-title !text-blackMetal" href="#">Sklepy</a>
         </li>
       </ul>
       <div class="px-4">
         <div
-          class="flex justify-between items-center gap-4 px-4 border-Jupiter border rounded-md h-[48px]"
+          class="flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
         >
           <input
             id="searchInput"
-            class="outline-none h-full w-full bg-transparent text-piedWagtailGrey text-base font-light"
-            type="text"
+            class="h-full w-full bg-transparent text-base font-light text-piedWagtailGrey outline-none"
+            type="search"
           />
           <button>
             <img src="/images/svg/sidebar-search-icon.svg" alt="search icon" />
@@ -1903,71 +1867,71 @@
         </div>
         <!-- Inline Suggestions Container (part of the same container) -->
         <div id="suggestionsBox" class="suggestions">
-          <div
-            class="py-2 px-4 small-title"
+          <button
+            class="small-title px-4 py-2"
             onclick="selectSuggestion('The North Face')"
           >
             The North Face
-          </div>
-          <div
-            class="py-2 px-4 small-title"
+          </button>
+          <button
+            class="small-title px-4 py-2"
             onclick="selectSuggestion('The Body Shop')"
           >
             The Body Shop
-          </div>
-          <div
-            class="py-2 px-4 small-title"
+          </button>
+          <button
+            class="small-title px-4 py-2"
             onclick="selectSuggestion('The Streets')"
           >
             The Streets
-          </div>
+          </button>
         </div>
       </div>
     </div>
     <!-- Header end --- -->
     <!-- Hero - section - -->
     <section
-      class="pb-10 md:pb-[67px] pt-14 md:pt-11 relative xl:static hero-section"
+      class="hero-section relative pb-10 pt-14 md:pb-[67px] md:pt-11 xl:static"
     >
       <img
         class="hero-bg-style"
         src="/images/webp/hero-bg.avif"
         alt="hero bg"
       />
-      <div class="flex justify-center items-center">
-        <h1 class="max-w-[943px] mx-auto px-4 main-heading">
+      <div class="flex items-center justify-center">
+        <h2 class="main-heading mx-auto max-w-[943px] px-4">
           Okazje, kody rabatowe i promocje do najlepszych sklepów w Polsce
-        </h1>
+        </h2>
       </div>
     </section>
     <!-- Hero SLIDER-SECTION -->
-    <section class="px-4 md:px-8 mt-[40px] md:mt-0">
+    <section class="mt-[40px] px-4 md:mt-0 md:px-8">
       <div
-        class="px-8 max-w-[1315px] 3xl:max-w-[1650px] mx-auto overflow-hidden bg-white relative shadow-c2 rounded-3xl"
+        class="relative mx-auto max-w-[1315px] overflow-hidden rounded-3xl bg-white px-8 shadow-c2 3xl:max-w-[1650px]"
       >
-        <div class="max-w-[1540px] mx-auto overflow-hidden px-2">
+        <div class="mx-auto max-w-[1540px] overflow-hidden px-2">
           <div class="card-swiper py-4">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <article
-                class="swiper-slide px-10 pt-10 pb-7 md:py-8 hero-slider-card"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:py-8"
                 role="group"
                 aria-label="1"
               >
                 <div class="slider-only-with-us">Tylko u nas</div>
                 <img
-                  class="max-w-[158px] h-full w-full object-cover"
+                  class="h-full w-full max-w-[158px] object-cover"
                   src="/images/webp/hero-slider-logo-1.avif"
                   alt="slide images"
                   srcset=""
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Abi</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -8%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -1976,7 +1940,7 @@
               </article>
               <!-- Slide 2 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:pb-8 md:pt-[58px]"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:pb-8 md:pt-[58px]"
                 role="group"
                 aria-label="2"
               >
@@ -1989,11 +1953,11 @@
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Amso</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -2%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2002,7 +1966,7 @@
               </article>
               <!-- Slide 3 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:pb-8 2xl:pt-[40px] 3xl:pt-[58px]"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:pb-8 2xl:pt-[40px] 3xl:pt-[58px]"
                 role="group"
                 aria-label="3"
               >
@@ -2015,11 +1979,11 @@
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Douglas</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -10%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2028,7 +1992,7 @@
               </article>
               <!-- Slide 4 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:pb-8 md:pt-[48px]"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:pb-8 md:pt-[48px]"
                 role="group"
                 aria-label="4"
               >
@@ -2041,11 +2005,11 @@
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Hosting</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -5%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2054,7 +2018,7 @@
               </article>
               <!-- Slide 5 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:py-8"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:py-8"
                 role="group"
                 aria-label="5"
               >
@@ -2067,11 +2031,11 @@
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Abi</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -8%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2080,7 +2044,7 @@
               </article>
               <!-- Slide 6 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:py-8"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:py-8"
                 role="group"
                 aria-label="6"
               >
@@ -2093,11 +2057,11 @@
                 />
                 <div>
                   <p class="small-titlet pt-4 text-center">Abi</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -8%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2106,7 +2070,7 @@
               </article>
               <!-- slide 7 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:pb-8 md:pt-[48px]"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:pb-8 md:pt-[48px]"
                 role="group"
                 aria-label="7"
               >
@@ -2119,11 +2083,11 @@
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Hosting</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -5%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2132,7 +2096,7 @@
               </article>
               <!-- slide 8 -->
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:pb-8 md:pt-[48px]"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:pb-8 md:pt-[48px]"
                 role="group"
                 aria-label="8"
               >
@@ -2145,11 +2109,11 @@
                 />
                 <div>
                   <p class="small-title pt-4 text-center">Hosting</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -5%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2157,7 +2121,7 @@
                 </div>
               </article>
               <article
-                class="swiper-slide hero-slider-card px-10 pt-10 pb-7 md:px-10 md:pb-8 md:pt-[48px]"
+                class="swiper-slide hero-slider-card px-10 pb-7 pt-10 md:px-10 md:pb-8 md:pt-[48px]"
                 role="group"
                 aria-label="9"
               >
@@ -2170,11 +2134,11 @@
                 />
                 <div>
                   <p class="small-titlet pt-4 text-center">Hosting</p>
-                  <h2 class="small-title !font-bold text-center">
+                  <h2 class="small-title text-center !font-bold">
                     Kod Rabatowy -5%
                   </h2>
                   <button
-                    class="relative group cursor-pointer max-w-[158px] w-full mt-2 primary-button"
+                    class="primary-button group relative mt-2 w-full max-w-[158px] cursor-pointer"
                   >
                     Pobierz kod
                     <span class="primary-button-hover"> &gt; </span>
@@ -2184,12 +2148,12 @@
             </div>
             <!-- Custom navigation arrows -->
             <button
-              class="custom-next-arrow flex justify-center items-center rounded-full cursor-pointer rotate-180 absolute left-0 z-20 top-[47%] ml-[10px] lg:ml-[8px] 3xl:ml-8"
+              class="custom-next-arrow absolute left-0 top-[47%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full lg:ml-[8px] 3xl:ml-8"
             >
               <img src="/images/svg/hero-slider-left-arrow.svg" alt="arrow" />
             </button>
             <button
-              class="custom-prev-arrow flex justify-center items-center rounded-full c cursor-pointer absolute right-0 z-20 mr-[10px] lg:mr-[8px] 3xl:mr-8 top-[47%]"
+              class="custom-prev-arrow c absolute right-0 top-[47%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full lg:mr-[8px] 3xl:mr-8"
             >
               <img src="/images/svg/hero-slider-right-arrow.svg" alt="arrow" />
             </button>
@@ -2199,27 +2163,27 @@
       </div>
     </section>
     <section
-      class="relative mt-[45px] md:mt-[90px] xl:pb-0 pb-20 hero-product-bg"
+      class="hero-product-bg relative mt-[45px] pb-20 md:mt-[90px] xl:pb-0"
     >
       <div
-        class="main-container mb-[35px] md:mb-[60px] lg:!mb-[86px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-[22px] 3xl:gap-3"
+        class="main-container mb-[35px] grid grid-cols-1 gap-[22px] sm:grid-cols-2 md:mb-[60px] lg:!mb-[86px] lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 3xl:gap-3"
       >
         <!-- card 1 -->
 
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img h-full w-full"
               src="/images/webp/hero-product-2.webp"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p
-                class="small-title pt-2.5 leading-[120%] text-center md:block hidden"
+                class="small-title hidden pt-2.5 text-center leading-[120%] md:block"
               >
                 Dyson
               </p>
-              <div class="grid grid-rows-2 h-full">
+              <div class="grid h-full grid-rows-2">
                 <h3 class="product-name">PROMOCJE NA WIOSNĘ!</h3>
                 <p class="product-descriptions">
                   Sprawdź aktualne zniżki w wiosennej promocji Dyson. Lorem
@@ -2229,9 +2193,9 @@
             </div>
           </div>
           <p class="product-tag">Dyson</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">2</span>
@@ -2240,15 +2204,15 @@
           </div>
         </article>
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-1.webp"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">ALAB sport</p>
-              <div class="grid grid-rows-2 h-full">
+              <div class="grid h-full grid-rows-2">
                 <h3 class="product-name">Kod Rabatowy -50%</h3>
                 <p class="product-descriptions">
                   Kod rabatowy -50% na wszystkie pakiety badań w ALAB sport
@@ -2257,9 +2221,9 @@
             </div>
           </div>
           <p class="product-tag">ALAB sport</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">2</span>
@@ -2269,13 +2233,13 @@
         </article>
         <article class="product-card">
           <i class="only-with-us"> Tylko u nas </i>
-          <div class="flex flex-row md:flex-col h-full relative">
+          <div class="relative flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-3.avif"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Frisco</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name">Wyprzedaż do -50%</h3>
@@ -2284,9 +2248,9 @@
             </div>
           </div>
           <p class="product-tag">Frisco</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">
                 Pozostało <span class="font-bold">2 dni</span>
               </h4>
@@ -2297,13 +2261,13 @@
           </div>
         </article>
         <article class="product-card">
-          <span class="flex justify-center items-center">
+          <span class="flex items-center justify-center">
             <img
               src="/images/svg/product-card-tag.svg"
               alt="product card tag"
             />
           </span>
-          <h3 class="text-center text-base leading-[120%] text-lightblack py-3">
+          <h3 class="py-3 text-center text-base leading-[120%] text-lightblack">
             Najlepsze oferty sklepów
           </h3>
           <img
@@ -2313,13 +2277,13 @@
           />
         </article>
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-5.webp"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Electrolux</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name">Odbierz 500 zł</h3>
@@ -2331,9 +2295,9 @@
             </div>
           </div>
           <p class="product-tag">Electrolux</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">2</span>
@@ -2342,13 +2306,13 @@
           </div>
         </article>
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-6.avif"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Mirat</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name">RABAT-10%</h3>
@@ -2359,9 +2323,9 @@
             </div>
           </div>
           <p class="product-tag">Mirat</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">
                 Pozostało <span class="font-bold">3 godziny</span>
               </h4>
@@ -2372,13 +2336,13 @@
           </div>
         </article>
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-7.avif"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Eveline Cosmetics</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name">NAWET-50%</h3>
@@ -2390,9 +2354,9 @@
             </div>
           </div>
           <p class="product-tag">Eveline Cosmetics</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">2</span>
@@ -2401,13 +2365,13 @@
           </div>
         </article>
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-8.webp"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Home&Garden</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name">NAWET-50%</h3>
@@ -2418,9 +2382,9 @@
             </div>
           </div>
           <p class="product-tag">Home&Garden</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">2</span>
@@ -2429,13 +2393,13 @@
           </div>
         </article>
         <article class="product-card">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-9.avif"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Home&Garden</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name">NAWET-50%</h3>
@@ -2446,9 +2410,9 @@
             </div>
           </div>
           <p class="product-tag">Home&Garden</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">2</span>
@@ -2457,13 +2421,13 @@
           </div>
         </article>
         <article class="product-card pointer-events-none">
-          <div class="flex flex-row md:flex-col h-full">
+          <div class="flex h-full flex-row md:flex-col">
             <img
               class="product-card-img"
               src="/images/webp/hero-product-9.avif"
               alt="product"
             />
-            <div class="px-5 h-full flex flex-col">
+            <div class="flex h-full flex-col px-5">
               <p class="product-tag-mobile">Home&Garden</p>
               <div class="grid grid-rows-2">
                 <h3 class="product-name-disable">NAWET-50%</h3>
@@ -2474,9 +2438,9 @@
             </div>
           </div>
           <p class="product-tag">Home&Garden</p>
-          <div class="md:px-5 px-[22px] mt-2 md:mt-0">
+          <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button-disable group">Zakończone</a>
-            <div class="flex justify-between items-center md:pt-7 pt-2">
+            <div class="flex items-center justify-between pt-2 md:pt-7">
               <h4 class="product-footer-text">Do odwołania</h4>
               <h4 class="product-footer-text">
                 Skorzystalo <span class="font-bold">742</span>
@@ -2485,37 +2449,37 @@
           </div>
         </article>
       </div>
-      <div class="flex justify-between md:justify-center gap-8 px-4">
-        <button class="!text-black small-title hover:underline cursor-pointer">
+      <div class="flex justify-between gap-8 px-4 md:justify-center">
+        <button class="small-title cursor-pointer !text-black hover:underline">
           Poprzednia
         </button>
         <div class="flex items-center gap-3">
-          <span class="small-title px-[0.8px] cursor-pointer">1</span>
-          <span class="small-title px-[0.8px] cursor-pointer">2</span>
-          <span class="small-title px-[0.8px] cursor-pointer">3</span>
+          <span class="small-title cursor-pointer px-[0.8px]">1</span>
+          <span class="small-title cursor-pointer px-[0.8px]">2</span>
+          <span class="small-title cursor-pointer px-[0.8px]">3</span>
           <span class="small-title">...</span>
           <p class="small-title cursor-pointer">344</p>
         </div>
-        <button class="!text-black small-title hover:underline cursor-pointer">
+        <button class="small-title cursor-pointer !text-black hover:underline">
           Następna
         </button>
       </div>
     </section>
     <!-- frequently visited stores -->
-    <section class="relative custom-gradient frequently-bg-section">
+    <section class="custom-gradient frequently-bg-section relative">
       <div
-        class="bg-cottonBall w-full h-[250px] absolute -top-[45px] left-0 z-[-4] xl:flex hidden"
+        class="absolute -top-[45px] left-0 z-[-4] hidden h-[250px] w-full bg-cottonBall xl:flex"
       ></div>
 
-      <div class="main-container xl:pt-[175px] pt-20 xl:pb-[400px] pb-20">
+      <div class="main-container pb-20 pt-20 xl:pb-[400px] xl:pt-[175px]">
         <h3 class="main-heading">
           100 chętnie odwiedzanych <br class="hidden md:block" />
           sklepów w Wydawajdobrze
         </h3>
         <div
-          class="pt-[65px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-10"
+          class="grid grid-cols-2 gap-10 pt-[65px] sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
         >
-          <div class="gap-2 flex flex-col">
+          <div class="flex flex-col gap-2">
             <a href="/" class="shops-in-wydawalidobrze">Colorland</a>
             <a href="/" class="shops-in-wydawalidobrze">Deichmann</a>
             <a href="/" class="shops-in-wydawalidobrze">Dekoria</a>
@@ -2532,7 +2496,7 @@
             <a href="/" class="shops-in-wydawalidobrze">Adidas</a>
             <a href="/" class="shops-in-wydawalidobrze">Agata</a>
           </div>
-          <div class="gap-2 flex flex-col">
+          <div class="flex flex-col gap-2">
             <a href="/" class="shops-in-wydawalidobrze">Avans</a>
             <a href="/" class="shops-in-wydawalidobrze">Black Red White</a>
             <a href="/" class="shops-in-wydawalidobrze">Bludshop</a>
@@ -2549,7 +2513,7 @@
             <a href="/" class="shops-in-wydawalidobrze">Philips</a>
             <a href="/" class="shops-in-wydawalidobrze">Promod</a>
           </div>
-          <div class="gap-2 flex flex-col">
+          <div class="flex flex-col gap-2">
             <a href="/" class="shops-in-wydawalidobrze">Prosto</a>
             <a href="/" class="shops-in-wydawalidobrze">Quiosque</a>
             <a href="/" class="shops-in-wydawalidobrze">Renee</a>
@@ -2566,7 +2530,7 @@
             <a href="/" class="shops-in-wydawalidobrze">Zalando Lounge</a>
             <a href="/" class="shops-in-wydawalidobrze">Wólczanka</a>
           </div>
-          <div class="gap-2 flex flex-col">
+          <div class="flex flex-col gap-2">
             <a href="/" class="shops-in-wydawalidobrze">Worldbox</a>
             <a href="/" class="shops-in-wydawalidobrze">BWittchen</a>
             <a href="/" class="shops-in-wydawalidobrze">W.KRUK</a>
@@ -2583,7 +2547,7 @@
             <a href="/" class="shops-in-wydawalidobrze">Home&You</a>
             <a href="/" class="shops-in-wydawalidobrze">Guess</a>
           </div>
-          <div class="gap-2 flex flex-col">
+          <div class="flex flex-col gap-2">
             <a href="/" class="shops-in-wydawalidobrze">Gino Rossi</a>
             <a href="/" class="shops-in-wydawalidobrze">Gearbest</a>
             <a href="/" class="shops-in-wydawalidobrze">Gandalf</a>
@@ -2600,7 +2564,7 @@
             <a href="/" class="shops-in-wydawalidobrze">Notino</a>
             <a href="/" class="shops-in-wydawalidobrze">Nike</a>
           </div>
-          <div class="gap-2 flex flex-col">
+          <div class="flex flex-col gap-2">
             <a href="/" class="shops-in-wydawalidobrze">New Balance</a>
             <a href="/" class="shops-in-wydawalidobrze">Neonet</a>
             <a href="/" class="shops-in-wydawalidobrze">Neo24</a>
@@ -2621,61 +2585,61 @@
     <!-- Spendwell section -->
     <section
       id="count-hub"
-      class="max-w-[1315px] 3xl:max-w-[1588px] mx-auto px-4 flex flex-col lg:flex-row justify-between gap-8 2xl:gap-12 3xl:gap-14 pt-[45px] md:pt-10 relative"
+      class="relative mx-auto flex max-w-[1315px] flex-col justify-between gap-8 px-4 pt-[45px] md:pt-10 lg:flex-row 2xl:gap-12 3xl:max-w-[1588px] 3xl:gap-14"
     >
-      <div class="mx-auto lg:mx-0 max-w-[370px] w-full pt-8">
-        <h3 class="main-heading !text-lightblack !text-center lg:!text-start">
+      <div class="mx-auto w-full max-w-[370px] pt-8 lg:mx-0">
+        <h3 class="main-heading !text-center !text-lightblack lg:!text-start">
           Wydawajdobrze w liczbach
         </h3>
       </div>
       <div
-        class="grid sm:grid-cols-2 xl:grid-cols-3 gap-8 2xl:gap-6 3xl:gap-10 px-6 md:px-0 max-w-[1100px] 3xl:max-w-[1000px] w-full"
+        class="grid w-full max-w-[1100px] gap-8 px-6 sm:grid-cols-2 md:px-0 xl:grid-cols-3 2xl:gap-6 3xl:max-w-[1000px] 3xl:gap-10"
       >
         <article class="count-card-style">
           <h4 id="count1" class="count-hub-heading">0</h4>
 
           <p
-            class="text-center text-blackMetal text-xs 3xl:text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto"
+            class="mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%] text-blackMetal 3xl:text-sm"
           >
             aktywnych kodów rabatowych i promocji
           </p>
         </article>
         <article class="count-card-style">
-          <div class="flex justify-center items-center">
+          <div class="flex items-center justify-center">
             <span id="count2" class="count-hub-heading"> 0 </span>
           </div>
           <p
-            class="text-center text-blackMetal text-xs 3xl:text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto"
+            class="mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%] text-blackMetal 3xl:text-sm"
           >
             nowych rabatów dodawanych każdego miesiąca
           </p>
         </article>
         <article class="count-card-style">
-          <div class="flex justify-center items-center">
+          <div class="flex items-center justify-center">
             <h4 id="count3" class="count-hub-heading">0</h4>
           </div>
           <p
-            class="text-center text-blackMetal text-xs 3xl:text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto"
+            class="mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%] text-blackMetal 3xl:text-sm"
           >
             sklepów w bazie
           </p>
         </article>
         <article class="count-card-style">
-          <div class="flex justify-center items-center">
+          <div class="flex items-center justify-center">
             <h4 id="count4" class="count-hub-heading">0</h4>
           </div>
           <p
-            class="text-center text-blackMetal text-xs 3xl:text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto"
+            class="mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%] text-blackMetal 3xl:text-sm"
           >
             lat w sieci
           </p>
         </article>
         <article class="count-card-style">
-          <div class="flex justify-center items-center">
+          <div class="flex items-center justify-center">
             <h4 id="count5" class="count-hub-heading">0</h4>
           </div>
           <p
-            class="text-center text-blackMetal text-xs 3xl:text-sm font-light leading-[120%] pt-2 max-w-[185px] mx-auto"
+            class="mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%] text-blackMetal 3xl:text-sm"
           >
             oszczędności generowanych przez naszych użytkowników każdego
             miesiąca
@@ -2687,44 +2651,44 @@
     <section class="relative pt-10">
       <img
         class="top-categories-bg-style"
-        src="/images/webp/top-categories-bg.webp"
+        src="/images/svg/top-categories-bg.svg"
         alt="top bg"
       />
       <div class="main-container">
-        <div class="mx-auto lg:mx-0 max-w-[514px] w-full">
-          <h3 class="main-heading !text-lightblack !text-center lg:!text-start">
+        <div class="mx-auto w-full max-w-[514px] lg:mx-0">
+          <h3 class="main-heading !text-center !text-lightblack lg:!text-start">
             TOP kategorie na Wydawajdobrze
           </h3>
         </div>
         <div
-          class="pt-[40px] md:pt-[50px] 2xl:pt-[90px] 3xl:pt-[118px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:gap-10 gap-6 place-items-center"
+          class="grid grid-cols-1 place-items-center gap-6 pt-[40px] sm:grid-cols-2 md:grid-cols-3 md:pt-[50px] xl:grid-cols-4 2xl:grid-cols-5 2xl:pt-[90px] 3xl:gap-10 3xl:pt-[118px]"
         >
           <!-- row 1 -->
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/computer.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Komputery i elektronika
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/diet.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Cateringi Dietetyczne
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/furniture.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Meble, oświetlenie i dodatki
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/garden.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Dom i ogród
             </h3>
           </article>
@@ -2735,7 +2699,7 @@
               alt="icons"
             />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Biżuteria i dodatki
             </h3>
           </article>
@@ -2743,57 +2707,57 @@
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/Finances.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Finanse
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/children.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Dla dzieci
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/Animals.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Zwierzęta
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/Sports.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Sport i hobby
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/delivery.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Restauracje i dostawa
             </h3>
           </article>
           <!-- row 3 -->
-          <article class="group artical-container">
+          <article class="artical-container group">
             <img class="w-[60px]" src="/images/svg/RTV.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               RTV i AGD
             </h3>
           </article>
-          <article class="group artical-container">
+          <article class="artical-container group">
             <img class="w-[60px]" src="/images/svg/Perfumes.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Drogerie. Perfumy i kosmetyki
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/Streaming.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Portale stremingowe
             </h3>
           </article>
@@ -2804,14 +2768,14 @@
               alt="icons"
             />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Zdrowie i supelementy
             </h3>
           </article>
           <article class="artical-container">
             <img class="w-[60px]" src="/images/svg/Clothing.svg" alt="icons" />
 
-            <h3 class="small-title leading-[150%] max-w-[116px] w-full">
+            <h3 class="small-title w-full max-w-[116px] leading-[150%]">
               Odież i obuwie
             </h3>
           </article>
@@ -2820,36 +2784,31 @@
     </section>
     <!-- Become a conscious section -->
     <section class="relative">
-      <img
-        class="top-categories-bg2-style"
-        src="/images/webp/top-categories-bg2.webp"
-        alt="categories bg"
-      />
       <div
-        class="primary-container md:pb-10 pt-16 sm:pt-[90px] md:pt-[101px] lg:pt-[241px] relative"
+        class="primary-container relative pt-16 sm:pt-[90px] md:pb-10 md:pt-[101px] lg:pt-[241px]"
       >
         <img
-          class="absolute left-[30%] top-10 block md:hidden max-w-[20px]"
+          class="absolute left-[30%] top-10 block max-w-[20px] md:hidden"
           src="/images/svg/sale-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[30%] top-[60%] pointer-events-none block md:hidden max-w-[20px] md:max-w-full"
+          class="pointer-events-none absolute left-[30%] top-[60%] block max-w-[20px] md:hidden md:max-w-full"
           src="/images/svg/like-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[10%] top-20 block md:hidden max-w-[20px]"
+          class="absolute right-[10%] top-20 block max-w-[20px] md:hidden"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Zostań świadomym <br />
           konsumentem
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Dzisiaj żyjemy w cudownych czasach — ilość sklepów, w których możesz
           zrobić zakupy jest ogromna. Nie musisz ograniczać się do jednego,
           osiedlowego sklepu. A internet dodatkowo poszerza te możliwości —
@@ -2868,29 +2827,29 @@
           różnych kodów rabatowych i okazji to pojawia się jedno pytanie.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute right-[30%] top-[20%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute right-[30%] top-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/mic-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[30%] top-[60%] pointer-events-none max-w-[20px] z-[-1] object-cover md:max-w-full"
+          class="pointer-events-none absolute left-[30%] top-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/like-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[30%] top-[90%] pointer-events-none max-w-[20px] z-[-1] object-cover md:max-w-full"
+          class="pointer-events-none absolute right-[30%] top-[90%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Jak zostać świadomym <br />
           konsumentem?
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Dzisiaj żyjemy w cudownych czasach — ilość Śledzenie wszystkich okazji
           wydaje się niemożliwe. Sprawdzanie stron każdego sklepu to zadanie
           żmudne i męczące. Co prawda można zapisywać się na newslettery, jednak
@@ -2903,30 +2862,29 @@
           wydawajdobrze.com
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute right-[20%] top-[20%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute right-[20%] top-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/star-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[30%] top-[60%] pointer-events-none max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="pointer-events-none absolute right-[30%] top-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/sale-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[30%] top-[90%] pointer-events-none max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="pointer-events-none absolute left-[30%] top-[90%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/shop-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Wszystkie promocje <br />
           w jednym miejscu
         </h3>
-
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Dzisiaj żyjemy w cudownych czasach — ilość Jeżeli potrzebujesz
           informacji o promocjach, to wystarczy, że po prostu sprawdzisz na
           naszej stronie — wydawajdobrze.com czy jest interesująca okazja
@@ -2938,50 +2896,50 @@
           interesujące Cię produkty.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[10%] top-[5%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[10%] top-[5%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/star-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[20%] top-[90%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute right-[20%] top-[90%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Jakie promocje znajdziesz <br />
           w naszym serwisie?
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Dzisiaj żyjemy w cudownych czasach — ilość Przyjrzyjmy się teraz jakie
           informacje o promocjach i okazjach znajdziesz w naszym serwisie.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-0 top-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-0 top-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/star-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[30%] top-[40%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[30%] top-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/sale-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[30%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/percent-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Kody promocyjne
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Dzisiaj praktycznie każdy sklep internetowy umożliwia korzystanie z
           kodów promocyjnych. Dlatego też, jeżeli planujesz zrobić zakupy w
           jakimś sklepie, to warto sprawdzić, czy są dostępne jakie ciekawe kody
@@ -2995,33 +2953,33 @@
           wykorzystują tę formę promocji.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[30%] top-[40%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[30%] top-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/shop-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/mic-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[20%] bottom-[-30%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-[-30%] right-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/sale-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Informacje o promocjach
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Nasz serwis to nie jest typowy serwis z kodami rabatowymi, gdzie po
           prostu pobierasz kod. Tutaj znajdziesz wiele informacji o różnych
           promocjach, wyprzedażach i okazjach dostępnych w poszczególnych
@@ -3034,28 +2992,28 @@
           promocjach są zgromadzone w jednym miejscu.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[30%] bottom-10 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-10 left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/like-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/star-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Gazetki promocyjne
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Z całą pewnością wiesz, że Lidl jest tani, a Biedronka oferuje
           codziennie niskie ceny. Niestety mało kto jest w stanie odwiedzać
           regularnie wszystkie markety, żeby zobaczyć, co w nich ciekawego się
@@ -3071,28 +3029,28 @@
           promocji dostępnych w tych sklepach.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[30%] bottom-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-[30%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/like-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Promocje lokalne
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           W naszym serwisie każdy użytkownik ma możliwość dodawania informacji o
           okazjach i ofertach, które spotka. To dla Ciebie świetna informacja,
           bo dzięki temu jesteś w stanie dowiedzieć się o okazjach, o których
@@ -3107,29 +3065,29 @@
           informacji o okazjach przez użytkowników.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[30%] bottom-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-[30%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/like-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Dodawaj informacje o <br />
           promocji samemu
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Jeżeli założysz konto w naszym serwisie, to zyskasz możliwość
           dodawania informacji o wyprzedażach i okazjach. Warto to
           wykorzystywać, ponieważ dzięki Tobie więcej osób dowie się o okazjach
@@ -3146,39 +3104,39 @@
           minut.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[60%] top-[40%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[60%] top-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/percent-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-0 top-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-0 top-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/star-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[40%] top-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[40%] top-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/sale-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-0 bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Jak dodać <br />
           informacje o okazji?
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Jeżeli znalazłeś w naszym serwisie wydawajdobrze kod rabatowy, to
           warto przeczytać opis kodu, może zawierać on istotne informacje np. co
           do tego, jakie produkty są Ci potrzebne, żeby kod promocyjny zadziałał
@@ -3193,39 +3151,39 @@
           na której będziesz mógł skorzystać z interesującej Cię oferty.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[80%] top-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[80%] top-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/mic-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[-2%] top-[20%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[-2%] top-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[40%] top-[60%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[40%] top-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/like-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/bell-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-0 bottom-0"
+          class="absolute bottom-0 right-0"
           src="/images/svg/heart-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Jak dużo można zaoszczędzić <br />
           korzystając z kuponów rabatowych?
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           JWiele osób może zastanawiać się, jakie są realne oszczędności, gdy
           będzie korzystało się z kuponów rabatowych i okazji. Tu wiele zależy
           od tego, jakie oferty wybierzesz. Na naszym serwisie znajdziesz
@@ -3247,33 +3205,33 @@
           promocji znalazły się produkty, które planujesz kupić.
         </p>
       </div>
-      <div class="primary-container pt-10 md:pb-10 md:py-10 relative">
+      <div class="primary-container relative pt-10 md:py-10 md:pb-10">
         <img
-          class="absolute left-[80%] top-[30%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-[80%] top-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/mic-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-0 top-[80%] max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute left-0 top-[80%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/shop-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute right-[40%] bottom-0 max-w-[20px] md:max-w-full z-[-1] object-cover"
+          class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
           src="/images/svg/sale-icon.svg"
           alt="icon"
         />
         <img
-          class="absolute left-[30%] bottom-[-10%] max-w-[20px] md:max-w-full hidden lg:block z-[-1] object-cover"
+          class="absolute bottom-[-10%] left-[30%] z-[-1] hidden max-w-[20px] object-cover md:max-w-full lg:block"
           src="/images/svg/star-icon.svg"
           alt="icon"
         />
         <h3
-          class="main-heading !text-lightblack !text-center md:!text-start !leading-[130%]"
+          class="main-heading !text-center !leading-[130%] !text-lightblack md:!text-start"
         >
           Podsumowanie
         </h3>
-        <p class="medium-title pt-7 md:pt-10 text-center md:text-start">
+        <p class="medium-title pt-7 text-center md:pt-10 md:text-start">
           Wykorzystywanie kodów rabatowych, sprawdzanie promocji, okazji i
           wyprzedaży — to podejście, którym cechuje się coraz więcej
           konsumentów. Dzięki naszemu serwisowi śledzenie wszystkich dostępnych
@@ -3290,19 +3248,19 @@
       </div>
     </section>
     <!-- footer section  -->
-    <footer class="w-full text-white relative mt-[48px] footer-bg">
-      <div class="main-container py-10 md:pt-[140px] md:pb-10">
-        <div class="pt-[13px] md:pt-[53px] sm:pt-20 sm:pb-8">
+    <footer class="footer-bg relative mt-[48px] w-full text-white">
+      <div class="main-container py-10 md:pb-10 md:pt-[140px]">
+        <div class="pt-[13px] sm:pb-8 sm:pt-20 md:pt-[53px]">
           <img
-            class="w-full cursor-pointer block md:hidden"
+            class="block w-full cursor-pointer md:hidden"
             src="/images/svg/logo.svg"
             alt="logo"
           />
           <div
-            class="flex flex-col-reverse md:flex-row justify-between gap-10 md:gap-16"
+            class="flex flex-col-reverse justify-between gap-10 md:flex-row md:gap-16"
           >
             <!-- Logo and security section -->
-            <div class="max-w-[682px] w-full">
+            <div class="w-full max-w-[682px]">
               <div class="mb-6 hidden md:block xl:ml-[-30px] 3xl:ml-[-50px]">
                 <img
                   class="w-full cursor-pointer"
@@ -3310,9 +3268,9 @@
                   alt="logo"
                 />
               </div>
-              <div class="flex items-center mt-4 gap-5">
+              <div class="mt-4 flex items-center gap-5">
                 <img
-                  class="max-w-[33px] w-full"
+                  class="w-full max-w-[33px]"
                   src="/images/svg/lock-icon.svg"
                   alt=""
                 />
@@ -3323,7 +3281,7 @@
                 </div>
               </div>
               <div
-                class="mt-8 text-[11px] font-light text-white max-w-[552px] w-full"
+                class="mt-8 w-full max-w-[552px] text-[11px] font-light text-white"
               >
                 <p>
                   COPYRIGHT © WYDAWAJDOBRZE.COM WSZYSTKIE PRAWA ZASTRZEŻONE.
@@ -3335,11 +3293,11 @@
               </div>
             </div>
             <div
-              class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-5 w-full pt-[20px] sm:pt-[50px] md:pt-[100px]"
+              class="grid w-full gap-8 pt-[20px] sm:grid-cols-2 sm:pt-[50px] md:grid-cols-3 md:gap-5 md:pt-[100px]"
             >
-              <div class="">
-                <h3 class="text-base text-white font-semibold mb-2">STRONY</h3>
-                <ul class="space-y-2 small-title !text-white">
+              <div>
+                <h3 class="mb-2 text-base font-semibold text-white">STRONY</h3>
+                <ul class="small-title space-y-2 !text-white">
                   <li>
                     <a href="#" class="footer-li-style">OKAZJE</a>
                   </li>
@@ -3365,9 +3323,9 @@
               </div>
 
               <!-- Ważne section -->
-              <div class="">
-                <h3 class="text-base text-white font-semibold mb-2">WAŻNE</h3>
-                <ul class="space-y-2 small-title !text-white">
+              <div>
+                <h3 class="mb-2 text-base font-semibold text-white">WAŻNE</h3>
+                <ul class="small-title space-y-2 !text-white">
                   <li>
                     <a href="#" class="footer-li-style"> KIM JESTEŚMY</a>
                   </li>
@@ -3383,9 +3341,9 @@
               </div>
 
               <!-- Kontakt section -->
-              <div class="">
-                <h3 class="text-base text-white font-semibold mb-2">KONTAKT</h3>
-                <ul class="space-y-2 small-title !text-white">
+              <div>
+                <h3 class="mb-2 text-base font-semibold text-white">KONTAKT</h3>
+                <ul class="small-title space-y-2 !text-white">
                   <li>
                     <a href="#" class="footer-li-style">KONTAKT</a>
                   </li>
@@ -3401,14 +3359,9 @@
     </footer>
     <!-- top to bottom buttom -->
     <button class="botton-top-btn-style" id="scroll" style="display: none">
-      <span class="flex justify-center items-center">
+      <span class="flex items-center justify-center">
         <img src="/images/svg/bottom-top-arrow.svg" alt="arrow" />
       </span>
     </button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/slider.js"></script>
-    <script type="module" src="/src/counthub.js"></script>
   </body>
 </html>
