@@ -326,6 +326,21 @@ body {
 .see-more-title {
   @apply text-xs font-bold text-lightblack sm:text-2xl md:text-[26px] 3xl:text-[30px];
 }
+.service-testing-title {
+  @apply text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin;
+}
+.service-testing-decription {
+  @apply text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin;
+}
+.service-card-style {
+  @apply flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-c3;
+}
+.service-card-title {
+  @apply text-sm font-bold text-exodusFruit;
+}
+.service-card-description {
+  @apply text-xs font-light leading-[150%] text-lightblack;
+}
 /* backgrounds */
 
 .hero-product-bg::before {
