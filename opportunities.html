@@ -1,205 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml/ico" href="/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Deals, discount codes and promotions for the best stores in Poland
-    </title>
+    <title>Rabat -15% na wybrane zestawy stworzone w The North Face</title>
     <link rel="stylesheet" href="/src/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
     />
   </head>
+
   <style>
-    /* Mobile sidebar */
-    .mobile-sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 80%;
-      max-width: 300px;
-      height: 100vh;
-      background-color: white;
-      z-index: 9999;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      overflow-y: auto;
-      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    .img-color-inactive {
+      filter: brightness(0) saturate(100%) invert(37%) sepia(42%)
+        saturate(1407%) hue-rotate(215deg) brightness(98%) contrast(94%);
     }
 
-    .mobile-sidebar.open {
-      transform: translateX(0);
-    }
-
-    .sidebar-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 10;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
-    }
-
-    .sidebar-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .mobile-menu-items a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    /* Search bar */
-    .mobile-search {
-      padding: 15px;
-      border-top: 1px solid #f0f0f0;
-    }
-
-    /* Search overlay */
-    .search-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      z-index: 40;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .search-overlay.open {
-      transform: translateY(0);
-    }
-
-    .search-container {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-    }
-
-    .search-overlay-input {
-      flex: 1;
-      border: none;
-      outline: none;
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    .dropdown-panel {
-      position: absolute;
-      top: 80%;
-      z-index: 50;
-      left: 0;
-      background-color: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 0.5rem;
-      box-shadow:
-        0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-      /* Animation properties */
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-
-      transition:
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        visibility 0.3s ease;
-    }
-
-    .dropdown-panel.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .dropdown-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-
-    .arrow-icon-dropdown {
-      transition: transform 0.3s ease;
-    }
-
-    .arrow-icon-dropdown.rotate {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-content.open {
-      max-height: 1451px;
-      /* Adjust based on your content */
-      transition: max-height 0.5s ease-in;
-    }
-
-    .arrow-change path {
-      fill: white;
-    }
-
-    .suggestions {
-      border-top: none;
-      display: none;
-    }
-
-    .custom-pointer {
-      cursor: url("../images/svg/cursor-pointer.svg"), auto;
-    }
-
-    /* Custom Scrollbar */
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 5px;
-      height: 8px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 9999px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 9999px;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-    .dropdown-enter {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    .dropdown-enter-active {
-      opacity: 1;
-      transform: translateY(0);
-      transition:
-        opacity 200ms ease,
-        transform 200ms ease;
-    }
-    .dropdown-exit {
-      opacity: 1;
-    }
-    .dropdown-exit-active {
-      opacity: 0;
-      transform: translateY(-10px);
-      transition:
-        opacity 200ms ease,
-        transform 200ms ease;
+    .img-color-active {
+      filter: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(293%)
+        hue-rotate(139deg) brightness(97%) contrast(90%);
     }
   </style>
 
@@ -253,7 +74,7 @@
               >
                 <!-- Row 1 -->
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -301,13 +122,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Artikuły spożywcze
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -362,14 +183,14 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Biuro i <br />
                     firma
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -432,13 +253,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Biżuteria i dodatki
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     width="37"
@@ -486,13 +307,13 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Cateringi Dietetyczne
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     width="59"
@@ -592,13 +413,13 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Dla dzieci
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     width="37"
@@ -646,14 +467,14 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Cateringi Dietetyczne
                   </h3>
                 </div>
                 <!-- Row 2  -->
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -760,13 +581,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Drogerie. Perfumy i kosmetyki
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -833,13 +654,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Finanse
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -870,13 +691,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Gry, programy, aplikacje
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -916,13 +737,13 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Inne
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1022,13 +843,13 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Komputery i elektronika
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1068,14 +889,14 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Konta bankowe dla młodych i młodezy
                   </h3>
                 </div>
                 <!-- Row 3 -->
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1130,13 +951,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Książka, muzyka, film
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1175,13 +996,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Meble, oświetlenie i dodatki
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1256,13 +1077,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Motoryzacja
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1297,13 +1118,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Odież i obuwie
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1343,13 +1164,13 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Podróze i wakacje
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1393,14 +1214,14 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Portale stremingowe
                   </h3>
                 </div>
                 <!-- Row 4 -->
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1443,13 +1264,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Prezenty i kwiaty
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1496,13 +1317,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Promocje kart kredytowych i debitowych
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1553,13 +1374,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Promocje na pożyczki
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1606,13 +1427,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Restauracje
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1668,13 +1489,13 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Restauracje i dostawa
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1734,14 +1555,14 @@
                   </svg>
 
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Rozrywka
                   </h3>
                 </div>
                 <!-- Row 5 -->
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1780,13 +1601,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Zdrowie i supelementy
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1821,13 +1642,13 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Zdrowie i uroda
                   </h3>
                 </div>
                 <div
-                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)]"
+                  class="group flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-c5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1870,7 +1691,7 @@
                     />
                   </svg>
                   <h3
-                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-[#050505]"
+                    class="w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal"
                   >
                     Zwierzęta
                   </h3>
@@ -2359,771 +2180,381 @@
     </div>
     <!-- Header end --- -->
     <!-- Hero - section - -->
-    <section
-      class="relative pb-10 pt-[66px] md:pb-[67px] md:pt-[73px] xl:static"
-    >
+    <section class="hero-section relative xl:static">
       <img
-        class="absolute left-0 top-0 z-[-1] h-[231px] w-full md:h-[670px]"
+        class="absolute left-0 top-0 z-[-1] h-[231px] w-full md:h-[500px]"
         src="/images/webp/hero-bg.webp"
         alt="hero bg"
       />
-      <div class="flex items-center justify-center">
-        <h1 class="main-heading mx-auto max-w-[943px] px-4">
-          Blog WydawajDobrze: piszemy o wyprzedażach, promocjach i sprytnych
-          zakupach!
-        </h1>
-      </div>
-    </section>
-    <!-- Hero - Card  -->
-    <section class="relative">
-      <img
-        class="absolute bottom-[-200px] left-0 z-[-10] hidden w-full xl:flex"
-        src="/images/hero-product-bg.png"
-        alt=""
-      />
-      <div class="primary-container py-10">
-        <div class="flex flex-col justify-between gap-8 sm:gap-3 xl:flex-row">
-          <div
-            class="mx-auto flex w-full max-w-[500px] flex-col gap-8 sm:gap-3 xl:mx-0 xl:max-w-[320px] 3xl:max-w-[350px]"
+      <div class="relative z-0 px-4 py-3 md:py-8">
+        <nav
+          class="flex max-w-[273px] flex-wrap items-center justify-start gap-2 sm:mx-auto sm:max-w-6xl sm:gap-4 md:justify-center lg:pl-[129px]"
+        >
+          <a href="#" class="text-[11px] leading-[218.182%] text-primary"
+            >Strona główna</a
           >
-            <!-- custom select  -->
-            <div
-              class="block rounded-[20px] !bg-[#FFF] py-11 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] md:hidden"
+          <span>
+            <svg
+              width="7"
+              height="10"
+              viewBox="0 0 7 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <h4
-                class="text-center text-base font-bold leading-[120%] text-lightblack"
-              >
-                Kategorie
-              </h4>
+              <path
+                d="M6.2168 5.49805L2.23242 9.48242C1.93945 9.77539 1.5 9.77539 1.23633 9.48242L0.5625 8.83789C0.298828 8.54492 0.298828 8.10547 0.5625 7.8418L3.4043 5.0293L0.5625 2.1875C0.298828 1.92383 0.298828 1.48438 0.5625 1.19141L1.23633 0.546875C1.5 0.253906 1.93945 0.253906 2.23242 0.546875L6.2168 4.53125C6.48047 4.79492 6.48047 5.23438 6.2168 5.49805Z"
+                fill="#FFEA74"
+              />
+            </svg>
+          </span>
+          <a href="#" class="text-[11px] leading-[218.182%] text-primary"
+            >Lista sklepów</a
+          >
+          <span>
+            <svg
+              width="7"
+              height="10"
+              viewBox="0 0 7 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.2168 5.49805L2.23242 9.48242C1.93945 9.77539 1.5 9.77539 1.23633 9.48242L0.5625 8.83789C0.298828 8.54492 0.298828 8.10547 0.5625 7.8418L3.4043 5.0293L0.5625 2.1875C0.298828 1.92383 0.298828 1.48438 0.5625 1.19141L1.23633 0.546875C1.5 0.253906 1.93945 0.253906 2.23242 0.546875L6.2168 4.53125C6.48047 4.79492 6.48047 5.23438 6.2168 5.49805Z"
+                fill="#FFEA74"
+              />
+            </svg>
+          </span>
+          <a href="#" class="text-[11px] leading-[218.182%] text-primary"
+            >The North Face</a
+          >
+          <span>
+            <svg
+              width="7"
+              height="10"
+              viewBox="0 0 7 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.2168 5.49805L2.23242 9.48242C1.93945 9.77539 1.5 9.77539 1.23633 9.48242L0.5625 8.83789C0.298828 8.54492 0.298828 8.10547 0.5625 7.8418L3.4043 5.0293L0.5625 2.1875C0.298828 1.92383 0.298828 1.48438 0.5625 1.19141L1.23633 0.546875C1.5 0.253906 1.93945 0.253906 2.23242 0.546875L6.2168 4.53125C6.48047 4.79492 6.48047 5.23438 6.2168 5.49805Z"
+                fill="#FFEA74"
+              />
+            </svg>
+          </span>
+          <span class="text-[11px] leading-[218.182%] text-white"
+            >Kody rabatowy i promocje</span
+          >
+        </nav>
+        <div
+          class="m-auto flex flex-col lg:flex-row justify-between max-w-[1200px] 3xl:max-w-[1544px] w-fit"
+        >
+          <div
+            class="my-10 h-[600px] max-w-[865px] rounded-2xl bg-white p-4 shadow-c2 lg:px-9 lg:py-6 lg:max-w-[1200px] 3xl:p-16"
+          >
+            <div class="flex w-full flex-row justify-between gap-6">
+              <!-- Logo -->
               <div
-                class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
+                class="hidden h-[281px] w-full max-w-[200px] items-center justify-center border-[3px] border-cottonBall p-4 lg:flex 3xl:h-[350px] 3xl:max-w-[250px]"
               >
-                <input
-                  id="searchInputSuggetion"
-                  placeholder="Wyszukaj poradnik"
-                  class="h-full w-full bg-transparent text-xs font-light text-piedWagtailGrey outline-none"
-                  type="text"
+                <img
+                  src="/images/webp/north-face-logo.webp"
+                  alt="The North Face Logo"
+                  class="object-contain"
                 />
-                <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="32"
-                    viewBox="0 0 25 32"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2905 20.1382C16.2905 20.1382 15.9436 20.4851 15.2498 21.179C14.5559 21.8728 13.2201 22.2197 11.2422 22.2197C9.26432 22.2197 7.57357 21.5259 6.16992 20.1382C4.76628 18.7505 4.06445 17.0677 4.06445 15.0898C4.06445 13.112 4.76628 11.4212 6.16992 10.0176C7.57357 8.61393 9.26432 7.91211 11.2422 7.91211C13.2201 7.91211 14.9028 8.61393 16.2905 10.0176C17.6782 11.4212 18.3721 13.112 18.3721 15.0898C18.3721 17.0677 17.6782 18.7505 16.2905 20.1382ZM11.2422 24.2773C12.901 24.2773 14.4323 23.8626 15.8359 23.0332C17.2396 22.2038 18.3561 21.0872 19.1855 19.6836C20.015 18.2799 20.4297 16.7487 20.4297 15.0898C20.4297 12.5378 19.5285 10.3685 17.7261 8.58203C15.9237 6.79557 13.7544 5.90234 11.2183 5.90234C8.68213 5.90234 6.52083 6.79557 4.73438 8.58203C2.94792 10.3685 2.05469 12.5298 2.05469 15.0659C2.05469 17.6021 2.94792 19.7713 4.73438 21.5737C6.52083 23.3761 8.6901 24.2773 11.2422 24.2773ZM21.4346 25.2822L22.1523 24.5645L17.7021 20.1143L16.9844 20.832L16.2666 21.5498L20.7168 26L21.4346 25.2822Z"
-                      fill="#BBBABF"
-                      fill-opacity="0.5"
-                    />
-                  </svg>
-                </button>
               </div>
-              <div id="suggestionsList" class="hidden">
+
+              <!-- Info Section -->
+              <div class="m-auto ">
                 <div
-                  data-text="Testy produktów i usługi"
-                  class="suggestion-item border-b border-Jupiter px-5 pb-3 pt-10"
+                  class="flex flex-col items-center justify-between lg:flex-row"
                 >
-                  <h3
-                    class="group flex cursor-pointer items-center justify-between gap-4"
-                  >
-                    <span
-                      class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      Testy produktów i usług
-                    </span>
-                    <span
-                      class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      5
-                    </span>
-                  </h3>
-                </div>
-                <div
-                  data-text="Sprytne zakupy"
-                  class="suggestion-item border-b border-Jupiter px-5 py-3"
-                >
-                  <h3
-                    class="group flex cursor-pointer items-center justify-between gap-4"
-                  >
-                    <span
-                      class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      Sprytne zakupy
-                    </span>
-                    <span
-                      class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      101
-                    </span>
-                  </h3>
-                </div>
-                <div
-                  data-text="Programy i karty lojalnościowe"
-                  class="suggestion-item border-b border-Jupiter px-5 py-3"
-                >
-                  <h3
-                    class="group flex cursor-pointer items-center justify-between gap-4"
-                  >
-                    <span
-                      class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      Programy i karty lojalnościowe
-                    </span>
-                    <span
-                      class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      28
-                    </span>
-                  </h3>
-                </div>
-                <div
-                  data-text="Pomysł na prezent"
-                  class="suggestion-item border-b border-Jupiter px-5 py-3"
-                >
-                  <h3
-                    class="group flex cursor-pointer items-center justify-between gap-4"
-                  >
-                    <span
-                      class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      Pomysł na prezent
-                    </span>
-                    <span
-                      class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      9
-                    </span>
-                  </h3>
-                </div>
-                <div
-                  data-text="Promocje bankowe i pokrewne"
-                  class="suggestion-item border-b border-Jupiter px-5 py-3"
-                >
-                  <h3
-                    class="group flex cursor-pointer items-center justify-between gap-4"
-                  >
-                    <span
-                      class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      Promocje bankowe i pokrewne
-                    </span>
-                    <span
-                      class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      4
-                    </span>
-                  </h3>
-                </div>
-                <div
-                  data-text="Aplikacje pomagające w zakupach"
-                  class="suggestion-item border-b border-Jupiter px-5 py-3"
-                >
-                  <h3
-                    class="group flex cursor-pointer items-center justify-between gap-4"
-                  >
-                    <span
-                      class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      Aplikacje pomagające w zakupach
-                    </span>
-                    <span
-                      class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                    >
-                      16
-                    </span>
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hidden rounded-[20px] !bg-[#FFF] py-11 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] md:block"
-            >
-              <h4
-                class="text-center text-base font-bold leading-[120%] text-lightblack"
-              >
-                Kategorie
-              </h4>
-              <div
-                class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
-              >
-                <input
-                  placeholder="Wyszukaj poradnik"
-                  class="h-full w-full bg-transparent text-xs font-light text-piedWagtailGrey outline-none"
-                  type="text"
-                />
-                <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="32"
-                    viewBox="0 0 25 32"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2905 20.1382C16.2905 20.1382 15.9436 20.4851 15.2498 21.179C14.5559 21.8728 13.2201 22.2197 11.2422 22.2197C9.26432 22.2197 7.57357 21.5259 6.16992 20.1382C4.76628 18.7505 4.06445 17.0677 4.06445 15.0898C4.06445 13.112 4.76628 11.4212 6.16992 10.0176C7.57357 8.61393 9.26432 7.91211 11.2422 7.91211C13.2201 7.91211 14.9028 8.61393 16.2905 10.0176C17.6782 11.4212 18.3721 13.112 18.3721 15.0898C18.3721 17.0677 17.6782 18.7505 16.2905 20.1382ZM11.2422 24.2773C12.901 24.2773 14.4323 23.8626 15.8359 23.0332C17.2396 22.2038 18.3561 21.0872 19.1855 19.6836C20.015 18.2799 20.4297 16.7487 20.4297 15.0898C20.4297 12.5378 19.5285 10.3685 17.7261 8.58203C15.9237 6.79557 13.7544 5.90234 11.2183 5.90234C8.68213 5.90234 6.52083 6.79557 4.73438 8.58203C2.94792 10.3685 2.05469 12.5298 2.05469 15.0659C2.05469 17.6021 2.94792 19.7713 4.73438 21.5737C6.52083 23.3761 8.6901 24.2773 11.2422 24.2773ZM21.4346 25.2822L22.1523 24.5645L17.7021 20.1143L16.9844 20.832L16.2666 21.5498L20.7168 26L21.4346 25.2822Z"
-                      fill="#BBBABF"
-                      fill-opacity="0.5"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="border-b border-Jupiter px-5 pb-3 pt-10">
-                <h3
-                  class="group flex cursor-pointer items-center justify-between gap-4"
-                >
-                  <span
-                    class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    Testy produktów i usług
-                  </span>
-                  <span
-                    class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    5
-                  </span>
-                </h3>
-              </div>
-              <div class="border-b border-Jupiter px-5 py-3">
-                <h3
-                  class="group flex cursor-pointer items-center justify-between gap-4"
-                >
-                  <span
-                    class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    Sprytne zakupy
-                  </span>
-                  <span
-                    class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    101
-                  </span>
-                </h3>
-              </div>
-              <div class="border-b border-Jupiter px-5 py-3">
-                <h3
-                  class="group flex cursor-pointer items-center justify-between gap-4"
-                >
-                  <span
-                    class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    Programy i karty lojalnościowe
-                  </span>
-                  <span
-                    class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    28
-                  </span>
-                </h3>
-              </div>
-              <div class="border-b border-Jupiter px-5 py-3">
-                <h3
-                  class="group flex cursor-pointer items-center justify-between gap-4"
-                >
-                  <span
-                    class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    Pomysł na prezent
-                  </span>
-                  <span
-                    class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    9
-                  </span>
-                </h3>
-              </div>
-              <div class="border-b border-Jupiter px-5 py-3">
-                <h3
-                  class="group flex cursor-pointer items-center justify-between gap-4"
-                >
-                  <span
-                    class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    Promocje bankowe i pokrewne
-                  </span>
-                  <span
-                    class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    4
-                  </span>
-                </h3>
-              </div>
-              <div class="border-b border-Jupiter px-5 py-3">
-                <h3
-                  class="group flex cursor-pointer items-center justify-between gap-4"
-                >
-                  <span
-                    class="text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    Aplikacje pomagające w zakupach
-                  </span>
-                  <span
-                    class="text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin"
-                  >
-                    16
-                  </span>
-                </h3>
-              </div>
-            </div>
-            <div
-              class="rounded-[20px] bg-white px-8 py-6 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <span class="flex items-center justify-center"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="36"
-                  height="55"
-                  viewBox="0 0 36 55"
-                  fill="none"
-                >
-                  <path
-                    d="M35.1442 38.2614L31.681 34.829C31.3393 34.4881 30.8038 34.4999 30.4735 34.8525C30.1431 35.2052 30.1545 35.7576 30.4963 36.0985L33.948 39.5191C34.4151 40.0011 34.4151 40.7769 33.948 41.2588L22.7042 52.8607C22.2485 53.3308 21.4738 53.3308 21.0182 52.8607L20.9954 52.8371C21.6903 52.2847 22.146 51.4383 22.146 50.4745V27.4001L24.7547 30.1742C24.9256 30.3505 25.142 30.4445 25.3699 30.4445C25.5977 30.4445 25.8028 30.3623 25.9623 30.1977C26.304 29.8568 26.304 29.3043 25.985 28.9517L21.451 24.144C21.3599 24.0265 21.2574 23.9207 21.1549 23.8267L21.0409 23.7091C21.0409 23.7091 20.9384 23.6386 20.8814 23.5916C20.8701 23.5916 20.8587 23.5798 20.8473 23.5681C20.8017 23.5446 20.7675 23.5211 20.722 23.4975C20.2891 23.2272 19.7878 23.0626 19.241 23.0626H18.9106C18.4777 19.3364 15.5728 16.3625 11.9616 15.9393C12.121 14.9402 12.9527 14.1644 13.9665 14.1644H16.3816C18.4436 14.1644 20.1296 12.4247 20.1296 10.2971V0.881599C20.1296 0.399658 19.7423 0 19.2752 0C18.8081 0 18.4208 0.399658 18.4208 0.881599V10.3088C18.4208 11.4725 17.5094 12.4129 16.3816 12.4129H13.9665C12.0185 12.4129 10.4236 13.9645 10.2528 15.9393C6.60733 16.339 3.6796 19.3129 3.23531 23.0744H2.90495C1.31007 23.0744 0 24.4144 0 26.0718V50.4862C0 52.1319 1.29868 53.4836 2.90495 53.4836H19.1954L19.8106 54.1184C20.3574 54.6826 21.0865 55 21.8612 55C22.6358 55 23.3649 54.6944 23.9117 54.1184L35.1556 42.5166C36.2834 41.3528 36.2834 39.4486 35.1442 38.2731V38.2614ZM11.0616 24.9199C11.5287 24.9199 11.916 24.5202 11.916 24.0383V21.7461C12.8159 22.0987 13.4539 22.9921 13.4539 24.0383C13.4539 25.4018 12.3831 26.5067 11.0616 26.5067C9.74012 26.5067 8.66928 25.4018 8.66928 24.0383C8.66928 22.9921 9.30723 22.0987 10.2072 21.7461V24.0383C10.2072 24.5202 10.5945 24.9199 11.0616 24.9199ZM1.6974 50.4862V26.0718C1.6974 25.39 2.23282 24.8376 2.89356 24.8376H4.03275C4.49982 24.8376 4.88715 24.4497 4.88715 23.9677C4.92132 20.794 7.24528 18.1844 10.2186 17.7495V19.9124C8.36169 20.3238 6.97187 22.0165 6.97187 24.05C6.97187 26.3774 8.81737 28.2817 11.073 28.2817C13.3286 28.2817 15.1741 26.3774 15.1741 24.05C15.1741 22.0165 13.7843 20.3238 11.9274 19.9124V17.7495C14.9007 18.1844 17.2246 20.794 17.2588 23.9677C17.2588 24.4497 17.6461 24.8376 18.1132 24.8376H19.2524C19.5486 24.8376 19.7992 24.9551 20.0043 25.1432L20.1524 25.3078C20.3232 25.5193 20.4372 25.7779 20.4372 26.0718V50.4862C20.4372 51.0034 20.1296 51.4383 19.6967 51.6264C19.4461 51.5324 19.1727 51.5676 18.9448 51.7205H2.89356C2.23282 51.7205 1.6974 51.168 1.6974 50.4862Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M6.98327 37.0742C9.09078 37.0742 10.7996 35.311 10.7996 33.1364C10.7996 30.9617 9.09078 29.1985 6.98327 29.1985C4.87576 29.1985 3.16696 30.9617 3.16696 33.1364C3.16696 35.311 4.87576 37.0742 6.98327 37.0742ZM6.98327 30.9617C8.14525 30.9617 9.09078 31.9374 9.09078 33.1364C9.09078 34.3353 8.14525 35.311 6.98327 35.311C5.82129 35.311 4.87576 34.3353 4.87576 33.1364C4.87576 31.9374 5.82129 30.9617 6.98327 30.9617Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M10.7312 41.3058C10.7312 43.4804 12.44 45.2436 14.5475 45.2436C16.655 45.2436 18.3638 43.4804 18.3638 41.3058C18.3638 39.1312 16.655 37.368 14.5475 37.368C12.44 37.368 10.7312 39.1312 10.7312 41.3058ZM16.655 41.3058C16.655 42.5048 15.7095 43.4804 14.5475 43.4804C13.3855 43.4804 12.44 42.5048 12.44 41.3058C12.44 40.1069 13.3855 39.1312 14.5475 39.1312C15.7095 39.1312 16.655 40.1069 16.655 41.3058Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M5.86686 41.9171C6.03774 42.0934 6.25418 42.1874 6.48202 42.1874C6.70986 42.1874 6.91492 42.1052 7.0744 41.9406L15.8234 33.1951C16.1652 32.8542 16.1766 32.3018 15.8462 31.9491C15.5158 31.5965 14.9804 31.5965 14.6387 31.9256L5.88964 40.6711C5.54788 41.012 5.53649 41.5644 5.86686 41.9171Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M17.1221 47.0068H5.01246C4.54539 47.0068 4.15806 47.4065 4.15806 47.8884C4.15806 48.3704 4.54539 48.77 5.01246 48.77H17.1221C17.5892 48.77 17.9765 48.3704 17.9765 47.8884C17.9765 47.4065 17.5892 47.0068 17.1221 47.0068Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M28.1381 33.4537C28.2406 33.4537 28.3546 33.4302 28.4571 33.3832C28.5596 33.3362 28.6622 33.2657 28.7419 33.1834C28.8216 33.1128 28.8786 33.0071 28.9242 32.9013C28.9697 32.7955 28.9925 32.6779 28.9925 32.5721C28.9925 32.4546 28.9697 32.337 28.9242 32.2312C28.8786 32.1255 28.8216 32.0197 28.7419 31.9374C28.6622 31.8669 28.5596 31.7963 28.4571 31.7493C28.1495 31.62 27.7736 31.7023 27.5344 31.9374C27.4546 32.0197 27.3863 32.1255 27.3407 32.2312C27.3065 32.337 27.2837 32.4546 27.2837 32.5721C27.2837 32.7955 27.3749 33.0306 27.5344 33.1834C27.6938 33.3597 27.9103 33.4537 28.1381 33.4537Z"
-                    fill="#243237"
-                  /></svg></span>
-              <h3
-                class="pb-4 pt-2 text-center text-base font-bold text-lightblack"
-              >
-                Najlepsze kody rabatowe
-              </h3>
-              <!-- Swiper Slider -->
-              <div class="relative mx-auto w-full max-w-[200px]">
-                <div class="swiper myImageSlider">
-                  <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                      <img
-                        src="/images/webp/img-slider.webp"
-                        alt="The North Face Discount"
-                      />
+                  <div class="flex flex-col">
+                    <div class="flex max-w-full justify-between">
+                      <div
+                        class="flex h-[100px] w-full max-w-[100px] items-center justify-center border-[3px] border-cottonBall p-0 md:h-[150px] md:max-w-[150px] md:p-[10px] lg:hidden"
+                      >
+                        <img
+                          src="/images/webp/north-face-logo.webp"
+                          alt="The North Face Logo"
+                          class="h-auto w-auto object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h2 class="secondry-heading">The North Face</h2>
+                        <h3 class="secondry-heading text-Mandarin">
+                          kody rabatowe, kupony
+                        </h3>
+                        <p
+                          class="mb-5 mt-3 w-full max-w-[168px] text-xs font-light md:max-w-full md:text-base 3xl:mb-8"
+                        >
+                          Dostępne kupony, okazje i promocje:
+                          <span class="font-bold text-black">17</span>
+                        </p>
+                      </div>
                     </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                      <img
-                        src="/images/webp/img-slider.webp"
-                        alt="Nike Discount"
-                      />
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                      <img
-                        src="/images/webp/img-slider.webp"
-                        alt="Adidas Discount"
-                      />
+                    <!-- Coupon Info -->
+                    <ul
+                      class="mt-5 grid max-w-xl grid-cols-2 gap-y-0 whitespace-nowrap text-[11px] font-light md:mt-0 md:whitespace-normal md:text-sm 3xl:gap-y-[5px] 3xl:text-base"
+                    >
+                      <li class="col-span-1 mb-1">Kody rabatowe</li>
+                      <li class="col-span-1 mb-1 pl-10 text-left">2</li>
+
+                      <li class="col-span-1 mb-1">Okazyjne oferty</li>
+                      <li class="col-span-1 mb-1 pl-10 text-left">15</li>
+
+                      <li class="col-span-1 mb-1">Popularna wyprzedaż</li>
+                      <li class="col-span-1 mb-1 pl-10 text-left">do -50%</li>
+
+                      <li class="col-span-1 mb-1">Darmowa dostawa</li>
+                      <li class="col-span-1 mb-1 pl-10 text-left">
+                        powyżej 230zł
+                      </li>
+
+                      <li class="col-span-1 mb-3">
+                        Ostatnia weryfikacja kuponów
+                      </li>
+                      <li class="col-span-1 mb-3 pl-10 text-left">
+                        09/09/2024
+                      </li>
+                    </ul>
+                    <p
+                      class="mt-2 block text-[11px] font-light md:text-sm lg:hidden 3xl:mt-3 3xl:text-base"
+                    >
+                      Zróżnicowana oferta The North Face przypadnie do gustu
+                      miłośnikom aktywności outdoorowych. Ubrania The North Face
+                      stanowią połączenie funkcjonalności, wytrzymałości,
+                      stylowego wzornictwa – to właśnie dzięki temu coraz
+                      częściej są wpasowywane w casualowe outfity. Sprawdź
+                      promocje na kurtki The North Face oraz pozostałe produkty
+                      z asortymentu!
+                      <a
+                        href="#"
+                        class="text-Mandarin underline hover:text-orange-600"
+                        >czytaj więcej</a
+                      >
+                    </p>
+                    <!-- Description -->
+                  </div>
+                  <!-- Rating & Button -->
+                  <div>
+                    <div class="space-y-2 text-right">
+                      <p
+                        class="text-center text-[11px] font-light md:text-sm 3xl:text-base"
+                      >
+                        Ocena sklepu<br /><strong class="font-light"
+                          >THE NORTH FACE</strong
+                        >
+                      </p>
+                      <div class="flex justify-center space-x-1 md:justify-end">
+                        <span
+                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
+                          >★</span
+                        >
+                        <span
+                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
+                          >★</span
+                        >
+                        <span
+                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
+                          >★</span
+                        >
+                        <span
+                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
+                          >★</span
+                        >
+                        <span
+                          class="text-xl text-cottonBall lg:text-3xl 3xl:text-6xl"
+                          >★</span
+                        >
+                      </div>
+                      <div class="m-auto w-fit">
+                        <p
+                          class="text-center text-xl font-light lg:text-2xl 3xl:text-[35px]"
+                        >
+                          4/5
+                        </p>
+                        <p class="text-center text-xs font-light md:text-base">
+                          ( 54 opinii )
+                        </p>
+                      </div>
+                      <button
+                        class="group mx-auto !mt-3 block h-[40px] w-full max-w-[216px] rounded-full bg-secondry px-4 py-2 text-sm text-white shadow-lg transition-all duration-300 md:!mt-[32px] md:text-base 3xl:!mt-4"
+                      >
+                        Przejdź do sklepu
+                        <img
+                          src="/images/svg/left-arrow.svg"
+                          alt=""
+                          class="absolute -translate-y-4 translate-x-28 opacity-0 transition-all duration-200 group-hover:translate-x-[165px] group-hover:opacity-100 lg:translate-x-32 xl:translate-x-36 xl:group-hover:translate-x-[165px] 2xl:group-hover:translate-x-[165px]"
+                        />
+                      </button>
                     </div>
                   </div>
                 </div>
-                <!-- Add Navigation -->
-                <div class="flex">
-                  <button
-                    class="custom-next-arrow absolute left-[-70px] top-[46%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full md:ml-8 3xl:left-[-90px]"
+                <p
+                  class="mt-3 hidden text-[11px] font-light md:text-sm lg:block 3xl:text-base"
+                >
+                  Zróżnicowana oferta The North Face przypadnie do gustu
+                  miłośnikom aktywności outdoorowych. Ubrania The North Face
+                  stanowią połączenie funkcjonalności, wytrzymałości, stylowego
+                  wzornictwa – to właśnie dzięki temu coraz częściej są
+                  wpasowywane w casualowe outfity. Sprawdź promocje na kurtki
+                  The North Face oraz pozostałe produkty z asortymentu!
+                  <a
+                    href="#"
+                    class="text-Mandarin underline hover:text-orange-600"
+                    >czytaj więcej</a
                   >
-                    <svg
-                      width="29"
-                      height="29"
-                      viewBox="0 0 29 29"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask id="path-1-inside-1_759_7539" fill="white">
-                        <path
-                          d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
-                        />
-                      </mask>
-                      <path
-                        d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
-                        fill="#243237"
-                        mask="url(#path-1-inside-1_759_7539)"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex">
-                  <button
-                    class="custom-prev-arrow c absolute right-[-70px] top-[46%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full md:mr-8 3xl:right-[-90px]"
-                  >
-                    <svg
-                      width="29"
-                      height="29"
-                      viewBox="0 0 29 29"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask id="path-1-inside-1_759_7539" fill="white">
-                        <path
-                          d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
-                        />
-                      </mask>
-                      <path
-                        d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
-                        fill="#243237"
-                        mask="url(#path-1-inside-1_759_7539)"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <p
-                class="py-3 text-center text-base leading-[120%] text-lightblack"
-              >
-                The North Face
-              </p>
-              <h4
-                class="text-center text-3xl font-bold leading-[130%] text-exodusFruit md:text-[26px] 3xl:text-3xl"
-              >
-                Kod Rabatowy <br />
-                - 10%
-              </h4>
-              <p
-                class="py-2 text-center text-sm leading-[120%] text-lightblack"
-              >
-                Kod rabatowy -10% na outlet w ofercie The North Face
-              </p>
-              <button
-                class="group mt-2 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]"
-              >
-                Sprawdź okazję
-              </button>
-              <div class="flex items-center justify-end pt-3">
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Skorzystalo <span class="font-bold">35</span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
           <div
-            class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 2xl:grid-cols-4"
+            class="rounded-[20px] my-10 xl:max-w-[200px] 2xl:max-w-[250px] 3xl:max-w-[300px] w-fit h-[600px] bg-white px-8 py-6 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
           >
-            <!-- card 1 -->
-            <article
-              class="group flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-1.webp"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Wniesienie sprzętu AGD - ile kosztuje w elektromarketach i
-                    czy warto?
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
-                  >
-                    Transport z wniesieniem sprzętu AGD to znakomita opcja dla
-                    tych, którzy wygodę stawiają na pierwszym miejscu. Ciężkie
-                    oraz nieporęczne konstrukcje trudno jest przenieść do
-                    mieszkania
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
+            <span class="flex items-center justify-center"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="55"
+                viewBox="0 0 36 55"
+                fill="none"
               >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Skorzystalo <span class="font-bold">35</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 2 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
+                <path
+                  d="M35.1442 38.2614L31.681 34.829C31.3393 34.4881 30.8038 34.4999 30.4735 34.8525C30.1431 35.2052 30.1545 35.7576 30.4963 36.0985L33.948 39.5191C34.4151 40.0011 34.4151 40.7769 33.948 41.2588L22.7042 52.8607C22.2485 53.3308 21.4738 53.3308 21.0182 52.8607L20.9954 52.8371C21.6903 52.2847 22.146 51.4383 22.146 50.4745V27.4001L24.7547 30.1742C24.9256 30.3505 25.142 30.4445 25.3699 30.4445C25.5977 30.4445 25.8028 30.3623 25.9623 30.1977C26.304 29.8568 26.304 29.3043 25.985 28.9517L21.451 24.144C21.3599 24.0265 21.2574 23.9207 21.1549 23.8267L21.0409 23.7091C21.0409 23.7091 20.9384 23.6386 20.8814 23.5916C20.8701 23.5916 20.8587 23.5798 20.8473 23.5681C20.8017 23.5446 20.7675 23.5211 20.722 23.4975C20.2891 23.2272 19.7878 23.0626 19.241 23.0626H18.9106C18.4777 19.3364 15.5728 16.3625 11.9616 15.9393C12.121 14.9402 12.9527 14.1644 13.9665 14.1644H16.3816C18.4436 14.1644 20.1296 12.4247 20.1296 10.2971V0.881599C20.1296 0.399658 19.7423 0 19.2752 0C18.8081 0 18.4208 0.399658 18.4208 0.881599V10.3088C18.4208 11.4725 17.5094 12.4129 16.3816 12.4129H13.9665C12.0185 12.4129 10.4236 13.9645 10.2528 15.9393C6.60733 16.339 3.6796 19.3129 3.23531 23.0744H2.90495C1.31007 23.0744 0 24.4144 0 26.0718V50.4862C0 52.1319 1.29868 53.4836 2.90495 53.4836H19.1954L19.8106 54.1184C20.3574 54.6826 21.0865 55 21.8612 55C22.6358 55 23.3649 54.6944 23.9117 54.1184L35.1556 42.5166C36.2834 41.3528 36.2834 39.4486 35.1442 38.2731V38.2614ZM11.0616 24.9199C11.5287 24.9199 11.916 24.5202 11.916 24.0383V21.7461C12.8159 22.0987 13.4539 22.9921 13.4539 24.0383C13.4539 25.4018 12.3831 26.5067 11.0616 26.5067C9.74012 26.5067 8.66928 25.4018 8.66928 24.0383C8.66928 22.9921 9.30723 22.0987 10.2072 21.7461V24.0383C10.2072 24.5202 10.5945 24.9199 11.0616 24.9199ZM1.6974 50.4862V26.0718C1.6974 25.39 2.23282 24.8376 2.89356 24.8376H4.03275C4.49982 24.8376 4.88715 24.4497 4.88715 23.9677C4.92132 20.794 7.24528 18.1844 10.2186 17.7495V19.9124C8.36169 20.3238 6.97187 22.0165 6.97187 24.05C6.97187 26.3774 8.81737 28.2817 11.073 28.2817C13.3286 28.2817 15.1741 26.3774 15.1741 24.05C15.1741 22.0165 13.7843 20.3238 11.9274 19.9124V17.7495C14.9007 18.1844 17.2246 20.794 17.2588 23.9677C17.2588 24.4497 17.6461 24.8376 18.1132 24.8376H19.2524C19.5486 24.8376 19.7992 24.9551 20.0043 25.1432L20.1524 25.3078C20.3232 25.5193 20.4372 25.7779 20.4372 26.0718V50.4862C20.4372 51.0034 20.1296 51.4383 19.6967 51.6264C19.4461 51.5324 19.1727 51.5676 18.9448 51.7205H2.89356C2.23282 51.7205 1.6974 51.168 1.6974 50.4862Z"
+                  fill="#243237"
+                />
+                <path
+                  d="M6.98327 37.0742C9.09078 37.0742 10.7996 35.311 10.7996 33.1364C10.7996 30.9617 9.09078 29.1985 6.98327 29.1985C4.87576 29.1985 3.16696 30.9617 3.16696 33.1364C3.16696 35.311 4.87576 37.0742 6.98327 37.0742ZM6.98327 30.9617C8.14525 30.9617 9.09078 31.9374 9.09078 33.1364C9.09078 34.3353 8.14525 35.311 6.98327 35.311C5.82129 35.311 4.87576 34.3353 4.87576 33.1364C4.87576 31.9374 5.82129 30.9617 6.98327 30.9617Z"
+                  fill="#243237"
+                />
+                <path
+                  d="M10.7312 41.3058C10.7312 43.4804 12.44 45.2436 14.5475 45.2436C16.655 45.2436 18.3638 43.4804 18.3638 41.3058C18.3638 39.1312 16.655 37.368 14.5475 37.368C12.44 37.368 10.7312 39.1312 10.7312 41.3058ZM16.655 41.3058C16.655 42.5048 15.7095 43.4804 14.5475 43.4804C13.3855 43.4804 12.44 42.5048 12.44 41.3058C12.44 40.1069 13.3855 39.1312 14.5475 39.1312C15.7095 39.1312 16.655 40.1069 16.655 41.3058Z"
+                  fill="#243237"
+                />
+                <path
+                  d="M5.86686 41.9171C6.03774 42.0934 6.25418 42.1874 6.48202 42.1874C6.70986 42.1874 6.91492 42.1052 7.0744 41.9406L15.8234 33.1951C16.1652 32.8542 16.1766 32.3018 15.8462 31.9491C15.5158 31.5965 14.9804 31.5965 14.6387 31.9256L5.88964 40.6711C5.54788 41.012 5.53649 41.5644 5.86686 41.9171Z"
+                  fill="#243237"
+                />
+                <path
+                  d="M17.1221 47.0068H5.01246C4.54539 47.0068 4.15806 47.4065 4.15806 47.8884C4.15806 48.3704 4.54539 48.77 5.01246 48.77H17.1221C17.5892 48.77 17.9765 48.3704 17.9765 47.8884C17.9765 47.4065 17.5892 47.0068 17.1221 47.0068Z"
+                  fill="#243237"
+                />
+                <path
+                  d="M28.1381 33.4537C28.2406 33.4537 28.3546 33.4302 28.4571 33.3832C28.5596 33.3362 28.6622 33.2657 28.7419 33.1834C28.8216 33.1128 28.8786 33.0071 28.9242 32.9013C28.9697 32.7955 28.9925 32.6779 28.9925 32.5721C28.9925 32.4546 28.9697 32.337 28.9242 32.2312C28.8786 32.1255 28.8216 32.0197 28.7419 31.9374C28.6622 31.8669 28.5596 31.7963 28.4571 31.7493C28.1495 31.62 27.7736 31.7023 27.5344 31.9374C27.4546 32.0197 27.3863 32.1255 27.3407 32.2312C27.3065 32.337 27.2837 32.4546 27.2837 32.5721C27.2837 32.7955 27.3749 33.0306 27.5344 33.1834C27.6938 33.3597 27.9103 33.4537 28.1381 33.4537Z"
+                  fill="#243237"
+                /></svg></span>
+            <h3
+              class="pb-4 pt-2 text-center text-base font-bold text-lightblack"
             >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-2.webp"
-                    alt="blog-card-image"
-                  />
+              Najlepsze kody rabatowe
+            </h3>
+            <!-- Swiper Slider -->
+            <div class="relative mx-auto w-full max-w-[200px]">
+              <div class="swiper myImageSlider">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/images/webp/img-slider.webp"
+                      alt="The North Face Discount"
+                    />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/images/webp/img-slider.webp"
+                      alt="Nike Discount"
+                    />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <img
+                      src="/images/webp/img-slider.webp"
+                      alt="Adidas Discount"
+                    />
+                  </div>
                 </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Sklepy podobne do SHEIN - gdzie kupować ubrania?
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
+              </div>
+              <!-- Add Navigation -->
+              <div class="flex">
+                <button
+                  class="custom-next-arrow absolute left-[-70px] top-[46%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full md:ml-8 3xl:left-[-90px]"
+                >
+                  <svg
+                    width="29"
+                    height="29"
+                    viewBox="0 0 29 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    TMiłośnicy tanich zakupów zastanawiają się, jakie strony
-                    podobne do Shein warto odwiedzić. Chińskie sklepy
-                    internetowe biją rekordy popularności – trudno się temu
-                    dziwić, ponieważ zdecydowana większość konsumentów poszukuje
-                    skutecznych sposobów na zaoszczędzenia gotówki.
-                  </p>
-                </div>
+                    <mask id="path-1-inside-1_759_7539" fill="white">
+                      <path
+                        d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
+                      />
+                    </mask>
+                    <path
+                      d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
+                      fill="#243237"
+                      mask="url(#path-1-inside-1_759_7539)"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">195</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 3 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-3.webp"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Przecena a promocja: podobieństwa i różnice - jak nie dać
-                    się naciąć?
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
+              <div class="flex">
+                <button
+                  class="custom-prev-arrow c absolute right-[-70px] top-[46%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full md:mr-8 3xl:right-[-90px]"
+                >
+                  <svg
+                    width="29"
+                    height="29"
+                    viewBox="0 0 29 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Czy wiesz, jakie są najbardziej znane polskie firmy na
-                    świecie? Istnieje sporo marek, które odniosły globalny
-                    sukces.
-                  </p>
-                </div>
+                    <mask id="path-1-inside-1_759_7539" fill="white">
+                      <path
+                        d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
+                      />
+                    </mask>
+                    <path
+                      d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
+                      fill="#243237"
+                      mask="url(#path-1-inside-1_759_7539)"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">631</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 4 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
+            </div>
+            <p
+              class="py-3 text-center text-base leading-[120%] text-lightblack"
             >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-4.webp"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Polskie firmy znane za granicą - które rodzime marki
-                    przyciągają międzynarodową uwagę?
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
-                  >
-                    Czy wiesz, jakie są najbardziej znane polskie firmy na
-                    świecie? Istnieje sporo marek, które odniosły globalny
-                    sukces.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">631</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 5 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-5.webp"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Od ilu lat można zamawiać przez internet i jakie możliwości
-                    mają dzieci?
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
-                  >
-                    Niejeden rodzic zastanawia się, czy dziecko może kupować
-                    przez internet. Prawdą jest, że w dzisiejszych czasach nawet
-                    kilkuletnie szkraby są na bieżąco z nowinkami technicznymi.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">191</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 6 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-6.webp"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Kraje z zakazem handlu w niedziele: gdzie poza Polską nie
-                    zrobimy zakupów? Lista!
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
-                  >
-                    Niedziele handlowe na świecie to temat, który interesuje nie
-                    tylko osoby uwielbiające podróże. W Polsce już od kilku lat
-                    stosowane są różne metody mające na celu ograniczenie handlu
-                    w siódmy dzień tygodnia.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">532</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 7 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-7.webp"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Jak sprawdzić czy sklep internetowy jest prawdziwy?
-                    Podpowiedzi dla przezornych
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
-                  >
-                    Niejedna osoba zastanawia się, jak sprawdzić czy sklep
-                    internetowy jest prawdziwy. W dzisiejszych czasach w sieci
-                    można natknąć się na mnóstwo fałszywych ogłoszeń, które na
-                    pierwszy rzut oka nie wzbudzają żadnych podejrzeń.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">1633</span>
-                </h4>
-              </div>
-            </article>
-            <!-- card 8 -->
-            <article
-              class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
-            >
-              <div>
-                <div class="overflow-hidden">
-                  <img
-                    class="transition-all duration-300 ease-in-out group-hover:scale-110"
-                    src="/images/webp/blog-hero-card-8.png"
-                    alt="blog-card-image"
-                  />
-                </div>
-                <div class="px-4 pt-4 3xl:px-6">
-                  <h3 class="text-sm font-bold text-exodusFruit">
-                    Aplikacja Deichmann a opinie, korzyści i instalacja - czy
-                    warto ją pobrać?
-                  </h3>
-                  <p
-                    class="pt-6 text-xs font-light leading-[150%] text-lightblack"
-                  >
-                    Niemal każdy poszukuje skutecznych sposobów na
-                    zaoszczędzenie gotówki. Wbrew pozorom nie jest to tak
-                    trudne, jak mogłoby się wydawać! 
-                  </p>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6"
-              >
-                <h4 class="text-[11px] font-light text-lightblack">
-                  Przeczytało <span class="font-bold">1038</span>
-                </h4>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div
-          class="flex justify-between gap-8 px-4 pt-[30px] md:justify-center md:pt-[84px]"
-        >
-          <button class="cursor-pointer font-light text-black hover:underline">
-            Poprzednia
-          </button>
-          <div class="flex items-center gap-3">
-            <span
-              class="cursor-pointer px-[0.8px] text-base font-light text-lightblack"
-              >1</span
-            >
-            <span
-              class="cursor-pointer px-[0.8px] text-base font-light text-lightblack"
-              >2</span
-            >
-            <span
-              class="cursor-pointer px-[0.8px] text-base font-light text-lightblack"
-              >3</span
-            >
-            <span class="text-base font-light text-lightblack">...</span>
-            <p class="cursor-pointer text-base font-light text-lightblack">
-              344
+              The North Face
             </p>
+            <h4
+              class="text-center text-3xl font-bold leading-[130%] text-exodusFruit md:text-[26px] 3xl:text-3xl"
+            >
+              Kod Rabatowy <br />
+              - 10%
+            </h4>
+            <p class="py-2 text-center text-sm leading-[120%] text-lightblack">
+              Kod rabatowy -10% na outlet w ofercie The North Face
+            </p>
+            <button
+              class="group mt-2 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]"
+            >
+              Sprawdź okazję
+            </button>
+            <div class="flex items-center justify-end pt-3">
+              <h4 class="text-[11px] font-light text-lightblack">
+                Skorzystalo <span class="font-bold">35</span>
+              </h4>
+            </div>
           </div>
-          <button class="cursor-pointer font-light text-black hover:underline">
-            Następna
-          </button>
         </div>
       </div>
-    </section>
+    </section>      
 
-    <!-- footer section  -->
+   <!-- footer section  -->
     <footer class="footer-bg relative mt-[164px] w-full text-white md:mt-8">
       <div class="main-container py-10">
         <div class="pt-14 sm:pb-8 sm:pt-20">
