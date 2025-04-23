@@ -1,5 +1,3 @@
-
-
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileSidebar = document.getElementById("mobileSidebar");
 const sidebarOverlay = document.getElementById("sidebarOverlay");
@@ -91,7 +89,6 @@ searchInput.addEventListener("input", function () {
 
     // Loop through all suggestion items and show/hide based on match
     suggestionItems.forEach((item) => {
-
       const itemName = item.getAttribute("data-name").toLowerCase();
 
       if (itemName.includes(query)) {

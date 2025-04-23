@@ -22,53 +22,6 @@
       />
     </noscript>
   </head>
-  <style>
-    /* Custom Scrollbar */
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 5px;
-      height: 8px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 9999px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 9999px;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .dropdown-enter {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-
-    .dropdown-enter-active {
-      opacity: 1;
-      transform: translateY(0);
-      transition:
-        opacity 200ms ease,
-        transform 200ms ease;
-    }
-
-    .dropdown-exit {
-      opacity: 1;
-    }
-
-    .dropdown-exit-active {
-      opacity: 0;
-      transform: translateY(-10px);
-      transition:
-        opacity 200ms ease,
-        transform 200ms ease;
-    }
-  </style>
 
   <body>
     <script
@@ -76,9 +29,10 @@
       type="module"
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"
     ></script>
-    <script defer type="module" src="/src/main.js"></script>
+    <script defer type="module" src="/src/js/main.js"></script>
     <script defer type="module" src="/src/js/service-search.js"></script>
     <script defer type="module" src="/src/js/image-slider.js"></script>
+
     <!-- Header start --- -->
     <header class="relative">
       <div
@@ -1877,22 +1831,22 @@
           3441
         </div>
         <li class="border-y border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Okazje</a>
+          <a class="dropdown-text" href="#">Okazje</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Kody rabatowe</a>
+          <a class="dropdown-text" href="#">Kody rabatowe</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Gezetki</a>
+          <a class="dropdown-text" href="#">Gezetki</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Za darmo</a>
+          <a class="dropdown-text" href="#">Za darmo</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Poradnik</a>
+          <a class="dropdown-text" href="#">Poradnik</a>
         </li>
         <li>
-          <a class="small-title !text-blackMetal" href="#">Sklepy</a>
+          <a class="dropdown-text" href="#">Sklepy</a>
         </li>
       </ul>
       <div class="px-4">
@@ -1911,19 +1865,19 @@
         <!-- Inline Suggestions Container (part of the same container) -->
         <div id="suggestionsBox" class="suggestions">
           <button
-            class="small-title px-4 py-2"
+            class="small-title px-4 py-2 font-light text-lightblack"
             onclick="selectSuggestion('The North Face')"
           >
             The North Face
           </button>
           <button
-            class="small-title px-4 py-2"
+            class="small-title px-4 py-2 font-light text-lightblack"
             onclick="selectSuggestion('The Body Shop')"
           >
             The Body Shop
           </button>
           <button
-            class="small-title px-4 py-2"
+            class="small-title px-4 py-2 font-light text-lightblack"
             onclick="selectSuggestion('The Streets')"
           >
             The Streets
@@ -1942,7 +1896,9 @@
         alt="hero bg"
       />
       <div class="flex items-center justify-center">
-        <h1 class="main-heading mx-auto max-w-[788px] px-4 3xl:max-w-[943px]">
+        <h1
+          class="main-heading mx-auto max-w-[788px] px-4 text-center text-white 3xl:max-w-[943px]"
+        >
           Blog WydawajDobrze: piszemy o wyprzedażach, promocjach i sprytnych
           zakupach!
         </h1>
@@ -1964,7 +1920,9 @@
             <div
               class="block rounded-[20px] bg-white py-11 shadow-c2 md:hidden"
             >
-              <h4 class="small-title text-center !font-bold">Kategorie</h4>
+              <h4 class="small-title text-center font-bold text-lightblack">
+                Kategorie
+              </h4>
               <div
                 class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
               >
@@ -2063,7 +2021,9 @@
             <div
               class="hidden rounded-[20px] bg-white py-11 shadow-c3 md:block"
             >
-              <h4 class="small-title text-center !font-bold">Kategorie</h4>
+              <h4 class="small-title text-center font-bold text-lightblack">
+                Kategorie
+              </h4>
               <div
                 class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
               >
@@ -2467,7 +2427,9 @@
         <div
           class="flex justify-between gap-8 pt-[30px] md:justify-center md:pt-[84px]"
         >
-          <button class="cursor-pointer font-light text-black hover:underline">
+          <button
+            class="cursor-pointer text-base font-light text-black hover:underline"
+          >
             Poprzednia
           </button>
           <div class="flex items-center gap-3">
@@ -2488,7 +2450,9 @@
               344
             </p>
           </div>
-          <button class="cursor-pointer font-light text-black hover:underline">
+          <button
+            class="cursor-pointer text-base font-light text-black hover:underline"
+          >
             Następna
           </button>
         </div>
@@ -2545,7 +2509,7 @@
             >
               <div>
                 <h3 class="mb-2 text-base font-semibold text-white">STRONY</h3>
-                <ul class="small-title space-y-2 !text-white">
+                <ul class="small-title space-y-2 font-light text-white">
                   <li>
                     <a href="#" class="footer-li-style">OKAZJE</a>
                   </li>
@@ -2573,7 +2537,7 @@
               <!-- Ważne section -->
               <div>
                 <h3 class="mb-2 text-base font-semibold text-white">WAŻNE</h3>
-                <ul class="small-title space-y-2 !text-white">
+                <ul class="small-title space-y-2 font-light text-white">
                   <li>
                     <a href="#" class="footer-li-style"> KIM JESTEŚMY</a>
                   </li>
@@ -2591,7 +2555,7 @@
               <!-- Kontakt section -->
               <div>
                 <h3 class="mb-2 text-base font-semibold text-white">KONTAKT</h3>
-                <ul class="small-title space-y-2 !text-white">
+                <ul class="small-title space-y-2 font-light text-white">
                   <li>
                     <a href="#" class="footer-li-style">KONTAKT</a>
                   </li>
