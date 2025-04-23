@@ -6,6 +6,7 @@ export default {
     "./guides.html",
     "./about.html",
     "./special.html",
+    "./opportunities.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -53,8 +54,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        "custom-gradient":
-          "linear-gradient(110deg, #9a33ae 6.13%, #f50269 76.3%, #f47d41 99.4%)",
+        "custom-gradient": "linear-gradient(110deg, #9a33ae 6.13%, #f50269 76.3%, #f47d41 99.4%)",
       },
       dropShadow: {
         c1: "2px 2px 6px rgba(68, 68, 68, 0.25)",
