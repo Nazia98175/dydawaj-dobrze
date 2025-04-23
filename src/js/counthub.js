@@ -41,7 +41,7 @@ function animateCount(elementId, targetValue, duration, formatFunc) {
       // Easing function to make animation more natural
       const easedProgress = 1 - Math.pow(1 - progress, 3);
       const currentValue = Math.floor(
-        startValue + easedProgress * (targetValue - startValue)
+        startValue + easedProgress * (targetValue - startValue),
       );
       element.textContent = formatFunc(currentValue);
       requestAnimationFrame(updateCount);
@@ -62,7 +62,7 @@ function startAnimations() {
         "count" + (i + 1),
         targetValues[i],
         durations[i],
-        formatting[i]
+        formatting[i],
       );
     }
   }

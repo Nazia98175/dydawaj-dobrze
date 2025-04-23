@@ -200,13 +200,13 @@ body {
   }
 }
 .main-heading {
-  @apply text-center text-[23px] font-bold leading-[150%] text-white sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px];
+  @apply text-[23px] font-bold leading-[150%] sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px];
 }
 .secondry-heading {
   @apply text-sm font-bold lg:text-2xl 2xl:text-[28px] 3xl:text-[35px];
 }
 .small-title {
-  @apply text-base font-light text-lightblack;
+  @apply text-base leading-[190%];
 }
 .larger-title {
   @apply text-xl font-bold leading-[130%] text-lightblack md:text-[23px] md:leading-[140%] 3xl:text-[30px];
@@ -312,7 +312,7 @@ body {
   @apply text-xs leading-[170%] md:text-lg md:leading-[160%] 3xl:text-xl;
 }
 .dropdown-text {
-  @apply small-title block px-4 py-2 !text-blackMetal;
+  @apply block px-4 py-2 text-base font-light text-blackMetal;
 }
 .coupon-info-text {
   @apply text-[11px] md:text-sm 3xl:text-base;
@@ -431,4 +431,50 @@ body {
 .img-color-active {
   filter: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(293%)
     hue-rotate(139deg) brightness(97%) contrast(90%);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 9999px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+.dropdown-exit {
+  opacity: 1;
+}
+
+.dropdown-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
 }

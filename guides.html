@@ -22,55 +22,17 @@
       />
     </noscript>
   </head>
-  <style>
-    /* Custom Scrollbar */
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 5px;
-      height: 8px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 9999px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 9999px;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .dropdown-enter {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-
-    .dropdown-enter-active {
-      opacity: 1;
-      transform: translateY(0);
-      transition:
-        opacity 200ms ease,
-        transform 200ms ease;
-    }
-
-    .dropdown-exit {
-      opacity: 1;
-    }
-
-    .dropdown-exit-active {
-      opacity: 0;
-      transform: translateY(-10px);
-      transition:
-        opacity 200ms ease,
-        transform 200ms ease;
-    }
-  </style>
 
   <body>
+    <script
+      defer
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"
+    ></script>
+    <script defer type="module" src="/src/js/main.js"></script>
+    <script defer type="module" src="/src/js/service-search.js"></script>
+    <script defer type="module" src="/src/js/image-slider.js"></script>
+
     <!-- Header start --- -->
     <header class="relative">
       <div
@@ -1869,22 +1831,22 @@
           3441
         </div>
         <li class="border-y border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Okazje</a>
+          <a class="dropdown-text" href="#">Okazje</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Kody rabatowe</a>
+          <a class="dropdown-text" href="#">Kody rabatowe</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Gezetki</a>
+          <a class="dropdown-text" href="#">Gezetki</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Za darmo</a>
+          <a class="dropdown-text" href="#">Za darmo</a>
         </li>
         <li class="border-b border-Jupiter">
-          <a class="small-title !text-blackMetal" href="#">Poradnik</a>
+          <a class="dropdown-text" href="#">Poradnik</a>
         </li>
         <li>
-          <a class="small-title !text-blackMetal" href="#">Sklepy</a>
+          <a class="dropdown-text" href="#">Sklepy</a>
         </li>
       </ul>
       <div class="px-4">
@@ -1903,19 +1865,19 @@
         <!-- Inline Suggestions Container (part of the same container) -->
         <div id="suggestionsBox" class="suggestions">
           <button
-            class="small-title px-4 py-2"
+            class="small-title px-4 py-2 font-light text-lightblack"
             onclick="selectSuggestion('The North Face')"
           >
             The North Face
           </button>
           <button
-            class="small-title px-4 py-2"
+            class="small-title px-4 py-2 font-light text-lightblack"
             onclick="selectSuggestion('The Body Shop')"
           >
             The Body Shop
           </button>
           <button
-            class="small-title px-4 py-2"
+            class="small-title px-4 py-2 font-light text-lightblack"
             onclick="selectSuggestion('The Streets')"
           >
             The Streets
@@ -1934,7 +1896,9 @@
         alt="hero bg"
       />
       <div class="flex items-center justify-center">
-        <h1 class="main-heading mx-auto max-w-[788px] px-4 3xl:max-w-[943px]">
+        <h1
+          class="main-heading mx-auto max-w-[788px] px-4 text-center text-white 3xl:max-w-[943px]"
+        >
           Blog WydawajDobrze: piszemy o wyprzedażach, promocjach i sprytnych
           zakupach!
         </h1>
@@ -1956,7 +1920,9 @@
             <div
               class="block rounded-[20px] bg-white py-11 shadow-c2 md:hidden"
             >
-              <h4 class="small-title text-center !font-bold">Kategorie</h4>
+              <h4 class="small-title text-center font-bold text-lightblack">
+                Kategorie
+              </h4>
               <div
                 class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
               >
@@ -1967,19 +1933,10 @@
                   type="text"
                 />
                 <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="32"
-                    viewBox="0 0 25 32"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2905 20.1382C16.2905 20.1382 15.9436 20.4851 15.2498 21.179C14.5559 21.8728 13.2201 22.2197 11.2422 22.2197C9.26432 22.2197 7.57357 21.5259 6.16992 20.1382C4.76628 18.7505 4.06445 17.0677 4.06445 15.0898C4.06445 13.112 4.76628 11.4212 6.16992 10.0176C7.57357 8.61393 9.26432 7.91211 11.2422 7.91211C13.2201 7.91211 14.9028 8.61393 16.2905 10.0176C17.6782 11.4212 18.3721 13.112 18.3721 15.0898C18.3721 17.0677 17.6782 18.7505 16.2905 20.1382ZM11.2422 24.2773C12.901 24.2773 14.4323 23.8626 15.8359 23.0332C17.2396 22.2038 18.3561 21.0872 19.1855 19.6836C20.015 18.2799 20.4297 16.7487 20.4297 15.0898C20.4297 12.5378 19.5285 10.3685 17.7261 8.58203C15.9237 6.79557 13.7544 5.90234 11.2183 5.90234C8.68213 5.90234 6.52083 6.79557 4.73438 8.58203C2.94792 10.3685 2.05469 12.5298 2.05469 15.0659C2.05469 17.6021 2.94792 19.7713 4.73438 21.5737C6.52083 23.3761 8.6901 24.2773 11.2422 24.2773ZM21.4346 25.2822L22.1523 24.5645L17.7021 20.1143L16.9844 20.832L16.2666 21.5498L20.7168 26L21.4346 25.2822Z"
-                      fill="#BBBABF"
-                      fill-opacity="0.5"
-                    />
-                  </svg>
+                  <img
+                    src="/images/svg/service-search-icon.svg"
+                    alt="service search"
+                  />
                 </button>
               </div>
               <div id="suggestionsList" class="hidden">
@@ -2062,9 +2019,11 @@
               </div>
             </div>
             <div
-              class="hidden rounded-[20px] !bg-[#FFF] py-11 shadow-c3 md:block"
+              class="hidden rounded-[20px] bg-white py-11 shadow-c3 md:block"
             >
-              <h4 class="small-title text-center !font-bold">Kategorie</h4>
+              <h4 class="small-title text-center font-bold text-lightblack">
+                Kategorie
+              </h4>
               <div
                 class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4"
               >
@@ -2074,19 +2033,10 @@
                   type="text"
                 />
                 <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="32"
-                    viewBox="0 0 25 32"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2905 20.1382C16.2905 20.1382 15.9436 20.4851 15.2498 21.179C14.5559 21.8728 13.2201 22.2197 11.2422 22.2197C9.26432 22.2197 7.57357 21.5259 6.16992 20.1382C4.76628 18.7505 4.06445 17.0677 4.06445 15.0898C4.06445 13.112 4.76628 11.4212 6.16992 10.0176C7.57357 8.61393 9.26432 7.91211 11.2422 7.91211C13.2201 7.91211 14.9028 8.61393 16.2905 10.0176C17.6782 11.4212 18.3721 13.112 18.3721 15.0898C18.3721 17.0677 17.6782 18.7505 16.2905 20.1382ZM11.2422 24.2773C12.901 24.2773 14.4323 23.8626 15.8359 23.0332C17.2396 22.2038 18.3561 21.0872 19.1855 19.6836C20.015 18.2799 20.4297 16.7487 20.4297 15.0898C20.4297 12.5378 19.5285 10.3685 17.7261 8.58203C15.9237 6.79557 13.7544 5.90234 11.2183 5.90234C8.68213 5.90234 6.52083 6.79557 4.73438 8.58203C2.94792 10.3685 2.05469 12.5298 2.05469 15.0659C2.05469 17.6021 2.94792 19.7713 4.73438 21.5737C6.52083 23.3761 8.6901 24.2773 11.2422 24.2773ZM21.4346 25.2822L22.1523 24.5645L17.7021 20.1143L16.9844 20.832L16.2666 21.5498L20.7168 26L21.4346 25.2822Z"
-                      fill="#BBBABF"
-                      fill-opacity="0.5"
-                    />
-                  </svg>
+                  <img
+                    src="/images/svg/service-search-icon.svg"
+                    alt="service search"
+                  />
                 </button>
               </div>
               <div class="border-b border-Jupiter px-5 pb-3 pt-10">
@@ -2148,38 +2098,10 @@
             </div>
             <div class="rounded-[20px] bg-white px-8 py-6 shadow-c3">
               <span class="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="36"
-                  height="55"
-                  viewBox="0 0 36 55"
-                  fill="none"
-                >
-                  <path
-                    d="M35.1442 38.2614L31.681 34.829C31.3393 34.4881 30.8038 34.4999 30.4735 34.8525C30.1431 35.2052 30.1545 35.7576 30.4963 36.0985L33.948 39.5191C34.4151 40.0011 34.4151 40.7769 33.948 41.2588L22.7042 52.8607C22.2485 53.3308 21.4738 53.3308 21.0182 52.8607L20.9954 52.8371C21.6903 52.2847 22.146 51.4383 22.146 50.4745V27.4001L24.7547 30.1742C24.9256 30.3505 25.142 30.4445 25.3699 30.4445C25.5977 30.4445 25.8028 30.3623 25.9623 30.1977C26.304 29.8568 26.304 29.3043 25.985 28.9517L21.451 24.144C21.3599 24.0265 21.2574 23.9207 21.1549 23.8267L21.0409 23.7091C21.0409 23.7091 20.9384 23.6386 20.8814 23.5916C20.8701 23.5916 20.8587 23.5798 20.8473 23.5681C20.8017 23.5446 20.7675 23.5211 20.722 23.4975C20.2891 23.2272 19.7878 23.0626 19.241 23.0626H18.9106C18.4777 19.3364 15.5728 16.3625 11.9616 15.9393C12.121 14.9402 12.9527 14.1644 13.9665 14.1644H16.3816C18.4436 14.1644 20.1296 12.4247 20.1296 10.2971V0.881599C20.1296 0.399658 19.7423 0 19.2752 0C18.8081 0 18.4208 0.399658 18.4208 0.881599V10.3088C18.4208 11.4725 17.5094 12.4129 16.3816 12.4129H13.9665C12.0185 12.4129 10.4236 13.9645 10.2528 15.9393C6.60733 16.339 3.6796 19.3129 3.23531 23.0744H2.90495C1.31007 23.0744 0 24.4144 0 26.0718V50.4862C0 52.1319 1.29868 53.4836 2.90495 53.4836H19.1954L19.8106 54.1184C20.3574 54.6826 21.0865 55 21.8612 55C22.6358 55 23.3649 54.6944 23.9117 54.1184L35.1556 42.5166C36.2834 41.3528 36.2834 39.4486 35.1442 38.2731V38.2614ZM11.0616 24.9199C11.5287 24.9199 11.916 24.5202 11.916 24.0383V21.7461C12.8159 22.0987 13.4539 22.9921 13.4539 24.0383C13.4539 25.4018 12.3831 26.5067 11.0616 26.5067C9.74012 26.5067 8.66928 25.4018 8.66928 24.0383C8.66928 22.9921 9.30723 22.0987 10.2072 21.7461V24.0383C10.2072 24.5202 10.5945 24.9199 11.0616 24.9199ZM1.6974 50.4862V26.0718C1.6974 25.39 2.23282 24.8376 2.89356 24.8376H4.03275C4.49982 24.8376 4.88715 24.4497 4.88715 23.9677C4.92132 20.794 7.24528 18.1844 10.2186 17.7495V19.9124C8.36169 20.3238 6.97187 22.0165 6.97187 24.05C6.97187 26.3774 8.81737 28.2817 11.073 28.2817C13.3286 28.2817 15.1741 26.3774 15.1741 24.05C15.1741 22.0165 13.7843 20.3238 11.9274 19.9124V17.7495C14.9007 18.1844 17.2246 20.794 17.2588 23.9677C17.2588 24.4497 17.6461 24.8376 18.1132 24.8376H19.2524C19.5486 24.8376 19.7992 24.9551 20.0043 25.1432L20.1524 25.3078C20.3232 25.5193 20.4372 25.7779 20.4372 26.0718V50.4862C20.4372 51.0034 20.1296 51.4383 19.6967 51.6264C19.4461 51.5324 19.1727 51.5676 18.9448 51.7205H2.89356C2.23282 51.7205 1.6974 51.168 1.6974 50.4862Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M6.98327 37.0742C9.09078 37.0742 10.7996 35.311 10.7996 33.1364C10.7996 30.9617 9.09078 29.1985 6.98327 29.1985C4.87576 29.1985 3.16696 30.9617 3.16696 33.1364C3.16696 35.311 4.87576 37.0742 6.98327 37.0742ZM6.98327 30.9617C8.14525 30.9617 9.09078 31.9374 9.09078 33.1364C9.09078 34.3353 8.14525 35.311 6.98327 35.311C5.82129 35.311 4.87576 34.3353 4.87576 33.1364C4.87576 31.9374 5.82129 30.9617 6.98327 30.9617Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M10.7312 41.3058C10.7312 43.4804 12.44 45.2436 14.5475 45.2436C16.655 45.2436 18.3638 43.4804 18.3638 41.3058C18.3638 39.1312 16.655 37.368 14.5475 37.368C12.44 37.368 10.7312 39.1312 10.7312 41.3058ZM16.655 41.3058C16.655 42.5048 15.7095 43.4804 14.5475 43.4804C13.3855 43.4804 12.44 42.5048 12.44 41.3058C12.44 40.1069 13.3855 39.1312 14.5475 39.1312C15.7095 39.1312 16.655 40.1069 16.655 41.3058Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M5.86686 41.9171C6.03774 42.0934 6.25418 42.1874 6.48202 42.1874C6.70986 42.1874 6.91492 42.1052 7.0744 41.9406L15.8234 33.1951C16.1652 32.8542 16.1766 32.3018 15.8462 31.9491C15.5158 31.5965 14.9804 31.5965 14.6387 31.9256L5.88964 40.6711C5.54788 41.012 5.53649 41.5644 5.86686 41.9171Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M17.1221 47.0068H5.01246C4.54539 47.0068 4.15806 47.4065 4.15806 47.8884C4.15806 48.3704 4.54539 48.77 5.01246 48.77H17.1221C17.5892 48.77 17.9765 48.3704 17.9765 47.8884C17.9765 47.4065 17.5892 47.0068 17.1221 47.0068Z"
-                    fill="#243237"
-                  />
-                  <path
-                    d="M28.1381 33.4537C28.2406 33.4537 28.3546 33.4302 28.4571 33.3832C28.5596 33.3362 28.6622 33.2657 28.7419 33.1834C28.8216 33.1128 28.8786 33.0071 28.9242 32.9013C28.9697 32.7955 28.9925 32.6779 28.9925 32.5721C28.9925 32.4546 28.9697 32.337 28.9242 32.2312C28.8786 32.1255 28.8216 32.0197 28.7419 31.9374C28.6622 31.8669 28.5596 31.7963 28.4571 31.7493C28.1495 31.62 27.7736 31.7023 27.5344 31.9374C27.4546 32.0197 27.3863 32.1255 27.3407 32.2312C27.3065 32.337 27.2837 32.4546 27.2837 32.5721C27.2837 32.7955 27.3749 33.0306 27.5344 33.1834C27.6938 33.3597 27.9103 33.4537 28.1381 33.4537Z"
-                    fill="#243237"
-                  />
-                </svg>
+                <img
+                  src="/images/svg/product-card-tag.svg"
+                  alt="product card tag"
+                />
               </span>
               <h3 class="small-title pb-4 pt-2 text-center !font-bold">
                 Najlepsze kody rabatowe
@@ -2216,48 +2138,20 @@
                   <button
                     class="custom-next-arrow absolute left-[-70px] top-[46%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full md:ml-8 3xl:left-[-90px]"
                   >
-                    <svg
-                      width="29"
-                      height="29"
-                      viewBox="0 0 29 29"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask id="path-1-inside-1_759_7539" fill="white">
-                        <path
-                          d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
-                        />
-                      </mask>
-                      <path
-                        d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
-                        fill="#243237"
-                        mask="url(#path-1-inside-1_759_7539)"
-                      />
-                    </svg>
+                    <img
+                      src="/images/svg/hero-slider-left-arrow.svg"
+                      alt="arrow"
+                    />
                   </button>
                 </div>
                 <div class="flex">
                   <button
                     class="custom-prev-arrow c absolute right-[-70px] top-[46%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full md:mr-8 3xl:right-[-90px]"
                   >
-                    <svg
-                      width="29"
-                      height="29"
-                      viewBox="0 0 29 29"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask id="path-1-inside-1_759_7539" fill="white">
-                        <path
-                          d="M29 14.2842L14.8579 28.4263L0.71573 14.2842L14.8579 0.142044L29 14.2842Z"
-                        />
-                      </mask>
-                      <path
-                        d="M29 14.2842L29.7071 14.9913L30.4142 14.2842L29.7071 13.5771L29 14.2842ZM28.2929 13.5771L14.1508 27.7192L15.565 29.1334L29.7071 14.9913L28.2929 13.5771ZM14.1508 0.849151L28.2929 14.9913L29.7071 13.5771L15.565 -0.565062L14.1508 0.849151Z"
-                        fill="#243237"
-                        mask="url(#path-1-inside-1_759_7539)"
-                      />
-                    </svg>
+                    <img
+                      src="/images/svg/hero-slider-right-arrow.svg"
+                      alt="arrow"
+                    />
                   </button>
                 </div>
               </div>
@@ -2533,7 +2427,9 @@
         <div
           class="flex justify-between gap-8 pt-[30px] md:justify-center md:pt-[84px]"
         >
-          <button class="cursor-pointer font-light text-black hover:underline">
+          <button
+            class="cursor-pointer text-base font-light text-black hover:underline"
+          >
             Poprzednia
           </button>
           <div class="flex items-center gap-3">
@@ -2554,7 +2450,9 @@
               344
             </p>
           </div>
-          <button class="cursor-pointer font-light text-black hover:underline">
+          <button
+            class="cursor-pointer text-base font-light text-black hover:underline"
+          >
             Następna
           </button>
         </div>
@@ -2611,7 +2509,7 @@
             >
               <div>
                 <h3 class="mb-2 text-base font-semibold text-white">STRONY</h3>
-                <ul class="small-title space-y-2 !text-white">
+                <ul class="small-title space-y-2 font-light text-white">
                   <li>
                     <a href="#" class="footer-li-style">OKAZJE</a>
                   </li>
@@ -2639,7 +2537,7 @@
               <!-- Ważne section -->
               <div>
                 <h3 class="mb-2 text-base font-semibold text-white">WAŻNE</h3>
-                <ul class="small-title space-y-2 !text-white">
+                <ul class="small-title space-y-2 font-light text-white">
                   <li>
                     <a href="#" class="footer-li-style"> KIM JESTEŚMY</a>
                   </li>
@@ -2657,7 +2555,7 @@
               <!-- Kontakt section -->
               <div>
                 <h3 class="mb-2 text-base font-semibold text-white">KONTAKT</h3>
-                <ul class="small-title space-y-2 !text-white">
+                <ul class="small-title space-y-2 font-light text-white">
                   <li>
                     <a href="#" class="footer-li-style">KONTAKT</a>
                   </li>
@@ -2677,102 +2575,5 @@
         <img src="/images/svg/bottom-top-arrow.svg" alt="arrow" />
       </span>
     </button>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".ImageSlider", {
-          // Enable navigation buttons
-          navigation: {
-            nextEl: ".custom-next-arrow",
-            prevEl: ".custom-prev-arrow",
-          },
-
-          // Optional: Auto play settings
-          // autoplay: {
-          //   delay: 5000,
-          //   disableOnInteraction: false,
-          // },
-
-          // Optional: Loop the slider
-          loop: true,
-
-          // Optional: Add some space between slides
-          spaceBetween: 0,
-
-          // Optional: Effect
-          effect: "slide", // You can try "fade", "cube", "coverflow", "flip"
-
-          // Optional: On slide change event
-          on: {
-            slideChange: function () {
-              // You can trigger any custom function on slide change
-              // console.log('Slide changed to: ', swiper.activeIndex);
-            },
-          },
-        });
-      });
-    </script>
-    <script>
-      const searchInput = document.getElementById("searchInputSuggetion");
-      console.log(searchInput);
-
-      const suggestionsList = document.getElementById("suggestionsList");
-      const suggestionItems = document.querySelectorAll(".suggestion-item");
-
-      function showDropdown() {
-        suggestionsList.classList.remove("hidden");
-        suggestionsList.classList.remove(
-          "dropdown-exit",
-          "dropdown-exit-active",
-        );
-        suggestionsList.classList.add("dropdown-enter");
-        requestAnimationFrame(() => {
-          suggestionsList.classList.add("dropdown-enter-active");
-          suggestionsList.classList.remove("dropdown-enter");
-        });
-      }
-
-      function hideDropdown() {
-        suggestionsList.classList.remove("dropdown-enter-active");
-        suggestionsList.classList.add("dropdown-exit", "dropdown-exit-active");
-        setTimeout(() => {
-          suggestionsList.classList.add("hidden");
-          suggestionsList.classList.remove(
-            "dropdown-exit",
-            "dropdown-exit-active",
-          );
-        }, 200);
-      }
-
-      // Show all suggestions when typing
-      searchInput.addEventListener("input", () => {
-        const term = searchInput.value.trim();
-        if (term.length === 0) {
-          hideDropdown();
-        } else {
-          showDropdown();
-        }
-      });
-
-      // Handle outside click
-      document.addEventListener("click", (e) => {
-        if (
-          !searchInput.contains(e.target) &&
-          !suggestionsList.contains(e.target)
-        ) {
-          hideDropdown();
-        }
-      });
-
-      // Suggestion click handler
-      suggestionItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          const text = item.dataset.text || "";
-          searchInput.value = text;
-          hideDropdown();
-        });
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

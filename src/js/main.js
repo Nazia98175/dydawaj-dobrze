@@ -1,5 +1,3 @@
-
-
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileSidebar = document.getElementById("mobileSidebar");
 const sidebarOverlay = document.getElementById("sidebarOverlay");
@@ -91,7 +89,6 @@ searchInput.addEventListener("input", function () {
 
     // Loop through all suggestion items and show/hide based on match
     suggestionItems.forEach((item) => {
-
       const itemName = item.getAttribute("data-name").toLowerCase();
 
       if (itemName.includes(query)) {
@@ -260,6 +257,25 @@ window.addEventListener("scroll", () => {
   }
 });
 document.getElementById("scroll").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+const scrollButton = document.getElementById("scroll");
+
+// Show or hide button on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+});
+
+// Scroll to top on click
+scrollButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
