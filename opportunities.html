@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <style>
@@ -22,9 +23,15 @@
       filter: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(293%)
         hue-rotate(139deg) brightness(97%) contrast(90%);
     }
+
+    .spinner {
+      border-top-color: transparent;
+      border-radius: 9999px;
+    }
   </style>
 
   <body>
+    <script defer type="module" src="./src/main.js"></script>
     <!-- Header start --- -->
     <header class="relative">
       <div
@@ -2186,7 +2193,7 @@
         src="/images/webp/hero-bg.webp"
         alt="hero bg"
       />
-      <div class="relative z-0 px-4 py-3 md:py-8">
+      <div class="relative z-0 m-auto max-w-[1315px] 3xl:max-w-[1544px] px-4 py-3 md:py-8">
         <nav
           class="flex max-w-[273px] flex-wrap items-center justify-start gap-2 sm:mx-auto sm:max-w-6xl sm:gap-4 md:justify-center lg:pl-[129px]"
         >
@@ -2242,174 +2249,309 @@
             </svg>
           </span>
           <span class="text-[11px] leading-[218.182%] text-white"
-            >Kody rabatowy i promocje</span
+            >Rabat -15% na wybrane zestawy stworzone w The North Face</span
           >
         </nav>
-        <div
-          class="m-auto flex flex-col lg:flex-row justify-between max-w-[1200px] 3xl:max-w-[1544px] w-fit"
-        >
+        <div class="m-auto flex flex-col gap-10 xl:flex-row max-w-[1315px] 3xl:max-w-[1544px]">
           <div
-            class="my-10 h-[600px] max-w-[865px] rounded-2xl bg-white p-4 shadow-c2 lg:px-9 lg:py-6 lg:max-w-[1200px] 3xl:p-16"
+            class="my-10 flex max-w-[1000px] flex-col gap-6 rounded-2xl 3xl:max-w-[1200px]"
           >
-            <div class="flex w-full flex-row justify-between gap-6">
-              <!-- Logo -->
+            <div
+              class="mx-auto rounded-2xl bg-white p-4 shadow-c3 lg:px-9 lg:py-6 3xl:p-16 h-auto xl:h-[600px]"
+            >
+              <div class="flex flex-row items-start gap-0 lg:gap-4">
+                <div>
+                    
+                  <div
+                    class="hidden  relative overflow-hidden w-max max-w-[250px] items-center justify-center border-[3px] border-cottonBall p-4 lg:flex h-[350px] 3xl:h-[350px] 3xl:max-w-[250px]"
+                  >
+                  <div class="slider-only-with-us over">Tylko u nas</div>
+
+                    <img
+                      src="/images/webp/north-face-logo.webp"
+                      alt="The North Face Logo"
+                      class="object-contain"
+                    />
+                  </div>
+                  <div class="hidden lg:block" >
+                  <p
+                    class="mt-4 text-center text-xl font-bold leading-[130%] text-exodusFruit md:text-[23px] md:leading-[140%] 3xl:text-[30px]"
+                  >
+                    Rabaty -15%
+                  </p>
+                  <button
+                    class="group mt-2 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]"
+                  >
+                    Sprawdź okazję
+                  </button>
+                  </div>
+                </div>
+
+                <div class="m-auto w-full max-w-[1149px]">
+                  <div
+                    class="flex flex-col items-center justify-between lg:flex-row"
+                  >
+                    <div class="flex flex-col">
+                      <div class="flex max-w-full gap-2 md:gap-0 justify-between items-center md:items-start">
+                        <div
+                          class="flex max-w-[70px] md:max-w-[150px] lg:max-w-[250px] h-[100px] md:h-[180px] lg:h-[350px] items-center justify-center border-[3px] border-cottonBall p-0 md:p-[10px] lg:hidden"
+                        >
+                        
+                          <img
+                            src="/images/webp/north-face-logo.webp"
+                            alt="The North Face Logo"
+                            class="h-auto w-auto object-contain"
+                          />
+                        </div>
+                        <div>
+                          <p
+                            class="mb-1 md:mb-4 text-xs font-light text-lightblack md:text-base"
+                          >
+                            The North Face
+                          </p>
+                          <h2 class="text-[15px] font-bold md:text-2xl 2xl:text-[28px] 3xl:text-[35px] mb-0 md:mb-4 leading-[130%] md:leading-[120%]">
+                            Rabat -15% na wybrane zestawy<br class="hidden md:block" />
+                            stworzone w The North Face
+                          </h2>
+                        </div>
+                       
+                      </div>
+  <div class="flex lg:hidden justify-between items-start" >
+                  <p
+                    class="flex-1 mt-4 text-start text-[15px] md:text-xl font-bold leading-[130%] text-exodusFruit md:text-[23px] md:leading-[140%] 3xl:text-[30px]"
+                  >
+                    Rabaty -15%
+                  </p>
+                  <button
+                    class="flex-1 text-xs md:text-base group mt-2 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]"
+                  >
+                    Sprawdź okazję
+                  </button>
+                  </div>
+                      <p
+                        class="mt-2 block text-[11px] font-light md:text-sm lg:hidden 3xl:mt-3 3xl:text-base"
+                      >
+                        Rabat -15% na wybrane zestawy stworzone w The North
+                        Face. Jeśli lubisz sportowy styl lub szukasz odzieży na
+                        siłownie, to koniecznie sprawdź szczegóły akcji. Sklep
+                        przygotował gotowe zestawy dla kobiet, mężczyzn i
+                        dzieci.
+                        <br class="hidden md:block"/>
+                        <br />
+                        Zestawy posiadają swoje nazwy, co ułatwia odnalezienie
+                        się w ofercie. Znajdziesz m.in. damski komplet do
+                        ćwiczeń, który zawiera biustonosz i spodenki. Kolejną
+                        opcją są dresy i bluza – zestaw na powrót do szkoły.
+                        Jest także pakiet męski turystyczny (t-shirt + bluzka).
+                        To oczywiście tylko przykłady, jest wiele zestawów,
+                        dzięki temu są duże szanse że znajdziesz coś dla siebie.
+                      </p>
+                    </div>
+                  </div>
+                  <p
+                    class="mt-3 hidden text-[11px] font-light md:text-sm lg:block 3xl:text-base "
+                  >
+                    Rabat -15% na wybrane zestawy stworzone w The North Face.
+                    Jeśli lubisz sportowy styl lub szukasz odzieży na siłownie,
+                    to koniecznie sprawdź szczegóły akcji. Sklep przygotował
+                    gotowe zestawy dla kobiet, mężczyzn i dzieci.
+                    <br />
+                    <br />
+                    <br />
+                    Zestawy posiadają swoje nazwy, co ułatwia odnalezienie się w
+                    ofercie. Znajdziesz m.in. damski komplet do ćwiczeń, który
+                    zawiera biustonosz i spodenki. Kolejną opcją są dresy i
+                    bluza – zestaw na powrót do szkoły. Jest także pakiet męski
+                    turystyczny (t-shirt + bluzka). To oczywiście tylko
+                    przykłady, jest wiele zestawów, dzięki temu są duże szanse
+                    że znajdziesz coś dla siebie.
+                  </p>
+                  <button
+                    class="group text-xs md:text-base mt-10 lg:mt-24 xl:mt-20 2xl:mt-[69px] flex h-[40px] mt-10 xl:mb-16 2xl:mb-16 w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-[#696ADB] px-6 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]"
+                  >
+                    Sprawdź aktualne kody rabatowe i promocje w The North Face
+                    <img
+                      src="/images/svg/left-arrow.svg"
+                      alt="arrow"
+                      class="absolute translate-x-10 translate-y-2 md:translate-y-0 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-[90px] md:group-hover:translate-x-[260px] lg:translate-x-24 lg:group-hover:translate-x-[260px] xl:translate-x-32"
+                    />
+                  </button>
+                  <div class="flex items-end justify-end pt-3 ">
+              <h4 class="text-[11px] font-light text-lightblack">
+                Skorzystalo <span class="font-bold">535</span>
+              </h4>
+            </div>
+                </div>
+              </div>
+            </div>
+            <!--STEPS SECTION-->
+
+            <div
+              class="mx-auto flex w-full max-w-[1200px] flex-col justify-between rounded-2xl p-4 shadow-c3 lg:px-20 lg:py-10 3xl:p-24"
+            >
+              <!-- Warning Banner -->
               <div
-                class="hidden h-[281px] w-full max-w-[200px] items-center justify-center border-[3px] border-cottonBall p-4 lg:flex 3xl:h-[350px] 3xl:max-w-[250px]"
+                class="rounded-full bg-[#FFEA74] py-3 text-center font-light text-[11px] md:text-xl "
               >
-                <img
-                  src="/images/webp/north-face-logo.webp"
-                  alt="The North Face Logo"
-                  class="object-contain"
+               Uwaga! Akceptowane są wyłącznie linki do sklepów i innych ofert w ramach serwisu.
+              </div>
+
+              <!-- Input Fields -->
+              <div class="mt-4 flex flex-col md:flex-row gap-4 text-lightblack">
+                <input
+                  type="text"
+                  id="comment"
+                  placeholder="Dodaj komentarz"
+                  class="flex-1 rounded-[20px] border border-[#BBBABF] px-6 py-3 font-light h-[50px]" 
+                />
+                <input
+                  type="text"
+                  id="nickname"
+                  placeholder="Nick"
+                  class="flex-1 rounded-[20px] border border-[#BBBABF] px-6 py-3 font-light h-[50px]"
                 />
               </div>
 
-              <!-- Info Section -->
-              <div class="m-auto ">
+              <!-- reCAPTCHA and Button -->
+              <div class="mt-4 flex items-end gap-4">
+                <!-- Fake ReCaptcha Box -->
                 <div
-                  class="flex flex-col items-center justify-between lg:flex-row"
+                  class="flex h-[40px] items-center rounded-full border border-[#BBBABF] px-6 py-3"
                 >
-                  <div class="flex flex-col">
-                    <div class="flex max-w-full justify-between">
-                      <div
-                        class="flex h-[100px] w-full max-w-[100px] items-center justify-center border-[3px] border-cottonBall p-0 md:h-[150px] md:max-w-[150px] md:p-[10px] lg:hidden"
-                      >
-                        <img
-                          src="/images/webp/north-face-logo.webp"
-                          alt="The North Face Logo"
-                          class="h-auto w-auto object-contain"
-                        />
-                      </div>
-                      <div>
-                        <h2 class="secondry-heading">The North Face</h2>
-                        <h3 class="secondry-heading text-Mandarin">
-                          kody rabatowe, kupony
-                        </h3>
-                        <p
-                          class="mb-5 mt-3 w-full max-w-[168px] text-xs font-light md:max-w-full md:text-base 3xl:mb-8"
-                        >
-                          Dostępne kupony, okazje i promocje:
-                          <span class="font-bold text-black">17</span>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- Coupon Info -->
-                    <ul
-                      class="mt-5 grid max-w-xl grid-cols-2 gap-y-0 whitespace-nowrap text-[11px] font-light md:mt-0 md:whitespace-normal md:text-sm 3xl:gap-y-[5px] 3xl:text-base"
-                    >
-                      <li class="col-span-1 mb-1">Kody rabatowe</li>
-                      <li class="col-span-1 mb-1 pl-10 text-left">2</li>
-
-                      <li class="col-span-1 mb-1">Okazyjne oferty</li>
-                      <li class="col-span-1 mb-1 pl-10 text-left">15</li>
-
-                      <li class="col-span-1 mb-1">Popularna wyprzedaż</li>
-                      <li class="col-span-1 mb-1 pl-10 text-left">do -50%</li>
-
-                      <li class="col-span-1 mb-1">Darmowa dostawa</li>
-                      <li class="col-span-1 mb-1 pl-10 text-left">
-                        powyżej 230zł
-                      </li>
-
-                      <li class="col-span-1 mb-3">
-                        Ostatnia weryfikacja kuponów
-                      </li>
-                      <li class="col-span-1 mb-3 pl-10 text-left">
-                        09/09/2024
-                      </li>
-                    </ul>
-                    <p
-                      class="mt-2 block text-[11px] font-light md:text-sm lg:hidden 3xl:mt-3 3xl:text-base"
-                    >
-                      Zróżnicowana oferta The North Face przypadnie do gustu
-                      miłośnikom aktywności outdoorowych. Ubrania The North Face
-                      stanowią połączenie funkcjonalności, wytrzymałości,
-                      stylowego wzornictwa – to właśnie dzięki temu coraz
-                      częściej są wpasowywane w casualowe outfity. Sprawdź
-                      promocje na kurtki The North Face oraz pozostałe produkty
-                      z asortymentu!
-                      <a
-                        href="#"
-                        class="text-Mandarin underline hover:text-orange-600"
-                        >czytaj więcej</a
-                      >
-                    </p>
-                    <!-- Description -->
-                  </div>
-                  <!-- Rating & Button -->
-                  <div>
-                    <div class="space-y-2 text-right">
-                      <p
-                        class="text-center text-[11px] font-light md:text-sm 3xl:text-base"
-                      >
-                        Ocena sklepu<br /><strong class="font-light"
-                          >THE NORTH FACE</strong
-                        >
-                      </p>
-                      <div class="flex justify-center space-x-1 md:justify-end">
-                        <span
-                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
-                          >★</span
-                        >
-                        <span
-                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
-                          >★</span
-                        >
-                        <span
-                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
-                          >★</span
-                        >
-                        <span
-                          class="text-xl text-schoolBus lg:text-3xl 3xl:text-6xl"
-                          >★</span
-                        >
-                        <span
-                          class="text-xl text-cottonBall lg:text-3xl 3xl:text-6xl"
-                          >★</span
-                        >
-                      </div>
-                      <div class="m-auto w-fit">
-                        <p
-                          class="text-center text-xl font-light lg:text-2xl 3xl:text-[35px]"
-                        >
-                          4/5
-                        </p>
-                        <p class="text-center text-xs font-light md:text-base">
-                          ( 54 opinii )
-                        </p>
-                      </div>
-                      <button
-                        class="group mx-auto !mt-3 block h-[40px] w-full max-w-[216px] rounded-full bg-secondry px-4 py-2 text-sm text-white shadow-lg transition-all duration-300 md:!mt-[32px] md:text-base 3xl:!mt-4"
-                      >
-                        Przejdź do sklepu
-                        <img
-                          src="/images/svg/left-arrow.svg"
-                          alt=""
-                          class="absolute -translate-y-4 translate-x-28 opacity-0 transition-all duration-200 group-hover:translate-x-[165px] group-hover:opacity-100 lg:translate-x-32 xl:translate-x-36 xl:group-hover:translate-x-[165px] 2xl:group-hover:translate-x-[165px]"
-                        />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <p
-                  class="mt-3 hidden text-[11px] font-light md:text-sm lg:block 3xl:text-base"
-                >
-                  Zróżnicowana oferta The North Face przypadnie do gustu
-                  miłośnikom aktywności outdoorowych. Ubrania The North Face
-                  stanowią połączenie funkcjonalności, wytrzymałości, stylowego
-                  wzornictwa – to właśnie dzięki temu coraz częściej są
-                  wpasowywane w casualowe outfity. Sprawdź promocje na kurtki
-                  The North Face oraz pozostałe produkty z asortymentu!
-                  <a
-                    href="#"
-                    class="text-Mandarin underline hover:text-orange-600"
-                    >czytaj więcej</a
+                  <input type="checkbox" id="captcha" class="mr-2" />
+                  <label for="captcha" class="text-[11px] md:text-base font-normal"
+                    >I'm not robot</label
                   >
-                </p>
+                  <!-- Spinner -->
+                  <div
+                    id="captchaSpinner"
+                    class="ml-[10px] hidden animate-spin rounded-full bg-gradient-to-tr from-white via-blue-600 to-blue-300 p-0.5"
+                  >
+                    <div class="rounded-full bg-white">
+                      <div class="h-3 w-3 rounded-full"></div>
+                    </div>
+                  </div>
+                  <!-- Confirmation -->
+                  <span
+                    id="captchaConfirm"
+                    class="hidden text-sm text-green-600"
+                    >✔️ Zweryfikowano</span
+                  >
+                </div>
+
+                <!-- Button -->
+
+                <button
+                  id="submitBtn"
+                  class="group mt-2 flex h-[40px] cursor-pointer items-center justify-center text-xs md:text-base gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)]"
+                >
+                  <span id="btnText">Dodaj komentarz</span>
+                  <div
+                    id="btnLoader"
+                    class="absolute right-4 hidden h-5 w-5 animate-spin rounded-full border-2 border-blue-400 border-t-transparent"
+                  ></div>
+                </button>
               </div>
+            </div>
+
+            <div
+              class="mx-auto flex w-full max-w-[1200px] flex-col justify-between rounded-2xl p-4 shadow-c3 lg:px-9 lg:py-6 3xl:p-16"
+            >
+              <!-- Comment -->
+              <div class="mb-8 flex items-start gap-2 border-b pb-4">
+                <div class="flex flex-col">
+                  <div
+                    class="flex h-[90px] w-[90px] items-center justify-center rounded-full shadow-c3"
+                  >
+                    <span class="text-xl"
+                      >
+                      <img
+                        src="/public/images/svg/ava-icon.svg"
+                        alt=""
+                        class="h-[41px] w-[38px]"
+                    />
+                  </span>
+                  </div>
+                  <div class="mt-4 text-xl font-light">Polecam</div>
+                  <button
+                    class="mb-6 mt-6 rounded-[20px] bg-[#F4F9FD] px-4 py-1 text-xs font-normal"
+                  >
+                    Odpowiedz
+                  </button>
+                </div>
+
+                <div class="mt-8 flex flex-col">
+                  <div class="text-xl font-bold">Kazik</div>
+                  <p class="text-xs font-light">735 dni temu</p>
+                </div>
+              </div>
+
+              <div class="mb-8 flex items-start gap-2 border-b pb-4">
+                <div class="flex flex-col">
+                  <div
+                    class="flex h-[90px] w-[90px] items-center justify-center rounded-full shadow-c3"
+                  >
+                    <span class="text-xl"
+                      ><img
+                        src="/public/images/svg/ava-icon.svg"
+                        alt=""
+                        class="h-[41px] w-[38px]"
+                    /></span>
+                  </div>
+                  <div class="mt-4 text-xl font-light">Nice</div>
+                  <button
+                    class="mb-6 mt-6 rounded-[20px] bg-[#F4F9FD] px-4 py-1 text-xs font-normal"
+                  >
+                    Odpowiedz
+                  </button>
+                </div>
+                <div class="mt-8 flex flex-col">
+                  <div class="text-xl font-bold">Bea</div>
+                  <p class="text-xs font-light">696 dni temu</p>
+                </div>
+              </div>
+              <div class="mb-6 flex items-start gap-2">
+                <div class="flex flex-col">
+                  <div
+                    class="flex h-[90px] w-[90px] items-center justify-center rounded-full shadow-c3"
+                  >
+                    <span class="text-xl"
+                      ><img
+                        src="/public/images/svg/ava-icon.svg"
+                        alt=""
+                        class="h-[41px] w-[38px]"
+                    /></span>
+                  </div>
+                  <div class="mt-4 text-xl font-light">Polecam</div>
+                  
+                </div>
+                <div class="mt-8 flex flex-col">
+                  <div class="text-xl font-bold">Jacek</div>
+                  <p class="text-xs font-light">670 dni temu</p>
+                </div>
+               
+              </div>
+               <div class="flex gap-3 items-center mb-6">
+                  <button
+                    class="rounded-[20px] bg-[#F4F9FD] font-normal px-4 py-1 text-xs"
+                  >
+                    Odpowiedz
+                  </button>
+                  <button
+                    class="toggle-replies rounded-[20px] px-4 py-1 text-xs font-normal bg-[#F4F9FD]"
+                    data-id="1"
+                  >
+                    Zobacz odpowiedź (1)
+                  </button>
+
+                  </div>
+                <div class="mt-4 ml-28 bg-[#F4F9FD] border-gray-200 hidden max-w-[482px]" id="replies-1">
+          <div class="text-xl font-light p-4 ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+        </div>
             </div>
           </div>
           <div
-            class="rounded-[20px] my-10 xl:max-w-[200px] 2xl:max-w-[250px] 3xl:max-w-[300px] w-fit h-[600px] bg-white px-8 py-6 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)]"
+            class="my-10 h-[600px] max-w-full xl:max-w-[300px] rounded-[20px] bg-white px-8 py-6 shadow-c3"
           >
             <span class="flex items-center justify-center"
               ><svg
@@ -2442,7 +2584,8 @@
                 <path
                   d="M28.1381 33.4537C28.2406 33.4537 28.3546 33.4302 28.4571 33.3832C28.5596 33.3362 28.6622 33.2657 28.7419 33.1834C28.8216 33.1128 28.8786 33.0071 28.9242 32.9013C28.9697 32.7955 28.9925 32.6779 28.9925 32.5721C28.9925 32.4546 28.9697 32.337 28.9242 32.2312C28.8786 32.1255 28.8216 32.0197 28.7419 31.9374C28.6622 31.8669 28.5596 31.7963 28.4571 31.7493C28.1495 31.62 27.7736 31.7023 27.5344 31.9374C27.4546 32.0197 27.3863 32.1255 27.3407 32.2312C27.3065 32.337 27.2837 32.4546 27.2837 32.5721C27.2837 32.7955 27.3749 33.0306 27.5344 33.1834C27.6938 33.3597 27.9103 33.4537 28.1381 33.4537Z"
                   fill="#243237"
-                /></svg></span>
+                /></svg
+            ></span>
             <h3
               class="pb-4 pt-2 text-center text-base font-bold text-lightblack"
             >
@@ -2454,6 +2597,7 @@
                 <div class="swiper-wrapper">
                   <!-- Slide 1 -->
                   <div class="swiper-slide">
+                     
                     <img
                       src="/images/webp/img-slider.webp"
                       alt="The North Face Discount"
@@ -2552,9 +2696,9 @@
           </div>
         </div>
       </div>
-    </section>      
+    </section>
 
-   <!-- footer section  -->
+    <!-- footer section  -->
     <footer class="footer-bg relative mt-[164px] w-full text-white md:mt-8">
       <div class="main-container py-10">
         <div class="pt-14 sm:pb-8 sm:pt-20">
@@ -2713,27 +2857,73 @@
       </div>
     </footer>
     <!-- top to bottom buttom -->
-    <button
-      class="fixed bottom-5 right-5 z-[1000] h-[50px] w-[50px] cursor-pointer rounded-full bg-secondry shadow-[3px_10px_10px_0px_rgba(0,0,0,0.20)] transition-all duration-200 hover:bg-Mandarin md:h-[60px] md:w-[60px]"
-      id="scroll"
-      style="display: none"
-    >
+    <button class="botton-top-btn-style" id="scroll" style="display: none">
       <span class="flex items-center justify-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 22 22"
-          fill="none"
-        >
-          <path
-            d="M11.7689 5.4039L21.5562 15.1911C21.7831 15.3897 21.8966 15.6379 21.8966 15.9358C21.8966 16.2337 21.7902 16.4961 21.5775 16.7231C21.3647 16.95 21.1023 17.0635 20.7902 17.0635C20.4782 17.0635 20.2228 16.95 20.0243 16.7231L11.003 7.74433L1.98172 16.7231C1.78313 16.95 1.52781 17.0635 1.21576 17.0635C0.903701 17.0635 0.64129 16.95 0.428524 16.7231C0.215758 16.4961 0.109375 16.2337 0.109375 15.9358C0.109375 15.6379 0.22285 15.3755 0.449801 15.1486L10.237 5.4039C10.4356 5.17695 10.6909 5.06348 11.003 5.06348C11.315 5.06348 11.5704 5.17695 11.7689 5.4039Z"
-            fill="white"
-          />
-        </svg>
+        <img src="/images/svg/bottom-top-arrow.svg" alt="arrow" />
       </span>
     </button>
     <script>
+      document.querySelectorAll(".toggle-replies").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.id;
+          const replies = document.getElementById(`replies-${id}`);
+          replies.classList.toggle("hidden");
+        });
+      });
+
+      const captchaCheckbox = document.getElementById("captcha");
+      const captchaCheck = document.getElementById("captchaCheck");
+      const captchaSpinner = document.getElementById("captchaSpinner");
+      const captchaConfirm = document.getElementById("captchaConfirm");
+      const submitBtn = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
+      const btnLoader = document.getElementById("btnLoader");
+
+      // Toggle spinner when checkbox is checked
+      captchaCheckbox.addEventListener("change", () => {
+        if (captchaCheckbox.checked) {
+          captchaSpinner.classList.remove("hidden");
+          captchaConfirm.classList.add("hidden");
+          captchaSpinner.classList.add("animate-spin");
+
+          // Simulate loading (1.5s)
+          setTimeout(() => {
+            captchaSpinner.classList.add("hidden");
+            captchaConfirm.classList.remove("hidden");
+          }, 1500);
+        } else {
+          captchaSpinner.classList.add("hidden");
+          captchaConfirm.classList.add("hidden");
+          captchaSpinner.classList.remove("animate-spin");
+        }
+      });
+
+      submitBtn.addEventListener("click", () => {
+        const isChecked = captchaCheckbox.checked;
+        const comment = document.getElementById("comment").value.trim();
+        const nickname = document.getElementById("nickname").value.trim();
+
+        if (!isChecked) {
+          alert("Proszę potwierdzić, że nie jesteś robotem!");
+          return;
+        }
+
+        if (!comment || !nickname) {
+          alert("Wypełnij wszystkie pola!");
+          return;
+        }
+
+        // Show button loader
+        btnText.classList.add("opacity-0");
+        btnLoader.classList.remove("hidden");
+
+        setTimeout(() => {
+          btnText.classList.remove("opacity-0");
+          btnLoader.classList.add("hidden");
+          alert("Komentarz został dodany!");
+        }, 1500);
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         var swiper = new Swiper(".myImageSlider", {
           // Enable navigation buttons
