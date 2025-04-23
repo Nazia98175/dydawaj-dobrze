@@ -262,3 +262,22 @@ document.getElementById("scroll").addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const scrollButton = document.getElementById("scroll");
+
+// Show or hide button on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+});
+
+// Scroll to top on click
+scrollButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
