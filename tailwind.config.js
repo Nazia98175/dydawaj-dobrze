@@ -49,12 +49,15 @@ export default {
         cottonBall: "#F4F9FD",
         Mandarin: "#F47D41",
         blueTitmouse: "#4063FD",
+        vivid: "#FFA303",
+        brutal: "#E41822",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        "custom-gradient": "linear-gradient(110deg, #9a33ae 6.13%, #f50269 76.3%, #f47d41 99.4%)",
+        "custom-gradient":
+          "linear-gradient(110deg, #9a33ae 6.13%, #f50269 76.3%, #f47d41 99.4%)",
       },
       dropShadow: {
         c1: "2px 2px 6px rgba(68, 68, 68, 0.25)",
