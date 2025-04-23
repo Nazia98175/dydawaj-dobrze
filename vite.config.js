@@ -1,4 +1,6 @@
-import { defineConfig } from "vite";
+import {
+  defineConfig
+} from "vite";
 
 export default defineConfig({
   build: {
@@ -9,6 +11,7 @@ export default defineConfig({
         guides: "guides.html",
         about: "about.html",
         special: "special.html",
+        opportunities: "opportunities.html",
       },
     },
   },

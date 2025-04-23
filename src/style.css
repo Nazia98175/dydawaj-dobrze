@@ -341,6 +341,12 @@ body {
 .service-card-description {
   @apply text-xs font-light leading-[150%] text-lightblack;
 }
+.hero-descrition {
+  @apply text-[11px] sm:text-sm md:text-base 3xl:text-xl;
+}
+.input-style {
+  @apply h-[50px] flex-1 rounded-[20px] border border-[#BBBABF] px-6 py-3 font-light outline-none;
+}
 /* backgrounds */
 
 .hero-product-bg::before {
