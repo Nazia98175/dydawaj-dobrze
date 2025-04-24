@@ -31,10 +31,11 @@
   --shadow-c3: 0px 5px 20px 0px rgba(132, 78, 213, 0.08);
   --shadow-c4: 3px 10px 10px 0px rgba(0, 0, 0, 0.2);
   --shadow-c5: 5px 8px 20px 0px rgba(0, 123, 255, 0.25);
+  --font-poppins: "poppins", "sans-serif";
 }
 
 body {
-  font-family: "Poppins", "sans-serif" !important;
+  font-family: "Poppins", sans-serif;
   background: white;
 }
 
@@ -117,7 +118,7 @@ body {
   @apply shadow-c3 rounded-xl bg-white px-9 py-10 transition-all duration-300 ease-in-out hover:-translate-y-1 2xl:px-0;
 }
 .count-hub-heading {
-  @apply text-gradient 3xl:text-[50px] w-[200px] text-center text-[50px] leading-[130%] font-bold md:w-[270px] lg:text-[42px];
+  @apply gradient-text 3xl:text-[50px] w-[200px] text-center text-[50px] leading-[130%] font-bold md:w-[270px] lg:text-[42px];
 }
 .medium-title {
   @apply text-lightblack 3xl:text-xl text-xs leading-[160%] font-light sm:text-base;
@@ -319,7 +320,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.text-gradient {
+.gradient-text {
   background: linear-gradient(
     110deg,
     #ffd800 25.25%,
