@@ -54,6 +54,9 @@ body {
 .small-title {
   @apply text-base leading-[190%];
 }
+.small-title-description {
+  @apply text-base leading-[190%] text-lightblack pt-4 text-center font-light;
+}
 .larger-title {
   @apply text-lightblack 3xl:text-[30px] text-xl leading-[130%] font-bold md:text-[23px] md:leading-[140%];
 }
@@ -72,6 +75,7 @@ body {
 .product-card {
   @apply 3xl:px-[14px] shadow-c6 relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] bg-white px-3 py-6 transition-all duration-300 ease-in-out hover:-translate-y-1;
 }
+
 .product-name {
   @apply text-exodusFruit 3xl:text-3xl mb-2.5 text-start text-xl leading-[130%] font-bold break-words sm:text-2xl md:text-center 2xl:text-[26px];
 }
