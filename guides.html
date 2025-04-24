@@ -1255,7 +1255,7 @@
       <div class="flex flex-col justify-between gap-8 sm:gap-3 xl:flex-row">
         <div
           class="mx-auto mt-[48px] flex w-full max-w-[500px] flex-col gap-8 sm:gap-3 md:mt-0 xl:mx-0 xl:max-w-[320px] 3xl:max-w-[350px]">
-          <!-- custom select  -->
+          <!-- custom select mobile  -->
           <div class="custom-search-container block rounded-[20px] bg-white px-4 py-11 shadow-c2 md:hidden">
             <h4 class="small-title text-center font-bold text-lightblack">
               Kategorie
@@ -1329,61 +1329,64 @@
               </div>
             </div>
           </div>
+          <!-- custom select desktop  -->
           <div class="hidden rounded-[20px] bg-white py-11 shadow-c3 md:block">
             <h4 class="small-title text-center font-bold text-lightblack">
               Kategorie
             </h4>
             <div
               class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4">
-              <input placeholder="Wyszukaj poradnik"
+              <input id="desktopSuggestions" placeholder="Wyszukaj poradnik"
                 class="h-full w-full bg-transparent text-xs font-light text-piedWagtailGrey outline-none" type="text" />
               <button>
                 <img src="/images/svg/service-search-icon.svg" alt="service search" />
               </button>
             </div>
-            <div class="border-b border-Jupiter px-6 pb-3 pt-10">
-              <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                <span class="service-testing-title">
-                  Testy produktów i usług
-                </span>
-                <span class="service-testing-decription"> 5 </span>
-              </h3>
-            </div>
-            <div class="border-b border-Jupiter px-6 py-3">
-              <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                <span class="service-testing-title"> Sprytne zakupy </span>
-                <span class="service-testing-decription"> 101 </span>
-              </h3>
-            </div>
-            <div class="border-b border-Jupiter px-6 py-3">
-              <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                <span class="service-testing-title">
-                  Programy i karty lojalnościowe
-                </span>
-                <span class="service-testing-decription"> 28 </span>
-              </h3>
-            </div>
-            <div class="border-b border-Jupiter px-6 py-3">
-              <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                <span class="service-testing-title"> Pomysł na prezent </span>
-                <span class="service-testing-decription"> 9 </span>
-              </h3>
-            </div>
-            <div class="border-b border-Jupiter px-6 py-3">
-              <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                <span class="service-testing-title">
-                  Promocje bankowe i pokrewne
-                </span>
-                <span class="service-testing-decription"> 4 </span>
-              </h3>
-            </div>
-            <div class="border-b border-Jupiter px-6 py-3">
-              <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                <span class="service-testing-title">
-                  Aplikacje pomagające w zakupach
-                </span>
-                <span class="service-testing-decription"> 16 </span>
-              </h3>
+            <div id="desktopSuggestionsList">
+              <div class="desktopSuggestionsItem border-b border-Jupiter px-6 pb-3 pt-10">
+                <h3 class="group flex cursor-pointer items-center justify-between gap-4">
+                  <span class="service-testing-title">
+                    Testy produktów i usług
+                  </span>
+                  <span class="service-testing-decription"> 5 </span>
+                </h3>
+              </div>
+              <div class="desktopSuggestionsItem border-b border-Jupiter px-6 py-3">
+                <h3 class="group flex cursor-pointer items-center justify-between gap-4">
+                  <span class="service-testing-title"> Sprytne zakupy </span>
+                  <span class="service-testing-decription"> 101 </span>
+                </h3>
+              </div>
+              <div class="desktopSuggestionsItem border-b border-Jupiter px-6 py-3">
+                <h3 class="group flex cursor-pointer items-center justify-between gap-4">
+                  <span class="service-testing-title">
+                    Programy i karty lojalnościowe
+                  </span>
+                  <span class="service-testing-decription"> 28 </span>
+                </h3>
+              </div>
+              <div class="desktopSuggestionsItem border-b border-Jupiter px-6 py-3">
+                <h3 class="group flex cursor-pointer items-center justify-between gap-4">
+                  <span class="service-testing-title"> Pomysł na prezent </span>
+                  <span class="service-testing-decription"> 9 </span>
+                </h3>
+              </div>
+              <div class="desktopSuggestionsItem border-b border-Jupiter px-6 py-3">
+                <h3 class="group flex cursor-pointer items-center justify-between gap-4">
+                  <span class="service-testing-title">
+                    Promocje bankowe i pokrewne
+                  </span>
+                  <span class="service-testing-decription"> 4 </span>
+                </h3>
+              </div>
+              <div class="desktopSuggestionsItem border-b border-Jupiter px-6 py-3">
+                <h3 class="group flex cursor-pointer items-center justify-between gap-4">
+                  <span class="service-testing-title">
+                    Aplikacje pomagające w zakupach
+                  </span>
+                  <span class="service-testing-decription"> 16 </span>
+                </h3>
+              </div>
             </div>
           </div>
           <div class="rounded-[20px] bg-white px-[52px] py-6 shadow-c3 md:px-8">

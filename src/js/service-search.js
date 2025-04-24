@@ -19,6 +19,8 @@ function hideSuggestions() {
 }
 
 function highlight(term, label) {
+
+
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const regex = new RegExp(`(${escaped})`, "gi");
   return label.replace(regex, `<span class="highlight">$1</span>`);
@@ -29,7 +31,6 @@ function filterCustomSuggestions(term) {
   suggestions.forEach((item) => {
     const text = item.dataset.label;
     const labelSpan = item.querySelector(".custom-suggestion-text");
-    console.log(labelSpan);
 
     if (!text || !labelSpan) {
       item.classList.add("hidden");
@@ -84,5 +85,46 @@ suggestions.forEach((item) => {
     const text = item.dataset.label || "";
     customInput.value = text;
     hideSuggestions();
+  });
+});
+
+
+// FOR DESKTOP //
+const search = document.getElementById("desktopSuggestions");
+
+const items = Array.from(document.querySelectorAll("#desktopSuggestionsList .desktopSuggestionsItem"));
+
+
+// Add input event listener to search input field
+search.addEventListener("input", (e) => {
+
+  let searchValue = e.target.value.toLowerCase();
+
+  filterItems(searchValue);
+});
+// Function to filter items based on search value
+const filterItems = (searchValue) => {
+  const filteredItems = items.filter((item) =>
+    item.textContent.toLowerCase().includes(searchValue)
+  );
+
+  // Hide all items first
+  items.forEach((item) => {
+    item.style.display = "none";
+  });
+
+  // Show only filtered items
+  filteredItems.forEach((item) => {
+    item.style.display = "block";
+  });
+};
+
+// Add click event listener to each item
+items.forEach((item) => {
+
+  item.addEventListener("click", () => {
+    const itemText = item.textContent.trim();
+    search.value = itemText; // Update the search input value
+    filterItems(itemText.toLowerCase()); // Filter based on the clicked item's text
   });
 });
