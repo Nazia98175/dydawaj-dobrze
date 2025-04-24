@@ -1,14 +1,42 @@
+@import "tailwindcss";
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-primary: #ffea74;
+  --color-secondry: #f50269;
+  --color-skyblue: #3cf;
+  --color-lightblack: #243237;
+  --color-exodusFruit: #696adb;
+  --color-Jupiter: #dcdcde;
+  --color-blackMetal: #050505;
+  --color-piedWagtailGrey: #bbbabf;
+  --color-schoolBus: #ffd800;
+  --color-yachtClub: #576063;
+  --color-cottonBall: #f4f9fd;
+  --color-Mandarin: #f47d41;
+  --color-blueTitmouse: #4063fd;
+  --color-vivid: #ffa303;
+  --color-brutal: #e41822;
+  --breakpoint-xs: 500px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1720px;
+  --drop-shadow-c1: 2px 2px 6px rgba(68, 68, 68, 0.25);
+  --shadow-c2: 0px 3px 10px 0px rgba(132, 78, 213, 0.25);
+  --shadow-c3: 0px 5px 20px 0px rgba(132, 78, 213, 0.08);
+  --shadow-c4: 3px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  --shadow-c5: 5px 8px 20px 0px rgba(0, 123, 255, 0.25);
+}
 
 body {
   font-family: "Poppins", "sans-serif" !important;
   background: white;
 }
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -16,7 +44,6 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 .text-gradient {
   background: linear-gradient(
     110deg,
@@ -43,11 +70,9 @@ body {
   overflow-y: auto;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .mobile-sidebar.open {
   transform: translateX(0);
 }
-
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -60,12 +85,10 @@ body {
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
-
 .sidebar-overlay.active {
   opacity: 1;
   visibility: visible;
 }
-
 .mobile-menu-items a {
   display: flex;
   justify-content: space-between;
@@ -74,13 +97,11 @@ body {
   text-decoration: none;
   font-size: 16px;
 }
-
 /* Search bar */
 .mobile-search {
   padding: 15px;
   border-top: 1px solid #f0f0f0;
 }
-
 /* Search overlay */
 .search-overlay {
   position: fixed;
@@ -93,17 +114,14 @@ body {
   transition: transform 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .search-overlay.open {
   transform: translateY(0);
 }
-
 .search-container {
   display: flex;
   align-items: center;
   padding: 15px;
 }
-
 .search-overlay-input {
   flex: 1;
   border: none;
@@ -111,7 +129,6 @@ body {
   padding: 10px;
   font-size: 16px;
 }
-
 .dropdown-panel {
   position: absolute;
   top: 74%;
@@ -123,64 +140,52 @@ body {
   box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
   /* Animation properties */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-
   transition:
     opacity 0.3s ease,
     transform 0.3s ease,
     visibility 0.3s ease;
 }
-
 .dropdown-panel.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
-
 .arrow-icon-dropdown {
   transition: transform 0.3s ease;
 }
-
 .arrow-icon-dropdown.rotate {
   transform: rotate(180deg);
 }
-
 .dropdown-content.open {
   max-height: 1451px;
   /* Adjust based on your content */
   transition: max-height 0.5s ease-in;
 }
-
 .arrow-change path {
   fill: white;
 }
-
 .suggestions {
   border-top: none;
   display: none;
 }
-
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 9999px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 9999px;
@@ -193,162 +198,159 @@ body {
     #f47d41 99.4%
   );
 }
-
 @media screen and (min-width: 1280px) {
   .custom-gradient {
     background: none !important;
   }
 }
 .main-heading {
-  @apply text-[23px] font-bold leading-[150%] sm:text-[30px] md:text-[36px] 2xl:text-[38px] 3xl:text-[50px];
+  @apply 3xl:text-[50px] text-[23px] leading-[150%] font-bold sm:text-[30px] md:text-[36px] 2xl:text-[38px];
 }
 .secondry-heading {
-  @apply text-sm font-bold lg:text-2xl 2xl:text-[28px] 3xl:text-[35px];
+  @apply 3xl:text-[35px] text-sm font-bold lg:text-2xl 2xl:text-[28px];
 }
 .small-title {
   @apply text-base leading-[190%];
 }
 .larger-title {
-  @apply text-xl font-bold leading-[130%] text-lightblack md:text-[23px] md:leading-[140%] 3xl:text-[30px];
+  @apply text-lightblack 3xl:text-[30px] text-xl leading-[130%] font-bold md:text-[23px] md:leading-[140%];
 }
 .shops-in-wydawalidobrze {
-  @apply w-fit cursor-pointer text-sm font-light text-white transition-all duration-200 ease-in-out hover:text-primary 3xl:text-base;
+  @apply hover:text-primary 3xl:text-base w-fit cursor-pointer text-sm font-light text-white transition-all duration-200 ease-in-out;
 }
 .main-container {
-  @apply mx-auto max-w-[1315px] px-4 3xl:max-w-[1561px];
+  @apply 3xl:max-w-[1561px] mx-auto max-w-[1315px] px-4;
 }
 .primary-container {
-  @apply mx-auto max-w-[1350px] px-4 3xl:max-w-[1593px];
+  @apply 3xl:max-w-[1593px] mx-auto max-w-[1350px] px-4;
 }
 .artical-container {
   @apply flex h-[100px] cursor-pointer items-center gap-8 rounded-lg px-9 py-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(132,78,213,0.20)];
 }
 .product-card {
-  @apply relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] bg-white px-3 py-6 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1 3xl:px-[14px];
+  @apply 3xl:px-[14px] relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] bg-white px-3 py-6 shadow-[0px_5px_20px_0px_rgba(132,78,213,0.08)] transition-all duration-300 ease-in-out hover:-translate-y-1;
 }
 .product-name {
-  @apply mb-2.5 break-words text-start text-xl font-bold leading-[130%] text-exodusFruit sm:text-2xl md:text-center 2xl:text-[26px] 3xl:text-3xl;
+  @apply text-exodusFruit 3xl:text-3xl mb-2.5 text-start text-xl leading-[130%] font-bold break-words sm:text-2xl md:text-center 2xl:text-[26px];
 }
 .product-name-disable {
-  @apply mb-2.5 break-words text-start text-xl font-bold leading-[130%] text-yachtClub sm:text-2xl md:text-center 2xl:text-[26px] 3xl:text-3xl;
+  @apply text-yachtClub 3xl:text-3xl mb-2.5 text-start text-xl leading-[130%] font-bold break-words sm:text-2xl md:text-center 2xl:text-[26px];
 }
 .product-descriptions {
-  @apply pb-3 text-start text-[11px] font-light leading-[120%] text-lightblack sm:text-sm md:text-center;
+  @apply text-lightblack pb-3 text-start text-[11px] leading-[120%] font-light sm:text-sm md:text-center;
 }
 .product-tag {
-  @apply block text-center text-base font-light leading-[120%] text-lightblack md:hidden md:pt-2.5;
+  @apply text-lightblack block text-center text-base leading-[120%] font-light md:hidden md:pt-2.5;
 }
 .product-tag-mobile {
-  @apply hidden pt-2.5 text-center text-base font-light leading-[120%] text-lightblack md:block;
+  @apply text-lightblack hidden pt-2.5 text-center text-base leading-[120%] font-light md:block;
 }
 .primary-button {
-  @apply flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-secondry px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)];
+  @apply bg-secondry flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)];
 }
 .primary-button-disable {
-  @apply flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl bg-yachtClub px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)];
+  @apply bg-yachtClub flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl px-6 py-3 text-center text-white transition-all duration-200 ease-in-out hover:shadow-[2px_2px_6px_0px_rgba(70,70,70,0.25)];
 }
 .product-footer-text {
-  @apply text-[11px] font-light leading-[218.182%] text-lightblack;
+  @apply text-lightblack text-[11px] leading-[218.182%] font-light;
 }
 .product-card-img {
   @apply mx-0 h-full max-h-[90px] object-center sm:mx-auto md:max-h-[250px];
 }
 .only-with-us {
-  @apply pointer-events-none absolute -right-[41%] top-[18%] z-10 !m-0 w-full rotate-45 bg-schoolBus py-1 text-center text-xs font-bold leading-[66.667%] text-lightblack drop-shadow-c1 sm:-right-[41%] sm:top-[9%] md:-right-[42%] md:top-[5%] lg:-right-[40%] xxl:-right-[37%] xxl:top-[4%] 2xl:py-[6px] 3xl:top-[4.9%] 3xl:py-2.5;
+  @apply bg-schoolBus text-lightblack drop-shadow-c1 xxl:-right-[37%] xxl:top-[4%] 3xl:top-[4.9%] 3xl:py-2.5 pointer-events-none absolute top-[18%] -right-[41%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold sm:top-[9%] sm:-right-[41%] md:top-[5%] md:-right-[42%] lg:-right-[40%] 2xl:py-[6px];
 }
 .slider-only-with-us {
-  @apply pointer-events-none absolute -right-[38%] top-[14%] z-10 !m-0 w-full rotate-45 bg-schoolBus py-1 text-center text-xs font-bold leading-[66.667%] text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] sm:-right-[44%] sm:top-[12%] md:-right-[40%] md:top-[10%] lg:-right-[35%] xxl:-right-[34%] xxl:top-[11%] 2xl:py-[6px] 3xl:top-[9.9%] 3xl:py-2.5;
+  @apply bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] xxl:-right-[34%] xxl:top-[11%] 3xl:top-[9.9%] 3xl:py-2.5 pointer-events-none absolute top-[14%] -right-[38%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold sm:top-[12%] sm:-right-[44%] md:top-[10%] md:-right-[40%] lg:-right-[35%] 2xl:py-[6px];
 }
 .footer-li-style {
-  @apply cursor-pointer transition-all duration-200 ease-in-out hover:text-primary;
+  @apply hover:text-primary cursor-pointer transition-all duration-200 ease-in-out;
 }
 .search-input-style {
-  @apply w-full bg-transparent text-base text-black outline-none placeholder:text-piedWagtailGrey;
+  @apply placeholder:text-piedWagtailGrey w-full bg-transparent text-base text-black outline-none;
 }
 .search-item-style {
-  @apply flex h-[100px] items-center justify-center border border-Jupiter px-4;
+  @apply border-Jupiter flex h-[100px] items-center justify-center border px-4;
 }
 .hero-slider-style {
-  @apply relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white shadow-c2;
+  @apply shadow-c2 relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white;
 }
 .nav-items-style {
-  @apply cursor-pointer text-base leading-[150%] text-white transition-all duration-200 ease-in-out hover:text-primary;
+  @apply hover:text-primary cursor-pointer text-base leading-[150%] text-white transition-all duration-200 ease-in-out;
 }
 .count-card-style {
-  @apply rounded-xl bg-white px-9 py-10 shadow-c3 transition-all duration-300 ease-in-out hover:-translate-y-1 2xl:px-0;
+  @apply shadow-c3 rounded-xl bg-white px-9 py-10 transition-all duration-300 ease-in-out hover:-translate-y-1 2xl:px-0;
 }
 .count-hub-heading {
-  @apply text-gradient w-[200px] text-center text-[50px] font-bold leading-[130%] md:w-[270px] lg:text-[42px] 3xl:text-[50px];
+  @apply text-gradient 3xl:text-[50px] w-[200px] text-center text-[50px] leading-[130%] font-bold md:w-[270px] lg:text-[42px];
 }
 .medium-title {
-  @apply text-xs font-light leading-[160%] text-lightblack sm:text-base 3xl:text-xl;
+  @apply text-lightblack 3xl:text-xl text-xs leading-[160%] font-light sm:text-base;
 }
 .botton-top-btn-style {
-  @apply fixed bottom-5 right-2 z-[1000] h-[50px] w-[50px] cursor-pointer rounded-full bg-secondry shadow-c4 transition-all duration-200 hover:bg-Mandarin md:right-5 md:h-[60px] md:w-[60px];
+  @apply bg-secondry shadow-c4 hover:bg-Mandarin fixed right-2 bottom-5 z-[1000] h-[50px] w-[50px] cursor-pointer rounded-full transition-all duration-200 md:right-5 md:h-[60px] md:w-[60px];
 }
 .header-dropdown-style {
   @apply flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white hover:shadow-[5px_8px_20px_0px_rgba(0,123,255,0.25)];
 }
 .header-dropdown-title {
-  @apply w-full max-w-[116px] text-base font-bold leading-[150%] text-blackMetal;
+  @apply text-blackMetal w-full max-w-[116px] text-base leading-[150%] font-bold;
 }
 .hero-slider-card {
-  @apply relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white shadow-c2;
+  @apply shadow-c2 relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white;
 }
 .primary-button-hover {
   @apply absolute right-4 -translate-x-5 transform text-base font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100;
 }
 .hero-bg-style {
-  @apply absolute left-0 top-0 z-[-1] h-[231px] w-full md:h-[500px];
+  @apply absolute top-0 left-0 z-[-1] h-[231px] w-full md:h-[500px];
 }
 .top-categories-bg-style {
-  @apply absolute left-0 top-[14%] z-[-5] object-cover;
+  @apply absolute top-[14%] left-0 z-[-5] object-cover;
 }
 .header-dropdown-content-hover {
   @apply fill-blueTitmouse transition-colors duration-300 group-hover:fill-[url(#hoverGradient)];
 }
-
 .paragraph-font-style {
-  @apply text-xs leading-[170%] md:text-lg md:leading-[160%] 3xl:text-xl;
+  @apply 3xl:text-xl text-xs leading-[170%] md:text-lg md:leading-[160%];
 }
 .dropdown-text {
-  @apply block px-4 py-2 text-base font-light text-blackMetal;
+  @apply text-blackMetal block px-4 py-2 text-base font-light;
 }
 .coupon-info-text {
-  @apply text-[11px] md:text-sm 3xl:text-base;
+  @apply 3xl:text-base text-[11px] md:text-sm;
 }
 .table-btn-style {
-  @apply m-auto block h-[36px] w-full max-w-[113px] rounded-full bg-secondry px-4 py-1 text-xs text-white shadow-lg transition-all duration-300 sm:text-sm 3xl:h-[40px] 3xl:py-2 3xl:text-base;
+  @apply bg-secondry 3xl:h-[40px] 3xl:py-2 3xl:text-base m-auto block h-[36px] w-full max-w-[113px] rounded-full px-4 py-1 text-xs text-white shadow-lg transition-all duration-300 sm:text-sm;
 }
 .accordion-btn-style {
-  @apply flex w-full items-center justify-between gap-3 text-left text-sm font-light leading-[130%] text-exodusFruit md:gap-8 md:text-[30px] xl:text-[36px] 2xl:text-[38px] 2xl:leading-[55px] 3xl:text-[50px] 3xl:leading-[65px];
+  @apply text-exodusFruit 3xl:text-[50px] 3xl:leading-[65px] flex w-full items-center justify-between gap-3 text-left text-sm leading-[130%] font-light md:gap-8 md:text-[30px] xl:text-[36px] 2xl:text-[38px] 2xl:leading-[55px];
 }
 .see-more-title {
-  @apply text-xs font-bold text-lightblack sm:text-2xl md:text-[26px] 3xl:text-[30px];
+  @apply text-lightblack 3xl:text-[30px] text-xs font-bold sm:text-2xl md:text-[26px];
 }
 .service-testing-title {
-  @apply text-xs font-light text-lightblack transition-all duration-200 ease-in-out group-hover:text-Mandarin;
+  @apply text-lightblack group-hover:text-Mandarin text-xs font-light transition-all duration-200 ease-in-out;
 }
 .service-testing-decription {
-  @apply text-xs font-light text-exodusFruit transition-all duration-200 ease-in-out group-hover:text-Mandarin;
+  @apply text-exodusFruit group-hover:text-Mandarin text-xs font-light transition-all duration-200 ease-in-out;
 }
 .service-card-style {
-  @apply flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white shadow-c3;
+  @apply shadow-c3 flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-[20px] bg-white;
 }
 .service-card-title {
-  @apply text-sm font-bold text-exodusFruit;
+  @apply text-exodusFruit text-sm font-bold;
 }
 .service-card-description {
-  @apply text-xs font-light leading-[150%] text-lightblack;
+  @apply text-lightblack text-xs leading-[150%] font-light;
 }
 .hero-descrition {
-  @apply text-[11px] sm:text-sm md:text-base 3xl:text-xl;
+  @apply 3xl:text-xl text-[11px] sm:text-sm md:text-base;
 }
 .input-style {
   @apply h-[50px] flex-1 rounded-[20px] border border-[#BBBABF] px-6 py-3 font-light outline-none;
 }
 /* backgrounds */
-
 .hero-product-bg::before {
   content: "";
   position: absolute;
@@ -361,7 +363,6 @@ body {
   background-position: top center;
   z-index: -10;
 }
-
 @media (min-width: 1280px) {
   .hero-product-bg::before {
     top: -111px;
@@ -369,7 +370,6 @@ body {
     background-image: url("/images/webp/hero-product-bg.webp");
   }
 }
-
 .frequently-bg-section::after {
   content: "";
   position: absolute;
@@ -384,13 +384,11 @@ body {
   z-index: -1;
   display: none;
 }
-
 @media (min-width: 1280px) {
   .frequently-bg-section::after {
     display: block;
   }
 }
-
 @layer utilities {
   .footer-bg::before {
     content: "";
@@ -405,7 +403,6 @@ body {
     background-position: top;
     z-index: -1;
   }
-
   @media (min-width: 1024px) {
     .footer-bg::before {
       background-image: url("/images/webp/footer-bg.webp");
@@ -433,64 +430,48 @@ body {
   filter: brightness(0) saturate(100%) invert(37%) sepia(42%) saturate(1407%)
     hue-rotate(215deg) brightness(98%) contrast(94%);
 }
-
 .img-color-active {
   filter: brightness(0) saturate(100%) invert(14%) sepia(5%) saturate(293%)
     hue-rotate(139deg) brightness(97%) contrast(90%);
 }
-
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 9999px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 9999px;
 }
-
 .swiper {
   width: 100%;
   height: 100%;
 }
-
-.highlight {
-  background-color: #ffe599;
-  font-weight: bold;
-}
-
 .dropdown-enter {
   animation: fadeInDropdown 0.2s ease-in-out forwards;
 }
-
 .dropdown-exit {
   animation: fadeOutDropdown 0.2s ease-in-out forwards;
 }
-
 @keyframes fadeInDropdown {
   from {
     opacity: 0;
     transform: translateY(-6px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes fadeOutDropdown {
   from {
     opacity: 1;
     transform: translateY(0);
   }
-
   to {
     opacity: 0;
     transform: translateY(-6px);
