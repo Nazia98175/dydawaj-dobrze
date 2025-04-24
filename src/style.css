@@ -46,7 +46,7 @@ body {
   @apply font-poppins bg-white;
 }
 .main-heading {
-  @apply 3xl:text-[50px] text-[23px] font-bold leading-[150%] sm:text-[30px] md:text-[36px] 2xl:text-[38px];
+  @apply 3xl:text-[50px] text-[23px] leading-[150%] font-bold sm:text-[30px] md:text-[36px] 2xl:text-[38px];
 }
 .secondry-heading {
   @apply 3xl:text-[35px] text-sm font-bold lg:text-2xl 2xl:text-[28px];
@@ -55,10 +55,10 @@ body {
   @apply text-base leading-[190%];
 }
 .small-title-description {
-  @apply text-lightblack pt-4 text-center text-base font-light leading-[190%];
+  @apply text-lightblack pt-4 text-center text-base leading-[190%] font-light;
 }
 .larger-title {
-  @apply text-lightblack 3xl:text-[30px] text-xl font-bold leading-[130%] md:text-[23px] md:leading-[140%];
+  @apply text-lightblack 3xl:text-[30px] text-xl leading-[130%] font-bold md:text-[23px] md:leading-[140%];
 }
 .shops-in-wydawalidobrze {
   @apply hover:text-primary 3xl:text-base w-fit cursor-pointer text-sm font-light text-white transition-all duration-200 ease-in-out;
@@ -79,23 +79,23 @@ body {
   @apply 3xl:px-[14px] shadow-c6 relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] bg-white px-3 py-6 transition-all duration-300 ease-in-out hover:-translate-y-1;
 }
 .tittle-text {
-  @apply text-blackMetal w-full max-w-[116px] text-base font-bold leading-[150%];
+  @apply text-blackMetal w-full max-w-[116px] text-base leading-[150%] font-bold;
 }
 
 .product-name {
-  @apply text-exodusFruit 3xl:text-3xl mb-2.5 break-words text-start text-xl font-bold leading-[130%] sm:text-2xl md:text-center 2xl:text-[26px];
+  @apply text-exodusFruit 3xl:text-3xl mb-2.5 text-start text-xl leading-[130%] font-bold break-words sm:text-2xl md:text-center 2xl:text-[26px];
 }
 .product-name-disable {
-  @apply text-yachtClub 3xl:text-3xl mb-2.5 break-words text-start text-xl font-bold leading-[130%] sm:text-2xl md:text-center 2xl:text-[26px];
+  @apply text-yachtClub 3xl:text-3xl mb-2.5 text-start text-xl leading-[130%] font-bold break-words sm:text-2xl md:text-center 2xl:text-[26px];
 }
 .product-descriptions {
-  @apply text-lightblack pb-3 text-start text-[11px] font-light leading-[120%] sm:text-sm md:text-center;
+  @apply text-lightblack pb-3 text-start text-[11px] leading-[120%] font-light sm:text-sm md:text-center;
 }
 .product-tag {
-  @apply text-lightblack block text-center text-base font-light leading-[120%] md:hidden md:pt-2.5;
+  @apply text-lightblack block text-center text-base leading-[120%] font-light md:hidden md:pt-2.5;
 }
 .product-tag-mobile {
-  @apply text-lightblack hidden pt-2.5 text-center text-base font-light leading-[120%] md:block;
+  @apply text-lightblack hidden pt-2.5 text-center text-base leading-[120%] font-light md:block;
 }
 .primary-button {
   @apply bg-secondry hover:shadow-c7 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl px-6 py-3 text-center text-white transition-all duration-200 ease-in-out;
@@ -104,16 +104,16 @@ body {
   @apply bg-yachtClub hover:shadow-c7 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl px-6 py-3 text-center text-white transition-all duration-200 ease-in-out;
 }
 .product-footer-text {
-  @apply text-lightblack text-[11px] font-light leading-[218.182%];
+  @apply text-lightblack text-[11px] leading-[218.182%] font-light;
 }
 .product-card-img {
   @apply mx-0 h-full max-h-[90px] object-center sm:mx-auto md:max-h-[250px];
 }
 .only-with-us {
-  @apply bg-schoolBus text-lightblack drop-shadow-c1 xxl:-right-[37%] xxl:top-[4%] 3xl:top-[4.9%] 3xl:py-2.5 pointer-events-none absolute -right-[41%] top-[18%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs font-bold leading-[66.667%] sm:-right-[41%] sm:top-[9%] md:-right-[42%] md:top-[5%] lg:-right-[40%] 2xl:py-[6px];
+  @apply bg-schoolBus text-lightblack drop-shadow-c1 xxl:-right-[37%] xxl:top-[4%] 3xl:top-[4.9%] 3xl:py-2.5 pointer-events-none absolute top-[18%] -right-[41%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold sm:top-[9%] sm:-right-[41%] md:top-[5%] md:-right-[42%] lg:-right-[40%] 2xl:py-[6px];
 }
 .slider-only-with-us {
-  @apply bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] xxl:-right-[34%] xxl:top-[11%] 3xl:top-[9.9%] 3xl:py-2.5 pointer-events-none absolute -right-[38%] top-[14%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs font-bold leading-[66.667%] sm:-right-[44%] sm:top-[12%] md:-right-[40%] md:top-[10%] lg:-right-[35%] 2xl:py-[6px];
+  @apply bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] xxl:-right-[34%] xxl:top-[11%] 3xl:top-[9.9%] 3xl:py-2.5 pointer-events-none absolute top-[14%] -right-[38%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold sm:top-[12%] sm:-right-[44%] md:top-[10%] md:-right-[40%] lg:-right-[35%] 2xl:py-[6px];
 }
 .footer-li-style {
   @apply hover:text-primary cursor-pointer text-base transition-all duration-200 ease-in-out;
@@ -134,19 +134,19 @@ body {
   @apply shadow-c3 rounded-xl bg-white px-9 py-10 transition-all duration-300 ease-in-out hover:-translate-y-1 2xl:px-0;
 }
 .count-hub-heading {
-  @apply 3xl:text-[50px] w-[200px] text-center text-[50px] font-bold leading-[130%] md:w-[270px] lg:text-[42px];
+  @apply 3xl:text-[50px] w-[200px] text-center text-[50px] leading-[130%] font-bold md:w-[270px] lg:text-[42px];
 }
 .medium-title {
-  @apply text-lightblack 3xl:text-xl text-xs font-light leading-[160%] sm:text-base;
+  @apply text-lightblack 3xl:text-xl text-xs leading-[160%] font-light sm:text-base;
 }
 .botton-top-btn-style {
-  @apply bg-secondry shadow-c4 hover:bg-Mandarin fixed bottom-5 right-2 z-[1000] h-[50px] w-[50px] cursor-pointer rounded-full transition-all duration-200 md:right-5 md:h-[60px] md:w-[60px];
+  @apply bg-secondry shadow-c4 hover:bg-Mandarin fixed right-2 bottom-5 z-[1000] h-[50px] w-[50px] cursor-pointer rounded-full transition-all duration-200 md:right-5 md:h-[60px] md:w-[60px];
 }
 .header-dropdown-style {
   @apply hover:shadow-c5 flex cursor-pointer items-center gap-6 rounded-md p-6 transition-all duration-200 ease-in-out hover:bg-white;
 }
 .header-dropdown-title {
-  @apply text-blackMetal w-full max-w-[116px] text-base font-bold leading-[150%];
+  @apply text-blackMetal w-full max-w-[116px] text-base leading-[150%] font-bold;
 }
 .hero-slider-card {
   @apply shadow-c2 relative !flex !h-[288px] !flex-col items-center justify-between overflow-hidden rounded-3xl bg-white;
@@ -155,10 +155,10 @@ body {
   @apply absolute right-4 -translate-x-5 transform text-base font-bold opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100;
 }
 .hero-bg-style {
-  @apply absolute left-0 top-0 z-[-1] h-[231px] w-full md:h-[500px];
+  @apply absolute top-0 left-0 z-[-1] h-[231px] w-full md:h-[500px];
 }
 .top-categories-bg-style {
-  @apply absolute left-0 top-[14%] z-[-5] object-cover;
+  @apply absolute top-[14%] left-0 z-[-5] object-cover;
 }
 .header-dropdown-content-hover {
   @apply fill-blueTitmouse transition-colors duration-300 group-hover:fill-[url(#hoverGradient)];
@@ -176,7 +176,7 @@ body {
   @apply bg-secondry 3xl:h-[40px] 3xl:py-2 3xl:text-base m-auto block h-[36px] w-full max-w-[113px] rounded-full px-4 py-1 text-xs text-white shadow-lg transition-all duration-300 sm:text-sm;
 }
 .accordion-btn-style {
-  @apply text-exodusFruit 3xl:text-[50px] 3xl:leading-[65px] flex w-full items-center justify-between gap-3 text-left text-sm font-light leading-[130%] md:gap-8 md:text-[30px] xl:text-[36px] 2xl:text-[38px] 2xl:leading-[55px];
+  @apply text-exodusFruit 3xl:text-[50px] 3xl:leading-[65px] flex w-full items-center justify-between gap-3 text-left text-sm leading-[130%] font-light md:gap-8 md:text-[30px] xl:text-[36px] 2xl:text-[38px] 2xl:leading-[55px];
 }
 .see-more-title {
   @apply text-lightblack 3xl:text-[30px] text-xs font-bold sm:text-2xl md:text-[26px];
@@ -194,7 +194,7 @@ body {
   @apply text-exodusFruit text-sm font-bold;
 }
 .service-card-description {
-  @apply text-lightblack text-xs font-light leading-[150%];
+  @apply text-lightblack text-xs leading-[150%] font-light;
 }
 .hero-descrition {
   @apply 3xl:text-xl text-[11px] sm:text-sm md:text-base;
@@ -202,19 +202,26 @@ body {
 .input-style {
   @apply border-piedWagtailGrey h-[50px] flex-1 rounded-[20px] border px-6 py-3 font-light outline-none;
 }
+.reply-btn-style {
+  @apply bg-cottonBall text-lightblack cursor-pointer rounded-[20px] px-4 py-3 text-xs;
+}
+.modal-input-style {
+  @apply text-lightblack w-full flex-grow bg-white px-4 py-2 text-base outline-none;
+}
+
 /* backgrounds */
 
 .hero-product-bg::before {
   content: "";
-  @apply absolute left-0 top-[-2.5%] -z-10 h-full w-full bg-[url('/images/webp/hero-product-bg-mobile.webp')] bg-cover bg-top xl:top-[-111px] xl:h-[106.5%] xl:bg-[url('/images/webp/hero-product-bg.webp')];
+  @apply absolute top-[-2.5%] left-0 -z-10 h-full w-full bg-[url('/images/webp/hero-product-bg-mobile.webp')] bg-cover bg-top xl:top-[-111px] xl:h-[106.5%] xl:bg-[url('/images/webp/hero-product-bg.webp')];
 }
 .frequently-bg-section::after {
   content: "";
-  @apply -z-1 absolute left-0 top-[-2%] hidden h-full w-full bg-[url('/images/webp/frequently-story-bg.webp')] bg-cover bg-top bg-no-repeat xl:block;
+  @apply absolute top-[-2%] left-0 -z-1 hidden h-full w-full bg-[url('/images/webp/frequently-story-bg.webp')] bg-cover bg-top bg-no-repeat xl:block;
 }
 .footer-bg::before {
   content: "";
-  @apply -z-1 absolute left-0 top-0 h-full w-full bg-[url('/images/webp/footer-mobile-bg.webp')] bg-cover bg-top bg-no-repeat lg:bg-[url('/images/webp/footer-bg.webp')];
+  @apply absolute top-0 left-0 -z-1 h-full w-full bg-[url('/images/webp/footer-mobile-bg.webp')] bg-cover bg-top bg-no-repeat lg:bg-[url('/images/webp/footer-bg.webp')];
 }
 /* .top-categories-bg2-style::before {
   content: "";
@@ -275,7 +282,7 @@ body {
 
 /* Mobile sidebar */
 .mobile-sidebar {
-  @apply shadow-c9 fixed left-0 top-0 z-[9999] h-screen w-4/5 max-w-[300px] -translate-x-full overflow-y-auto bg-white transition-transform duration-300 ease-in-out;
+  @apply shadow-c9 fixed top-0 left-0 z-[9999] h-screen w-4/5 max-w-[300px] -translate-x-full overflow-y-auto bg-white transition-transform duration-300 ease-in-out;
 }
 
 .mobile-sidebar.open {
@@ -283,7 +290,7 @@ body {
 }
 
 .sidebar-overlay {
-  @apply invisible fixed left-0 top-0 z-10 h-full w-full bg-black/50 opacity-0 transition-opacity duration-300 ease-in-out;
+  @apply invisible fixed top-0 left-0 z-10 h-full w-full bg-black/50 opacity-0 transition-opacity duration-300 ease-in-out;
 }
 
 .sidebar-overlay.active {
@@ -298,7 +305,7 @@ body {
 }
 
 .search-overlay {
-  @apply shadow-c9 fixed left-0 top-0 z-40 w-full -translate-y-full bg-white transition-transform duration-300 ease-in-out;
+  @apply shadow-c9 fixed top-0 left-0 z-40 w-full -translate-y-full bg-white transition-transform duration-300 ease-in-out;
 }
 
 .search-overlay.open {
@@ -313,7 +320,7 @@ body {
 }
 
 .dropdown-panel {
-  @apply shadow-c8 border-dipper invisible absolute left-0 top-[74%] z-50 -translate-y-[10px] rounded-lg border bg-white opacity-0 transition-[opacity,transform,visibility] duration-300 ease-in-out;
+  @apply shadow-c8 border-dipper invisible absolute top-[74%] left-0 z-50 -translate-y-[10px] rounded-lg border bg-white opacity-0 transition-[opacity,transform,visibility] duration-300 ease-in-out;
 }
 
 .dropdown-panel.show {
@@ -370,4 +377,40 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.spinner {
+  border-top-color: transparent;
+  border-radius: 9999px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1);
+  opacity: 1;
 }
