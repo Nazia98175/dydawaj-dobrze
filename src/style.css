@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
 
 @theme {
   --color-primary: #ffea74;
@@ -118,7 +117,7 @@ body {
   @apply shadow-c3 rounded-xl bg-white px-9 py-10 transition-all duration-300 ease-in-out hover:-translate-y-1 2xl:px-0;
 }
 .count-hub-heading {
-  @apply gradient-text 3xl:text-[50px] w-[200px] text-center text-[50px] leading-[130%] font-bold md:w-[270px] lg:text-[42px];
+  @apply 3xl:text-[50px] w-[200px] text-center text-[50px] leading-[130%] font-bold md:w-[270px] lg:text-[42px];
 }
 .medium-title {
   @apply text-lightblack 3xl:text-xl text-xs leading-[160%] font-light sm:text-base;
