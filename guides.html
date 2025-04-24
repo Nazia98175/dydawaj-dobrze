@@ -1237,7 +1237,7 @@
   </div>
   <!-- Header end --- -->
   <!-- Hero - section - -->
-  <section class="relative pb-10 pt-[55px] md:pb-[31px] md:pt-[37px] xl:static 3xl:pb-[67px] 3xl:pt-[73px]">
+  <section class="relative pb-10 pt-[55px] md:pb-[31px] md:pt-[37px] xl:static 3xl:pb-[44px] 3xl:pt-[45px]">
     <img class="absolute left-0 top-0 z-[-1] h-[258px] w-full md:h-[500px] 3xl:h-[670px]"
       src="/images/webp/hero-bg.webp" alt="hero bg" />
     <div class="flex items-center justify-center">
@@ -1251,70 +1251,81 @@
   <section class="relative">
     <img class="absolute bottom-[-200px] left-0 z-[-10] hidden w-full xl:flex" src="/images/hero-product-bg.png"
       alt="" />
-    <div class="primary-container py-10">
+    <div class="primary-container pb-10">
       <div class="flex flex-col justify-between gap-8 sm:gap-3 xl:flex-row">
         <div
-          class="mx-auto flex w-full max-w-[500px] flex-col gap-8 sm:gap-3 xl:mx-0 xl:max-w-[320px] 3xl:max-w-[350px]">
+          class="mx-auto mt-[48px] flex w-full max-w-[500px] flex-col gap-8 sm:gap-3 md:mt-0 xl:mx-0 xl:max-w-[320px] 3xl:max-w-[350px]">
           <!-- custom select  -->
-          <div class="block rounded-[20px] bg-white py-11 shadow-c2 md:hidden">
+          <div class="custom-search-container block rounded-[20px] bg-white px-4 py-11 shadow-c2 md:hidden">
             <h4 class="small-title text-center font-bold text-lightblack">
               Kategorie
             </h4>
             <div
-              class="mx-5 mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4">
-              <input id="searchInputSuggetion" placeholder="Wyszukaj poradnik"
-                class="h-full w-full bg-transparent text-xs font-light text-piedWagtailGrey outline-none" type="text" />
+              class="mx-[18px] mt-7 flex h-[48px] items-center justify-between gap-4 rounded-md border border-Jupiter px-4">
+              <input id="customSearchInput" placeholder="Wyszukaj poradnik"
+                class="custom-search-input h-full w-full bg-transparent text-xs font-light text-piedWagtailGrey outline-none"
+                type="text" />
               <button>
                 <img src="/images/svg/service-search-icon.svg" alt="service search" />
               </button>
             </div>
-            <div id="suggestionsList" class="hidden">
-              <div data-text="Testy produktów i usługi" class="suggestion-item border-b border-Jupiter px-5 pb-3 pt-10">
+            <div id="customSuggestionsList" class="hidden">
+              <div data-label="Testy produktów i usługi"
+                class="custom-suggestion border-b border-Jupiter px-[18px] pb-3 pt-10">
                 <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                  <span class="service-testing-title">
+                  <span class="custom-suggestion-text service-testing-title">
                     Testy produktów i usług
                   </span>
                   <span class="service-testing-decription"> 5 </span>
                 </h3>
               </div>
-              <div data-text="Sprytne zakupy" class="suggestion-item border-b border-Jupiter px-5 py-3">
+              <div data-label="Sprytne zakupy" class="custom-suggestion border-b border-Jupiter px-[18px] py-3">
                 <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                  <span class="service-testing-title"> Sprytne zakupy </span>
+                  <span class="custom-suggestion-text service-testing-title">
+                    Sprytne zakupy
+                  </span>
                   <span class="service-testing-decription"> 101 </span>
                 </h3>
               </div>
-              <div data-text="Programy i karty lojalnościowe" class="suggestion-item border-b border-Jupiter px-5 py-3">
+              <div data-label="Programy i karty lojalnościowe"
+                class="custom-suggestion border-b border-Jupiter px-[18px] py-3">
                 <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                  <span class="service-testing-title">
+                  <span class="custom-suggestion-text service-testing-title">
                     Programy i karty lojalnościowe
                   </span>
                   <span class="service-testing-decription"> 28 </span>
                 </h3>
               </div>
-              <div data-text="Pomysł na prezent" class="suggestion-item border-b border-Jupiter px-5 py-3">
+              <div data-label="Pomysł na prezent" class="custom-suggestion border-b border-Jupiter px-[18px] py-3">
                 <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                  <span class="service-testing-title">
+                  <span class="custom-suggestion-text service-testing-title">
                     Pomysł na prezent
                   </span>
                   <span class="service-testing-decription"> 9 </span>
                 </h3>
               </div>
-              <div data-text="Promocje bankowe i pokrewne" class="suggestion-item border-b border-Jupiter px-5 py-3">
+              <div data-label="Promocje bankowe i pokrewne"
+                class="custom-suggestion border-b border-Jupiter px-[18px] py-3">
                 <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                  <span class="service-testing-title">
+                  <span class="custom-suggestion-text service-testing-title">
                     Promocje bankowe i pokrewne
                   </span>
                   <span class="service-testing-decription"> 4 </span>
                 </h3>
               </div>
-              <div data-text="Aplikacje pomagające w zakupach"
-                class="suggestion-item border-b border-Jupiter px-5 py-3">
+              <div data-label="Aplikacje pomagające w zakupach"
+                class="custom-suggestion border-b border-Jupiter px-[18px] py-3">
                 <h3 class="group flex cursor-pointer items-center justify-between gap-4">
-                  <span class="service-testing-title">
+                  <span class="custom-suggestion-text service-testing-title">
                     Aplikacje pomagające w zakupach
                   </span>
                   <span class="service-testing-decription"> 16 </span>
                 </h3>
+                <!-- Custom No Results -->
+                <div id="customNoResults" class="hidden px-5 py-4 text-center text-sm text-gray-500">
+                  Brak wyników dla:
+                  <span id="customSearchTerm" class="font-semibold"></span>
+                </div>
               </div>
             </div>
           </div>
@@ -1330,7 +1341,7 @@
                 <img src="/images/svg/service-search-icon.svg" alt="service search" />
               </button>
             </div>
-            <div class="border-b border-Jupiter px-5 pb-3 pt-10">
+            <div class="border-b border-Jupiter px-6 pb-3 pt-10">
               <h3 class="group flex cursor-pointer items-center justify-between gap-4">
                 <span class="service-testing-title">
                   Testy produktów i usług
@@ -1338,13 +1349,13 @@
                 <span class="service-testing-decription"> 5 </span>
               </h3>
             </div>
-            <div class="border-b border-Jupiter px-5 py-3">
+            <div class="border-b border-Jupiter px-6 py-3">
               <h3 class="group flex cursor-pointer items-center justify-between gap-4">
                 <span class="service-testing-title"> Sprytne zakupy </span>
                 <span class="service-testing-decription"> 101 </span>
               </h3>
             </div>
-            <div class="border-b border-Jupiter px-5 py-3">
+            <div class="border-b border-Jupiter px-6 py-3">
               <h3 class="group flex cursor-pointer items-center justify-between gap-4">
                 <span class="service-testing-title">
                   Programy i karty lojalnościowe
@@ -1352,13 +1363,13 @@
                 <span class="service-testing-decription"> 28 </span>
               </h3>
             </div>
-            <div class="border-b border-Jupiter px-5 py-3">
+            <div class="border-b border-Jupiter px-6 py-3">
               <h3 class="group flex cursor-pointer items-center justify-between gap-4">
                 <span class="service-testing-title"> Pomysł na prezent </span>
                 <span class="service-testing-decription"> 9 </span>
               </h3>
             </div>
-            <div class="border-b border-Jupiter px-5 py-3">
+            <div class="border-b border-Jupiter px-6 py-3">
               <h3 class="group flex cursor-pointer items-center justify-between gap-4">
                 <span class="service-testing-title">
                   Promocje bankowe i pokrewne
@@ -1366,7 +1377,7 @@
                 <span class="service-testing-decription"> 4 </span>
               </h3>
             </div>
-            <div class="border-b border-Jupiter px-5 py-3">
+            <div class="border-b border-Jupiter px-6 py-3">
               <h3 class="group flex cursor-pointer items-center justify-between gap-4">
                 <span class="service-testing-title">
                   Aplikacje pomagające w zakupach
@@ -1375,7 +1386,7 @@
               </h3>
             </div>
           </div>
-          <div class="rounded-[20px] bg-white px-8 py-6 shadow-c3">
+          <div class="rounded-[20px] bg-white px-[52px] py-6 shadow-c3 md:px-8">
             <span class="flex items-center justify-center">
               <img src="/images/svg/product-card-tag.svg" alt="product card tag" />
             </span>
@@ -1401,18 +1412,14 @@
                 </div>
               </div>
               <!-- Add Navigation -->
-              <div class="flex">
-                <button
-                  class="custom-next-arrow absolute left-[-70px] top-[46%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full md:ml-8 3xl:left-[-90px]">
-                  <img src="/images/svg/hero-slider-left-arrow.svg" alt="arrow" />
-                </button>
-              </div>
-              <div class="flex">
-                <button
-                  class="custom-prev-arrow c absolute right-[-70px] top-[46%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full md:mr-8 3xl:right-[-90px]">
-                  <img src="/images/svg/hero-slider-right-arrow.svg" alt="arrow" />
-                </button>
-              </div>
+              <button
+                class="custom-next-arrow absolute left-[-50px] top-[46%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full md:ml-8 2xl:left-[-70px] 3xl:left-[-80px]">
+                <img src="/images/svg/hero-slider-left-arrow.svg" alt="arrow" />
+              </button>
+              <button
+                class="custom-prev-arrow c absolute right-[-50px] top-[46%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full md:mr-8 2xl:right-[-70px] 3xl:right-[-80px]">
+                <img src="/images/svg/hero-slider-right-arrow.svg" alt="arrow" />
+              </button>
             </div>
             <p class="small-title py-3 text-center">The North Face</p>
             <h4 class="text-center text-3xl font-bold leading-[130%] text-exodusFruit md:text-[26px] 3xl:text-3xl">
@@ -1422,7 +1429,7 @@
             <p class="py-2 text-center text-sm leading-[120%] text-lightblack">
               Kod rabatowy -10% na outlet w ofercie The North Face
             </p>
-            <button class="primary-button group mt-2">Sprawdź okazję</button>
+            <button class="primary-button group mt-2">Pobierz kod</button>
             <div class="flex items-center justify-end pt-3">
               <h4 class="text-[11px] font-light text-lightblack">
                 Skorzystalo <span class="font-bold">35</span>
@@ -1438,7 +1445,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-1.webp" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Wniesienie sprzętu AGD - ile kosztuje w elektromarketach i
                   czy warto?
@@ -1451,7 +1458,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Skorzystalo <span class="font-bold">35</span>
               </h4>
@@ -1477,7 +1484,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">195</span>
               </h4>
@@ -1490,7 +1497,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-3.webp" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Przecena a promocja: podobieństwa i różnice - jak nie dać
                   się naciąć?
@@ -1502,7 +1509,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">631</span>
               </h4>
@@ -1515,7 +1522,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-4.webp" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Polskie firmy znane za granicą - które rodzime marki
                   przyciągają międzynarodową uwagę?
@@ -1527,7 +1534,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">631</span>
               </h4>
@@ -1540,7 +1547,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-5.webp" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Od ilu lat można zamawiać przez internet i jakie możliwości
                   mają dzieci?
@@ -1552,7 +1559,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">191</span>
               </h4>
@@ -1565,7 +1572,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-6.webp" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Kraje z zakazem handlu w niedziele: gdzie poza Polską nie
                   zrobimy zakupów? Lista!
@@ -1578,7 +1585,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">532</span>
               </h4>
@@ -1591,7 +1598,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-7.webp" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Jak sprawdzić czy sklep internetowy jest prawdziwy?
                   Podpowiedzi dla przezornych
@@ -1604,7 +1611,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">1633</span>
               </h4>
@@ -1617,7 +1624,7 @@
                 <img class="transition-all duration-300 ease-in-out group-hover:scale-110"
                   src="/images/webp/blog-hero-card-8.png" alt="blog-card-image" />
               </div>
-              <div class="px-4 pt-4 3xl:px-6">
+              <div class="px-5 pt-4 3xl:px-6">
                 <h3 class="service-card-title">
                   Aplikacja Deichmann a opinie, korzyści i instalacja - czy
                   warto ją pobrać?
@@ -1629,7 +1636,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-end px-4 pb-4 pt-3 3xl:px-6">
+            <div class="flex items-center justify-end px-5 pb-4 pt-3 3xl:px-6">
               <h4 class="text-[11px] font-light text-lightblack">
                 Przeczytało <span class="font-bold">1038</span>
               </h4>

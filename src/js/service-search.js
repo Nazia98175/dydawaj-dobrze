@@ -1,49 +1,88 @@
-const searchInput = document.getElementById("searchInputSuggetion");
+const customInput = document.getElementById("customSearchInput");
+const suggestionBox = document.getElementById("customSuggestionsList");
+const suggestions = document.querySelectorAll(".custom-suggestion");
+const noResult = document.getElementById("customNoResults");
+const customSearchTerm = document.getElementById("customSearchTerm");
 
-const suggestionsList = document.getElementById("suggestionsList");
-const suggestionItems = document.querySelectorAll(".suggestion-item");
-
-function showDropdown() {
-  suggestionsList.classList.remove("hidden");
-  suggestionsList.classList.remove("dropdown-exit", "dropdown-exit-active");
-  suggestionsList.classList.add("dropdown-enter");
-  requestAnimationFrame(() => {
-    suggestionsList.classList.add("dropdown-enter-active");
-    suggestionsList.classList.remove("dropdown-enter");
-  });
+function showSuggestions() {
+  suggestionBox.classList.remove("hidden", "dropdown-exit");
+  suggestionBox.classList.add("dropdown-enter");
 }
 
-function hideDropdown() {
-  suggestionsList.classList.remove("dropdown-enter-active");
-  suggestionsList.classList.add("dropdown-exit", "dropdown-exit-active");
+function hideSuggestions() {
+  suggestionBox.classList.remove("dropdown-enter");
+  suggestionBox.classList.add("dropdown-exit");
   setTimeout(() => {
-    suggestionsList.classList.add("hidden");
-    suggestionsList.classList.remove("dropdown-exit", "dropdown-exit-active");
+    suggestionBox.classList.add("hidden");
+    suggestionBox.classList.remove("dropdown-exit");
   }, 200);
 }
 
-// Show all suggestions when typing
-searchInput.addEventListener("input", () => {
-  const term = searchInput.value.trim();
-  if (term.length === 0) {
-    hideDropdown();
+function highlight(term, label) {
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`(${escaped})`, "gi");
+  return label.replace(regex, `<span class="highlight">$1</span>`);
+}
+
+function filterCustomSuggestions(term) {
+  let matchCount = 0;
+  suggestions.forEach((item) => {
+    const text = item.dataset.label;
+    const labelSpan = item.querySelector(".custom-suggestion-text");
+    console.log(labelSpan);
+
+    if (!text || !labelSpan) {
+      item.classList.add("hidden");
+      return;
+    }
+
+    if (text.toLowerCase().includes(term)) {
+      item.classList.remove("hidden");
+      labelSpan.innerHTML = highlight(term, text);
+      matchCount++;
+    } else {
+      item.classList.add("hidden");
+    }
+  });
+
+  customSearchTerm.textContent = term;
+  noResult.classList.toggle("hidden", matchCount > 0);
+  showSuggestions();
+}
+
+customInput.addEventListener("input", () => {
+  const query = customInput.value.trim().toLowerCase();
+  if (query.length === 0) {
+    suggestions.forEach((item) => {
+      item.classList.remove("hidden");
+      const labelSpan = item.querySelector(".custom-suggestion-text");
+      if (labelSpan && item.dataset.label) {
+        labelSpan.innerHTML = item.dataset.label;
+      }
+    });
+    noResult.classList.add("hidden");
+    hideSuggestions();
   } else {
-    showDropdown();
+    filterCustomSuggestions(query);
   }
 });
 
-// Handle outside click
+customInput.addEventListener("focus", () => {
+  if (customInput.value.trim().length > 0) {
+    showSuggestions();
+  }
+});
+
 document.addEventListener("click", (e) => {
-  if (!searchInput.contains(e.target) && !suggestionsList.contains(e.target)) {
-    hideDropdown();
+  if (!customInput.contains(e.target) && !suggestionBox.contains(e.target)) {
+    hideSuggestions();
   }
 });
 
-// Suggestion click handler
-suggestionItems.forEach((item) => {
+suggestions.forEach((item) => {
   item.addEventListener("click", () => {
-    const text = item.dataset.text || "";
-    searchInput.value = text;
-    hideDropdown();
+    const text = item.dataset.label || "";
+    customInput.value = text;
+    hideSuggestions();
   });
 });
