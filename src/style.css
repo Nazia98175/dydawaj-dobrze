@@ -113,7 +113,7 @@ body {
   @apply bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] xxl:-right-[34%] xxl:top-[11%] 3xl:top-[9.9%] 3xl:py-2.5 pointer-events-none absolute top-[14%] -right-[38%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold sm:top-[12%] sm:-right-[44%] md:top-[10%] md:-right-[40%] lg:-right-[35%] 2xl:py-[6px];
 }
 .footer-li-style {
-  @apply hover:text-primary cursor-pointer transition-all duration-200 ease-in-out;
+  @apply hover:text-primary cursor-pointer transition-all duration-200 ease-in-out text-base;
 }
 .search-input-style {
   @apply placeholder:text-piedWagtailGrey w-full bg-transparent text-base text-black outline-none;
