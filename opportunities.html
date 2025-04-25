@@ -1082,7 +1082,7 @@
   <aside class="mobile-sidebar pb-5" id="mobileSidebar">
     <div class="flex items-center justify-between gap-3 pr-4">
       <div class="w-full max-w-[164px]">
-        <img class="h-full w-full" src="/images/svg/mobile-logo.svg" alt="wydawaj dobrze logo" />
+        <img src="/images/webp/mobile-logo.webp" alt="wydawaj dobrze logo" />
       </div>
       <button id="close" aria-label="Close sidebar">
         <img src="/images/svg/sidebar-close.svg" alt="sidebar close" />
@@ -1269,7 +1269,11 @@
       <div class="m-auto flex max-w-[1315px] flex-col gap-10 xl:flex-row 3xl:max-w-[1544px]">
         <div
           class="sm:mb-10 mt-5 flex max-w-[1000px] flex-col gap-8 md:gap-6 rounded-2xl 3xl:max-w-[1200px] mx-auto xl:mx-0">
-          <div class="mx-auto h-auto rounded-2xl bg-white p-4 shadow-c3 lg:px-9 lg:py-6 3xl:px-16 3xl:py-7">
+          <div class="mx-auto h-auto rounded-2xl bg-white px-5 pt-[23px] pb-[45px] shadow-c3 lg:px-9 lg:py-6 3xl:px-16
+            3xl:py-7 relative overflow-hidden">
+            <div
+              class="bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[43%] xs:top-[8%] xxl:-right-[34%] xxl:top-[11%] 3xl:top-[9.9%] 3xl:py-2.5 pointer-events-none absolute top-[7%] -right-[38%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold sm:top-[8%] sm:-right-[43%] md:top-[10%] md:-right-[40%] lg:-right-[35%] 2xl:py-[6px] block sm:hidden">
+              Tylko u nas</div>
             <div class="flex flex-row items-start gap-0 lg:gap-4">
               <div>
                 <div
@@ -1309,7 +1313,7 @@
                         </h2>
                       </div>
                     </div>
-                    <div class="flex items-start justify-between lg:hidden">
+                    <div class="flex items-start justify-between lg:hidden pb-[29px]">
                       <p
                         class="mt-4 flex-1 text-start text-[15px] font-bold leading-[130%] text-exodusFruit md:text-[23px] md:text-xl md:leading-[140%] 3xl:text-[30px]">
                         Rabaty -15%
@@ -1318,7 +1322,7 @@
                         Sprawdź okazję
                       </button>
                     </div>
-                    <p class="hero-descrition mt-2 block font-light text-lightblack lg:hidden 3xl:mt-3">
+                    <p class="hero-descrition md:mt-2 block font-light text-lightblack lg:hidden 3xl:mt-3">
                       Rabat -15% na wybrane zestawy stworzone w The North
                       Face. Jeśli lubisz sportowy styl lub szukasz odzieży na
                       siłownie, to koniecznie sprawdź szczegóły akcji. Sklep
@@ -1351,7 +1355,12 @@
                   przykłady, jest wiele zestawów, dzięki temu są duże szanse
                   że znajdziesz coś dla siebie.
                 </p>
-                <button class="group mt-10 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl
+                <div class="md:hidden flex items-end justify-end py-6">
+                  <h4 class="text-[11px] font-light text-lightblack">
+                    Skorzystalo <span class="font-bold">535</span>
+                  </h4>
+                </div>
+                <button class="group md:mt-10 flex h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-3xl
                   bg-exodusFruit px-6 text-center text-xs text-white transition-all duration-200 ease-in-out
                   hover:shadow-c7 md:text-base lg:mt-24 xl:mb-16 xl:mt-[45px] 2xl:mb-[50px] 3xl:mb-[35px] 3xl:mt-[50px]
                   md:max-w-[564px]">
@@ -1359,7 +1368,7 @@
                   <img src="/images/svg/left-arrow.svg" alt="arrow"
                     class="absolute translate-x-10 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-x-[90px] group-hover:opacity-100 md:translate-y-0 md:group-hover:translate-x-[260px] lg:translate-x-24 lg:group-hover:translate-x-[260px] xl:translate-x-32" />
                 </button>
-                <div class="flex items-end justify-end pt-3">
+                <div class="hidden md:flex items-end justify-end pt-3">
                   <h4 class="text-[11px] font-light text-lightblack">
                     Skorzystalo <span class="font-bold">535</span>
                   </h4>
