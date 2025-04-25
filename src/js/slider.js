@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const totalSlides = document.querySelectorAll(".swiper-slide").length;
   const prevButton = document.querySelector(".custom-next-arrow");
   const nextButton = document.querySelector(".custom-prev-arrow");
 
-  // Initialize Swiper
   const swiper = new Swiper(".card-swiper", {
     loop: false,
-    // Responsive breakpoints
+    grabCursor: true,
+    centeredSlides: false,
+    watchOverflow: true,
+
     breakpoints: {
       320: {
         slidesPerView: 1,
         spaceBetween: 14,
-        centeredSlides: true,
+        centeredSlides: false, // 👈 FIXED here
       },
       633: {
         slidesPerView: 1,
@@ -22,10 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 10,
       },
       992: {
-        slidesPerView: 3.5,
-        spaceBetween: 10,
-      },
-      1000: {
         slidesPerView: 3,
         spaceBetween: 10,
       },
@@ -44,70 +41,50 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".custom-next-arrow",
     },
 
-    centeredSlides: false,
-    grabCursor: true,
-
     on: {
-      init: function () {
-        updateArrows(this);
+      init(swiper) {
+        updateArrows(swiper);
       },
-      slideChange: function () {
-        updateArrows(this);
-      },
-      resize: function () {
-        this.update();
-        updateArrows(this);
+      slideChange(swiper) {
+        updateArrows(swiper);
       },
     },
   });
 
-  /**
-   * Updates navigation arrows visibility based on swiper state
-   */
   function updateArrows(swiperInstance) {
-    // Get current device slidesPerView based on breakpoint
-    let currentSlidesPerView = swiperInstance.params.slidesPerView;
+    const slidesPerView = getSlidesPerView(swiperInstance);
+    const totalSlides = swiperInstance.slides.length;
 
-    // All slides are visible - hide both arrows
-    if (totalSlides <= currentSlidesPerView) {
+    // Hide arrows if all slides fit
+    if (totalSlides <= slidesPerView) {
       prevButton.classList.add("!hidden");
-      prevButton.classList.remove("md:!flex");
       nextButton.classList.add("!hidden");
-      nextButton.classList.remove("md:!flex");
       return;
     }
 
-    // Handle beginning of slider
-    if (swiperInstance.isBeginning) {
-      prevButton.classList.add("!hidden");
-      prevButton.classList.remove("md:!flex");
-    } else {
-      prevButton.classList.remove("!hidden");
-      prevButton.classList.add("md:!flex");
-    }
+    swiperInstance.isBeginning
+      ? prevButton.classList.add("!hidden")
+      : prevButton.classList.remove("!hidden");
 
-    // Handle end of slider
-    if (swiperInstance.isEnd) {
-      nextButton.classList.add("!hidden");
-      nextButton.classList.remove("md:!flex");
-    } else {
-      nextButton.classList.remove("!hidden");
-      nextButton.classList.add("md:!flex");
-    }
+    swiperInstance.isEnd
+      ? nextButton.classList.add("!hidden")
+      : nextButton.classList.remove("!hidden");
   }
 
-  // Initial update with a small delay to ensure everything is rendered
-  setTimeout(() => {
-    swiper.update();
-    updateArrows(swiper);
-  }, 100);
+  function getSlidesPerView(swiperInstance) {
+    const currentBreakpoint = swiperInstance.currentBreakpoint;
+    const breakpointParams =
+      swiperInstance.params.breakpoints[currentBreakpoint];
+    return breakpointParams?.slidesPerView || 1;
+  }
 
-  // Update on window resize with debounce
+  // ✅ Debounced full re-render on resize
   let resizeTimer;
   window.addEventListener("resize", function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       swiper.update();
+      swiper.slideTo(0); // 👈 Reset to first to avoid space on resize
       updateArrows(swiper);
     }, 250);
   });
