@@ -3,6 +3,7 @@ document.querySelectorAll(".accordion-toggle").forEach((button) => {
     const item = button.closest(".accordion-item");
     const content = item.querySelector(".accordion-content");
     const iconImg = button.querySelector(".icon-img");
+    const iconImage = button.querySelector(".icon-image");
 
     const isOpen = content.classList.contains("open");
 
@@ -17,8 +18,11 @@ document.querySelectorAll(".accordion-toggle").forEach((button) => {
       btn.classList.remove("text-lightblack");
       btn.classList.add("text-exodusFruit");
       const img = btn.querySelector(".icon-img");
+      const image = btn.querySelector(".icon-image");
       img.classList.remove("img-color-active", "rotate-180");
       img.classList.add("img-color-inactive");
+      image.classList.remove("img-color-active");
+      image.classList.add("img-color-inactive");
     });
 
     // Open this one if it was closed
@@ -31,6 +35,8 @@ document.querySelectorAll(".accordion-toggle").forEach((button) => {
       button.classList.add("text-lightblack");
       iconImg.classList.remove("img-color-inactive");
       iconImg.classList.add("img-color-active", "rotate-180");
+      iconImage.classList.remove("img-color-inactive");
+      iconImage.classList.add("img-color-active");
     }
   });
 });
@@ -43,3 +49,42 @@ window.addEventListener("scroll", () => {
 scrollButton?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+const stars = document.querySelectorAll("#starRating .star");
+let rating = 4;
+
+stars.forEach((star, idx) => {
+  star.classList.add("inactive");
+
+  // Highlight stars on hover
+  star.addEventListener("mouseover", () => {
+    updateStars(idx + 1);
+  });
+
+  // Reset highlight on mouse leave
+  star.addEventListener("mouseleave", () => {
+    updateStars(rating);
+  });
+
+  // Set rating on click
+  star.addEventListener("click", () => {
+    rating = idx + 1;
+    updateStars(rating);
+    console.log("Selected rating:", rating);
+    // You can save this value in a form or send it to a server
+  });
+});
+
+function updateStars(rating) {
+  stars.forEach((star, i) => {
+    if (i < rating) {
+      star.classList.add("active");
+      star.classList.remove("inactive");
+    } else {
+      star.classList.remove("active");
+      star.classList.add("inactive");
+    }
+  });
+}
+
+updateStars(rating);
