@@ -1077,7 +1077,7 @@
   <aside class="mobile-sidebar pb-5" id="mobileSidebar">
     <div class="flex items-center justify-between gap-3 pr-4">
       <div class="w-full max-w-[164px]">
-        <img class="h-full w-full" src="/images/svg/mobile-logo.svg" alt="wydawaj dobrze logo" />
+        <img src="/images/webp/mobile-logo.webp" alt="wydawaj dobrze logo" />
       </div>
       <button id="close" aria-label="Close sidebar">
         <img src="/images/svg/sidebar-close.svg" alt="sidebar close" />
@@ -1237,7 +1237,7 @@
     </div>
   </section>
 
-  <div class="relative z-0 mt-[81px] px-4 sm:mt-[119px] md:mt-0">
+  <div class="relative z-0 mt-[109px] px-4 sm:mt-[119px] md:mt-0">
     <div class="shadow-c2 3xl:max-w-[1650px] mx-auto mb-10 max-w-[1315px] rounded-2xl bg-white">
       <img class="3xl:max-w-[450px] mx-auto h-full w-full max-w-[264px] md:max-w-[330px]"
         src="/images/webp/Black-friday.webp" alt="black friday image" class="m-auto block" />
@@ -1380,8 +1380,94 @@
   <section class="relative mt-8 md:pb-20 xl:pb-0">
     <img class="absolute left-0 top-0 z-[-10] hidden h-full w-full object-cover md:block"
       src="/images/webp/hero-product-bg.webp" alt="hero product bg" />
+    <!-- mobile view  -->
     <div
-      class="main-container 3xl:grid-cols-5 3xl:gap-3 mb-[35px] grid grid-cols-1 gap-[22px] sm:grid-cols-2 md:mb-[60px] lg:!mb-[86px] lg:grid-cols-3 2xl:grid-cols-4">
+      class="main-container md:hidden 3xl:grid-cols-5 3xl:gap-3 mb-[35px] grid grid-cols-1 gap-[22px] sm:grid-cols-2 md:mb-[60px] lg:!mb-[86px] lg:grid-cols-3 2xl:grid-cols-4">
+      <article class="product-card">
+        <div class="flex h-full flex-row md:flex-col">
+          <img class="product-card-img" src="/images/webp/hero-product-1.webp" alt="product" />
+          <div class="flex h-full flex-col px-5">
+            <p class="small-title hidden pt-2.5 text-center leading-[120%] md:block">
+              Dyson
+            </p>
+            <div class="grid h-full grid-rows-2">
+              <h3 class="product-name">PROMOCJE NA WIOSNĘ!</h3>
+              <p class="product-descriptions">
+                Sprawdź aktualne zniżki w wiosennej promocji Dyson. Lorem
+                Ipsum is simply dummy text
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="product-tag">Dyson</p>
+        <div class="mt-2 px-[22px] md:mt-0 md:px-5">
+          <a href="/" class="primary-button group">Sprawdź okazję</a>
+          <div class="flex items-center justify-between pt-2 md:pt-7">
+            <h4 class="product-footer-text">Do odwołania</h4>
+            <h4 class="product-footer-text">
+              Skorzystalo <span class="font-bold">2</span>
+            </h4>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="flex h-full flex-row md:flex-col">
+
+          <div class="border-cottonBall border-[3px] md:flex justify-center items-center py-[65px] hidden">
+
+            <img class="w-full max-w-[190px]" src="/images/webp/Alab-logo.webp" alt="product" />
+          </div>
+          <img class="product-card-img block md:hidden" src="/images/webp/hero-product-2.webp" alt="product" />
+          <div class="flex h-full flex-col px-5">
+            <p class="product-tag-mobile">ALAB sport</p>
+            <div class="grid h-full grid-rows-2">
+              <h3 class="product-name">Kod Rabatowy -50%</h3>
+              <p class="product-descriptions">
+                Kod rabatowy -50% na wszystkie pakiety badań w ALAB sport
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="product-tag">ALAB sport</p>
+        <div class="mt-2 px-[22px] md:mt-0 md:px-5">
+          <a href="/" class="primary-button group">Sprawdź okazję</a>
+          <div class="flex items-center justify-between pt-2 md:pt-7">
+            <h4 class="product-footer-text">Do odwołania</h4>
+            <h4 class="product-footer-text">
+              Skorzystalo <span class="font-bold">2</span>
+            </h4>
+          </div>
+        </div>
+      </article>
+      <article class="product-card ">
+
+        <div class="relative flex h-full flex-row md:flex-col">
+          <img class="product-card-img" src="/images/webp/hero-product-3.webp" alt="product" />
+          <div class="flex h-full flex-col px-5">
+            <p class="product-tag-mobile">Frisco</p>
+            <div class="grid grid-rows-2">
+              <h3 class="product-name">Wyprzedaż do -50%</h3>
+              <p class="product-descriptions">Rabatówka we Frisco</p>
+            </div>
+          </div>
+        </div>
+        <p class="product-tag">Frisco - wszystkie okazje</p>
+        <div class="mt-2 px-[22px] md:mt-0 md:px-5">
+          <a href="/" class="primary-button group">Sprawdź okazję</a>
+          <div class="flex items-center justify-between pt-2 md:pt-7">
+            <h4 class="product-footer-text">
+              Pozostało <span class="font-bold">2 dni</span>
+            </h4>
+            <h4 class="product-footer-text">
+              Skorzystalo <span class="font-bold">15</span>
+            </h4>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- desktop view  -->
+    <div
+      class="main-container 3xl:grid-cols-5 3xl:gap-3 mb-[35px]  hidden md:grid grid-cols-1 gap-[22px] sm:grid-cols-2 md:mb-[60px] lg:!mb-[86px] lg:grid-cols-3 2xl:grid-cols-4">
       <!-- card 1 -->
 
       <article class="product-card">
@@ -1411,7 +1497,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-2.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1437,7 +1523,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="relative flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-3.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1464,7 +1550,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="relative flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-4.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1488,7 +1574,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-8.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1513,7 +1599,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-9.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1538,7 +1624,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-8.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1564,7 +1650,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-10.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1588,7 +1674,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-5.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
@@ -1612,7 +1698,7 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article class="product-card hidden md:block">
         <div class="flex h-full flex-row md:flex-col">
           <img class="product-card-img" src="/images/webp/hero-blog-card-6.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
