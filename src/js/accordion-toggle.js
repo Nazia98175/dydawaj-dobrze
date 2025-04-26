@@ -1,3 +1,4 @@
+// Accordion toggle
 document.querySelectorAll(".accordion-toggle").forEach((button) => {
   button.addEventListener("click", () => {
     const item = button.closest(".accordion-item");
@@ -50,8 +51,10 @@ scrollButton?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Star Rating System
 const stars = document.querySelectorAll("#starRating .star");
-let rating = 4;
+const ratingText = document.getElementById("ratingText"); // <--- New addition
+let rating = 4; // default
 
 stars.forEach((star, idx) => {
   star.classList.add("inactive");
@@ -70,8 +73,8 @@ stars.forEach((star, idx) => {
   star.addEventListener("click", () => {
     rating = idx + 1;
     updateStars(rating);
+    updateRatingText(rating); // <--- New addition
     console.log("Selected rating:", rating);
-    // You can save this value in a form or send it to a server
   });
 });
 
@@ -87,4 +90,12 @@ function updateStars(rating) {
   });
 }
 
+function updateRatingText(rating) {
+  if (ratingText) {
+    ratingText.innerText = `${rating}/5`;
+  }
+}
+
+// Initialize default
 updateStars(rating);
+updateRatingText(rating); // <--- New addition
