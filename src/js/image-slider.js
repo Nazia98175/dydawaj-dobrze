@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Ensure Swiper is properly initialized
   if (typeof Swiper === "undefined") {
-    console.error("Swiper is not loaded. Please include the Swiper library.");
     return;
   }
 

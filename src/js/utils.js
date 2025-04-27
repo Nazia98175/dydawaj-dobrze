@@ -17,7 +17,6 @@ export function getSection() {
             alt="wydawaj dobrze logo"
           />
         </div>
-        <!-- Navigation -->
         <nav class="hidden xl:flex space-x-8">
           <div id="categoriesDropdown">
             <button

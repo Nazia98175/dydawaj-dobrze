@@ -74,7 +74,6 @@ stars.forEach((star, idx) => {
     rating = idx + 1;
     updateStars(rating);
     updateRatingText(rating); // <--- New addition
-    console.log("Selected rating:", rating);
   });
 });
 
