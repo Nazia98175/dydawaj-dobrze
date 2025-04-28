@@ -213,7 +213,7 @@ body {
 
 .hero-product-bg::before {
   content: "";
-  @apply absolute top-[-2.5%] left-0 -z-10 h-full w-full bg-[url('/images/webp/hero-product-bg-mobile.webp')] bg-cover bg-top xl:top-[-111px] xl:h-[106.5%] xl:bg-[url('/images/webp/hero-product-bg.webp')];
+  @apply absolute top-[-2.5%] left-0 -z-10 h-full w-full bg-[url('/images/webp/hero-product-bg-mobile.webp')] bg-cover bg-top xl:top-[-111px] xl:h-[106.5%] xl:bg-[url('/images/webp/hero-product-bg.avif')];
 }
 .frequently-bg-section::after {
   content: "";
