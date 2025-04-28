@@ -11,6 +11,7 @@
     <title>Black Friday 2024</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
+
   <body>
     <script defer type="module" type="module" src="/src/js/main.js"></script>
     <script
@@ -1536,19 +1537,16 @@
           <a href="#" class="nav-items-style">Poradniki</a>
           <a href="#" class="nav-items-style">Sklepy</a>
         </nav>
-        <!-- Search Icon -->
         <div class="hidden items-center lg:flex" id="searchBtn">
           <button class="cursor-pointer text-white focus:outline-none">
             <img src="/images/svg/search-icon.svg" alt="search icon" />
           </button>
         </div>
-        <!-- Mobile menu button -->
         <button class="block xl:hidden" id="mobileMenuBtn">
           <img src="/images/svg/Menu-icon.svg" alt="menu icon" />
         </button>
       </div>
     </header>
-    <!-- Search Overlay -->
     <div class="search-overlay" id="searchOverlay">
       <div class="tertiary-container">
         <div class="flex w-full flex-col items-end gap-4">
@@ -1837,7 +1835,7 @@
     </div>
     <section class="relative z-0 mx-auto px-4">
       <div
-        class="shadow-c2 3xl:max-w-[1650px] relative mx-auto h-full max-w-[1315px] overflow-hidden rounded-2xl bg-white px-0 pt-[32px] pb-[15px] md:px-6 md:py-10"
+        class="shadow-c2 3xl:max-w-[1650px] relative mx-auto h-full max-w-[1315px] overflow-hidden rounded-2xl bg-white px-5 pt-[32px] pb-[15px] md:px-11 md:py-10"
       >
         <!-- Scrollable container -->
         <div
@@ -1845,7 +1843,7 @@
         >
           <!-- A-Z Button -->
           <div
-            class="bg-primary bg-opacity-100 hidden h-[55px] w-[55px] items-center justify-center rounded-xl p-4 text-sm font-semibold whitespace-nowrap md:flex"
+            class="bg-primary bg-opacity-100 mr-5 hidden h-[55px] w-[55px] items-center justify-center rounded-xl p-4 text-sm font-semibold whitespace-nowrap md:flex"
           >
             A - Z
           </div>
@@ -1854,11 +1852,11 @@
             <button
               id="scrollLeft"
               type="button"
-              class="custom-next-arrow relative top-[46%] left-0 z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full md:ml-8"
+              class="custom-next-arrow relative top-[46%] left-0 z-20 flex rotate-180 cursor-pointer items-center justify-center rounded-full"
             >
               <!-- Put SVG fully inside the button -->
               <img
-                class="h-full w-full max-w-[34px]"
+                class="h-full w-[34px]"
                 src="/images/svg/cloth-slider-arrow-left.svg"
                 alt="arrow"
               />
@@ -2027,10 +2025,10 @@
           <div class="flex">
             <button
               id="scrollRight"
-              class="custom-prev-arrow c relative top-[46%] right-0 z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full md:mr-8"
+              class="custom-prev-arrow c relative top-[46%] right-0 z-20 flex cursor-pointer items-center justify-center rounded-full"
             >
               <img
-                class="w-full max-w-[34px]"
+                class="h-full w-[34px]"
                 src="/images/svg/cloth-slider-arrow-right.svg"
                 alt="arrow"
               />
@@ -2057,21 +2055,16 @@
               alt="product"
             />
             <div class="flex h-full flex-col px-5">
-              <p
-                class="small-title hidden pt-2.5 text-center leading-[120%] md:block"
-              >
-                Dyson
-              </p>
+              <p class="product-tag-mobile">ALAB sport</p>
               <div class="grid h-full grid-rows-2">
-                <h3 class="product-name">PROMOCJE NA WIOSNĘ!</h3>
-                <p class="product-descriptions">
-                  Sprawdź aktualne zniżki w wiosennej promocji Dyson. Lorem
-                  Ipsum is simply dummy text
+                <h3 class="product-name">Kod Rabatowy -50%</h3>
+                <p class="product-descriptions truncate">
+                  Kod rabatowy -50% na wszystkie pakiety badań w ALAB sport
                 </p>
               </div>
             </div>
           </div>
-          <p class="product-tag">Dyson - wszystkie okazje</p>
+          <p class="product-tag">ALAB sport</p>
           <div class="mt-2 px-[22px] md:mt-0 md:px-5">
             <a href="/" class="primary-button group">Sprawdź okazję</a>
             <div class="flex items-center justify-between pt-2 md:pt-7">

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       1536: {
         slidesPerView: 5,
-        spaceBetween: 11,
+        spaceBetween: 10,
       },
     },
 

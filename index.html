@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml/ico" href="/images/favicon.ico" />
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css" />
   </noscript>
 </head>
+
 <body>
   <script defer type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
   <script defer type="module" src="/src/js/main.js"></script>
@@ -991,7 +993,6 @@
         <a href="#" class="nav-items-style">Poradniki</a>
         <a href="#" class="nav-items-style">Sklepy</a>
       </nav>
-      <!-- Search Icon -->
       <div class="hidden items-center lg:flex" id="searchBtn">
         <button class="cursor-pointer text-white focus:outline-none">
           <img src="/images/svg/search-icon.svg" alt="search icon" />
@@ -1003,7 +1004,6 @@
       </button>
     </div>
   </header>
-  <!-- Search Overlay -->
   <div class="search-overlay" id="searchOverlay">
     <div class="tertiary-container">
       <div class="flex w-full flex-col items-end gap-4">
@@ -1020,7 +1020,7 @@
       </div>
     </div>
     <div id="suggestions" class="hidden">
-      <div class="mx-auto flex max-w-[1163px] items-center justify-start gap-4 px-4 pb-6 pt-7">
+      <div class="mx-auto flex max-w-[1163px] items-center justify-start gap-4 px-4 pt-7 pb-6">
         <article class="suggestion-item flex cursor-pointer flex-col items-center justify-center gap-5"
           data-name="The North Face">
           <div class="search-item-style">
@@ -1146,7 +1146,7 @@
             <a href="#" class="dropdown-text">Meble, oświetlenie i dodatki</a>
           </li>
           <li>
-            <a href="#" class="small-title !text-blackMetal block !px-4 !pb-0 !pt-4">Prezenty i kwiaty</a>
+            <a href="#" class="small-title !text-blackMetal block !px-4 !pt-4 !pb-0">Prezenty i kwiaty</a>
           </li>
           <li class="border-Jupiter border-b">
             <a href="#" class="dropdown-text">debetowych</a>
@@ -1181,7 +1181,6 @@
           <img src="/images/svg/sidebar-search-icon.svg" alt="search icon" />
         </button>
       </div>
-      <!-- Inline Suggestions Container (part of the same container) -->
       <div id="suggestionsBox" class="suggestions">
         <button class="small-title text-lightblack px-4 py-2 font-light" onclick="selectSuggestion('The North Face')">
           The North Face
@@ -1197,10 +1196,10 @@
   </aside>
   <!-- Header end --- -->
   <!-- Hero - section - -->
-  <section class="hero-section relative pb-10 pt-14 md:pb-[67px] md:pt-11 xl:static">
-    <img class="absolute left-0 top-0 z-[-1] h-[231px] w-full md:h-[500px]" src="/images/webp/hero-bg-2.avif"
+  <section class="hero-section relative pt-14 pb-10 md:pt-11 md:pb-[67px] xl:static">
+    <img class="absolute top-0 left-0 z-[-1] h-[231px] w-full md:h-[500px]" src="/images/webp/hero-bg-2.avif"
       alt="hero bg" width="1600" height="500" fetchpriority="high" decoding="sync" loading="eager"
-      style="content-visibility: auto;">
+      style="content-visibility: auto" />
     <div class="flex items-center justify-center">
       <h2 class="main-heading mx-auto max-w-[943px] px-4 text-center text-white">
         Okazje, kody rabatowe i promocje do najlepszych sklepów w Polsce
@@ -1209,14 +1208,20 @@
   </section>
   <!-- Hero SLIDER-SECTION -->
   <section class="mt-[40px] px-4 md:mt-0 md:px-8">
-    <div class="shadow-c2 3xl:max-w-[1650px] relative mx-auto max-w-[1315px] overflow-hidden rounded-3xl bg-white px-8">
-      <div class="mx-auto max-w-[1540px] overflow-hidden px-2">
+    <div
+      class="shadow-c2 3xl:max-w-[1650px] 3xl:px-10 relative z-10 mx-auto max-w-[1315px] overflow-hidden rounded-3xl bg-white px-8">
+      <div class="3xl:max-w-[1555px] mx-auto max-w-[1540px] overflow-hidden px-2">
         <div class="card-swiper py-4">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="1" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="1" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-1.webp"
@@ -1234,9 +1239,14 @@
               </div>
             </article>
             <!-- Slide 2 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto object-cover" src="/images/webp/hero-slider-logo-2.avif" alt="slide image" />
@@ -1253,9 +1263,14 @@
               </div>
             </article>
             <!-- Slide 3 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-3.avif"
@@ -1273,9 +1288,14 @@
               </div>
             </article>
             <!-- Slide 4 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-4.avif"
@@ -1293,9 +1313,14 @@
               </div>
             </article>
             <!-- Slide 5 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-1.webp"
@@ -1313,9 +1338,14 @@
               </div>
             </article>
             <!-- Slide 6 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-1.webp"
@@ -1333,9 +1363,14 @@
               </div>
             </article>
             <!-- slide 7 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-4.avif"
@@ -1353,9 +1388,14 @@
               </div>
             </article>
             <!-- slide 8 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hero-slider-logo-4.avif"
@@ -1373,9 +1413,14 @@
               </div>
             </article>
             <!-- slide 8 -->
-            <article class="swiper-slide hero-slider-card flex flex-col justify-between px-10 pb-7 pt-10 md:py-8"
-              role="group" aria-label="2 / 9"
-              style="width: 289.5px; margin-right: 11px; height: 300px; contain: size layout;">
+            <article
+              class="swiper-slide hero-slider-card 3xl:!h-[300px] 3xL:!w-[300px] flex flex-col justify-between px-10 pt-10 pb-7 md:py-8"
+              role="group" aria-label="2 / 9" style="
+                  width: 289.5px;
+                  margin-right: 11px;
+                  height: 300px;
+                  contain: size layout;
+                ">
               <div class="slider-only-with-us">Tylko u nas</div>
               <div class="flex h-full w-full max-w-[158px] items-center justify-center">
                 <img class="aspect-auto w-full object-cover" src="/images/webp/hebe.webp" alt="slide image" />
@@ -1396,11 +1441,11 @@
           </div>
           <!-- Custom navigation arrows -->
           <button
-            class="custom-next-arrow 3xl:ml-4 absolute left-0 top-[47%] z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full lg:ml-[8px]">
+            class="custom-next-arrow 3xl:ml-4 absolute top-[47%] left-0 z-20 ml-[10px] flex rotate-180 cursor-pointer items-center justify-center rounded-full lg:ml-[8px]">
             <img src="/images/svg/hero-slider-left-arrow.svg" alt="arrow" />
           </button>
           <button
-            class="custom-prev-arrow 3xl:mr-4 absolute right-0 top-[47%] z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full lg:mr-[8px]">
+            class="custom-prev-arrow 3xl:mr-4 absolute top-[47%] right-0 z-20 mr-[10px] flex cursor-pointer items-center justify-center rounded-full lg:mr-[8px]">
             <img src="/images/svg/hero-slider-right-arrow.svg" alt="arrow" />
           </button>
         </div>
@@ -1409,21 +1454,21 @@
     </div>
   </section>
   <section class="hero-product-bg relative mt-[45px] pb-0 md:mt-[90px] md:pb-20 xl:pb-0"
-    style="min-height: 200px; contain: layout;">
+    style="min-height: 200px; contain: layout">
     <div
       class="main-container 3xl:grid-cols-5 3xl:gap-3 mb-[35px] grid grid-cols-1 gap-[22px] sm:grid-cols-2 md:mb-[60px] lg:!mb-[86px] lg:grid-cols-3 2xl:grid-cols-4">
       <!-- card 1 -->
       <article class="product-card">
         <div class="flex h-full flex-row md:flex-col">
-          <div class="border-cottonBall hidden items-center justify-center border-[3px] py-[65px] md:flex">
+          <!-- <div class="border-cottonBall hidden items-center justify-center border-[3px]  h-full md:flex">
             <img class="w-full max-w-[190px]" src="/images/webp/Alab-logo.webp" alt="product" />
-          </div>
-          <img class="product-card-img block md:hidden" src="/images/webp/hero-product-2.webp" alt="product" />
+          </div> -->
+          <img class="product-card-img" src="/images/webp/hero-product-2.webp" alt="product" />
           <div class="flex h-full flex-col px-5">
             <p class="product-tag-mobile">Dyson</p>
             <div class="grid h-full grid-rows-2">
               <h3 class="product-name">PROMOCJE NA WIOSNĘ!</h3>
-              <p class="product-descriptions">
+              <p class="product-descriptions text-ellipsis line-clamp-2 sm:line-clamp-none">
                 Sprawdź aktualne zniżki w wiosennej promocji Dyson. Lorem
                 Ipsum is simply dummy text
               </p>
@@ -1467,7 +1512,7 @@
       </article>
       <article class="product-card">
         <p
-          class="bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] xxl:-right-[31%] xxl:top-[7%] 3xl:right-[-24%] 3xl:top-[9.8%] 3xl:py-2.3 pointer-events-none absolute -right-[38%] top-[14%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs font-bold italic leading-[66.667%] sm:-right-[44%] sm:top-[12%] md:-right-[40%] md:top-[10%] lg:-right-[35%] 2xl:py-[6px]">
+          class="bg-schoolBus text-lightblack drop-shadow-c1 xs:-right-[41%] xs:top-[14%] xxl:-right-[31%] xxl:top-[7%] 3xl:right-[-34%] 3xl:top-[6.8%] 3xl:py-2.3 pointer-events-none absolute top-[14%] -right-[38%] z-10 !m-0 w-full rotate-45 py-1 text-center text-xs leading-[66.667%] font-bold italic sm:top-[12%] sm:-right-[44%] md:top-[10%] md:-right-[40%] lg:-right-[35%] 2xl:py-[6px]">
           Tylko u nas
         </p>
         <div class="relative flex h-full flex-row md:flex-col">
@@ -1493,7 +1538,8 @@
           </div>
         </div>
       </article>
-      <article class="product-card">
+      <article
+        class="3xl:px-[14px] shadow-c6 3xl:w-[300px] 3xl:h-[600px] relative hidden h-[250px] max-w-[335px] flex-col justify-between overflow-hidden rounded-[20px] bg-white px-3 py-6 transition-all duration-300 ease-in-out hover:-translate-y-1 sm:h-auto sm:max-w-full lg:flex">
         <span class="flex items-center justify-center">
           <img src="/images/svg/product-card-tag.svg" alt="product card tag" />
         </span>
@@ -1672,7 +1718,7 @@
   <!-- frequently visited stores -->
   <section class="custom-gradient frequently-bg-section relative hidden md:block">
     <div class="bg-cottonBall absolute -top-[45px] left-0 z-[-4] hidden h-[250px] w-full xl:flex"></div>
-    <div class="main-container pb-20 pt-20 xl:pb-[400px] xl:pt-[175px]">
+    <div class="main-container pt-20 pb-20 xl:pt-[175px] xl:pb-[400px]">
       <h3 class="main-heading text-center text-white">
         100 chętnie odwiedzanych <br class="hidden md:block" />
         sklepów w Wydawajdobrze
@@ -1790,8 +1836,10 @@
     <div
       class="3xl:max-w-[1000px] 3xl:gap-10 grid w-full max-w-[1100px] gap-8 px-6 sm:grid-cols-2 md:px-0 xl:grid-cols-3 2xl:gap-6">
       <article class="count-card-style">
-        <h4 id="count1" class="count-hub-heading gradient-text">0</h4>
-        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%]">
+        <div class="flex items-center justify-center">
+          <h4 id="count1" class="count-hub-heading gradient-text">0</h4>
+        </div>
+        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs leading-[120%] font-light">
           aktywnych kodów rabatowych i promocji
         </p>
       </article>
@@ -1799,7 +1847,7 @@
         <div class="flex items-center justify-center">
           <span id="count2" class="count-hub-heading gradient-text"> 0 </span>
         </div>
-        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%]">
+        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs leading-[120%] font-light">
           nowych rabatów dodawanych każdego miesiąca
         </p>
       </article>
@@ -1807,7 +1855,7 @@
         <div class="flex items-center justify-center">
           <h4 id="count3" class="count-hub-heading gradient-text">0</h4>
         </div>
-        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%]">
+        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs leading-[120%] font-light">
           sklepów w bazie
         </p>
       </article>
@@ -1815,7 +1863,7 @@
         <div class="flex items-center justify-center">
           <h4 id="count4" class="count-hub-heading gradient-text">0</h4>
         </div>
-        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%]">
+        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs leading-[120%] font-light">
           lat w sieci
         </p>
       </article>
@@ -1823,7 +1871,7 @@
         <div class="flex items-center justify-center">
           <h4 id="count5" class="count-hub-heading gradient-text">0</h4>
         </div>
-        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs font-light leading-[120%]">
+        <p class="text-blackMetal 3xl:text-sm mx-auto max-w-[185px] pt-2 text-center text-xs leading-[120%] font-light">
           oszczędności generowanych przez naszych użytkowników każdego
           miesiąca
         </p>
@@ -1843,31 +1891,31 @@
         class="3xl:gap-10 3xl:pt-[118px] grid grid-cols-1 place-items-center gap-6 pt-[40px] sm:grid-cols-2 md:grid-cols-3 md:pt-[50px] xl:grid-cols-4 2xl:grid-cols-5 2xl:pt-[90px]">
         <!-- row 1 -->
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/computer.svg" alt="icons" />
+          <img class="h-[38px] w-[45px]" src="/images/svg/computer.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Komputery i elektronika
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/diet.svg" alt="icons" />
+          <img class="h-[38px] w-[45px]" src="/images/svg/diet.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Cateringi Dietetyczne
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/furniture.svg" alt="icons" />
+          <img class="h-[62px] w-[68px]" src="/images/svg/furniture.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Meble, oświetlenie i dodatki
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/garden.svg" alt="icons" />
+          <img class="h-[44px] w-[36px]" src="/images/svg/garden.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Dom i ogród
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/accessories.svg" alt="icons" />
+          <img class="h-[38px] w-[45px]" src="/images/svg/accessories.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Biżuteria i dodatki
           </h3>
@@ -1892,32 +1940,32 @@
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/Sports.svg" alt="icons" />
+          <img class="h-[40px] w-[40px]" src="/images/svg/Sports.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Sport i hobby
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/delivery.svg" alt="icons" />
+          <img class="h-[37px] w-[57px]" src="/images/svg/delivery.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Restauracje i dostawa
           </h3>
         </article>
         <!-- row 3 -->
         <article class="artical-container group">
-          <img class="w-[60px]" src="/images/svg/RTV.svg" alt="icons" />
+          <img class="h-[44px] w-[36px]" src="/images/svg/RTV.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             RTV i AGD
           </h3>
         </article>
         <article class="artical-container group">
-          <img class="w-[60px]" src="/images/svg/Perfumes.svg" alt="icons" />
+          <img class="h-[44px] w-[45px]" src="/images/svg/Perfumes.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Drogerie. Perfumy i kosmetyki
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/Streaming.svg" alt="icons" />
+          <img class="h-[32px] w-[33px]" src="/images/svg/Streaming.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Portale stremingowe
           </h3>
@@ -1929,7 +1977,7 @@
           </h3>
         </article>
         <article class="artical-container">
-          <img class="w-[60px]" src="/images/svg/Clothing.svg" alt="icons" />
+          <img class="h-[35px] w-[38px]" src="/images/svg/Clothing.svg" alt="icons" />
           <h3 class="small-title w-full max-w-[116px] leading-[150%]">
             Odież i obuwie
           </h3>
@@ -1939,11 +1987,11 @@
   </section>
   <!-- Become a conscious section -->
   <section class="relative">
-    <div class="primary-container relative pt-16 sm:pt-[90px] md:pb-10 md:pt-[101px] lg:pt-[241px]">
-      <img class="absolute left-[30%] top-10 block max-w-[20px] md:hidden" src="/images/svg/sale-icon.svg" alt="icon" />
-      <img class="pointer-events-none absolute left-[30%] top-[60%] block max-w-[20px] md:hidden md:max-w-full"
+    <div class="primary-container relative pt-16 sm:pt-[90px] md:pt-[101px] md:pb-10 lg:pt-[241px]">
+      <img class="absolute top-10 left-[30%] block max-w-[20px] md:hidden" src="/images/svg/sale-icon.svg" alt="icon" />
+      <img class="pointer-events-none absolute top-[60%] left-[30%] block max-w-[20px] md:hidden md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon" />
-      <img class="absolute right-[10%] top-20 block max-w-[20px] md:hidden" src="/images/svg/bell-icon.svg"
+      <img class="absolute top-20 right-[10%] block max-w-[20px] md:hidden" src="/images/svg/bell-icon.svg"
         alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Zostań świadomym <br />
@@ -1969,11 +2017,11 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute right-[30%] top-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[20%] right-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/mic-icon.svg" alt="icon" />
-      <img class="pointer-events-none absolute left-[30%] top-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="pointer-events-none absolute top-[60%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon" />
-      <img class="pointer-events-none absolute right-[30%] top-[90%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="pointer-events-none absolute top-[90%] right-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Jak zostać świadomym <br />
@@ -1993,11 +2041,11 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute right-[20%] top-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[20%] right-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/star-icon.svg" alt="icon" />
-      <img class="pointer-events-none absolute right-[30%] top-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="pointer-events-none absolute top-[60%] right-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/sale-icon.svg" alt="icon" />
-      <img class="pointer-events-none absolute left-[30%] top-[90%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="pointer-events-none absolute top-[90%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/shop-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Wszystkie promocje <br />
@@ -2016,9 +2064,9 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute left-[10%] top-[5%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[5%] left-[10%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/star-icon.svg" alt="icon" />
-      <img class="absolute right-[20%] top-[90%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[90%] right-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Jakie promocje znajdziesz <br />
@@ -2030,11 +2078,11 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute left-0 top-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[30%] left-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/star-icon.svg" alt="icon" />
-      <img class="absolute left-[30%] top-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[40%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/sale-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[30%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/percent-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Kody promocyjne
@@ -2054,13 +2102,13 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute left-[30%] top-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[40%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/shop-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-0 bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/mic-icon.svg" alt="icon" />
-      <img class="absolute bottom-[-30%] right-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[20%] bottom-[-30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/sale-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Informacje o promocjach
@@ -2081,9 +2129,9 @@
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
       <img class="absolute bottom-10 left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-0 bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/star-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Gazetki promocyjne
@@ -2107,9 +2155,9 @@
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
       <img class="absolute bottom-[30%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-0 bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center md:text-start">
         Promocje lokalne
@@ -2132,9 +2180,9 @@
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
       <img class="absolute bottom-[30%] left-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-0 bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Dodawaj informacje o <br />
@@ -2158,15 +2206,15 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute left-[60%] top-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[40%] left-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/percent-icon.svg" alt="icon" />
-      <img class="absolute left-0 top-0 z-[-1] max-w-[20px] object-cover md:max-w-full" src="/images/svg/star-icon.svg"
+      <img class="absolute top-0 left-0 z-[-1] max-w-[20px] object-cover md:max-w-full" src="/images/svg/star-icon.svg"
         alt="icon" />
-      <img class="absolute left-[40%] top-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-0 left-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/sale-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-0 bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center md:text-start">
         Jak dodać <br />
@@ -2188,15 +2236,15 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute left-[80%] top-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[30%] left-[80%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/mic-icon.svg" alt="icon" />
-      <img class="absolute left-[-2%] top-[20%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[20%] left-[-2%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/heart-icon.svg" alt="icon" />
-      <img class="absolute left-[40%] top-[60%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[60%] left-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/like-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/bell-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-0" src="/images/svg/heart-icon.svg" alt="icon" />
+      <img class="absolute right-0 bottom-0" src="/images/svg/heart-icon.svg" alt="icon" />
       <h3 class="main-heading text-lightblack text-center lg:text-start">
         Jak dużo można zaoszczędzić <br />
         korzystając z kuponów rabatowych?
@@ -2224,11 +2272,11 @@
       </p>
     </div>
     <div class="primary-container relative pt-10 md:py-10 md:pb-10">
-      <img class="absolute left-[80%] top-[30%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[30%] left-[80%] z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/mic-icon.svg" alt="icon" />
-      <img class="absolute left-0 top-[80%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute top-[80%] left-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/shop-icon.svg" alt="icon" />
-      <img class="absolute bottom-0 right-[40%] z-[-1] max-w-[20px] object-cover md:max-w-full"
+      <img class="absolute right-[40%] bottom-0 z-[-1] max-w-[20px] object-cover md:max-w-full"
         src="/images/svg/sale-icon.svg" alt="icon" />
       <img class="absolute bottom-[-10%] left-[30%] z-[-1] hidden max-w-[20px] object-cover md:max-w-full lg:block"
         src="/images/svg/star-icon.svg" alt="icon" />
@@ -2254,7 +2302,7 @@
   <!-- footer section  -->
   <footer class="footer-bg relative mt-[48px] w-full text-white">
     <div class="main-container py-10 md:pb-10 lg:pt-[140px]">
-      <div class="pt-[13px] sm:pb-8 sm:pt-20 md:pt-[53px]">
+      <div class="pt-[13px] sm:pt-20 sm:pb-8 md:pt-[53px]">
         <img class="mx-auto block w-full max-w-[500px] cursor-pointer lg:mx-0 lg:hidden" src="/images/svg/logo.svg"
           alt="logo" />
         <div class="xxl:gap-16 flex flex-col justify-between lg:flex-row lg:gap-10">
@@ -2271,13 +2319,13 @@
                 <p>24/7 wsparcie</p>
               </div>
             </div>
-              <p class="mt-8 hidden w-full max-w-[552px] text-[11px] font-light text-white lg:flex">
-                COPYRIGHT © WYDAWAJDOBRZE.COM WSZYSTKIE PRAWA ZASTRZEŻONE.
-                Wszystkie użyte na niniejszej stronie internetowej znaki
-                towarowe i nazwy firmowe lub towarowe należą lub/i są
-                zastrzeżone przez ich właścicieli i zostały użyte wyłącznie w
-                celach informacyjnych.
-              </p>
+            <p class="mt-8 hidden w-full max-w-[552px] text-[11px] font-light text-white lg:flex">
+              COPYRIGHT © WYDAWAJDOBRZE.COM WSZYSTKIE PRAWA ZASTRZEŻONE.
+              Wszystkie użyte na niniejszej stronie internetowej znaki
+              towarowe i nazwy firmowe lub towarowe należą lub/i są
+              zastrzeżone przez ich właścicieli i zostały użyte wyłącznie w
+              celach informacyjnych.
+            </p>
           </div>
           <div
             class="xxl:pt-[70px] 3xl:pt-[93px] grid w-full gap-5 pt-[20px] sm:grid-cols-2 sm:pt-[50px] md:grid-cols-3 md:gap-5 lg:pt-[39px]">
@@ -2345,13 +2393,13 @@
                 <p>24/7 wsparcie</p>
               </div>
             </div>
-              <p class="mt-8 w-full max-w-[552px] text-[11px] font-light text-white">
-                COPYRIGHT © WYDAWAJDOBRZE.COM WSZYSTKIE PRAWA ZASTRZEŻONE.
-                Wszystkie użyte na niniejszej stronie internetowej znaki
-                towarowe i nazwy firmowe lub towarowe należą lub/i są
-                zastrzeżone przez ich właścicieli i zostały użyte wyłącznie w
-                celach informacyjnych.
-              </p>
+            <p class="mt-8 w-full max-w-[552px] text-[11px] font-light text-white">
+              COPYRIGHT © WYDAWAJDOBRZE.COM WSZYSTKIE PRAWA ZASTRZEŻONE.
+              Wszystkie użyte na niniejszej stronie internetowej znaki
+              towarowe i nazwy firmowe lub towarowe należą lub/i są
+              zastrzeżone przez ich właścicieli i zostały użyte wyłącznie w
+              celach informacyjnych.
+            </p>
           </div>
         </div>
       </div>
