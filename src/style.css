@@ -209,10 +209,10 @@ body {
 }
 
 /* backgrounds */
-.hero-product-bg::before {
+/* .hero-product-bg::before {
   content: "";
   @apply absolute top-[-2.5%] left-0 -z-10 h-full w-full bg-[url('/images/webp/hero-product-bg-mobile.webp')] bg-cover bg-top lg:top-[-10%] xl:h-[106.5%] lg:bg-[url('/images/webp/hero-product-bg.avif')];
-}
+} */
 .frequently-bg-section::after {
   content: "";
   @apply absolute top-[-2%] left-0 -z-1 hidden h-full w-full bg-[url('/images/webp/frequently-story-bg.webp')] bg-cover bg-top bg-no-repeat xl:block;
