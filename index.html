@@ -10,11 +10,11 @@
     Deals, discount codes and promotions for the best stores in Poland
   </title>
   <link rel="stylesheet" href="/src/style.css" />
-  <!-- Add this to your HTML head -->
   <link rel="preload" href="/images/webp/hero-product-bg.avif" as="image" type="image/avif" />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'" />
-
+  <link rel="preload" as="image" href="/images/webp/hero-product-bg-mobile.webp" media="(max-width: 1023px)">
+  <link rel="preload" as="image" href="/images/webp/hero-product-bg.avif" media="(min-width: 1024px)">
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css" />
   </noscript>
@@ -28,8 +28,8 @@
   <!-- Header start --- -->
   <header class="relative">
     <div class="mx-auto flex max-w-[1164px] items-center justify-between gap-7 px-4">
-      <img class="hidden w-full max-w-[160px] cursor-pointer md:max-w-[270px] xl:block" width="[natural width]"
-        height="[natural height]" src="/images/svg/logo.svg" alt="logo" />
+      <img loading="lazy" class="hidden w-full max-w-[160px] cursor-pointer md:max-w-[270px] xl:block"
+        width="[natural width]" height="[natural height]" src="/images/svg/logo.svg" alt="logo" />
       <div class="block w-full max-w-[160px] md:max-w-[270px] xl:hidden">
         <img width="[natural width]" height="[natural height]" src="/images/webp/mobile-logo.webp"
           alt="wydawaj dobrze logo" />
